@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NUMUNE_TAKİPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TblLab">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="lab_bitis_tarih" Type="DateTime" Precision="3" />
+    <Property Name="lab_aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="lab_maliyet1" Type="Int32" />
+    <Property Name="lab_isik_hasligi" Type="Int32" />
+    <Property Name="lab_isi_dayanimi" Type="Int32" />
+    <Property Name="lab_gida" Type="Boolean" />
+    <Property Name="lab_reach_rohs_oran" Type="Int32" />
+    <Property Name="lab_maliyet2" Type="Int32" />
+    <Property Name="lab_sonuc" Type="Boolean" />
+    <Property Name="lab_musteri_onay" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TblNumuneler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nmn_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_tarih" Type="DateTime" Precision="3" />
+    <Property Name="nmn_cari_seviye" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_aciliyet" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_aday_cari" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_aday_carikonum" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_sip_miktar" Type="Int32" />
+    <Property Name="nmn_deneme_miktar" Type="Int32" />
+    <Property Name="nmn_hdf_fiyat" Type="Int32" />
+    <Property Name="nmn_fiyat_cins" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_mus_yetkili" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_is_merkezi" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_rkpcari_ad" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_rkpcari_urunkod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_tur" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_uretilecek_urun" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_hammadde" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_mfi" Type="Double" />
+    <Property Name="nmn_oran" Type="Int32" />
+    <Property Name="nmn_gida" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_reach_rohs" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_termintarih" Type="DateTime" Precision="3" />
+    <Property Name="nmn_aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="NUMUNE_TAKİPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TblLab" EntityType="Self.TblLab" />
+    <EntitySet Name="TblNumuneler" EntityType="Self.TblNumuneler" />
+    <FunctionImport Name="ListNumune" ReturnType="Collection(NUMUNE_TAKİPModel.ListNumune_Result)">
+      <Parameter Name="ilk_tarih" Mode="In" Type="DateTime" />
+      <Parameter Name="son_tarih" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="ListNumune_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="nmn_kod" Nullable="true" MaxLength="25" />
+    <Property Type="DateTime" Name="nmn_tarih" Nullable="true" Precision="23" />
+    <Property Type="String" Name="nmn_cari_seviye" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="nmn_aciliyet" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="nmn_aday_cari" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="nmn_aday_carikonum" Nullable="true" MaxLength="25" />
+    <Property Type="Int32" Name="nmn_sip_miktar" Nullable="true" />
+    <Property Type="Int32" Name="nmn_deneme_miktar" Nullable="true" />
+    <Property Type="Int32" Name="nmn_hdf_fiyat" Nullable="true" />
+    <Property Type="String" Name="nmn_fiyat_cins" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="nmn_mus_yetkili" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="nmn_is_merkezi" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="nmn_rkpcari_ad" Nullable="true" MaxLength="120" />
+    <Property Type="String" Name="nmn_rkpcari_urunkod" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="nmn_tur" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="nmn_uretilecek_urun" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="nmn_hammadde" Nullable="true" MaxLength="25" />
+    <Property Type="Double" Name="nmn_mfi" Nullable="true" />
+    <Property Type="Int32" Name="nmn_oran" Nullable="true" />
+    <Property Type="String" Name="nmn_gida" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="nmn_reach_rohs" Nullable="true" MaxLength="25" />
+    <Property Type="DateTime" Name="nmn_termintarih" Nullable="true" Precision="23" />
+    <Property Type="String" Name="nmn_aciklama" Nullable="true" />
+  </ComplexType>
+</Schema>

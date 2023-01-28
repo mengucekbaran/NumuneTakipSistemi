@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NUMUNE_TAKİPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TblLab">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="lab_bitis_tarih" Type="datetime" />
+          <Property Name="lab_aciklama" Type="nvarchar(max)" />
+          <Property Name="lab_maliyet1" Type="int" />
+          <Property Name="lab_isik_hasligi" Type="int" />
+          <Property Name="lab_isi_dayanimi" Type="int" />
+          <Property Name="lab_gida" Type="bit" />
+          <Property Name="lab_reach_rohs_oran" Type="int" />
+          <Property Name="lab_maliyet2" Type="int" />
+          <Property Name="lab_sonuc" Type="bit" />
+          <Property Name="lab_musteri_onay" Type="bit" />
+        </EntityType>
+        <EntityType Name="TblNumuneler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nmn_kod" Type="nvarchar" MaxLength="25" />
+          <Property Name="nmn_tarih" Type="datetime" />
+          <Property Name="nmn_cari_seviye" Type="nvarchar" MaxLength="25" />
+          <Property Name="nmn_aciliyet" Type="nvarchar" MaxLength="25" />
+          <Property Name="nmn_aday_cari" Type="nvarchar" MaxLength="25" />
+          <Property Name="nmn_aday_carikonum" Type="nvarchar" MaxLength="25" />
+          <Property Name="nmn_sip_miktar" Type="int" />
+          <Property Name="nmn_deneme_miktar" Type="int" />
+          <Property Name="nmn_hdf_fiyat" Type="int" />
+          <Property Name="nmn_fiyat_cins" Type="nvarchar" MaxLength="25" />
+          <Property Name="nmn_mus_yetkili" Type="nvarchar" MaxLength="50" />
+          <Property Name="nmn_is_merkezi" Type="nvarchar" MaxLength="25" />
+          <Property Name="nmn_rkpcari_ad" Type="nvarchar" MaxLength="120" />
+          <Property Name="nmn_rkpcari_urunkod" Type="nvarchar" MaxLength="25" />
+          <Property Name="nmn_tur" Type="nvarchar" MaxLength="50" />
+          <Property Name="nmn_uretilecek_urun" Type="nvarchar" MaxLength="25" />
+          <Property Name="nmn_hammadde" Type="nvarchar" MaxLength="25" />
+          <Property Name="nmn_mfi" Type="float" />
+          <Property Name="nmn_oran" Type="int" />
+          <Property Name="nmn_gida" Type="nvarchar" MaxLength="25" />
+          <Property Name="nmn_reach_rohs" Type="nvarchar" MaxLength="25" />
+          <Property Name="nmn_termintarih" Type="datetime" />
+          <Property Name="nmn_aciklama" Type="nvarchar(max)" />
+        </EntityType>
+        <Function Name="ListNumune" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ilk_tarih" Type="datetime2" Mode="In" />
+          <Parameter Name="son_tarih" Type="datetime2" Mode="In" />
+        </Function>
+        <EntityContainer Name="NUMUNE_TAKİPModelStoreContainer">
+          <EntitySet Name="TblLab" EntityType="Self.TblLab" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblNumuneler" EntityType="Self.TblNumuneler" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NUMUNE_TAKİPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TblLab">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="lab_bitis_tarih" Type="DateTime" Precision="3" />
+          <Property Name="lab_aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="lab_maliyet1" Type="Int32" />
+          <Property Name="lab_isik_hasligi" Type="Int32" />
+          <Property Name="lab_isi_dayanimi" Type="Int32" />
+          <Property Name="lab_gida" Type="Boolean" />
+          <Property Name="lab_reach_rohs_oran" Type="Int32" />
+          <Property Name="lab_maliyet2" Type="Int32" />
+          <Property Name="lab_sonuc" Type="Boolean" />
+          <Property Name="lab_musteri_onay" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TblNumuneler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nmn_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_tarih" Type="DateTime" Precision="3" />
+          <Property Name="nmn_cari_seviye" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_aciliyet" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_aday_cari" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_aday_carikonum" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_sip_miktar" Type="Int32" />
+          <Property Name="nmn_deneme_miktar" Type="Int32" />
+          <Property Name="nmn_hdf_fiyat" Type="Int32" />
+          <Property Name="nmn_fiyat_cins" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_mus_yetkili" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_is_merkezi" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_rkpcari_ad" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_rkpcari_urunkod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_tur" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_uretilecek_urun" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_hammadde" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_mfi" Type="Double" />
+          <Property Name="nmn_oran" Type="Int32" />
+          <Property Name="nmn_gida" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_reach_rohs" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmn_termintarih" Type="DateTime" Precision="3" />
+          <Property Name="nmn_aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="NUMUNE_TAKİPEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblLab" EntityType="Self.TblLab" />
+          <EntitySet Name="TblNumuneler" EntityType="Self.TblNumuneler" />
+          <FunctionImport Name="ListNumune" ReturnType="Collection(NUMUNE_TAKİPModel.ListNumune_Result)">
+            <Parameter Name="ilk_tarih" Mode="In" Type="DateTime" />
+            <Parameter Name="son_tarih" Mode="In" Type="DateTime" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="ListNumune_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="nmn_kod" Nullable="true" MaxLength="25" />
+          <Property Type="DateTime" Name="nmn_tarih" Nullable="true" Precision="23" />
+          <Property Type="String" Name="nmn_cari_seviye" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nmn_aciliyet" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nmn_aday_cari" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nmn_aday_carikonum" Nullable="true" MaxLength="25" />
+          <Property Type="Int32" Name="nmn_sip_miktar" Nullable="true" />
+          <Property Type="Int32" Name="nmn_deneme_miktar" Nullable="true" />
+          <Property Type="Int32" Name="nmn_hdf_fiyat" Nullable="true" />
+          <Property Type="String" Name="nmn_fiyat_cins" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nmn_mus_yetkili" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="nmn_is_merkezi" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nmn_rkpcari_ad" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="nmn_rkpcari_urunkod" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nmn_tur" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="nmn_uretilecek_urun" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nmn_hammadde" Nullable="true" MaxLength="25" />
+          <Property Type="Double" Name="nmn_mfi" Nullable="true" />
+          <Property Type="Int32" Name="nmn_oran" Nullable="true" />
+          <Property Type="String" Name="nmn_gida" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nmn_reach_rohs" Nullable="true" MaxLength="25" />
+          <Property Type="DateTime" Name="nmn_termintarih" Nullable="true" Precision="23" />
+          <Property Type="String" Name="nmn_aciklama" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NUMUNE_TAKİPModelStoreContainer" CdmEntityContainer="NUMUNE_TAKİPEntities">
+          <EntitySetMapping Name="TblLab">
+            <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.TblLab">
+              <MappingFragment StoreEntitySet="TblLab">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="lab_bitis_tarih" ColumnName="lab_bitis_tarih" />
+                <ScalarProperty Name="lab_aciklama" ColumnName="lab_aciklama" />
+                <ScalarProperty Name="lab_maliyet1" ColumnName="lab_maliyet1" />
+                <ScalarProperty Name="lab_isik_hasligi" ColumnName="lab_isik_hasligi" />
+                <ScalarProperty Name="lab_isi_dayanimi" ColumnName="lab_isi_dayanimi" />
+                <ScalarProperty Name="lab_gida" ColumnName="lab_gida" />
+                <ScalarProperty Name="lab_reach_rohs_oran" ColumnName="lab_reach_rohs_oran" />
+                <ScalarProperty Name="lab_maliyet2" ColumnName="lab_maliyet2" />
+                <ScalarProperty Name="lab_sonuc" ColumnName="lab_sonuc" />
+                <ScalarProperty Name="lab_musteri_onay" ColumnName="lab_musteri_onay" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblNumuneler">
+            <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.TblNumuneler">
+              <MappingFragment StoreEntitySet="TblNumuneler">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nmn_kod" ColumnName="nmn_kod" />
+                <ScalarProperty Name="nmn_tarih" ColumnName="nmn_tarih" />
+                <ScalarProperty Name="nmn_cari_seviye" ColumnName="nmn_cari_seviye" />
+                <ScalarProperty Name="nmn_aciliyet" ColumnName="nmn_aciliyet" />
+                <ScalarProperty Name="nmn_aday_cari" ColumnName="nmn_aday_cari" />
+                <ScalarProperty Name="nmn_aday_carikonum" ColumnName="nmn_aday_carikonum" />
+                <ScalarProperty Name="nmn_sip_miktar" ColumnName="nmn_sip_miktar" />
+                <ScalarProperty Name="nmn_deneme_miktar" ColumnName="nmn_deneme_miktar" />
+                <ScalarProperty Name="nmn_hdf_fiyat" ColumnName="nmn_hdf_fiyat" />
+                <ScalarProperty Name="nmn_fiyat_cins" ColumnName="nmn_fiyat_cins" />
+                <ScalarProperty Name="nmn_mus_yetkili" ColumnName="nmn_mus_yetkili" />
+                <ScalarProperty Name="nmn_is_merkezi" ColumnName="nmn_is_merkezi" />
+                <ScalarProperty Name="nmn_rkpcari_ad" ColumnName="nmn_rkpcari_ad" />
+                <ScalarProperty Name="nmn_rkpcari_urunkod" ColumnName="nmn_rkpcari_urunkod" />
+                <ScalarProperty Name="nmn_tur" ColumnName="nmn_tur" />
+                <ScalarProperty Name="nmn_uretilecek_urun" ColumnName="nmn_uretilecek_urun" />
+                <ScalarProperty Name="nmn_hammadde" ColumnName="nmn_hammadde" />
+                <ScalarProperty Name="nmn_mfi" ColumnName="nmn_mfi" />
+                <ScalarProperty Name="nmn_oran" ColumnName="nmn_oran" />
+                <ScalarProperty Name="nmn_gida" ColumnName="nmn_gida" />
+                <ScalarProperty Name="nmn_reach_rohs" ColumnName="nmn_reach_rohs" />
+                <ScalarProperty Name="nmn_termintarih" ColumnName="nmn_termintarih" />
+                <ScalarProperty Name="nmn_aciklama" ColumnName="nmn_aciklama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="ListNumune" FunctionName="NUMUNE_TAKİPModel.Store.ListNumune">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NUMUNE_TAKİPModel.ListNumune_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nmn_kod" ColumnName="nmn_kod" />
+                <ScalarProperty Name="nmn_tarih" ColumnName="nmn_tarih" />
+                <ScalarProperty Name="nmn_cari_seviye" ColumnName="nmn_cari_seviye" />
+                <ScalarProperty Name="nmn_aciliyet" ColumnName="nmn_aciliyet" />
+                <ScalarProperty Name="nmn_aday_cari" ColumnName="nmn_aday_cari" />
+                <ScalarProperty Name="nmn_aday_carikonum" ColumnName="nmn_aday_carikonum" />
+                <ScalarProperty Name="nmn_sip_miktar" ColumnName="nmn_sip_miktar" />
+                <ScalarProperty Name="nmn_deneme_miktar" ColumnName="nmn_deneme_miktar" />
+                <ScalarProperty Name="nmn_hdf_fiyat" ColumnName="nmn_hdf_fiyat" />
+                <ScalarProperty Name="nmn_fiyat_cins" ColumnName="nmn_fiyat_cins" />
+                <ScalarProperty Name="nmn_mus_yetkili" ColumnName="nmn_mus_yetkili" />
+                <ScalarProperty Name="nmn_is_merkezi" ColumnName="nmn_is_merkezi" />
+                <ScalarProperty Name="nmn_rkpcari_ad" ColumnName="nmn_rkpcari_ad" />
+                <ScalarProperty Name="nmn_rkpcari_urunkod" ColumnName="nmn_rkpcari_urunkod" />
+                <ScalarProperty Name="nmn_tur" ColumnName="nmn_tur" />
+                <ScalarProperty Name="nmn_uretilecek_urun" ColumnName="nmn_uretilecek_urun" />
+                <ScalarProperty Name="nmn_hammadde" ColumnName="nmn_hammadde" />
+                <ScalarProperty Name="nmn_mfi" ColumnName="nmn_mfi" />
+                <ScalarProperty Name="nmn_oran" ColumnName="nmn_oran" />
+                <ScalarProperty Name="nmn_gida" ColumnName="nmn_gida" />
+                <ScalarProperty Name="nmn_reach_rohs" ColumnName="nmn_reach_rohs" />
+                <ScalarProperty Name="nmn_termintarih" ColumnName="nmn_termintarih" />
+                <ScalarProperty Name="nmn_aciklama" ColumnName="nmn_aciklama" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
