@@ -60,5 +60,33 @@ namespace SampleManagmentSystem.Forms
         {
             Listele();
         }
+
+        private void dateFirst_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmNumune_Load(object sender, EventArgs e)
+        {
+            SetTodayDate();
+        }
+        //TABLONUN SATIRINA TIKLANDIĞINDA NUMUNE DÜZELTME SAYFASI
+        //private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        //{
+        //    DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+
+
+        //        Forms.NewNumune fr = new Forms.NewNumune();
+        //        fr.Show();
+
+
+        //}
+        public void SetTodayDate()
+        {
+            DateTime dateTimeObj = DateTime.Parse($"01-01-{DateTime.Now.Year}");
+            dateFirst.EditValue = dateTimeObj;
+            dateLast.EditValue = DateTime.Today;
+        }
     }
+    
 }

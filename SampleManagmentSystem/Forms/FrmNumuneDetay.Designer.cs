@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNumuneDetay));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -51,9 +52,9 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.dateFirst = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -62,22 +63,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateLast.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFirst.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFirst.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bindingSource1;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
-            this.gridControl1.Location = new System.Drawing.Point(0, 150);
+            gridLevelNode1});
+            this.gridControl1.Location = new System.Drawing.Point(25, 165);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1720, 638);
+            this.gridControl1.Size = new System.Drawing.Size(1448, 536);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
             // 
             // bindingNavigator1
             // 
@@ -104,7 +111,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1720, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1497, 27);
             this.bindingNavigator1.TabIndex = 3;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -200,9 +207,9 @@
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.dateFirst);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(0, 30);
+            this.groupControl1.Location = new System.Drawing.Point(25, 30);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1720, 114);
+            this.groupControl1.Size = new System.Drawing.Size(1448, 114);
             this.groupControl1.TabIndex = 4;
             // 
             // BtnList
@@ -260,16 +267,11 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "İlk Tarih";
             // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
             // FrmNumuneDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1720, 698);
+            this.ClientSize = new System.Drawing.Size(1497, 698);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.gridControl1);
@@ -279,6 +281,7 @@
             this.Load += new System.EventHandler(this.FrmNumuneDetay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
@@ -289,7 +292,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateLast.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFirst.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFirst.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

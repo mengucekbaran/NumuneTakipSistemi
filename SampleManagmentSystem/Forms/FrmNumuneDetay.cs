@@ -40,12 +40,19 @@ namespace SampleManagmentSystem.Forms
 
         private void FrmNumuneDetay_Load(object sender, EventArgs e)
         {
-            bindingSource1.DataSource = db.TblNumuneler.Local;
+            //bindingSource1.DataSource = db.TblNumuneler.Local;
+            SetTodayDate();
         }
 
         private void BtnList_Click_1(object sender, EventArgs e)
         {
             Listele();
+        }
+        public void SetTodayDate()
+        {
+            DateTime dateTimeObj = DateTime.Parse($"01-01-{DateTime.Now.Year}");
+            dateFirst.EditValue = dateTimeObj;
+            dateLast.EditValue = DateTime.Today;
         }
     }
 }

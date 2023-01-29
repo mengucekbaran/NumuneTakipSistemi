@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNumune));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.BtnList = new DevExpress.XtraEditors.SimpleButton();
             this.dateLast = new DevExpress.XtraEditors.DateEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.dateFirst = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateLast.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateLast.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFirst.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFirst.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -56,6 +56,13 @@
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowFooter = true;
             // 
             // groupControl1
             // 
@@ -116,6 +123,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateFirst.Size = new System.Drawing.Size(128, 22);
             this.dateFirst.TabIndex = 3;
+            this.dateFirst.EditValueChanged += new System.EventHandler(this.dateFirst_EditValueChanged);
             // 
             // labelControl1
             // 
@@ -124,12 +132,6 @@
             this.labelControl1.Size = new System.Drawing.Size(47, 16);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "İlk Tarih";
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowFooter = true;
             // 
             // FrmNumune
             // 
@@ -140,7 +142,9 @@
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmNumune";
             this.Text = "Numuneler";
+            this.Load += new System.EventHandler(this.FrmNumune_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -148,7 +152,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateLast.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFirst.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFirst.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

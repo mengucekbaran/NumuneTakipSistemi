@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MikroDB_V16_MASKOMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ADAY_CARI_HESAPLAR">
+    <Key>
+      <PropertyRef Name="adaycr_Guid" />
+    </Key>
+    <Property Name="adaycr_Guid" Type="Guid" Nullable="false" />
+    <Property Name="adaycr_DBCno" Type="Int16" Nullable="false" />
+    <Property Name="adaycr_SpecRECno" Type="Int32" />
+    <Property Name="adaycr_iptal" Type="Boolean" />
+    <Property Name="adaycr_fileid" Type="Int16" />
+    <Property Name="adaycr_hidden" Type="Boolean" />
+    <Property Name="adaycr_kilitli" Type="Boolean" />
+    <Property Name="adaycr_degisti" Type="Boolean" />
+    <Property Name="adaycr_checksum" Type="Int32" />
+    <Property Name="adaycr_create_user" Type="Int16" />
+    <Property Name="adaycr_create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="adaycr_lastup_user" Type="Int16" />
+    <Property Name="adaycr_lastup_date" Type="DateTime" Precision="3" />
+    <Property Name="adaycr_special1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_special2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_special3" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_unvan1" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_unvan2" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_sektor_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_bolge_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_grup_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_temsilci_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_wwwadresi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_EMail" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_cadde" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_mahalle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_sokak" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_Semt" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_Apt_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_Daire_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_posta_kodu" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_ilce" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_il" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_ulke" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_adres_kodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_tel_ulke_kodu" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_tel_bolge_kodu" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr1_tel_no1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_cadde" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_mahalle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_sokak" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_Semt" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_Apt_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_Daire_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_posta_kodu" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_ilce" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_il" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_ulke" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_adres_kodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_tel_ulke_kodu" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_tel_bolge_kodu" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_adr2_tel_no1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili1_isim" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili1_dahili_telno" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili1_email_adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili1_cep_telno" Type="String" MaxLength="17" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili2_isim" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili2_dahili_telno" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili2_email_adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili2_cep_telno" Type="String" MaxLength="17" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili3_isim" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili3_dahili_telno" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili3_email_adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili3_cep_telno" Type="String" MaxLength="17" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili4_isim" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili4_dahili_telno" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili4_email_adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili4_cep_telno" Type="String" MaxLength="17" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili5_isim" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili5_dahili_telno" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili5_email_adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adaycr_yetkili5_cep_telno" Type="String" MaxLength="17" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CARI_HESAPLAR">
+    <Key>
+      <PropertyRef Name="cari_Guid" />
+    </Key>
+    <Property Name="cari_Guid" Type="Guid" Nullable="false" />
+    <Property Name="cari_DBCno" Type="Int16" Nullable="false" />
+    <Property Name="cari_SpecRECno" Type="Int32" />
+    <Property Name="cari_iptal" Type="Boolean" />
+    <Property Name="cari_fileid" Type="Int16" />
+    <Property Name="cari_hidden" Type="Boolean" />
+    <Property Name="cari_kilitli" Type="Boolean" />
+    <Property Name="cari_degisti" Type="Boolean" />
+    <Property Name="cari_checksum" Type="Int32" />
+    <Property Name="cari_create_user" Type="Int16" />
+    <Property Name="cari_create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cari_lastup_user" Type="Int16" />
+    <Property Name="cari_lastup_date" Type="DateTime" Precision="3" />
+    <Property Name="cari_special1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_special2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_special3" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_unvan1" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="cari_unvan2" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="cari_hareket_tipi" Type="Byte" />
+    <Property Name="cari_baglanti_tipi" Type="Byte" />
+    <Property Name="cari_stok_alim_cinsi" Type="Byte" />
+    <Property Name="cari_stok_satim_cinsi" Type="Byte" />
+    <Property Name="cari_muh_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_muh_kod1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_muh_kod2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_doviz_cinsi" Type="Byte" />
+    <Property Name="cari_doviz_cinsi1" Type="Byte" />
+    <Property Name="cari_doviz_cinsi2" Type="Byte" />
+    <Property Name="cari_vade_fark_yuz" Type="Double" />
+    <Property Name="cari_vade_fark_yuz1" Type="Double" />
+    <Property Name="cari_vade_fark_yuz2" Type="Double" />
+    <Property Name="cari_KurHesapSekli" Type="Byte" />
+    <Property Name="cari_vdaire_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cari_vdaire_no" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="cari_sicil_no" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="cari_VergiKimlikNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="cari_satis_fk" Type="Int32" />
+    <Property Name="cari_odeme_cinsi" Type="Byte" />
+    <Property Name="cari_odeme_gunu" Type="Byte" />
+    <Property Name="cari_odemeplan_no" Type="Int32" />
+    <Property Name="cari_opsiyon_gun" Type="Int32" />
+    <Property Name="cari_cariodemetercihi" Type="Byte" />
+    <Property Name="cari_fatura_adres_no" Type="Int32" />
+    <Property Name="cari_sevk_adres_no" Type="Int32" />
+    <Property Name="cari_banka_tcmb_kod1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_subekod1" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_ilkod1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_hesapno1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_swiftkodu1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_kod2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_subekod2" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_ilkod2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_hesapno2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_swiftkodu2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_kod3" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_subekod3" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_ilkod3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_hesapno3" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_swiftkodu3" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_kod4" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_subekod4" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_ilkod4" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_hesapno4" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_swiftkodu4" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_kod5" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_subekod5" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_ilkod5" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_hesapno5" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_swiftkodu5" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_kod6" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_subekod6" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_ilkod6" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_hesapno6" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_swiftkodu6" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_kod7" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_subekod7" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_ilkod7" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_hesapno7" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_swiftkodu7" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_kod8" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_subekod8" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_ilkod8" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_hesapno8" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_swiftkodu8" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_kod9" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_subekod9" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_ilkod9" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_hesapno9" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_swiftkodu9" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_kod10" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_subekod10" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_tcmb_ilkod10" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_hesapno10" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_banka_swiftkodu10" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_EftHesapNum" Type="Byte" />
+    <Property Name="cari_Ana_cari_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_satis_isk_kod" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_sektor_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_bolge_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_grup_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_temsilci_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_muhartikeli" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="cari_firma_acik_kapal" Type="Boolean" />
+    <Property Name="cari_BUV_tabi_fl" Type="Boolean" />
+    <Property Name="cari_cari_kilitli_flg" Type="Boolean" />
+    <Property Name="cari_etiket_bas_fl" Type="Boolean" />
+    <Property Name="cari_Detay_incele_flg" Type="Boolean" />
+    <Property Name="cari_efatura_fl" Type="Boolean" />
+    <Property Name="cari_POS_ongpesyuzde" Type="Double" />
+    <Property Name="cari_POS_ongtaksayi" Type="Double" />
+    <Property Name="cari_POS_ongIskOran" Type="Double" />
+    <Property Name="cari_kaydagiristarihi" Type="DateTime" Precision="3" />
+    <Property Name="cari_KabEdFCekTutar" Type="Double" />
+    <Property Name="cari_hal_caritip" Type="Byte" />
+    <Property Name="cari_HalKomYuzdesi" Type="Double" />
+    <Property Name="cari_TeslimSuresi" Type="Int16" />
+    <Property Name="cari_wwwadresi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="cari_EMail" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="cari_CepTel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="cari_VarsayilanGirisDepo" Type="Int32" />
+    <Property Name="cari_VarsayilanCikisDepo" Type="Int32" />
+    <Property Name="cari_Portal_Enabled" Type="Boolean" />
+    <Property Name="cari_Portal_PW" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="cari_BagliOrtaklisa_Firma" Type="Int32" />
+    <Property Name="cari_kampanyakodu" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_b_bakiye_degerlendirilmesin_fl" Type="Boolean" />
+    <Property Name="cari_a_bakiye_degerlendirilmesin_fl" Type="Boolean" />
+    <Property Name="cari_b_irsbakiye_degerlendirilmesin_fl" Type="Boolean" />
+    <Property Name="cari_a_irsbakiye_degerlendirilmesin_fl" Type="Boolean" />
+    <Property Name="cari_b_sipbakiye_degerlendirilmesin_fl" Type="Boolean" />
+    <Property Name="cari_a_sipbakiye_degerlendirilmesin_fl" Type="Boolean" />
+    <Property Name="cari_AvmBilgileri1KiraKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AvmBilgileri1TebligatSekli" Type="Byte" />
+    <Property Name="cari_AvmBilgileri2KiraKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AvmBilgileri2TebligatSekli" Type="Byte" />
+    <Property Name="cari_AvmBilgileri3KiraKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AvmBilgileri3TebligatSekli" Type="Byte" />
+    <Property Name="cari_AvmBilgileri4KiraKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AvmBilgileri4TebligatSekli" Type="Byte" />
+    <Property Name="cari_AvmBilgileri5KiraKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AvmBilgileri5TebligatSekli" Type="Byte" />
+    <Property Name="cari_AvmBilgileri6KiraKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AvmBilgileri6TebligatSekli" Type="Byte" />
+    <Property Name="cari_AvmBilgileri7KiraKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AvmBilgileri7TebligatSekli" Type="Byte" />
+    <Property Name="cari_AvmBilgileri8KiraKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AvmBilgileri8TebligatSekli" Type="Byte" />
+    <Property Name="cari_AvmBilgileri9KiraKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AvmBilgileri9TebligatSekli" Type="Byte" />
+    <Property Name="cari_AvmBilgileri10KiraKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AvmBilgileri10TebligatSekli" Type="Byte" />
+    <Property Name="cari_KrediRiskTakibiVar_flg" Type="Boolean" />
+    <Property Name="cari_ufrs_fark_muh_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_ufrs_fark_muh_kod1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_ufrs_fark_muh_kod2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_odeme_sekli" Type="Byte" />
+    <Property Name="cari_TeminatMekAlacakMuhKodu" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_TeminatMekAlacakMuhKodu1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_TeminatMekAlacakMuhKodu2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_TeminatMekBorcMuhKodu" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_TeminatMekBorcMuhKodu1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_TeminatMekBorcMuhKodu2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_VerilenDepozitoTeminatMuhKodu" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_VerilenDepozitoTeminatMuhKodu1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_VerilenDepozitoTeminatMuhKodu2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AlinanDepozitoTeminatMuhKodu" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AlinanDepozitoTeminatMuhKodu1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_AlinanDepozitoTeminatMuhKodu2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_def_efatura_cinsi" Type="Byte" />
+    <Property Name="cari_otv_tevkifatina_tabii_fl" Type="Boolean" />
+    <Property Name="cari_KEP_adresi" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="cari_efatura_baslangic_tarihi" Type="DateTime" Precision="3" />
+    <Property Name="cari_mutabakat_mail_adresi" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="cari_mersis_no" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_istasyon_cari_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_gonderionayi_sms" Type="Boolean" />
+    <Property Name="cari_gonderionayi_email" Type="Boolean" />
+    <Property Name="cari_eirsaliye_fl" Type="Boolean" />
+    <Property Name="cari_eirsaliye_baslangic_tarihi" Type="DateTime" Precision="3" />
+    <Property Name="cari_vergidairekodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="cari_CRM_sistemine_aktar_fl" Type="Boolean" />
+    <Property Name="cari_efatura_xslt_dosya" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="cari_pasaport_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="cari_kisi_kimlik_bilgisi_aciklama_turu" Type="Byte" />
+    <Property Name="cari_kisi_kimlik_bilgisi_diger_aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cari_uts_kurum_no" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="cari_kamu_kurumu_fl" Type="Boolean" />
+    <Property Name="cari_earsiv_xslt_dosya" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="cari_Perakende_fl" Type="Boolean" />
+    <Property Name="cari_yeni_dogan_mi" Type="Boolean" />
+    <Property Name="cari_eirsaliye_xslt_dosya" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="cari_def_eirsaliye_cinsi" Type="Byte" />
+    <Property Name="cari_ozel_butceli_kurum_carisi" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_nakakincelenmesi" Type="Boolean" />
+    <Property Name="cari_vergimukellefidegil_mi" Type="Boolean" />
+    <Property Name="cari_tasiyicifirma_cari_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_nacekodu_1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_nacekodu_2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_nacekodu_3" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_sirket_turu" Type="Byte" />
+    <Property Name="cari_baba_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cari_faal_terk" Type="Byte" />
+  </EntityType>
+  <EntityType Name="STOK_ALT_GRUPLARI">
+    <Key>
+      <PropertyRef Name="sta_Guid" />
+    </Key>
+    <Property Name="sta_Guid" Type="Guid" Nullable="false" />
+    <Property Name="sta_DBCno" Type="Int16" Nullable="false" />
+    <Property Name="sta_SpecRECno" Type="Int32" />
+    <Property Name="sta_iptal" Type="Boolean" />
+    <Property Name="sta_fileid" Type="Int16" />
+    <Property Name="sta_hidden" Type="Boolean" />
+    <Property Name="sta_kilitli" Type="Boolean" />
+    <Property Name="sta_degisti" Type="Boolean" />
+    <Property Name="sta_checksum" Type="Int32" />
+    <Property Name="sta_create_user" Type="Int16" />
+    <Property Name="sta_create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sta_lastup_user" Type="Int16" />
+    <Property Name="sta_lastup_date" Type="DateTime" Precision="3" />
+    <Property Name="sta_special1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="sta_special2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="sta_special3" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="sta_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sta_isim" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="sta_ana_grup_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="STOK_ANA_GRUPLARI">
+    <Key>
+      <PropertyRef Name="san_Guid" />
+    </Key>
+    <Property Name="san_Guid" Type="Guid" Nullable="false" />
+    <Property Name="san_DBCno" Type="Int16" Nullable="false" />
+    <Property Name="san_SpecRECno" Type="Int32" />
+    <Property Name="san_iptal" Type="Boolean" />
+    <Property Name="san_fileid" Type="Int16" />
+    <Property Name="san_hidden" Type="Boolean" />
+    <Property Name="san_kilitli" Type="Boolean" />
+    <Property Name="san_degisti" Type="Boolean" />
+    <Property Name="san_checksum" Type="Int32" />
+    <Property Name="san_create_user" Type="Int16" />
+    <Property Name="san_create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="san_lastup_user" Type="Int16" />
+    <Property Name="san_lastup_date" Type="DateTime" Precision="3" />
+    <Property Name="san_special1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="san_special2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="san_special3" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="san_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="san_isim" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="STOKLAR">
+    <Key>
+      <PropertyRef Name="sto_kod" />
+    </Key>
+    <Property Name="sto_Guid" Type="Guid" Nullable="false" />
+    <Property Name="sto_DBCno" Type="Int16" Nullable="false" />
+    <Property Name="sto_SpecRECno" Type="Int32" />
+    <Property Name="sto_iptal" Type="Boolean" />
+    <Property Name="sto_fileid" Type="Int16" />
+    <Property Name="sto_hidden" Type="Boolean" />
+    <Property Name="sto_kilitli" Type="Boolean" />
+    <Property Name="sto_degisti" Type="Boolean" />
+    <Property Name="sto_checksum" Type="Int32" />
+    <Property Name="sto_create_user" Type="Int16" />
+    <Property Name="sto_create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sto_lastup_user" Type="Int16" />
+    <Property Name="sto_lastup_date" Type="DateTime" Precision="3" />
+    <Property Name="sto_special1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="sto_special2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="sto_special3" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="sto_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sto_isim" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="sto_kisa_ismi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sto_yabanci_isim" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="sto_sat_cari_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_cins" Type="Byte" />
+    <Property Name="sto_doviz_cinsi" Type="Byte" />
+    <Property Name="sto_detay_takip" Type="Byte" />
+    <Property Name="sto_birim1_ad" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="sto_birim1_katsayi" Type="Double" />
+    <Property Name="sto_birim1_agirlik" Type="Double" />
+    <Property Name="sto_birim1_en" Type="Double" />
+    <Property Name="sto_birim1_boy" Type="Double" />
+    <Property Name="sto_birim1_yukseklik" Type="Double" />
+    <Property Name="sto_birim1_dara" Type="Double" />
+    <Property Name="sto_birim2_ad" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="sto_birim2_katsayi" Type="Double" />
+    <Property Name="sto_birim2_agirlik" Type="Double" />
+    <Property Name="sto_birim2_en" Type="Double" />
+    <Property Name="sto_birim2_boy" Type="Double" />
+    <Property Name="sto_birim2_yukseklik" Type="Double" />
+    <Property Name="sto_birim2_dara" Type="Double" />
+    <Property Name="sto_birim3_ad" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="sto_birim3_katsayi" Type="Double" />
+    <Property Name="sto_birim3_agirlik" Type="Double" />
+    <Property Name="sto_birim3_en" Type="Double" />
+    <Property Name="sto_birim3_boy" Type="Double" />
+    <Property Name="sto_birim3_yukseklik" Type="Double" />
+    <Property Name="sto_birim3_dara" Type="Double" />
+    <Property Name="sto_birim4_ad" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="sto_birim4_katsayi" Type="Double" />
+    <Property Name="sto_birim4_agirlik" Type="Double" />
+    <Property Name="sto_birim4_en" Type="Double" />
+    <Property Name="sto_birim4_boy" Type="Double" />
+    <Property Name="sto_birim4_yukseklik" Type="Double" />
+    <Property Name="sto_birim4_dara" Type="Double" />
+    <Property Name="sto_muh_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_muh_Iade_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_muh_sat_muh_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_muh_satIadmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_muh_sat_isk_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_muh_aIiskmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_muh_satmalmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_yurtdisi_satmuhk" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_ilavemasmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_yatirimtesmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_depsatmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_depsatmalmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_bagortsatmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_bagortsatIadmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_bagortsatIskmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_satfiyfarkmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_yurtdisisatmalmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_bagortsatmalmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_sifirbedsatmalmuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_ihrackayitlisatismuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_ihrackayitlisatismaliyetimuhkod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_karorani" Type="Double" />
+    <Property Name="sto_min_stok" Type="Double" />
+    <Property Name="sto_siparis_stok" Type="Double" />
+    <Property Name="sto_max_stok" Type="Double" />
+    <Property Name="sto_ver_sip_birim" Type="Byte" />
+    <Property Name="sto_al_sip_birim" Type="Byte" />
+    <Property Name="sto_siparis_sure" Type="Int16" />
+    <Property Name="sto_perakende_vergi" Type="Byte" />
+    <Property Name="sto_toptan_vergi" Type="Byte" />
+    <Property Name="sto_yer_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_elk_etk_tipi" Type="Byte" />
+    <Property Name="sto_raf_etiketli" Type="Byte" />
+    <Property Name="sto_etiket_bas" Type="Byte" />
+    <Property Name="sto_satis_dursun" Type="Byte" />
+    <Property Name="sto_siparis_dursun" Type="Byte" />
+    <Property Name="sto_malkabul_dursun" Type="Byte" />
+    <Property Name="sto_malkabul_gun1" Type="Boolean" />
+    <Property Name="sto_malkabul_gun2" Type="Boolean" />
+    <Property Name="sto_malkabul_gun3" Type="Boolean" />
+    <Property Name="sto_malkabul_gun4" Type="Boolean" />
+    <Property Name="sto_malkabul_gun5" Type="Boolean" />
+    <Property Name="sto_malkabul_gun6" Type="Boolean" />
+    <Property Name="sto_malkabul_gun7" Type="Boolean" />
+    <Property Name="sto_siparis_gun1" Type="Boolean" />
+    <Property Name="sto_siparis_gun2" Type="Boolean" />
+    <Property Name="sto_siparis_gun3" Type="Boolean" />
+    <Property Name="sto_siparis_gun4" Type="Boolean" />
+    <Property Name="sto_siparis_gun5" Type="Boolean" />
+    <Property Name="sto_siparis_gun6" Type="Boolean" />
+    <Property Name="sto_siparis_gun7" Type="Boolean" />
+    <Property Name="sto_iskon_yapilamaz" Type="Boolean" />
+    <Property Name="sto_tasfiyede" Type="Boolean" />
+    <Property Name="sto_alt_grup_no" Type="Int16" />
+    <Property Name="sto_kategori_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_urun_sorkod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_altgrup_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_anagrup_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_uretici_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_sektor_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_reyon_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_muhgrup_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_ambalaj_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_marka_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_beden_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_renk_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_model_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_sezon_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_hammadde_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_prim_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_kalkon_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_paket_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_pozisyonbayrak_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_mkod_artik" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="sto_kasa_tarti_fl" Type="Boolean" />
+    <Property Name="sto_bedenli_takip" Type="Boolean" />
+    <Property Name="sto_renkDetayli" Type="Boolean" />
+    <Property Name="sto_miktarondalikli_fl" Type="Boolean" />
+    <Property Name="sto_pasif_fl" Type="Boolean" />
+    <Property Name="sto_eksiyedusebilir_fl" Type="Boolean" />
+    <Property Name="sto_GtipNo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_puan" Type="Double" />
+    <Property Name="sto_komisyon_hzmkodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_komisyon_orani" Type="Double" />
+    <Property Name="sto_otvuygulama" Type="Byte" />
+    <Property Name="sto_otvtutar" Type="Double" />
+    <Property Name="sto_otvliste" Type="Byte" />
+    <Property Name="sto_otvbirimi" Type="Byte" />
+    <Property Name="sto_prim_orani" Type="Double" />
+    <Property Name="sto_garanti_sure" Type="Int16" />
+    <Property Name="sto_garanti_sure_tipi" Type="Byte" />
+    <Property Name="sto_iplik_Ne_no" Type="Double" />
+    <Property Name="sto_standartmaliyet" Type="Double" />
+    <Property Name="sto_kanban_kasa_miktari" Type="Double" />
+    <Property Name="sto_oivuygulama" Type="Byte" />
+    <Property Name="sto_zraporu_stoku_fl" Type="Boolean" />
+    <Property Name="sto_maxiskonto_orani" Type="Double" />
+    <Property Name="sto_detay_takibinde_depo_kontrolu_fl" Type="Boolean" />
+    <Property Name="sto_tamamlayici_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_oto_barkod_acma_sekli" Type="Byte" />
+    <Property Name="sto_oto_barkod_kod_yapisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sto_KasaIskontoOrani" Type="Double" />
+    <Property Name="sto_KasaIskontoTutari" Type="Double" />
+    <Property Name="sto_gelirpayi" Type="Double" />
+    <Property Name="sto_oivtutar" Type="Double" />
+    <Property Name="sto_oivturu" Type="Byte" />
+    <Property Name="sto_giderkodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="sto_oivvergipntr" Type="Byte" />
+    <Property Name="sto_Tevkifat_turu" Type="Byte" />
+    <Property Name="sto_SKT_fl" Type="Boolean" />
+    <Property Name="sto_terazi_SKT" Type="Int16" />
+    <Property Name="sto_RafOmru" Type="Int16" />
+    <Property Name="sto_KasadaTaksitlenebilir_fl" Type="Boolean" />
+    <Property Name="sto_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_iade_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_yurticisat_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_satiade_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_satisk_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_alisk_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_satmal_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_yurtdisisat_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_ilavemas_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_yatirimtes_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_depsat_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_depsatmal_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_bagortsat_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_bagortsatiade_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_bagortsatisk_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_satfiyfark_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_yurtdisisatmal_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_bagortsatmal_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_sifirbedsatmal_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_uretimmaliyet_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_uretimkapasite_ufrsfark_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_degerdusuklugu_ufrs_kod" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="sto_halrusumyudesi" Type="Double" />
+    <Property Name="sto_webe_gonderilecek_fl" Type="Boolean" />
+    <Property Name="sto_min_stok_belirleme_gun" Type="Int16" />
+    <Property Name="sto_sip_stok_belirleme_gun" Type="Int16" />
+    <Property Name="sto_max_stok_belirleme_gun" Type="Int16" />
+    <Property Name="sto_sev_bel_opr_degerlendime_fl" Type="Boolean" />
+    <Property Name="sto_otv_tevkifat_turu" Type="Byte" />
+    <Property Name="sto_kay_plan_degerlendir" Type="Byte" />
+    <Property Name="sto_CRM_sistemine_aktar_fl" Type="Boolean" />
+    <Property Name="sto_plu_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sto_yerli_yabanci" Type="Byte" />
+    <Property Name="sto_mensei" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="sto_oto_parti_lot_kod_fl" Type="Boolean" />
+    <Property Name="sto_efat_sinif_kodu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="sto_efat_sinif_listesi" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="sto_efat_sinif_versiyonu" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="sto_utssisteminegonderilsin_fl" Type="Boolean" />
+    <Property Name="sto_posetbeyannamekonusu_fl" Type="Boolean" />
+    <Property Name="sto_STT_oncesi_kaldirma" Type="Int16" />
+    <Property Name="sto_toplam_rafomru" Type="Int16" />
+    <Property Name="sto_fiyat_kasada_belirlenir_fl" Type="Boolean" />
+    <Property Name="sto_franchise_siparis_dursun" Type="Byte" />
+    <Property Name="sto_GEKAP" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="sto_GEKAP_birim" Type="Byte" />
+    <Property Name="sto_resim_url" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="sto_GEKAP_depozitoonaykodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="sto_cabuk_bozulabilen_urun_fl" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="URUNLER">
+    <Key>
+      <PropertyRef Name="uru_Guid" />
+    </Key>
+    <Property Name="uru_Guid" Type="Guid" Nullable="false" />
+    <Property Name="uru_DBCno" Type="Int16" Nullable="false" />
+    <Property Name="uru_SpecRECno" Type="Int32" />
+    <Property Name="uru_iptal" Type="Boolean" />
+    <Property Name="uru_fileid" Type="Int16" />
+    <Property Name="uru_hidden" Type="Boolean" />
+    <Property Name="uru_kilitli" Type="Boolean" />
+    <Property Name="uru_degisti" Type="Boolean" />
+    <Property Name="uru_checksum" Type="Int32" />
+    <Property Name="uru_create_user" Type="Int16" />
+    <Property Name="uru_create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="uru_lastup_user" Type="Int16" />
+    <Property Name="uru_lastup_date" Type="DateTime" Precision="3" />
+    <Property Name="uru_special1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="uru_special2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="uru_special3" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="uru_stok_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="uru_gider1" Type="Double" />
+    <Property Name="uru_gider2" Type="Double" />
+    <Property Name="uru_gider3" Type="Double" />
+    <Property Name="uru_gider4" Type="Double" />
+    <Property Name="uru_gider5" Type="Double" />
+    <Property Name="uru_tip" Type="Byte" />
+    <Property Name="uru_max_fire_yuz" Type="Double" />
+    <Property Name="uru_min_fire_yuz" Type="Double" />
+    <Property Name="uru_fasonmaliyet" Type="Double" />
+    <Property Name="uru_partimiktari" Type="Double" />
+    <Property Name="uru_isemriID" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="uru_uretimortakcarpani" Type="Double" />
+    <Property Name="uru_uretimsekli" Type="Byte" />
+    <Property Name="uru_formdosyaadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="uru_excdosyaadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="uru_ongorulendepo" Type="Int32" />
+    <Property Name="uru_gider6" Type="Double" />
+    <Property Name="uru_gider7" Type="Double" />
+    <Property Name="uru_gider8" Type="Double" />
+    <Property Name="uru_gider9" Type="Double" />
+    <Property Name="uru_gider10" Type="Double" />
+    <Property Name="uru_ozel_tipi" Type="Byte" />
+    <Property Name="uru_sabitmlyt_anauruncarpan" Type="Double" />
+    <Property Name="uru_masterrecete" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="uru_SorumlulukMerkezi" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="uru_varsayilanismerkezi" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="uru_Muhgrup_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="uru_masterkalip_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="uru_recete_ismi1" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="uru_recete_ismi2" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="uru_recete_ismi3" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="uru_recete_ismi4" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="uru_recete_ismi5" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="uru_varsayilan_recete_tanim_kodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="uru_varsayilan_recete_cins" Type="Byte" />
+  </EntityType>
+  <EntityContainer Name="MikroDB_V16_MASKOM" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADAY_CARI_HESAPLAR" EntityType="Self.ADAY_CARI_HESAPLAR" />
+    <EntitySet Name="CARI_HESAPLAR" EntityType="Self.CARI_HESAPLAR" />
+    <EntitySet Name="STOK_ALT_GRUPLARI" EntityType="Self.STOK_ALT_GRUPLARI" />
+    <EntitySet Name="STOK_ANA_GRUPLARI" EntityType="Self.STOK_ANA_GRUPLARI" />
+    <EntitySet Name="STOKLAR" EntityType="Self.STOKLAR" />
+    <EntitySet Name="URUNLER" EntityType="Self.URUNLER" />
+  </EntityContainer>
+</Schema>

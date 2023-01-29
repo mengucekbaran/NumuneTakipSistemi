@@ -82,8 +82,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\ADAY_CARI_HESAPLAR.cs">
+      <DependentUpon>Maskom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CARI_HESAPLAR.cs">
+      <DependentUpon>Maskom.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\ListNumune_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Maskom.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Maskom.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Maskom.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Maskom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Maskom.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Maskom.edmx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -100,11 +121,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Entities\STOKLAR.cs">
+      <DependentUpon>Maskom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\STOK_ALT_GRUPLARI.cs">
+      <DependentUpon>Maskom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\STOK_ANA_GRUPLARI.cs">
+      <DependentUpon>Maskom.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\TblLab.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\TblNumuneler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\URUNLER.cs">
+      <DependentUpon>Maskom.tt</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -159,6 +192,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="Entities\Maskom.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Maskom.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entities\Maskom.edmx.diagram">
+      <DependentUpon>Maskom.edmx</DependentUpon>
+    </None>
     <None Include="Entities\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
@@ -189,6 +229,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Entities\Maskom.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Maskom.edmx</DependentUpon>
+      <LastGenOutput>Maskom.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\Maskom.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Maskom.edmx</DependentUpon>
+      <LastGenOutput>Maskom.cs</LastGenOutput>
+    </Content>
     <Content Include="Entities\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
