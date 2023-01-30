@@ -21,29 +21,35 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nmn_kod" Type="nvarchar" MaxLength="25" />
-    <Property Name="nmn_tarih" Type="datetime" />
+    <Property Name="nmn_create_date" Type="datetime" Nullable="false" />
+    <Property Name="nmn_lastup_date" Type="datetime" Nullable="false" />
+    <Property Name="nmn_kod" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="nmn_cari_kod" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="nmn_cari_unvan" Type="nvarchar" MaxLength="120" Nullable="false" />
+    <Property Name="nmn_tarih" Type="datetime" Nullable="false" />
     <Property Name="nmn_cari_seviye" Type="nvarchar" MaxLength="25" />
     <Property Name="nmn_aciliyet" Type="nvarchar" MaxLength="25" />
-    <Property Name="nmn_aday_cari" Type="nvarchar" MaxLength="25" />
-    <Property Name="nmn_aday_carikonum" Type="nvarchar" MaxLength="25" />
-    <Property Name="nmn_sip_miktar" Type="int" />
-    <Property Name="nmn_deneme_miktar" Type="int" />
-    <Property Name="nmn_hdf_fiyat" Type="int" />
+    <Property Name="nmn_adaycari_kod" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="nmn_adaycari_unvan" Type="nvarchar" MaxLength="120" Nullable="false" />
+    <Property Name="nmn_adaycari_konum" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="nmn_sip_miktar" Type="float" Nullable="false" />
+    <Property Name="nmn_deneme_miktar" Type="float" Nullable="false" />
+    <Property Name="nmn_hdf_fiyat" Type="float" Nullable="false" />
     <Property Name="nmn_fiyat_cins" Type="nvarchar" MaxLength="25" />
     <Property Name="nmn_mus_yetkili" Type="nvarchar" MaxLength="50" />
-    <Property Name="nmn_is_merkezi" Type="nvarchar" MaxLength="25" />
-    <Property Name="nmn_rkpcari_ad" Type="nvarchar" MaxLength="120" />
+    <Property Name="nmn_urun_grubu" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="nmn_rkpcari_unvan" Type="nvarchar" MaxLength="120" />
     <Property Name="nmn_rkpcari_urunkod" Type="nvarchar" MaxLength="25" />
     <Property Name="nmn_tur" Type="nvarchar" MaxLength="50" />
     <Property Name="nmn_uretilecek_urun" Type="nvarchar" MaxLength="25" />
     <Property Name="nmn_hammadde" Type="nvarchar" MaxLength="25" />
-    <Property Name="nmn_mfi" Type="float" />
-    <Property Name="nmn_oran" Type="int" />
+    <Property Name="nmn_mfi" Type="float" Nullable="false" />
+    <Property Name="nmn_oran" Type="float" Nullable="false" />
     <Property Name="nmn_gida" Type="nvarchar" MaxLength="25" />
     <Property Name="nmn_reach_rohs" Type="nvarchar" MaxLength="25" />
-    <Property Name="nmn_termintarih" Type="datetime" />
-    <Property Name="nmn_aciklama" Type="nvarchar(max)" />
+    <Property Name="nmn_termin_tarih" Type="datetime" Nullable="false" />
+    <Property Name="nmn_aciklama" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nmn_urungrup_kod" Type="nvarchar" MaxLength="25" />
   </EntityType>
   <Function Name="ListNumune" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ilk_tarih" Type="datetime2" Mode="In" />

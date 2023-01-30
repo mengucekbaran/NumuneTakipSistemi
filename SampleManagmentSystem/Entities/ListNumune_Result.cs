@@ -14,28 +14,33 @@ namespace SampleManagmentSystem.Entities
     public partial class ListNumune_Result
     {
         public int id { get; set; }
+        public System.DateTime nmn_create_date { get; set; }
+        public System.DateTime nmn_lastup_date { get; set; }
         public string nmn_kod { get; set; }
-        public Nullable<System.DateTime> nmn_tarih { get; set; }
+        public string nmn_cari_kod { get; set; }
+        public string nmn_cari_unvan { get; set; }
+        public System.DateTime nmn_tarih { get; set; }
         public string nmn_cari_seviye { get; set; }
         public string nmn_aciliyet { get; set; }
-        public string nmn_aday_cari { get; set; }
-        public string nmn_aday_carikonum { get; set; }
-        public Nullable<int> nmn_sip_miktar { get; set; }
-        public Nullable<int> nmn_deneme_miktar { get; set; }
-        public Nullable<int> nmn_hdf_fiyat { get; set; }
+        public string nmn_adaycari_kod { get; set; }
+        public string nmn_adaycari_unvan { get; set; }
+        public string nmn_adaycari_konum { get; set; }
+        public double nmn_sip_miktar { get; set; }
+        public double nmn_deneme_miktar { get; set; }
+        public double nmn_hdf_fiyat { get; set; }
         public string nmn_fiyat_cins { get; set; }
         public string nmn_mus_yetkili { get; set; }
-        public string nmn_is_merkezi { get; set; }
-        public string nmn_rkpcari_ad { get; set; }
+        public string nmn_urun_grubu { get; set; }
+        public string nmn_rkpcari_unvan { get; set; }
         public string nmn_rkpcari_urunkod { get; set; }
         public string nmn_tur { get; set; }
         public string nmn_uretilecek_urun { get; set; }
         public string nmn_hammadde { get; set; }
-        public Nullable<double> nmn_mfi { get; set; }
-        public Nullable<int> nmn_oran { get; set; }
+        public double nmn_mfi { get; set; }
+        public double nmn_oran { get; set; }
         public string nmn_gida { get; set; }
         public string nmn_reach_rohs { get; set; }
-        public Nullable<System.DateTime> nmn_termintarih { get; set; }
+        public System.DateTime nmn_termin_tarih { get; set; }
         public string nmn_aciklama { get; set; }
     }
 }

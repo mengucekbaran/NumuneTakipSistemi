@@ -14,10 +14,52 @@ namespace SampleManagmentSystem.Forms
 {
     public partial class NewNumune : Form
     {
+        MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
+        NUMUNE_TAKİPEntities db = new NUMUNE_TAKİPEntities();
         public NewNumune()
         {
             InitializeComponent();
+            SetTodayDate();
         }
+        public NewNumune(int id) //UPDATE
+        {
+            InitializeComponent();
+            TblNumuneler nmn = db.TblNumuneler.Find(id);
+            if (nmn.id == id)
+            {
+                //BUTONLARIN GÖRÜNÜRLÜĞÜNÜ AYARLAMA
+                BtnKaydet.Visible = false;
+                BtnGuncelle.Visible = true;
+
+                txtNmnKod.EditValue = nmn.nmn_kod;
+                lookUpCariAd.EditValue = nmn.nmn_cari_kod;
+                lookUpCariSvy.EditValue = nmn.nmn_cari_seviye;
+                lookUpAdayCari.EditValue = nmn.nmn_adaycari_kod;
+                txtSipMktr.EditValue = nmn.nmn_sip_miktar;
+                txtHedefFiyat.EditValue = nmn.nmn_hdf_fiyat;
+                txtMusYetkili.EditValue = nmn.nmn_mus_yetkili;
+                txtRkpUnvan.EditValue = nmn.nmn_rkpcari_unvan;
+                lookUpNmnTur.EditValue = nmn.nmn_tur;
+                txtKullanımOran.EditValue = nmn.nmn_oran;
+                lookUpHammadde.EditValue = nmn.nmn_hammadde;
+                txtMfi.EditValue = nmn.nmn_mfi;
+                txtAlisTarih.EditValue = nmn.nmn_tarih;
+                txtTerminTarih.EditValue = nmn.nmn_termin_tarih;
+                radioGroupCariKnm.EditValue = nmn.nmn_adaycari_konum;
+                txtDenemeMktr.EditValue = nmn.nmn_deneme_miktar;
+                lookUpUrunGrubu.EditValue = nmn.nmn_urungrup_kod;
+                lookUpDoviz.EditValue = nmn.nmn_fiyat_cins;
+                txtRkpUrunKod.EditValue = nmn.nmn_rkpcari_urunkod;
+                txtUretilecekUrun.EditValue = nmn.nmn_uretilecek_urun;
+                lookUpAciliyet.EditValue = nmn.nmn_aciliyet;
+                radioGroupGida.EditValue = nmn.nmn_gida;
+                radioGroupReachRohs.EditValue = nmn.nmn_reach_rohs;
+                txtAciklama.EditValue = nmn.nmn_aciklama;
+
+
+            }
+        }
+
         // CHECKBOX İSLEMLERİ
         //*************************************************************************************
         //private void chEdit1_CheckedChanged(object sender, EventArgs e)
@@ -108,17 +150,22 @@ namespace SampleManagmentSystem.Forms
             this.Close();
         }
         // KAYDET BUTONUNA TIKLANDIĞINDA YAPILACAKLAR
-        NUMUNE_TAKİPEntities db = new NUMUNE_TAKİPEntities();
+
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             TblNumuneler nmn = new TblNumuneler();
+            nmn.nmn_create_date = DateTime.Now;
+            nmn.nmn_lastup_date = DateTime.Now;
             nmn.nmn_aciklama = txtAciklama.Text;
             nmn.nmn_aciliyet = lookUpAciliyet.Text;
-            nmn.nmn_aday_cari = txtAdayCari.Text;
-            nmn.nmn_aday_carikonum = lookUpCariKnm.Text;
+            nmn.nmn_adaycari_kod = lookUpAdayCari.EditValue.ToString(); ; 
+            nmn.nmn_adaycari_unvan = lookUpAdayCari.Text;
+            nmn.nmn_adaycari_konum = radioGroupCariKnm.Properties.Items[radioGroupCariKnm.SelectedIndex].Description; ;
+            nmn.nmn_cari_kod = lookUpCariAd.EditValue.ToString(); 
+            nmn.nmn_cari_unvan = lookUpCariAd.Text;
             nmn.nmn_cari_seviye = lookUpCariSvy.Text;
-            if (int.TryParse(txtDenemeMktr.EditValue.ToString(), out int result))
-                nmn.nmn_deneme_miktar = result;
+            if (int.TryParse(txtDenemeMktr.EditValue.ToString(), out int deneme))
+                nmn.nmn_deneme_miktar = deneme;
             else
                 MessageBox.Show("Lütfen sayısal bir değer giriniz.");
             nmn.nmn_fiyat_cins = lookUpDoviz.Text;
@@ -140,83 +187,137 @@ namespace SampleManagmentSystem.Forms
             //nmn.nmn_hammadde = temp;
             nmn.nmn_hammadde = lookUpHammadde.Text;
 
-            if (int.TryParse(txtHedefFiyat.EditValue.ToString(), out int result2))
-                nmn.nmn_hdf_fiyat = result2;
+            if (int.TryParse(txtHedefFiyat.EditValue.ToString(), out int hdfFiyat))
+                nmn.nmn_hdf_fiyat = hdfFiyat;
             else
                 MessageBox.Show("Lütfen sayısal bir değer giriniz.");
-            nmn.nmn_is_merkezi = lookUpIsMerkez.Text;
+            nmn.nmn_urun_grubu = lookUpUrunGrubu.Text;
+            nmn.nmn_urungrup_kod = lookUpUrunGrubu.EditValue.ToString();
             nmn.nmn_kod = txtNmnKod.Text;
             //MFI VE HAMMADDE SORULACAK
-            nmn.nmn_mfi = 0;
+            if (int.TryParse(txtMfi.EditValue.ToString(), out int mfi))
+                nmn.nmn_mfi = mfi;
+            else
+                MessageBox.Show("Lütfen sayısal bir değer giriniz.");
             //nmn.nmn_mfi = txtEdit1 + ',' + txtEdit2 + ',' + txtEdit3 + ',' + txtEdit4 + ',' + txtEdit5
             //                + ',' + txtEdit6 + ',' + txtEdit7 + ',' + txtEdit8 + ',' + txtEdit9;
             nmn.nmn_mus_yetkili = txtMusYetkili.Text;
-            if (int.TryParse(txtKullanımOran.EditValue.ToString(), out int result3))
-                nmn.nmn_oran = result3;
+            if (int.TryParse(txtKullanımOran.EditValue.ToString(), out int oran))
+                nmn.nmn_oran = oran;
             else
                 MessageBox.Show("Lütfen sayısal bir değer giriniz.");
-            nmn.nmn_reach_rohs = radioGroupReachRohs.Properties.Items[radioGroupGida.SelectedIndex].Description;
-            nmn.nmn_rkpcari_ad = txtRkpAd.Text;
+            nmn.nmn_reach_rohs = radioGroupReachRohs.Properties.Items[radioGroupReachRohs.SelectedIndex].Description;
+            nmn.nmn_rkpcari_unvan = txtRkpUnvan.Text;
             nmn.nmn_rkpcari_urunkod = txtRkpUrunKod.Text;
             
-            if (int.TryParse(txtSipMktr.EditValue.ToString(), out int result4))
-                nmn.nmn_sip_miktar = result3;
+            if (int.TryParse(txtSipMktr.EditValue.ToString(), out int sipMktr))
+                nmn.nmn_sip_miktar = sipMktr;
             else
                 MessageBox.Show("Lütfen sayısal bir değer giriniz.");
             nmn.nmn_tarih = txtAlisTarih.DateTime;
-            nmn.nmn_termintarih = txtTerminTarih.DateTime;
+            nmn.nmn_termin_tarih = txtTerminTarih.DateTime;
             nmn.nmn_tur = lookUpNmnTur.Text;
             nmn.nmn_uretilecek_urun = txtUretilecekUrun.Text;
-            //nmn.nmn_gida = txtGıdayaUygunMu.Text;
             db.TblNumuneler.Add(nmn);
             db.SaveChanges();
             XtraMessageBox.Show("Numune Başarılı Bir Şekilde Tanımlandı",
                 "Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            this.Close();
         }
 
-        MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
+        
         //SAYFA YÜKLENDİĞİNDE YAPILACAKLAR
         private void NewNumune_Load(object sender, EventArgs e)
         {
-            var degerler = (from x in db.TblLab
-                            select new
-                            {
-                                x.id,
-                                x.lab_aciklama
-                            }).ToList();
-            lookUpCariKnm.Properties.ValueMember = "id";
-            lookUpCariKnm.Properties.DisplayMember = "lab_aciklama";
-            lookUpCariKnm.Properties.DataSource = degerler;
-            lookUpCariSvy.Properties.ValueMember = "id";
-            lookUpCariSvy.Properties.DisplayMember = "lab_aciklama";
-            lookUpCariSvy.Properties.DataSource = degerler;
-            lookUpDoviz.Properties.ValueMember = "id";
-            lookUpDoviz.Properties.DisplayMember = "lab_aciklama";
-            lookUpDoviz.Properties.DataSource = degerler;
-            lookUpIsMerkez.Properties.ValueMember = "id";
-            lookUpIsMerkez.Properties.DisplayMember = "lab_aciklama";
-            lookUpIsMerkez.Properties.DataSource = degerler;
-            lookUpHammadde.Properties.ValueMember = "id";
-            lookUpHammadde.Properties.DisplayMember = "lab_aciklama";
-            lookUpHammadde.Properties.DataSource = degerler;
-            lookUpNmnTur.Properties.ValueMember = "id";
-            lookUpNmnTur.Properties.DisplayMember = "lab_aciklama";
-            lookUpNmnTur.Properties.DataSource = degerler;
-            lookUpAciliyet.Properties.ValueMember = "id";
-            lookUpAciliyet.Properties.DisplayMember = "lab_aciklama";
-            lookUpAciliyet.Properties.DataSource = degerler;
-
+            //TABLES
+            //******************************************************************************************************
+            // ACİLİYET 
+            DataTable dtAciliyet = new DataTable();
+            dtAciliyet.Columns.Add("Deger", typeof(string));
+            dtAciliyet.Rows.Add("Normal");
+            dtAciliyet.Rows.Add("Acil");
+            dtAciliyet.Rows.Add("Çok Acil");
+            lookUpShow(lookUpAciliyet, dtAciliyet);
+            //DÖVİZ
+            DataTable dtDoviz = new DataTable();
+            dtDoviz.Columns.Add("Deger", typeof(string));
+            dtDoviz.Rows.Add("TL");
+            dtDoviz.Rows.Add("DOLAR");
+            dtDoviz.Rows.Add("EURO");
+            lookUpShow(lookUpDoviz, dtDoviz);
+            //TÜR - NUMUNENİN GELME ŞEKLİ
+            DataTable dtTur= new DataTable();
+            dtTur.Columns.Add("Deger", typeof(string));
+            dtTur.Rows.Add("Masterbatch");
+            dtTur.Rows.Add("Uygulama Numunesi");
+            dtTur.Rows.Add("Pantolon Veya Ral");
+            dtTur.Rows.Add("Mail veya Telefon ile Fotoğraf");
+            dtTur.Rows.Add("Müşteri Hammaddesi ile yapılacaktır");
+            lookUpShow(lookUpNmnTur, dtTur);
+            //HAMMADDE
+            DataTable dtHammadde = new DataTable();
+            dtHammadde.Columns.Add("Deger", typeof(string));
+            dtHammadde.Rows.Add("LDPE");
+            dtHammadde.Rows.Add("LLDPE");
+            dtHammadde.Rows.Add("PP HOMOPOL");
+            dtHammadde.Rows.Add("PP COPOL");
+            dtHammadde.Rows.Add("HDPE");
+            dtHammadde.Rows.Add("ABS");
+            dtHammadde.Rows.Add("PC");
+            dtHammadde.Rows.Add("PS");
+            dtHammadde.Rows.Add("ANTİŞOK");
+            dtHammadde.Rows.Add("PA6,PA66 VB.");
+            dtHammadde.Rows.Add("PMMA veya SAN");
+            dtHammadde.Rows.Add("DİĞER PET");
+            lookUpShow(lookUpHammadde, dtHammadde);
+            //CARİ SEVİYE
+            DataTable dtCariSeviye = new DataTable();
+            dtCariSeviye.Columns.Add("Deger", typeof(string));
+            dtCariSeviye.Rows.Add("EKONOMİK");
+            dtCariSeviye.Rows.Add("VİP");
+            dtCariSeviye.Rows.Add("CIP");
+            lookUpShow(lookUpCariSvy, dtCariSeviye);
+            //CARİ HESAPLAR
             var cariHesaplar = (from x in dbMaskom.CARI_HESAPLAR
                                 select new
                                 {
                                     x.cari_kod,
                                     unvan = x.cari_unvan1 + x.cari_unvan2
-                            }).ToList();
+                                }).ToList();
             lookUpCariAd.Properties.ValueMember = "cari_kod";
             lookUpCariAd.Properties.DisplayMember = "unvan";
             lookUpCariAd.Properties.DataSource = cariHesaplar;
+            //ADAY CARİLER
+            var adayCariler = (from x in dbMaskom.ADAY_CARI_HESAPLAR
+                               select new
+                               {
+                                   x.adaycr_kod,
+                                   unvan = x.adaycr_unvan1 + x.adaycr_unvan2
+                               }).ToList();
+            lookUpAdayCari.Properties.ValueMember = "adaycr_kod";
+            lookUpAdayCari.Properties.DisplayMember = "unvan";
+            lookUpAdayCari.Properties.DataSource = adayCariler;
+            //URUN GRUBU
+            var urunGrubu = (from x in dbMaskom.STOK_ALT_GRUPLARI
+                             select new
+                             {
+                                 x.sta_kod,
+                                 x.sta_isim
+                             }).ToList();
+            lookUpUrunGrubu.Properties.ValueMember = "sta_kod";
+            lookUpUrunGrubu.Properties.DisplayMember = "sta_isim";
+            lookUpUrunGrubu.Properties.DataSource = urunGrubu;
+            //**************************************************************************************************
             
-            SetTodayDate();
+        }
+
+        // parametre verilen lookUpEdite ,parametre verilen tabloyu atar ve görüntülenmesini sağlar
+        public void lookUpShow(LookUpEdit lookUpEdit,DataTable dt)
+        {
+            //lookUp da görüntülemek için ValueMember ve DisplayMember değerleri atanır
+            lookUpEdit.Properties.ValueMember = "Deger";
+            lookUpEdit.Properties.DisplayMember = "Deger";
+            lookUpEdit.Properties.DataSource = dt;   //DataSource e veri kaynağı atanır
         }
         public void SetTodayDate()
         {
@@ -224,24 +325,67 @@ namespace SampleManagmentSystem.Forms
             txtTerminTarih.EditValue = DateTime.Today;
         }
 
-        private void lookUpCariKnm_EditValueChanged(object sender, EventArgs e)
+        private void BtnGuncelle_Click(object sender, EventArgs e)
         {
+            var nmn = db.TblNumuneler.FirstOrDefault(x => x.nmn_kod == txtNmnKod.EditValue.ToString());
+            if(nmn != null)
+            {
+                nmn.nmn_create_date = DateTime.Now;
+                nmn.nmn_lastup_date = DateTime.Now;
+                nmn.nmn_aciklama = txtAciklama.Text;
+                nmn.nmn_aciliyet = lookUpAciliyet.Text;
+                nmn.nmn_adaycari_kod = lookUpAdayCari.EditValue.ToString(); ;
+                nmn.nmn_adaycari_unvan = lookUpAdayCari.Text;
+                nmn.nmn_adaycari_konum = radioGroupCariKnm.Properties.Items[radioGroupCariKnm.SelectedIndex].Description; ;
+                nmn.nmn_cari_kod = lookUpCariAd.EditValue.ToString();
+                nmn.nmn_cari_unvan = lookUpCariAd.Text;
+                nmn.nmn_cari_seviye = lookUpCariSvy.Text;
+                if (int.TryParse(txtDenemeMktr.EditValue.ToString(), out int deneme))
+                    nmn.nmn_deneme_miktar = deneme;
+                else
+                    MessageBox.Show("Lütfen sayısal bir değer giriniz.");
+                nmn.nmn_fiyat_cins = lookUpDoviz.Text;
+                nmn.nmn_gida = radioGroupGida.Properties.Items[radioGroupGida.SelectedIndex].Description;
+                nmn.nmn_hammadde = lookUpHammadde.Text;
 
-        }
+                if (int.TryParse(txtHedefFiyat.EditValue.ToString(), out int hdfFiyat))
+                    nmn.nmn_hdf_fiyat = hdfFiyat;
+                else
+                    MessageBox.Show("Lütfen sayısal bir değer giriniz.");
+                nmn.nmn_urun_grubu = lookUpUrunGrubu.Text;
+                nmn.nmn_urungrup_kod = lookUpUrunGrubu.EditValue.ToString();
+                nmn.nmn_kod = txtNmnKod.Text;
+                if (int.TryParse(txtMfi.EditValue.ToString(), out int mfi))
+                    nmn.nmn_mfi = mfi;
+                else
+                    MessageBox.Show("Lütfen sayısal bir değer giriniz.");
+                nmn.nmn_mus_yetkili = txtMusYetkili.Text;
+                if (int.TryParse(txtKullanımOran.EditValue.ToString(), out int oran))
+                    nmn.nmn_oran = oran;
+                else
+                    MessageBox.Show("Lütfen sayısal bir değer giriniz.");
+                nmn.nmn_reach_rohs = radioGroupReachRohs.Properties.Items[radioGroupReachRohs.SelectedIndex].Description;
+                nmn.nmn_rkpcari_unvan = txtRkpUnvan.Text;
+                nmn.nmn_rkpcari_urunkod = txtRkpUrunKod.Text;
 
-        private void lookUpCariSvy_EditValueChanged(object sender, EventArgs e)
-        {
+                if (int.TryParse(txtSipMktr.EditValue.ToString(), out int sipMktr))
+                    nmn.nmn_sip_miktar = sipMktr;
+                else
+                    MessageBox.Show("Lütfen sayısal bir değer giriniz.");
+                nmn.nmn_tarih = txtAlisTarih.DateTime;
+                nmn.nmn_termin_tarih = txtTerminTarih.DateTime;
+                nmn.nmn_tur = lookUpNmnTur.Text;
+                nmn.nmn_uretilecek_urun = txtUretilecekUrun.Text;
+                //FirstOrDefault, belirli bir koşula uyan ilk öğeyi döndüren veya eğer bu tür bir öğe bulunamazsa varsayılan değer döndüren bir LINQ uzantı metodudur.
+                //var nmn = db.TblNumuneler.FirstOrDefault(x => x.nmn_kod == txtNmnKod.EditValue.ToString());
 
-        }
+                db.SaveChanges();
+                XtraMessageBox.Show("Numune Başarılı Bir Şekilde Güncellendi",
+                    "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
 
-        private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toggleSwitch1_Toggled(object sender, EventArgs e)
-        {
-
+            }
+            
         }
     }
 }

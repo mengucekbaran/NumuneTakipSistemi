@@ -114,8 +114,8 @@
             // 
             this.btnNumuneDetay.Caption = "Numune Detay";
             this.btnNumuneDetay.Id = 5;
-            this.btnNumuneDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.btnNumuneDetay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.btnNumuneDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNumuneDetay.ImageOptions.Image")));
+            this.btnNumuneDetay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNumuneDetay.ImageOptions.LargeImage")));
             this.btnNumuneDetay.Name = "btnNumuneDetay";
             this.btnNumuneDetay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNumuneDetay_ItemClick);
             // 
@@ -200,7 +200,7 @@
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Numune Yönetim Sistemi";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();

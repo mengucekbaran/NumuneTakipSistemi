@@ -112,3 +112,4 @@ C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\bin\Debug
 C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\obj\Debug\SampleManagmentSystem.Forms.NewNumune.resources
 C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\obj\Debug\SampleManagmentSystem.Forms.FrmNumuneDetay.resources
+C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\bin\Debug\DevExpress.BonusSkins.v20.1.dll

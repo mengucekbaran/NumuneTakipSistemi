@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d29fcfea2281448195e77d90a895d6f1" Name="Diagram1" ZoomLevel="94">
+      <Diagram DiagramId="84b493a83f3245a1a97fe223b1e3fab2" Name="Diagram1">
         <EntityTypeShape EntityType="NUMUNE_TAKİPModel.TblLab" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NUMUNE_TAKİPModel.TblNumuneler" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
