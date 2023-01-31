@@ -16,12 +16,13 @@ namespace SampleManagmentSystem.Forms
     {
         MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
         NUMUNE_TAKİPEntities db = new NUMUNE_TAKİPEntities();
-        public NewNumune()
+        public NewNumune() //CREATE NUMUNE
         {
             InitializeComponent();
             SetTodayDate();
+            SetZero();
         }
-        public NewNumune(int id) //UPDATE
+        public NewNumune(int id) //UPDATE NUMUNE
         {
             InitializeComponent();
             TblNumuneler nmn = db.TblNumuneler.Find(id);
@@ -30,7 +31,8 @@ namespace SampleManagmentSystem.Forms
                 //BUTONLARIN GÖRÜNÜRLÜĞÜNÜ AYARLAMA
                 BtnKaydet.Visible = false;
                 BtnGuncelle.Visible = true;
-
+                //FORM ELEMANLARINI TIKLANAN KAYIDIN BİLGİLERİYLE DOLDURMA
+                txtNmnKod.Enabled = false;
                 txtNmnKod.EditValue = nmn.nmn_kod;
                 lookUpCariAd.EditValue = nmn.nmn_cari_kod;
                 lookUpCariSvy.EditValue = nmn.nmn_cari_seviye;
@@ -55,95 +57,8 @@ namespace SampleManagmentSystem.Forms
                 radioGroupGida.EditValue = nmn.nmn_gida;
                 radioGroupReachRohs.EditValue = nmn.nmn_reach_rohs;
                 txtAciklama.EditValue = nmn.nmn_aciklama;
-
-
             }
         }
-
-        // CHECKBOX İSLEMLERİ
-        //*************************************************************************************
-        //private void chEdit1_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    txtEdit1.Enabled = chEdit1.Checked;
-        //    if (!chEdit1.Checked)
-        //        txtEdit1.Text = string.Empty;
-        //}
-
-        //private void chEdit2_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    txtEdit2.Enabled = chEdit2.Checked;
-        //    if (!chEdit2.Checked)
-        //        txtEdit2.Text = string.Empty;
-        //}
-
-        //private void chEdit3_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    txtEdit3.Enabled = chEdit3.Checked;
-        //    if (!chEdit3.Checked)
-        //        txtEdit3.Text = string.Empty;
-        //}
-
-        //private void chEdit4_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    txtEdit4.Enabled = chEdit4.Checked;
-        //    if (!chEdit4.Checked)
-        //        txtEdit4.Text = string.Empty;
-        //}
-
-        //private void chEdit5_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    txtEdit5.Enabled = chEdit5.Checked;
-        //    if (!chEdit5.Checked)
-        //        txtEdit5.Text = string.Empty;
-        //}
-
-        //private void chEdit6_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    txtEdit6.Enabled = chEdit6.Checked;
-        //    if (!chEdit6.Checked)
-        //        txtEdit6.Text = string.Empty;
-        //}
-
-        //private void chEdit7_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    txtEdit7.Enabled = chEdit7.Checked;
-        //    if (!chEdit7.Checked)
-        //        txtEdit7.Text = string.Empty;
-        //}
-
-        //private void chEdit8_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    txtEdit8.Enabled = chEdit8.Checked;
-        //    if (!chEdit8.Checked)
-        //        txtEdit8.Text = string.Empty;
-        //}
-
-        //private void chEdit9_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    txtEdit9.Enabled = chEdit9.Checked;
-        //    if (!chEdit9.Checked)
-        //        txtEdit9.Text = string.Empty;
-        //}
-        //private void chEdit10_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    txtEdit10.Enabled = chEdit10.Checked;
-        //    if (!chEdit10.Checked)
-        //        txtEdit10.Text = string.Empty;
-        //}
-        //private void chEdit11_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    txtEdit11.Enabled = chEdit11.Checked;
-        //    if (!chEdit11.Checked)
-        //        txtEdit11.Text = string.Empty;
-        //}
-        //private void chEdit12_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    txtEdit12.Enabled = chEdit12.Checked;
-        //    if (!chEdit12.Checked)
-        //        txtEdit12.Text = string.Empty;
-        //}
-
-        //*************************************************************************************
         //VAZGEC 
         private void btnVazgec_Click(object sender, EventArgs e)
         {
@@ -154,78 +69,29 @@ namespace SampleManagmentSystem.Forms
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             TblNumuneler nmn = new TblNumuneler();
-            nmn.nmn_create_date = DateTime.Now;
-            nmn.nmn_lastup_date = DateTime.Now;
-            nmn.nmn_aciklama = txtAciklama.Text;
-            nmn.nmn_aciliyet = lookUpAciliyet.Text;
-            nmn.nmn_adaycari_kod = lookUpAdayCari.EditValue.ToString(); ; 
-            nmn.nmn_adaycari_unvan = lookUpAdayCari.Text;
-            nmn.nmn_adaycari_konum = radioGroupCariKnm.Properties.Items[radioGroupCariKnm.SelectedIndex].Description; ;
-            nmn.nmn_cari_kod = lookUpCariAd.EditValue.ToString(); 
-            nmn.nmn_cari_unvan = lookUpCariAd.Text;
-            nmn.nmn_cari_seviye = lookUpCariSvy.Text;
-            if (int.TryParse(txtDenemeMktr.EditValue.ToString(), out int deneme))
-                nmn.nmn_deneme_miktar = deneme;
-            else
-                MessageBox.Show("Lütfen sayısal bir değer giriniz.");
-            nmn.nmn_fiyat_cins = lookUpDoviz.Text;
-            nmn.nmn_gida = radioGroupGida.Properties.Items[radioGroupGida.SelectedIndex].Description;
-            // seçili olan checkboxların değerlerini bir listeye alır
-            //CheckEdit[] checkEdits = new CheckEdit[] { chEdit1, chEdit2, chEdit3, chEdit4, chEdit5,
-            //                                           chEdit6, chEdit7, chEdit8,chEdit9,chEdit10,chEdit11,chEdit12 };
-            //List<string> checkedValues = new List<string>();
-            //string temp="";
-            //for (int i = 0; i < checkEdits.Length; i++)
-            //{
-            //    if (checkEdits[i].Checked)
-            //        checkedValues.Add(checkEdits[i].Text);
-            //}
-            //foreach(string item in checkedValues)
-            //{
-            //    temp += item + ",";
-            //}
-            //nmn.nmn_hammadde = temp;
-            nmn.nmn_hammadde = lookUpHammadde.Text;
-
-            if (int.TryParse(txtHedefFiyat.EditValue.ToString(), out int hdfFiyat))
-                nmn.nmn_hdf_fiyat = hdfFiyat;
-            else
-                MessageBox.Show("Lütfen sayısal bir değer giriniz.");
-            nmn.nmn_urun_grubu = lookUpUrunGrubu.Text;
-            nmn.nmn_urungrup_kod = lookUpUrunGrubu.EditValue.ToString();
-            nmn.nmn_kod = txtNmnKod.Text;
-            //MFI VE HAMMADDE SORULACAK
-            if (int.TryParse(txtMfi.EditValue.ToString(), out int mfi))
-                nmn.nmn_mfi = mfi;
-            else
-                MessageBox.Show("Lütfen sayısal bir değer giriniz.");
-            //nmn.nmn_mfi = txtEdit1 + ',' + txtEdit2 + ',' + txtEdit3 + ',' + txtEdit4 + ',' + txtEdit5
-            //                + ',' + txtEdit6 + ',' + txtEdit7 + ',' + txtEdit8 + ',' + txtEdit9;
-            nmn.nmn_mus_yetkili = txtMusYetkili.Text;
-            if (int.TryParse(txtKullanımOran.EditValue.ToString(), out int oran))
-                nmn.nmn_oran = oran;
-            else
-                MessageBox.Show("Lütfen sayısal bir değer giriniz.");
-            nmn.nmn_reach_rohs = radioGroupReachRohs.Properties.Items[radioGroupReachRohs.SelectedIndex].Description;
-            nmn.nmn_rkpcari_unvan = txtRkpUnvan.Text;
-            nmn.nmn_rkpcari_urunkod = txtRkpUrunKod.Text;
             
-            if (int.TryParse(txtSipMktr.EditValue.ToString(), out int sipMktr))
-                nmn.nmn_sip_miktar = sipMktr;
-            else
-                MessageBox.Show("Lütfen sayısal bir değer giriniz.");
-            nmn.nmn_tarih = txtAlisTarih.DateTime;
-            nmn.nmn_termin_tarih = txtTerminTarih.DateTime;
-            nmn.nmn_tur = lookUpNmnTur.Text;
-            nmn.nmn_uretilecek_urun = txtUretilecekUrun.Text;
-            db.TblNumuneler.Add(nmn);
-            db.SaveChanges();
+            PostFormElementToDb(nmn);//FORMDAKİLERİ nmn ye atar.
+            db.TblNumuneler.Add(nmn);//tabloya ekler
+            db.SaveChanges(); // degisiklikleri kaydeder
             XtraMessageBox.Show("Numune Başarılı Bir Şekilde Tanımlandı",
                 "Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
             this.Close();
         }
+        // GÜNCELLE BUTONUNA TIKLANDIĞINDA YAPILACAKLAR
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            //FirstOrDefault, belirli bir koşula uyan ilk öğeyi döndüren veya eğer bu tür bir öğe bulunamazsa varsayılan değer döndüren bir LINQ uzantı metodudur.
+            TblNumuneler nmn = db.TblNumuneler.FirstOrDefault(x => x.nmn_kod == txtNmnKod.EditValue.ToString());
+            if (nmn != null)
+            {
+                PostFormElementToDb(nmn);
+                db.SaveChanges();
+                XtraMessageBox.Show("Numune Başarılı Bir Şekilde Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);                
+                this.Close();
+            }
 
-        
+        }
+
         //SAYFA YÜKLENDİĞİNDE YAPILACAKLAR
         private void NewNumune_Load(object sender, EventArgs e)
         {
@@ -310,7 +176,58 @@ namespace SampleManagmentSystem.Forms
             //**************************************************************************************************
             
         }
+        //FORMDAKİ DEĞERLERİ 
+        public void PostFormElementToDb(TblNumuneler nmn)
+        {
+            nmn.nmn_create_date = DateTime.Now;
+            nmn.nmn_lastup_date = DateTime.Now;
+            nmn.nmn_aciklama = txtAciklama.Text;
+            nmn.nmn_aciliyet = lookUpAciliyet.Text;
+            nmn.nmn_adaycari_kod = lookUpAdayCari.EditValue.ToString(); ;
+            nmn.nmn_adaycari_unvan = lookUpAdayCari.Text;
+            nmn.nmn_adaycari_konum = radioGroupCariKnm.Properties.Items[radioGroupCariKnm.SelectedIndex].Description; ;
+            nmn.nmn_cari_kod = lookUpCariAd.EditValue.ToString();
+            nmn.nmn_cari_unvan = lookUpCariAd.Text;
+            nmn.nmn_cari_seviye = lookUpCariSvy.Text;
+            nmn.nmn_deneme_miktar = float.Parse(txtDenemeMktr.Text);
+            nmn.nmn_fiyat_cins = lookUpDoviz.Text;
+            nmn.nmn_gida = radioGroupGida.Properties.Items[radioGroupGida.SelectedIndex].Description;
+            // seçili olan checkboxların değerlerini bir listeye alır
+            //CheckEdit[] checkEdits = new CheckEdit[] { chEdit1, chEdit2, chEdit3, chEdit4, chEdit5,
+            //                                           chEdit6, chEdit7, chEdit8,chEdit9,chEdit10,chEdit11,chEdit12 };
+            //List<string> checkedValues = new List<string>();
+            //string temp="";
+            //for (int i = 0; i < checkEdits.Length; i++)
+            //{
+            //    if (checkEdits[i].Checked)
+            //        checkedValues.Add(checkEdits[i].Text);
+            //}
+            //foreach(string item in checkedValues)
+            //{
+            //    temp += item + ",";
+            //}
+            //nmn.nmn_hammadde = temp;
+            nmn.nmn_hammadde = lookUpHammadde.Text;
+            nmn.nmn_hdf_fiyat = float.Parse(txtHedefFiyat.Text);
+            nmn.nmn_urun_grubu = lookUpUrunGrubu.Text;
+            nmn.nmn_urungrup_kod = lookUpUrunGrubu.EditValue.ToString();
+            nmn.nmn_kod = txtNmnKod.Text;
+            nmn.nmn_mfi = float.Parse(txtMfi.Text);
+            //nmn.nmn_mfi = txtEdit1 + ',' + txtEdit2 + ',' + txtEdit3 + ',' + txtEdit4 + ',' + txtEdit5
+            //                + ',' + txtEdit6 + ',' + txtEdit7 + ',' + txtEdit8 + ',' + txtEdit9;
+            nmn.nmn_mus_yetkili = txtMusYetkili.Text;
+            nmn.nmn_oran = float.Parse(txtKullanımOran.Text);
+            nmn.nmn_reach_rohs = radioGroupReachRohs.Properties.Items[radioGroupReachRohs.SelectedIndex].Description;
+            nmn.nmn_rkpcari_unvan = txtRkpUnvan.Text;
+            nmn.nmn_rkpcari_urunkod = txtRkpUrunKod.Text;
+            nmn.nmn_sip_miktar = float.Parse(txtSipMktr.Text);
 
+            //MessageBox.Show("Lütfen sayısal bir değer giriniz.");
+            nmn.nmn_tarih = txtAlisTarih.DateTime;
+            nmn.nmn_termin_tarih = txtTerminTarih.DateTime;
+            nmn.nmn_tur = lookUpNmnTur.Text;
+            nmn.nmn_uretilecek_urun = txtUretilecekUrun.Text;
+        }
         // parametre verilen lookUpEdite ,parametre verilen tabloyu atar ve görüntülenmesini sağlar
         public void lookUpShow(LookUpEdit lookUpEdit,DataTable dt)
         {
@@ -324,68 +241,14 @@ namespace SampleManagmentSystem.Forms
             txtAlisTarih.EditValue = DateTime.Today;
             txtTerminTarih.EditValue = DateTime.Today;
         }
-
-        private void BtnGuncelle_Click(object sender, EventArgs e)
+        public void SetZero()
         {
-            var nmn = db.TblNumuneler.FirstOrDefault(x => x.nmn_kod == txtNmnKod.EditValue.ToString());
-            if(nmn != null)
-            {
-                nmn.nmn_create_date = DateTime.Now;
-                nmn.nmn_lastup_date = DateTime.Now;
-                nmn.nmn_aciklama = txtAciklama.Text;
-                nmn.nmn_aciliyet = lookUpAciliyet.Text;
-                nmn.nmn_adaycari_kod = lookUpAdayCari.EditValue.ToString(); ;
-                nmn.nmn_adaycari_unvan = lookUpAdayCari.Text;
-                nmn.nmn_adaycari_konum = radioGroupCariKnm.Properties.Items[radioGroupCariKnm.SelectedIndex].Description; ;
-                nmn.nmn_cari_kod = lookUpCariAd.EditValue.ToString();
-                nmn.nmn_cari_unvan = lookUpCariAd.Text;
-                nmn.nmn_cari_seviye = lookUpCariSvy.Text;
-                if (int.TryParse(txtDenemeMktr.EditValue.ToString(), out int deneme))
-                    nmn.nmn_deneme_miktar = deneme;
-                else
-                    MessageBox.Show("Lütfen sayısal bir değer giriniz.");
-                nmn.nmn_fiyat_cins = lookUpDoviz.Text;
-                nmn.nmn_gida = radioGroupGida.Properties.Items[radioGroupGida.SelectedIndex].Description;
-                nmn.nmn_hammadde = lookUpHammadde.Text;
-
-                if (int.TryParse(txtHedefFiyat.EditValue.ToString(), out int hdfFiyat))
-                    nmn.nmn_hdf_fiyat = hdfFiyat;
-                else
-                    MessageBox.Show("Lütfen sayısal bir değer giriniz.");
-                nmn.nmn_urun_grubu = lookUpUrunGrubu.Text;
-                nmn.nmn_urungrup_kod = lookUpUrunGrubu.EditValue.ToString();
-                nmn.nmn_kod = txtNmnKod.Text;
-                if (int.TryParse(txtMfi.EditValue.ToString(), out int mfi))
-                    nmn.nmn_mfi = mfi;
-                else
-                    MessageBox.Show("Lütfen sayısal bir değer giriniz.");
-                nmn.nmn_mus_yetkili = txtMusYetkili.Text;
-                if (int.TryParse(txtKullanımOran.EditValue.ToString(), out int oran))
-                    nmn.nmn_oran = oran;
-                else
-                    MessageBox.Show("Lütfen sayısal bir değer giriniz.");
-                nmn.nmn_reach_rohs = radioGroupReachRohs.Properties.Items[radioGroupReachRohs.SelectedIndex].Description;
-                nmn.nmn_rkpcari_unvan = txtRkpUnvan.Text;
-                nmn.nmn_rkpcari_urunkod = txtRkpUrunKod.Text;
-
-                if (int.TryParse(txtSipMktr.EditValue.ToString(), out int sipMktr))
-                    nmn.nmn_sip_miktar = sipMktr;
-                else
-                    MessageBox.Show("Lütfen sayısal bir değer giriniz.");
-                nmn.nmn_tarih = txtAlisTarih.DateTime;
-                nmn.nmn_termin_tarih = txtTerminTarih.DateTime;
-                nmn.nmn_tur = lookUpNmnTur.Text;
-                nmn.nmn_uretilecek_urun = txtUretilecekUrun.Text;
-                //FirstOrDefault, belirli bir koşula uyan ilk öğeyi döndüren veya eğer bu tür bir öğe bulunamazsa varsayılan değer döndüren bir LINQ uzantı metodudur.
-                //var nmn = db.TblNumuneler.FirstOrDefault(x => x.nmn_kod == txtNmnKod.EditValue.ToString());
-
-                db.SaveChanges();
-                XtraMessageBox.Show("Numune Başarılı Bir Şekilde Güncellendi",
-                    "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-
-            }
-            
+            txtSipMktr.EditValue = 0.00;
+            txtHedefFiyat.EditValue = 0.00;
+            txtKullanımOran.EditValue = 0.00;
+            txtMfi.EditValue = 0.00;
+            txtDenemeMktr.EditValue = 0.00;
         }
+
     }
 }

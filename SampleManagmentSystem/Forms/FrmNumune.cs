@@ -19,7 +19,7 @@ namespace SampleManagmentSystem.Forms
         {
             InitializeComponent();
         }
-        void Listele()
+        public void Listele()
         {
             
             DateTime temp = new DateTime(); //default 01/01/0001
@@ -29,51 +29,10 @@ namespace SampleManagmentSystem.Forms
                 df = null;
             if (dl == temp)
                 dl = null;
-
-            //var degerler = (from x in db.ListNumune(df, dl)
-            //                select new
-            //                {
-            //                    x.id,
-            //                    x.nmn_kod,
-            //                    x.nmn_cari_kod,
-            //                    x.nmn_cari_unvan,
-            //                    x.nmn_tarih,
-            //                    x.nmn_cari_seviye,
-            //                    x.nmn_adaycari_unvan,
-            //                    x.nmn_sip_miktar,
-            //                    x.nmn_deneme_miktar,
-            //                    x.nmn_hdf_fiyat,
-            //                    x.nmn_fiyat_cins,
-            //                    x.nmn_tur
-            //                }).ToList();
             gridControl1.DataSource = db.ListNumune(df,dl).ToList();
             //gridControl1.DataSource = degerler;
 
         }
-
-        //private void EditButton_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        //{
-        //    int selectedRowIndex = gridView1.FocusedRowHandle;
-        //    int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
-
-        //    Form2 form2 = new Form2(id);
-        //    form2.ShowDialog();
-        //    Listele();
-        //}
-        //private void DeleteButton_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        //{
-        //    int selectedRowIndex = gridView1.FocusedRowHandle;
-        //    int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
-
-        //    var sonuc = MessageBox.Show("Seçili veriyi silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-        //    if (sonuc == DialogResult.Yes)
-        //    {
-        //        numune_takip numune = db.numune_takip.Find(id);
-        //        db.numune_takip.Remove(numune);
-        //        db.SaveChanges();
-        //        Listele();
-        //    }
-        //}
         private void BtnList_Click_1(object sender, EventArgs e)
         {
             Listele();

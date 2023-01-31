@@ -53,7 +53,6 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.radioGroupCariKnm = new DevExpress.XtraEditors.RadioGroup();
             this.lookUpAciliyet = new DevExpress.XtraEditors.LookUpEdit();
-            this.txtMfi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.radioGroupReachRohs = new DevExpress.XtraEditors.RadioGroup();
             this.radioGroupGida = new DevExpress.XtraEditors.RadioGroup();
@@ -63,11 +62,7 @@
             this.txtAlisTarih = new DevExpress.XtraEditors.DateEdit();
             this.txtAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.txtNmnKod = new DevExpress.XtraEditors.TextEdit();
-            this.txtKullanımOran = new DevExpress.XtraEditors.TextEdit();
-            this.txtSipMktr = new DevExpress.XtraEditors.TextEdit();
-            this.txtDenemeMktr = new DevExpress.XtraEditors.TextEdit();
             this.txtUretilecekUrun = new DevExpress.XtraEditors.TextEdit();
-            this.txtHedefFiyat = new DevExpress.XtraEditors.TextEdit();
             this.txtRkpUrunKod = new DevExpress.XtraEditors.TextEdit();
             this.txtMusYetkili = new DevExpress.XtraEditors.TextEdit();
             this.txtRkpUnvan = new DevExpress.XtraEditors.TextEdit();
@@ -81,11 +76,15 @@
             this.btnVazgec = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.txtSipMktr = new DevExpress.XtraEditors.SpinEdit();
+            this.txtHedefFiyat = new DevExpress.XtraEditors.SpinEdit();
+            this.txtKullanımOran = new DevExpress.XtraEditors.SpinEdit();
+            this.txtMfi = new DevExpress.XtraEditors.SpinEdit();
+            this.txtDenemeMktr = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupCariKnm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpAciliyet.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMfi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupReachRohs.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupGida.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpHammadde.Properties)).BeginInit();
@@ -93,11 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAlisTarih.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullanımOran.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDenemeMktr.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUretilecekUrun.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHedefFiyat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRkpUrunKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMusYetkili.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRkpUnvan.Properties)).BeginInit();
@@ -109,6 +104,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpCariAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnTur.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpAdayCari.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHedefFiyat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullanımOran.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMfi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDenemeMktr.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -281,9 +281,12 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.txtDenemeMktr);
+            this.panelControl1.Controls.Add(this.txtMfi);
+            this.panelControl1.Controls.Add(this.txtKullanımOran);
+            this.panelControl1.Controls.Add(this.txtHedefFiyat);
             this.panelControl1.Controls.Add(this.radioGroupCariKnm);
             this.panelControl1.Controls.Add(this.lookUpAciliyet);
-            this.panelControl1.Controls.Add(this.txtMfi);
             this.panelControl1.Controls.Add(this.labelControl21);
             this.panelControl1.Controls.Add(this.radioGroupReachRohs);
             this.panelControl1.Controls.Add(this.radioGroupGida);
@@ -301,18 +304,14 @@
             this.panelControl1.Controls.Add(this.labelControl18);
             this.panelControl1.Controls.Add(this.labelControl8);
             this.panelControl1.Controls.Add(this.labelControl19);
-            this.panelControl1.Controls.Add(this.txtKullanımOran);
             this.panelControl1.Controls.Add(this.labelControl7);
             this.panelControl1.Controls.Add(this.labelControl20);
             this.panelControl1.Controls.Add(this.labelControl6);
-            this.panelControl1.Controls.Add(this.txtSipMktr);
             this.panelControl1.Controls.Add(this.labelControl5);
             this.panelControl1.Controls.Add(this.labelControl22);
-            this.panelControl1.Controls.Add(this.txtDenemeMktr);
             this.panelControl1.Controls.Add(this.txtUretilecekUrun);
             this.panelControl1.Controls.Add(this.labelControl16);
             this.panelControl1.Controls.Add(this.labelControl9);
-            this.panelControl1.Controls.Add(this.txtHedefFiyat);
             this.panelControl1.Controls.Add(this.labelControl15);
             this.panelControl1.Controls.Add(this.labelControl10);
             this.panelControl1.Controls.Add(this.txtRkpUrunKod);
@@ -329,6 +328,7 @@
             this.panelControl1.Controls.Add(this.lookUpCariAd);
             this.panelControl1.Controls.Add(this.lookUpNmnTur);
             this.panelControl1.Controls.Add(this.lookUpAdayCari);
+            this.panelControl1.Controls.Add(this.txtSipMktr);
             this.panelControl1.Location = new System.Drawing.Point(12, 9);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1186, 669);
@@ -361,14 +361,6 @@
             this.lookUpAciliyet.Properties.NullText = "";
             this.lookUpAciliyet.Size = new System.Drawing.Size(340, 22);
             this.lookUpAciliyet.TabIndex = 80;
-            // 
-            // txtMfi
-            // 
-            this.txtMfi.Location = new System.Drawing.Point(424, 365);
-            this.txtMfi.Name = "txtMfi";
-            this.txtMfi.Properties.Mask.EditMask = "d";
-            this.txtMfi.Size = new System.Drawing.Size(113, 22);
-            this.txtMfi.TabIndex = 79;
             // 
             // labelControl21
             // 
@@ -472,43 +464,12 @@
             this.txtNmnKod.Size = new System.Drawing.Size(340, 22);
             this.txtNmnKod.TabIndex = 1;
             // 
-            // txtKullanımOran
-            // 
-            this.txtKullanımOran.Location = new System.Drawing.Point(197, 327);
-            this.txtKullanımOran.Name = "txtKullanımOran";
-            this.txtKullanımOran.Size = new System.Drawing.Size(340, 22);
-            this.txtKullanımOran.TabIndex = 37;
-            // 
-            // txtSipMktr
-            // 
-            this.txtSipMktr.Location = new System.Drawing.Point(197, 154);
-            this.txtSipMktr.Name = "txtSipMktr";
-            this.txtSipMktr.Size = new System.Drawing.Size(340, 22);
-            this.txtSipMktr.TabIndex = 13;
-            // 
-            // txtDenemeMktr
-            // 
-            this.txtDenemeMktr.Location = new System.Drawing.Point(828, 120);
-            this.txtDenemeMktr.Name = "txtDenemeMktr";
-            this.txtDenemeMktr.Properties.Mask.BeepOnError = true;
-            this.txtDenemeMktr.Properties.Mask.EditMask = "d";
-            this.txtDenemeMktr.Size = new System.Drawing.Size(340, 22);
-            this.txtDenemeMktr.TabIndex = 15;
-            // 
             // txtUretilecekUrun
             // 
             this.txtUretilecekUrun.Location = new System.Drawing.Point(828, 255);
             this.txtUretilecekUrun.Name = "txtUretilecekUrun";
             this.txtUretilecekUrun.Size = new System.Drawing.Size(340, 22);
             this.txtUretilecekUrun.TabIndex = 31;
-            // 
-            // txtHedefFiyat
-            // 
-            this.txtHedefFiyat.Location = new System.Drawing.Point(197, 188);
-            this.txtHedefFiyat.Name = "txtHedefFiyat";
-            this.txtHedefFiyat.Properties.Mask.EditMask = "d";
-            this.txtHedefFiyat.Size = new System.Drawing.Size(340, 22);
-            this.txtHedefFiyat.TabIndex = 17;
             // 
             // txtRkpUrunKod
             // 
@@ -653,6 +614,71 @@
             this.BtnGuncelle.Visible = false;
             this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
+            // txtSipMktr
+            // 
+            this.txtSipMktr.Location = new System.Drawing.Point(197, 154);
+            this.txtSipMktr.Name = "txtSipMktr";
+            this.txtSipMktr.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtSipMktr.Properties.DisplayFormat.FormatString = "N2";
+            this.txtSipMktr.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSipMktr.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtSipMktr.Properties.Mask.EditMask = "f";
+            this.txtSipMktr.Size = new System.Drawing.Size(340, 24);
+            this.txtSipMktr.TabIndex = 13;
+            // 
+            // txtHedefFiyat
+            // 
+            this.txtHedefFiyat.Location = new System.Drawing.Point(197, 187);
+            this.txtHedefFiyat.Name = "txtHedefFiyat";
+            this.txtHedefFiyat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtHedefFiyat.Properties.DisplayFormat.FormatString = "N2";
+            this.txtHedefFiyat.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtHedefFiyat.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtHedefFiyat.Properties.Mask.EditMask = "f";
+            this.txtHedefFiyat.Size = new System.Drawing.Size(340, 24);
+            this.txtHedefFiyat.TabIndex = 82;
+            // 
+            // txtKullanımOran
+            // 
+            this.txtKullanımOran.Location = new System.Drawing.Point(197, 326);
+            this.txtKullanımOran.Name = "txtKullanımOran";
+            this.txtKullanımOran.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtKullanımOran.Properties.DisplayFormat.FormatString = "N2";
+            this.txtKullanımOran.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtKullanımOran.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtKullanımOran.Properties.Mask.EditMask = "f";
+            this.txtKullanımOran.Size = new System.Drawing.Size(340, 24);
+            this.txtKullanımOran.TabIndex = 83;
+            // 
+            // txtMfi
+            // 
+            this.txtMfi.Location = new System.Drawing.Point(411, 363);
+            this.txtMfi.Name = "txtMfi";
+            this.txtMfi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtMfi.Properties.DisplayFormat.FormatString = "N2";
+            this.txtMfi.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtMfi.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtMfi.Properties.Mask.EditMask = "f";
+            this.txtMfi.Size = new System.Drawing.Size(126, 24);
+            this.txtMfi.TabIndex = 84;
+            // 
+            // txtDenemeMktr
+            // 
+            this.txtDenemeMktr.Location = new System.Drawing.Point(828, 119);
+            this.txtDenemeMktr.Name = "txtDenemeMktr";
+            this.txtDenemeMktr.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDenemeMktr.Properties.DisplayFormat.FormatString = "N2";
+            this.txtDenemeMktr.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtDenemeMktr.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtDenemeMktr.Properties.Mask.EditMask = "f";
+            this.txtDenemeMktr.Size = new System.Drawing.Size(340, 24);
+            this.txtDenemeMktr.TabIndex = 85;
+            // 
             // NewNumune
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -671,7 +697,6 @@
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupCariKnm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpAciliyet.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMfi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupReachRohs.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupGida.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpHammadde.Properties)).EndInit();
@@ -679,11 +704,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAlisTarih.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullanımOran.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDenemeMktr.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUretilecekUrun.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHedefFiyat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRkpUrunKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMusYetkili.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRkpUnvan.Properties)).EndInit();
@@ -695,6 +716,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpCariAd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnTur.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpAdayCari.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHedefFiyat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullanımOran.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMfi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDenemeMktr.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -705,9 +731,7 @@
         private DevExpress.XtraEditors.TextEdit txtNmnKod;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txtDenemeMktr;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit txtSipMktr;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl8;
@@ -722,12 +746,10 @@
         private DevExpress.XtraEditors.TextEdit txtMusYetkili;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.TextEdit txtHedefFiyat;
         private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.LabelControl labelControl19;
-        private DevExpress.XtraEditors.TextEdit txtKullanımOran;
         private DevExpress.XtraEditors.LabelControl labelControl20;
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.LabelControl labelControl23;
@@ -749,9 +771,13 @@
         private DevExpress.XtraEditors.RadioGroup radioGroupReachRohs;
         private DevExpress.XtraEditors.LookUpEdit lookUpAdayCari;
         private DevExpress.XtraEditors.LabelControl labelControl21;
-        private DevExpress.XtraEditors.TextEdit txtMfi;
         private DevExpress.XtraEditors.LookUpEdit lookUpAciliyet;
         private DevExpress.XtraEditors.RadioGroup radioGroupCariKnm;
         private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
+        private DevExpress.XtraEditors.SpinEdit txtSipMktr;
+        private DevExpress.XtraEditors.SpinEdit txtKullanımOran;
+        private DevExpress.XtraEditors.SpinEdit txtHedefFiyat;
+        private DevExpress.XtraEditors.SpinEdit txtDenemeMktr;
+        private DevExpress.XtraEditors.SpinEdit txtMfi;
     }
 }
