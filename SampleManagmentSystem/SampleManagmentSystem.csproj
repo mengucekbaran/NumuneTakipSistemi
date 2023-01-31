@@ -158,6 +158,12 @@
     <Compile Include="Forms\FrmNumuneDetay.Designer.cs">
       <DependentUpon>FrmNumuneDetay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmNumuneSonuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNumuneSonuc.Designer.cs">
+      <DependentUpon>FrmNumuneSonuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\NewNumune.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmNumuneDetay.resx">
       <DependentUpon>FrmNumuneDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNumuneSonuc.resx">
+      <DependentUpon>FrmNumuneSonuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewNumune.resx">
       <DependentUpon>NewNumune.cs</DependentUpon>

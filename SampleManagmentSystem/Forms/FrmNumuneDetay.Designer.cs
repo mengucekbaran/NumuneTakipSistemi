@@ -29,11 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNumuneDetay));
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -52,9 +59,51 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.dateFirst = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.tblNumunelerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_create_date = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_lastup_date = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_kod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_cari_kod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_cari_unvan = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_tarih = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_cari_seviye = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_aciliyet = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_adaycari_kod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_adaycari_unvan = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_adaycari_konum = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_sip_miktar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_deneme_miktar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_hdf_fiyat = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_fiyat_cins = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_mus_yetkili = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_urungrup_kod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_urun_grubu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_rkpcari_unvan = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_rkpcari_urunkod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_tur = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_uretilecek_urun = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_hammadde = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_mfi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_oran = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_gida = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_reach_rohs = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_termin_tarih = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_aciklama = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.delete = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.update = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -63,28 +112,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateLast.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFirst.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFirst.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblNumunelerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.DataSource = this.bindingSource1;
-            gridLevelNode1.RelationName = "Level1";
-            this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.gridControl1.Location = new System.Drawing.Point(25, 165);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1448, 536);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ColumnAutoWidth = false;
             // 
             // bindingNavigator1
             // 
@@ -267,21 +300,418 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "İlk Tarih";
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Name = "gridColumn1";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Name = "gridColumn2";
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Name = "gridColumn3";
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Name = "gridColumn4";
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Name = "gridColumn5";
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Name = "gridColumn6";
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Name = "gridColumn7";
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = this.tblNumunelerBindingSource;
+            this.gridControl1.Location = new System.Drawing.Point(25, 150);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemButtonDelete,
+            this.repositoryItemButtonUpdate});
+            this.gridControl1.Size = new System.Drawing.Size(1448, 483);
+            this.gridControl1.TabIndex = 5;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // tblNumunelerBindingSource
+            // 
+            this.tblNumunelerBindingSource.DataSource = typeof(SampleManagmentSystem.Entities.TblNumuneler);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid,
+            this.colnmn_create_date,
+            this.colnmn_lastup_date,
+            this.colnmn_kod,
+            this.colnmn_cari_kod,
+            this.colnmn_cari_unvan,
+            this.colnmn_tarih,
+            this.colnmn_cari_seviye,
+            this.colnmn_aciliyet,
+            this.colnmn_adaycari_kod,
+            this.colnmn_adaycari_unvan,
+            this.colnmn_adaycari_konum,
+            this.colnmn_sip_miktar,
+            this.colnmn_deneme_miktar,
+            this.colnmn_hdf_fiyat,
+            this.colnmn_fiyat_cins,
+            this.colnmn_mus_yetkili,
+            this.colnmn_urungrup_kod,
+            this.colnmn_urun_grubu,
+            this.colnmn_rkpcari_unvan,
+            this.colnmn_rkpcari_urunkod,
+            this.colnmn_tur,
+            this.colnmn_uretilecek_urun,
+            this.colnmn_hammadde,
+            this.colnmn_mfi,
+            this.colnmn_oran,
+            this.colnmn_gida,
+            this.colnmn_reach_rohs,
+            this.colnmn_termin_tarih,
+            this.colnmn_aciklama,
+            this.delete,
+            this.update});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
+            this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            // 
+            // colid
+            // 
+            this.colid.FieldName = "id";
+            this.colid.MinWidth = 25;
+            this.colid.Name = "colid";
+            this.colid.Visible = true;
+            this.colid.VisibleIndex = 0;
+            this.colid.Width = 36;
+            // 
+            // colnmn_create_date
+            // 
+            this.colnmn_create_date.FieldName = "nmn_create_date";
+            this.colnmn_create_date.MinWidth = 25;
+            this.colnmn_create_date.Name = "colnmn_create_date";
+            this.colnmn_create_date.Visible = true;
+            this.colnmn_create_date.VisibleIndex = 1;
+            this.colnmn_create_date.Width = 117;
+            // 
+            // colnmn_lastup_date
+            // 
+            this.colnmn_lastup_date.FieldName = "nmn_lastup_date";
+            this.colnmn_lastup_date.MinWidth = 25;
+            this.colnmn_lastup_date.Name = "colnmn_lastup_date";
+            this.colnmn_lastup_date.Visible = true;
+            this.colnmn_lastup_date.VisibleIndex = 2;
+            this.colnmn_lastup_date.Width = 121;
+            // 
+            // colnmn_kod
+            // 
+            this.colnmn_kod.FieldName = "nmn_kod";
+            this.colnmn_kod.MinWidth = 25;
+            this.colnmn_kod.Name = "colnmn_kod";
+            this.colnmn_kod.Visible = true;
+            this.colnmn_kod.VisibleIndex = 3;
+            this.colnmn_kod.Width = 80;
+            // 
+            // colnmn_cari_kod
+            // 
+            this.colnmn_cari_kod.FieldName = "nmn_cari_kod";
+            this.colnmn_cari_kod.MinWidth = 25;
+            this.colnmn_cari_kod.Name = "colnmn_cari_kod";
+            this.colnmn_cari_kod.Visible = true;
+            this.colnmn_cari_kod.VisibleIndex = 4;
+            this.colnmn_cari_kod.Width = 101;
+            // 
+            // colnmn_cari_unvan
+            // 
+            this.colnmn_cari_unvan.FieldName = "nmn_cari_unvan";
+            this.colnmn_cari_unvan.MinWidth = 25;
+            this.colnmn_cari_unvan.Name = "colnmn_cari_unvan";
+            this.colnmn_cari_unvan.Visible = true;
+            this.colnmn_cari_unvan.VisibleIndex = 6;
+            this.colnmn_cari_unvan.Width = 117;
+            // 
+            // colnmn_tarih
+            // 
+            this.colnmn_tarih.FieldName = "nmn_tarih";
+            this.colnmn_tarih.MinWidth = 25;
+            this.colnmn_tarih.Name = "colnmn_tarih";
+            this.colnmn_tarih.Visible = true;
+            this.colnmn_tarih.VisibleIndex = 8;
+            this.colnmn_tarih.Width = 88;
+            // 
+            // colnmn_cari_seviye
+            // 
+            this.colnmn_cari_seviye.FieldName = "nmn_cari_seviye";
+            this.colnmn_cari_seviye.MinWidth = 25;
+            this.colnmn_cari_seviye.Name = "colnmn_cari_seviye";
+            this.colnmn_cari_seviye.Visible = true;
+            this.colnmn_cari_seviye.VisibleIndex = 5;
+            this.colnmn_cari_seviye.Width = 113;
+            // 
+            // colnmn_aciliyet
+            // 
+            this.colnmn_aciliyet.FieldName = "nmn_aciliyet";
+            this.colnmn_aciliyet.MinWidth = 25;
+            this.colnmn_aciliyet.Name = "colnmn_aciliyet";
+            this.colnmn_aciliyet.Visible = true;
+            this.colnmn_aciliyet.VisibleIndex = 7;
+            this.colnmn_aciliyet.Width = 81;
+            // 
+            // colnmn_adaycari_kod
+            // 
+            this.colnmn_adaycari_kod.FieldName = "nmn_adaycari_kod";
+            this.colnmn_adaycari_kod.MinWidth = 25;
+            this.colnmn_adaycari_kod.Name = "colnmn_adaycari_kod";
+            this.colnmn_adaycari_kod.Visible = true;
+            this.colnmn_adaycari_kod.VisibleIndex = 28;
+            this.colnmn_adaycari_kod.Width = 118;
+            // 
+            // colnmn_adaycari_unvan
+            // 
+            this.colnmn_adaycari_unvan.FieldName = "nmn_adaycari_unvan";
+            this.colnmn_adaycari_unvan.MinWidth = 25;
+            this.colnmn_adaycari_unvan.Name = "colnmn_adaycari_unvan";
+            this.colnmn_adaycari_unvan.Visible = true;
+            this.colnmn_adaycari_unvan.VisibleIndex = 10;
+            this.colnmn_adaycari_unvan.Width = 131;
+            // 
+            // colnmn_adaycari_konum
+            // 
+            this.colnmn_adaycari_konum.FieldName = "nmn_adaycari_konum";
+            this.colnmn_adaycari_konum.MinWidth = 25;
+            this.colnmn_adaycari_konum.Name = "colnmn_adaycari_konum";
+            this.colnmn_adaycari_konum.Visible = true;
+            this.colnmn_adaycari_konum.VisibleIndex = 11;
+            this.colnmn_adaycari_konum.Width = 137;
+            // 
+            // colnmn_sip_miktar
+            // 
+            this.colnmn_sip_miktar.FieldName = "nmn_sip_miktar";
+            this.colnmn_sip_miktar.MinWidth = 25;
+            this.colnmn_sip_miktar.Name = "colnmn_sip_miktar";
+            this.colnmn_sip_miktar.Visible = true;
+            this.colnmn_sip_miktar.VisibleIndex = 12;
+            this.colnmn_sip_miktar.Width = 106;
+            // 
+            // colnmn_deneme_miktar
+            // 
+            this.colnmn_deneme_miktar.FieldName = "nmn_deneme_miktar";
+            this.colnmn_deneme_miktar.MinWidth = 25;
+            this.colnmn_deneme_miktar.Name = "colnmn_deneme_miktar";
+            this.colnmn_deneme_miktar.Visible = true;
+            this.colnmn_deneme_miktar.VisibleIndex = 13;
+            this.colnmn_deneme_miktar.Width = 130;
+            // 
+            // colnmn_hdf_fiyat
+            // 
+            this.colnmn_hdf_fiyat.FieldName = "nmn_hdf_fiyat";
+            this.colnmn_hdf_fiyat.MinWidth = 25;
+            this.colnmn_hdf_fiyat.Name = "colnmn_hdf_fiyat";
+            this.colnmn_hdf_fiyat.Visible = true;
+            this.colnmn_hdf_fiyat.VisibleIndex = 14;
+            this.colnmn_hdf_fiyat.Width = 102;
+            // 
+            // colnmn_fiyat_cins
+            // 
+            this.colnmn_fiyat_cins.FieldName = "nmn_fiyat_cins";
+            this.colnmn_fiyat_cins.MinWidth = 25;
+            this.colnmn_fiyat_cins.Name = "colnmn_fiyat_cins";
+            this.colnmn_fiyat_cins.Visible = true;
+            this.colnmn_fiyat_cins.VisibleIndex = 15;
+            this.colnmn_fiyat_cins.Width = 100;
+            // 
+            // colnmn_mus_yetkili
+            // 
+            this.colnmn_mus_yetkili.FieldName = "nmn_mus_yetkili";
+            this.colnmn_mus_yetkili.MinWidth = 25;
+            this.colnmn_mus_yetkili.Name = "colnmn_mus_yetkili";
+            this.colnmn_mus_yetkili.Visible = true;
+            this.colnmn_mus_yetkili.VisibleIndex = 16;
+            this.colnmn_mus_yetkili.Width = 115;
+            // 
+            // colnmn_urungrup_kod
+            // 
+            this.colnmn_urungrup_kod.FieldName = "nmn_urungrup_kod";
+            this.colnmn_urungrup_kod.MinWidth = 25;
+            this.colnmn_urungrup_kod.Name = "colnmn_urungrup_kod";
+            this.colnmn_urungrup_kod.Visible = true;
+            this.colnmn_urungrup_kod.VisibleIndex = 27;
+            this.colnmn_urungrup_kod.Width = 129;
+            // 
+            // colnmn_urun_grubu
+            // 
+            this.colnmn_urun_grubu.FieldName = "nmn_urun_grubu";
+            this.colnmn_urun_grubu.MinWidth = 25;
+            this.colnmn_urun_grubu.Name = "colnmn_urun_grubu";
+            this.colnmn_urun_grubu.Visible = true;
+            this.colnmn_urun_grubu.VisibleIndex = 17;
+            this.colnmn_urun_grubu.Width = 124;
+            // 
+            // colnmn_rkpcari_unvan
+            // 
+            this.colnmn_rkpcari_unvan.FieldName = "nmn_rkpcari_unvan";
+            this.colnmn_rkpcari_unvan.MinWidth = 25;
+            this.colnmn_rkpcari_unvan.Name = "colnmn_rkpcari_unvan";
+            this.colnmn_rkpcari_unvan.Visible = true;
+            this.colnmn_rkpcari_unvan.VisibleIndex = 18;
+            this.colnmn_rkpcari_unvan.Width = 128;
+            // 
+            // colnmn_rkpcari_urunkod
+            // 
+            this.colnmn_rkpcari_urunkod.FieldName = "nmn_rkpcari_urunkod";
+            this.colnmn_rkpcari_urunkod.MinWidth = 25;
+            this.colnmn_rkpcari_urunkod.Name = "colnmn_rkpcari_urunkod";
+            this.colnmn_rkpcari_urunkod.Visible = true;
+            this.colnmn_rkpcari_urunkod.VisibleIndex = 19;
+            this.colnmn_rkpcari_urunkod.Width = 144;
+            // 
+            // colnmn_tur
+            // 
+            this.colnmn_tur.FieldName = "nmn_tur";
+            this.colnmn_tur.MinWidth = 25;
+            this.colnmn_tur.Name = "colnmn_tur";
+            this.colnmn_tur.Visible = true;
+            this.colnmn_tur.VisibleIndex = 20;
+            this.colnmn_tur.Width = 69;
+            // 
+            // colnmn_uretilecek_urun
+            // 
+            this.colnmn_uretilecek_urun.FieldName = "nmn_uretilecek_urun";
+            this.colnmn_uretilecek_urun.MinWidth = 25;
+            this.colnmn_uretilecek_urun.Name = "colnmn_uretilecek_urun";
+            this.colnmn_uretilecek_urun.Visible = true;
+            this.colnmn_uretilecek_urun.VisibleIndex = 21;
+            this.colnmn_uretilecek_urun.Width = 150;
+            // 
+            // colnmn_hammadde
+            // 
+            this.colnmn_hammadde.FieldName = "nmn_hammadde";
+            this.colnmn_hammadde.MinWidth = 25;
+            this.colnmn_hammadde.Name = "colnmn_hammadde";
+            this.colnmn_hammadde.Visible = true;
+            this.colnmn_hammadde.VisibleIndex = 22;
+            this.colnmn_hammadde.Width = 116;
+            // 
+            // colnmn_mfi
+            // 
+            this.colnmn_mfi.FieldName = "nmn_mfi";
+            this.colnmn_mfi.MinWidth = 25;
+            this.colnmn_mfi.Name = "colnmn_mfi";
+            this.colnmn_mfi.Visible = true;
+            this.colnmn_mfi.VisibleIndex = 23;
+            this.colnmn_mfi.Width = 81;
+            // 
+            // colnmn_oran
+            // 
+            this.colnmn_oran.FieldName = "nmn_oran";
+            this.colnmn_oran.MinWidth = 25;
+            this.colnmn_oran.Name = "colnmn_oran";
+            this.colnmn_oran.Visible = true;
+            this.colnmn_oran.VisibleIndex = 24;
+            this.colnmn_oran.Width = 78;
+            // 
+            // colnmn_gida
+            // 
+            this.colnmn_gida.FieldName = "nmn_gida";
+            this.colnmn_gida.MinWidth = 25;
+            this.colnmn_gida.Name = "colnmn_gida";
+            this.colnmn_gida.Visible = true;
+            this.colnmn_gida.VisibleIndex = 25;
+            this.colnmn_gida.Width = 84;
+            // 
+            // colnmn_reach_rohs
+            // 
+            this.colnmn_reach_rohs.FieldName = "nmn_reach_rohs";
+            this.colnmn_reach_rohs.MinWidth = 25;
+            this.colnmn_reach_rohs.Name = "colnmn_reach_rohs";
+            this.colnmn_reach_rohs.Visible = true;
+            this.colnmn_reach_rohs.VisibleIndex = 26;
+            this.colnmn_reach_rohs.Width = 101;
+            // 
+            // colnmn_termin_tarih
+            // 
+            this.colnmn_termin_tarih.FieldName = "nmn_termin_tarih";
+            this.colnmn_termin_tarih.MinWidth = 25;
+            this.colnmn_termin_tarih.Name = "colnmn_termin_tarih";
+            this.colnmn_termin_tarih.Visible = true;
+            this.colnmn_termin_tarih.VisibleIndex = 29;
+            this.colnmn_termin_tarih.Width = 120;
+            // 
+            // colnmn_aciklama
+            // 
+            this.colnmn_aciklama.FieldName = "nmn_aciklama";
+            this.colnmn_aciklama.MinWidth = 25;
+            this.colnmn_aciklama.Name = "colnmn_aciklama";
+            this.colnmn_aciklama.Visible = true;
+            this.colnmn_aciklama.VisibleIndex = 9;
+            this.colnmn_aciklama.Width = 102;
+            // 
+            // delete
+            // 
+            this.delete.Caption = "Sil";
+            this.delete.ColumnEdit = this.repositoryItemButtonDelete;
+            this.delete.MinWidth = 25;
+            this.delete.Name = "delete";
+            this.delete.Visible = true;
+            this.delete.VisibleIndex = 30;
+            this.delete.Width = 51;
+            // 
+            // repositoryItemButtonDelete
+            // 
+            this.repositoryItemButtonDelete.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.repositoryItemButtonDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonDelete.Name = "repositoryItemButtonDelete";
+            this.repositoryItemButtonDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryItemButtonDelete.Click += new System.EventHandler(this.repositoryItemButtonDelete_Click);
+            // 
+            // update
+            // 
+            this.update.Caption = "Güncelle";
+            this.update.ColumnEdit = this.repositoryItemButtonUpdate;
+            this.update.MinWidth = 25;
+            this.update.Name = "update";
+            this.update.Visible = true;
+            this.update.VisibleIndex = 31;
+            this.update.Width = 66;
+            // 
+            // repositoryItemButtonUpdate
+            // 
+            this.repositoryItemButtonUpdate.AutoHeight = false;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            this.repositoryItemButtonUpdate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Güncelle", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonUpdate.Name = "repositoryItemButtonUpdate";
+            this.repositoryItemButtonUpdate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryItemButtonUpdate.Click += new System.EventHandler(this.repositoryItemButtonUpdate_Click);
+            // 
             // FrmNumuneDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1497, 698);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.bindingNavigator1);
-            this.Controls.Add(this.gridControl1);
             this.Name = "FrmNumuneDetay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Numune Detaylar";
             this.Load += new System.EventHandler(this.FrmNumuneDetay_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
@@ -292,14 +722,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateLast.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFirst.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFirst.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblNumunelerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraGrid.GridControl gridControl1;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
@@ -319,6 +752,49 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.DateEdit dateFirst;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private System.Windows.Forms.BindingSource tblNumunelerBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn delete;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonDelete;
+        private DevExpress.XtraGrid.Columns.GridColumn update;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonUpdate;
+        private DevExpress.XtraGrid.Columns.GridColumn colid;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_create_date;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_lastup_date;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_kod;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_cari_kod;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_cari_unvan;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_tarih;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_cari_seviye;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_aciliyet;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_adaycari_kod;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_adaycari_unvan;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_adaycari_konum;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_sip_miktar;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_deneme_miktar;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_hdf_fiyat;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_fiyat_cins;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_mus_yetkili;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_urungrup_kod;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_urun_grubu;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_rkpcari_unvan;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_rkpcari_urunkod;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_tur;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_uretilecek_urun;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_hammadde;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_mfi;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_oran;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_gida;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_reach_rohs;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_termin_tarih;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_aciklama;
     }
 }

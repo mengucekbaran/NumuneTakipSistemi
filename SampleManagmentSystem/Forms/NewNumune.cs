@@ -69,13 +69,24 @@ namespace SampleManagmentSystem.Forms
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             TblNumuneler nmn = new TblNumuneler();
+            //Girilen numune kodu kontrolü
+            bool isExist = db.TblNumuneler.Any(x => x.nmn_kod == txtNmnKod.Text);
+            if (isExist)
+            {
+                XtraMessageBox.Show("Bu numune kodu sistemde bulunmaktadır.Lütfen farklı bir numune kodu giriniz", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNmnKod.Focus();
+                return;
+            }
+            if (PostFormElementToDb(nmn))
+            {
+                nmn.nmn_create_date = DateTime.Now;
+                db.TblNumuneler.Add(nmn);//tabloya ekler
+                db.SaveChanges(); // degisiklikleri kaydeder
+                XtraMessageBox.Show("Numune Başarılı Bir Şekilde Tanımlandı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else return;
             
-            PostFormElementToDb(nmn);//FORMDAKİLERİ nmn ye atar.
-            db.TblNumuneler.Add(nmn);//tabloya ekler
-            db.SaveChanges(); // degisiklikleri kaydeder
-            XtraMessageBox.Show("Numune Başarılı Bir Şekilde Tanımlandı",
-                "Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            this.Close();
         }
         // GÜNCELLE BUTONUNA TIKLANDIĞINDA YAPILACAKLAR
         private void BtnGuncelle_Click(object sender, EventArgs e)
@@ -84,10 +95,15 @@ namespace SampleManagmentSystem.Forms
             TblNumuneler nmn = db.TblNumuneler.FirstOrDefault(x => x.nmn_kod == txtNmnKod.EditValue.ToString());
             if (nmn != null)
             {
-                PostFormElementToDb(nmn);
-                db.SaveChanges();
-                XtraMessageBox.Show("Numune Başarılı Bir Şekilde Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);                
-                this.Close();
+                if (PostFormElementToDb(nmn))
+                {
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Numune Başarılı Bir Şekilde Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else return;
+                
+                
             }
 
         }
@@ -177,9 +193,78 @@ namespace SampleManagmentSystem.Forms
             
         }
         //FORMDAKİ DEĞERLERİ 
-        public void PostFormElementToDb(TblNumuneler nmn)
+        public bool PostFormElementToDb(TblNumuneler nmn)
         {
-            nmn.nmn_create_date = DateTime.Now;
+            //KONTROLLER
+            if (string.IsNullOrEmpty(txtNmnKod.Text))
+            {
+                XtraMessageBox.Show("Numune kodu boş bırakılamaz.", "Information");
+                txtNmnKod.Focus();
+                return false;
+            }
+            if (lookUpCariAd.EditValue==null)
+            {
+                lookUpCariAd.ShowPopup();
+                return false;
+            }
+            if (txtAlisTarih.DateTime == Convert.ToDateTime("1-01-0001"))
+            {
+                XtraMessageBox.Show("Geçerli bir tarih giriniz.", "Information");
+                txtAlisTarih.Focus();
+                return false;
+            }
+            if (txtTerminTarih.DateTime == Convert.ToDateTime("1-01-0001"))
+            {
+                XtraMessageBox.Show("Geçerli bir tarih giriniz.", "Information");
+                txtTerminTarih.Focus();
+                return false;
+            }
+            if (lookUpAdayCari.EditValue == null)
+            {
+                lookUpAdayCari.ShowPopup();
+                return false;
+            }
+            if (lookUpUrunGrubu.EditValue == null)
+            {
+                lookUpUrunGrubu.ShowPopup();
+                return false;
+            }
+            if (Convert.ToDecimal(txtSipMktr.EditValue) < 0)
+            {
+                XtraMessageBox.Show("Sipariş miktarı negatif olamaz.", "Information");
+                txtSipMktr.Focus();
+                return false;
+            }
+            if (Convert.ToDecimal(txtDenemeMktr.EditValue) < 0)
+            {
+                XtraMessageBox.Show("Deneme miktarı negatif olamaz.", "Information");
+                txtDenemeMktr.Focus();
+                return false;
+            }
+            if (Convert.ToDecimal(txtHedefFiyat.EditValue) < 0)
+            {
+                XtraMessageBox.Show("Hedef fiyat negatif olamaz.", "Information");
+                txtHedefFiyat.Focus();
+                return false;
+            }
+            if (Convert.ToDecimal(txtKullanımOran.EditValue) < 0)
+            {
+                XtraMessageBox.Show("Kullanım oranı negatif olamaz.", "Information");
+                txtKullanımOran.Focus();
+                return false;
+            }
+            if (Convert.ToDecimal(txtMfi.EditValue) < 0)
+            {
+                XtraMessageBox.Show("MFI negatif olamaz.", "Information");
+                txtMfi.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtAciklama.Text))
+            {
+                XtraMessageBox.Show("Açıklama boş bırakılamaz.", "Information");
+                txtNmnKod.Focus();
+                return false;
+            }
             nmn.nmn_lastup_date = DateTime.Now;
             nmn.nmn_aciklama = txtAciklama.Text;
             nmn.nmn_aciliyet = lookUpAciliyet.Text;
@@ -227,6 +312,7 @@ namespace SampleManagmentSystem.Forms
             nmn.nmn_termin_tarih = txtTerminTarih.DateTime;
             nmn.nmn_tur = lookUpNmnTur.Text;
             nmn.nmn_uretilecek_urun = txtUretilecekUrun.Text;
+            return true;
         }
         // parametre verilen lookUpEdite ,parametre verilen tabloyu atar ve görüntülenmesini sağlar
         public void lookUpShow(LookUpEdit lookUpEdit,DataTable dt)

@@ -1,4 +1,5 @@
-﻿using SampleManagmentSystem.Entities;
+﻿using DevExpress.XtraEditors;
+using SampleManagmentSystem.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +36,7 @@ namespace SampleManagmentSystem.Forms
 
         private void BtnList_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void FrmNumuneDetay_Load(object sender, EventArgs e)
@@ -53,6 +54,37 @@ namespace SampleManagmentSystem.Forms
             DateTime dateTimeObj = DateTime.Parse($"01-01-{DateTime.Now.Year}");
             dateFirst.EditValue = dateTimeObj;
             dateLast.EditValue = DateTime.Today;
+        }
+
+        private void repositoryItemButtonDelete_Click(object sender, EventArgs e)
+        {
+            //DELETE BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
+            int selectedRowIndex = gridView1.FocusedRowHandle;
+            int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
+
+            //SİLMEK İSTEDİĞİNİZDEN EMİN MİSİNİZ MESAJI
+            var sonuc = XtraMessageBox.Show($"{(gridView1.GetFocusedRow() as ListNumune_Result).nmn_kod} kodlu kaydı silmek istediğinizden emin misiniz ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //YESE TIKLANIRSA
+            if (sonuc == DialogResult.Yes)
+            {
+                XtraMessageBox.Show("Siliniyor...");
+                // TABLODA VERİLEN İD YE EŞİT OLAN KAYDI BULDU
+                TblNumuneler nmn = db.TblNumuneler.Find(id);
+                //SİLDİ
+                db.TblNumuneler.Remove(nmn);
+                db.SaveChanges();
+                Listele();
+            }
+        }
+
+        private void repositoryItemButtonUpdate_Click(object sender, EventArgs e)
+        {
+            //UPDATE BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
+            int selectedRowIndex = gridView1.FocusedRowHandle;
+            int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
+
+            Forms.NewNumune fr = new Forms.NewNumune(id);
+            fr.Show();
         }
     }
 }
