@@ -51,6 +51,10 @@
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.txtDenemeMktr = new DevExpress.XtraEditors.SpinEdit();
+            this.txtMfi = new DevExpress.XtraEditors.SpinEdit();
+            this.txtKullanımOran = new DevExpress.XtraEditors.SpinEdit();
+            this.txtHedefFiyat = new DevExpress.XtraEditors.SpinEdit();
             this.radioGroupCariKnm = new DevExpress.XtraEditors.RadioGroup();
             this.lookUpAciliyet = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
@@ -73,16 +77,16 @@
             this.lookUpCariAd = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpNmnTur = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpAdayCari = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtSipMktr = new DevExpress.XtraEditors.SpinEdit();
             this.btnVazgec = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.txtSipMktr = new DevExpress.XtraEditors.SpinEdit();
-            this.txtHedefFiyat = new DevExpress.XtraEditors.SpinEdit();
-            this.txtKullanımOran = new DevExpress.XtraEditors.SpinEdit();
-            this.txtMfi = new DevExpress.XtraEditors.SpinEdit();
-            this.txtDenemeMktr = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDenemeMktr.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMfi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullanımOran.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHedefFiyat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupCariKnm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpAciliyet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupReachRohs.Properties)).BeginInit();
@@ -105,10 +109,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnTur.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpAdayCari.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHedefFiyat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullanımOran.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMfi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDenemeMktr.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -334,6 +334,78 @@
             this.panelControl1.Size = new System.Drawing.Size(1186, 669);
             this.panelControl1.TabIndex = 49;
             // 
+            // txtDenemeMktr
+            // 
+            this.txtDenemeMktr.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtDenemeMktr.Location = new System.Drawing.Point(828, 119);
+            this.txtDenemeMktr.Name = "txtDenemeMktr";
+            this.txtDenemeMktr.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDenemeMktr.Properties.DisplayFormat.FormatString = "N2";
+            this.txtDenemeMktr.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtDenemeMktr.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtDenemeMktr.Properties.Mask.EditMask = "f";
+            this.txtDenemeMktr.Size = new System.Drawing.Size(340, 24);
+            this.txtDenemeMktr.TabIndex = 85;
+            // 
+            // txtMfi
+            // 
+            this.txtMfi.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtMfi.Location = new System.Drawing.Point(411, 363);
+            this.txtMfi.Name = "txtMfi";
+            this.txtMfi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtMfi.Properties.DisplayFormat.FormatString = "N2";
+            this.txtMfi.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtMfi.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtMfi.Properties.Mask.EditMask = "f";
+            this.txtMfi.Size = new System.Drawing.Size(126, 24);
+            this.txtMfi.TabIndex = 84;
+            // 
+            // txtKullanımOran
+            // 
+            this.txtKullanımOran.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtKullanımOran.Location = new System.Drawing.Point(197, 326);
+            this.txtKullanımOran.Name = "txtKullanımOran";
+            this.txtKullanımOran.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtKullanımOran.Properties.DisplayFormat.FormatString = "N2";
+            this.txtKullanımOran.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtKullanımOran.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtKullanımOran.Properties.Mask.EditMask = "f";
+            this.txtKullanımOran.Size = new System.Drawing.Size(340, 24);
+            this.txtKullanımOran.TabIndex = 83;
+            // 
+            // txtHedefFiyat
+            // 
+            this.txtHedefFiyat.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtHedefFiyat.Location = new System.Drawing.Point(197, 187);
+            this.txtHedefFiyat.Name = "txtHedefFiyat";
+            this.txtHedefFiyat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtHedefFiyat.Properties.DisplayFormat.FormatString = "N2";
+            this.txtHedefFiyat.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtHedefFiyat.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtHedefFiyat.Properties.Mask.EditMask = "f";
+            this.txtHedefFiyat.Size = new System.Drawing.Size(340, 24);
+            this.txtHedefFiyat.TabIndex = 82;
+            // 
             // radioGroupCariKnm
             // 
             this.radioGroupCariKnm.EditValue = "Yurt İçi";
@@ -459,6 +531,7 @@
             // 
             // txtNmnKod
             // 
+            this.txtNmnKod.Enabled = false;
             this.txtNmnKod.Location = new System.Drawing.Point(197, 20);
             this.txtNmnKod.Name = "txtNmnKod";
             this.txtNmnKod.Size = new System.Drawing.Size(340, 22);
@@ -570,6 +643,24 @@
             this.lookUpAdayCari.Size = new System.Drawing.Size(340, 22);
             this.lookUpAdayCari.TabIndex = 9;
             // 
+            // txtSipMktr
+            // 
+            this.txtSipMktr.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtSipMktr.Location = new System.Drawing.Point(197, 154);
+            this.txtSipMktr.Name = "txtSipMktr";
+            this.txtSipMktr.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtSipMktr.Properties.DisplayFormat.FormatString = "N2";
+            this.txtSipMktr.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSipMktr.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtSipMktr.Properties.Mask.EditMask = "f";
+            this.txtSipMktr.Size = new System.Drawing.Size(340, 24);
+            this.txtSipMktr.TabIndex = 13;
+            // 
             // btnVazgec
             // 
             this.btnVazgec.Appearance.BackColor = System.Drawing.Color.DarkRed;
@@ -614,71 +705,6 @@
             this.BtnGuncelle.Visible = false;
             this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
-            // txtSipMktr
-            // 
-            this.txtSipMktr.Location = new System.Drawing.Point(197, 154);
-            this.txtSipMktr.Name = "txtSipMktr";
-            this.txtSipMktr.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtSipMktr.Properties.DisplayFormat.FormatString = "N2";
-            this.txtSipMktr.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtSipMktr.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.txtSipMktr.Properties.Mask.EditMask = "f";
-            this.txtSipMktr.Size = new System.Drawing.Size(340, 24);
-            this.txtSipMktr.TabIndex = 13;
-            // 
-            // txtHedefFiyat
-            // 
-            this.txtHedefFiyat.Location = new System.Drawing.Point(197, 187);
-            this.txtHedefFiyat.Name = "txtHedefFiyat";
-            this.txtHedefFiyat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtHedefFiyat.Properties.DisplayFormat.FormatString = "N2";
-            this.txtHedefFiyat.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtHedefFiyat.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.txtHedefFiyat.Properties.Mask.EditMask = "f";
-            this.txtHedefFiyat.Size = new System.Drawing.Size(340, 24);
-            this.txtHedefFiyat.TabIndex = 82;
-            // 
-            // txtKullanımOran
-            // 
-            this.txtKullanımOran.Location = new System.Drawing.Point(197, 326);
-            this.txtKullanımOran.Name = "txtKullanımOran";
-            this.txtKullanımOran.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtKullanımOran.Properties.DisplayFormat.FormatString = "N2";
-            this.txtKullanımOran.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtKullanımOran.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.txtKullanımOran.Properties.Mask.EditMask = "f";
-            this.txtKullanımOran.Size = new System.Drawing.Size(340, 24);
-            this.txtKullanımOran.TabIndex = 83;
-            // 
-            // txtMfi
-            // 
-            this.txtMfi.Location = new System.Drawing.Point(411, 363);
-            this.txtMfi.Name = "txtMfi";
-            this.txtMfi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtMfi.Properties.DisplayFormat.FormatString = "N2";
-            this.txtMfi.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtMfi.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.txtMfi.Properties.Mask.EditMask = "f";
-            this.txtMfi.Size = new System.Drawing.Size(126, 24);
-            this.txtMfi.TabIndex = 84;
-            // 
-            // txtDenemeMktr
-            // 
-            this.txtDenemeMktr.Location = new System.Drawing.Point(828, 119);
-            this.txtDenemeMktr.Name = "txtDenemeMktr";
-            this.txtDenemeMktr.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDenemeMktr.Properties.DisplayFormat.FormatString = "N2";
-            this.txtDenemeMktr.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtDenemeMktr.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.txtDenemeMktr.Properties.Mask.EditMask = "f";
-            this.txtDenemeMktr.Size = new System.Drawing.Size(340, 24);
-            this.txtDenemeMktr.TabIndex = 85;
-            // 
             // NewNumune
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -695,6 +721,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDenemeMktr.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMfi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullanımOran.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHedefFiyat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupCariKnm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpAciliyet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupReachRohs.Properties)).EndInit();
@@ -717,10 +747,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnTur.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpAdayCari.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHedefFiyat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullanımOran.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMfi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDenemeMktr.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

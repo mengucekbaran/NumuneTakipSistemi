@@ -46,7 +46,7 @@
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.bntNumuneList = new DevExpress.XtraBars.BarButtonItem();
             this.NewNumuneAdd = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNumuneList2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnNumuneDetay = new DevExpress.XtraBars.BarButtonItem();
             this.btnNumuneSonuc = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
@@ -95,7 +95,7 @@
             this.barButtonItem1,
             this.bntNumuneList,
             this.NewNumuneAdd,
-            this.barButtonItem4,
+            this.btnNumuneList2,
             this.btnNumuneDetay,
             this.btnNumuneSonuc});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
@@ -135,14 +135,14 @@
             this.NewNumuneAdd.Name = "NewNumuneAdd";
             this.NewNumuneAdd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NewNumuneAdd_ItemClick);
             // 
-            // barButtonItem4
+            // btnNumuneList2
             // 
-            this.barButtonItem4.Caption = "Numune Listesi";
-            this.barButtonItem4.Id = 4;
-            this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
-            this.barButtonItem4.Name = "barButtonItem4";
-            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            this.btnNumuneList2.Caption = "Numune Listesi";
+            this.btnNumuneList2.Id = 4;
+            this.btnNumuneList2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNumuneList2.ImageOptions.Image")));
+            this.btnNumuneList2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNumuneList2.ImageOptions.LargeImage")));
+            this.btnNumuneList2.Name = "btnNumuneList2";
+            this.btnNumuneList2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNumuneList2_ItemClick);
             // 
             // btnNumuneDetay
             // 
@@ -206,7 +206,7 @@
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnNumuneList2);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnNumuneSonuc);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
@@ -244,6 +244,7 @@
             this.IsMdiContainer = true;
             this.Name = "Form1";
             this.Text = "Numune Yönetim Sistemi";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -266,7 +267,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup numune;
         private DevExpress.XtraBars.Ribbon.RibbonPage lab;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem btnNumuneList2;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.Ribbon.ApplicationMenu applicationMenu1;

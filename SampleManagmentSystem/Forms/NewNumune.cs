@@ -20,7 +20,6 @@ namespace SampleManagmentSystem.Forms
         {
             InitializeComponent();
             SetTodayDate();
-            SetZero();
         }
         public NewNumune(int id) //UPDATE NUMUNE
         {
@@ -126,6 +125,7 @@ namespace SampleManagmentSystem.Forms
             dtDoviz.Rows.Add("TL");
             dtDoviz.Rows.Add("DOLAR");
             dtDoviz.Rows.Add("EURO");
+            dtDoviz.Rows.Add("GBP");
             lookUpShow(lookUpDoviz, dtDoviz);
             //TÜR - NUMUNENİN GELME ŞEKLİ
             DataTable dtTur= new DataTable();
@@ -189,8 +189,39 @@ namespace SampleManagmentSystem.Forms
             lookUpUrunGrubu.Properties.ValueMember = "sta_kod";
             lookUpUrunGrubu.Properties.DisplayMember = "sta_isim";
             lookUpUrunGrubu.Properties.DataSource = urunGrubu;
-            //**************************************************************************************************
+
+            string nextNmnKod;
+            string currentYear = DateTime.Now.ToString("yy");
+            //tabloda herhangi bir kaydın olup olmadığını kontrol eder
+            int isExist = db.TblNumuneler.Count();
+            if (isExist == 0)
+            {
+                nextNmnKod = "L" + currentYear + "0001";
+            }
+            else
+            {
+                //idye göre küçükten büyüğe sıralar ve son kaydın numune kodunu alır
+                var prevNumunekod = db.TblNumuneler.OrderByDescending(x => x.id).FirstOrDefault().nmn_kod;
+                //L230015 ise son kayıt Sonrakini L230016 yapar       
+
+                //son numune kodun yılını alır
+                string year = prevNumunekod.Substring(1, prevNumunekod.Length - 5);
+
+                if (currentYear == year)
+                {
+                    int nextNumber = int.Parse(prevNumunekod.Substring(prevNumunekod.Length - 4)) + 1;
+                    nextNmnKod = "L" + currentYear + nextNumber.ToString("D4");
+                }
+                else
+                {
+                    nextNmnKod = "L" + currentYear + "0001";
+                }
+            }
             
+            txtNmnKod.Text = nextNmnKod;
+            //**************************************************************************************************
+
+
         }
         //FORMDAKİ DEĞERLERİ 
         public bool PostFormElementToDb(TblNumuneler nmn)
@@ -327,14 +358,7 @@ namespace SampleManagmentSystem.Forms
             txtAlisTarih.EditValue = DateTime.Today;
             txtTerminTarih.EditValue = DateTime.Today;
         }
-        public void SetZero()
-        {
-            txtSipMktr.EditValue = 0.00;
-            txtHedefFiyat.EditValue = 0.00;
-            txtKullanımOran.EditValue = 0.00;
-            txtMfi.EditValue = 0.00;
-            txtDenemeMktr.EditValue = 0.00;
-        }
+
 
     }
 }
