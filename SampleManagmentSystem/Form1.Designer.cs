@@ -48,6 +48,7 @@
             this.NewNumuneAdd = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.btnNumuneDetay = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNumuneSonuc = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.home = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -95,9 +96,10 @@
             this.bntNumuneList,
             this.NewNumuneAdd,
             this.barButtonItem4,
-            this.btnNumuneDetay});
+            this.btnNumuneDetay,
+            this.btnNumuneSonuc});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 6;
+            this.ribbonControl1.MaxItemId = 8;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -151,6 +153,15 @@
             this.btnNumuneDetay.Name = "btnNumuneDetay";
             this.btnNumuneDetay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNumuneDetay_ItemClick);
             // 
+            // btnNumuneSonuc
+            // 
+            this.btnNumuneSonuc.Caption = "Numune Sonucu Gir";
+            this.btnNumuneSonuc.Id = 7;
+            this.btnNumuneSonuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNumuneSonuc.ImageOptions.Image")));
+            this.btnNumuneSonuc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNumuneSonuc.ImageOptions.LargeImage")));
+            this.btnNumuneSonuc.Name = "btnNumuneSonuc";
+            this.btnNumuneSonuc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNumuneSonuc_ItemClick);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -196,6 +207,7 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnNumuneSonuc);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // xtraTabbedMdiManager1
@@ -264,6 +276,7 @@
         private DevExpress.XtraBars.BarButtonItem btnNumuneDetay;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonDelete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonUpdate;
+        private DevExpress.XtraBars.BarButtonItem btnNumuneSonuc;
     }
 }
 

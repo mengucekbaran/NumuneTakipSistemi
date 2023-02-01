@@ -54,6 +54,8 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.BtnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.BtnList = new DevExpress.XtraEditors.SimpleButton();
             this.dateLast = new DevExpress.XtraEditors.DateEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -99,9 +101,7 @@
             this.colnmn_reach_rohs = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnmn_termin_tarih = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnmn_aciklama = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.delete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.update = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -235,6 +235,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.BtnUpdate);
+            this.groupControl1.Controls.Add(this.BtnDelete);
             this.groupControl1.Controls.Add(this.BtnList);
             this.groupControl1.Controls.Add(this.dateLast);
             this.groupControl1.Controls.Add(this.labelControl2);
@@ -244,6 +246,35 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1448, 114);
             this.groupControl1.TabIndex = 4;
+            // 
+            // BtnUpdate
+            // 
+            this.BtnUpdate.Appearance.BackColor = System.Drawing.Color.OrangeRed;
+            this.BtnUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.BtnUpdate.Appearance.Options.UseBackColor = true;
+            this.BtnUpdate.Appearance.Options.UseFont = true;
+            this.BtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ImageOptions.Image")));
+            this.BtnUpdate.Location = new System.Drawing.Point(1288, 31);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(134, 42);
+            this.BtnUpdate.TabIndex = 52;
+            this.BtnUpdate.Text = "Güncelle";
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
+            // 
+            // BtnDelete
+            // 
+            this.BtnDelete.Appearance.BackColor = System.Drawing.Color.DarkRed;
+            this.BtnDelete.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.BtnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.BtnDelete.Appearance.Options.UseBackColor = true;
+            this.BtnDelete.Appearance.Options.UseFont = true;
+            this.BtnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnDelete.ImageOptions.Image")));
+            this.BtnDelete.Location = new System.Drawing.Point(1130, 31);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(134, 42);
+            this.BtnDelete.TabIndex = 49;
+            this.BtnDelete.Text = "Sil";
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnList
             // 
@@ -378,9 +409,7 @@
             this.colnmn_gida,
             this.colnmn_reach_rohs,
             this.colnmn_termin_tarih,
-            this.colnmn_aciklama,
-            this.delete,
-            this.update});
+            this.colnmn_aciklama});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gridView1.Name = "gridView1";
@@ -485,7 +514,7 @@
             this.colnmn_adaycari_unvan.MinWidth = 25;
             this.colnmn_adaycari_unvan.Name = "colnmn_adaycari_unvan";
             this.colnmn_adaycari_unvan.Visible = true;
-            this.colnmn_adaycari_unvan.VisibleIndex = 10;
+            this.colnmn_adaycari_unvan.VisibleIndex = 9;
             this.colnmn_adaycari_unvan.Width = 131;
             // 
             // colnmn_adaycari_konum
@@ -494,7 +523,7 @@
             this.colnmn_adaycari_konum.MinWidth = 25;
             this.colnmn_adaycari_konum.Name = "colnmn_adaycari_konum";
             this.colnmn_adaycari_konum.Visible = true;
-            this.colnmn_adaycari_konum.VisibleIndex = 11;
+            this.colnmn_adaycari_konum.VisibleIndex = 10;
             this.colnmn_adaycari_konum.Width = 137;
             // 
             // colnmn_sip_miktar
@@ -503,7 +532,7 @@
             this.colnmn_sip_miktar.MinWidth = 25;
             this.colnmn_sip_miktar.Name = "colnmn_sip_miktar";
             this.colnmn_sip_miktar.Visible = true;
-            this.colnmn_sip_miktar.VisibleIndex = 12;
+            this.colnmn_sip_miktar.VisibleIndex = 11;
             this.colnmn_sip_miktar.Width = 106;
             // 
             // colnmn_deneme_miktar
@@ -512,7 +541,7 @@
             this.colnmn_deneme_miktar.MinWidth = 25;
             this.colnmn_deneme_miktar.Name = "colnmn_deneme_miktar";
             this.colnmn_deneme_miktar.Visible = true;
-            this.colnmn_deneme_miktar.VisibleIndex = 13;
+            this.colnmn_deneme_miktar.VisibleIndex = 12;
             this.colnmn_deneme_miktar.Width = 130;
             // 
             // colnmn_hdf_fiyat
@@ -521,7 +550,7 @@
             this.colnmn_hdf_fiyat.MinWidth = 25;
             this.colnmn_hdf_fiyat.Name = "colnmn_hdf_fiyat";
             this.colnmn_hdf_fiyat.Visible = true;
-            this.colnmn_hdf_fiyat.VisibleIndex = 14;
+            this.colnmn_hdf_fiyat.VisibleIndex = 13;
             this.colnmn_hdf_fiyat.Width = 102;
             // 
             // colnmn_fiyat_cins
@@ -656,18 +685,8 @@
             this.colnmn_aciklama.MinWidth = 25;
             this.colnmn_aciklama.Name = "colnmn_aciklama";
             this.colnmn_aciklama.Visible = true;
-            this.colnmn_aciklama.VisibleIndex = 9;
+            this.colnmn_aciklama.VisibleIndex = 14;
             this.colnmn_aciklama.Width = 102;
-            // 
-            // delete
-            // 
-            this.delete.Caption = "Sil";
-            this.delete.ColumnEdit = this.repositoryItemButtonDelete;
-            this.delete.MinWidth = 25;
-            this.delete.Name = "delete";
-            this.delete.Visible = true;
-            this.delete.VisibleIndex = 30;
-            this.delete.Width = 51;
             // 
             // repositoryItemButtonDelete
             // 
@@ -677,17 +696,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonDelete.Name = "repositoryItemButtonDelete";
             this.repositoryItemButtonDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.repositoryItemButtonDelete.Click += new System.EventHandler(this.repositoryItemButtonDelete_Click);
-            // 
-            // update
-            // 
-            this.update.Caption = "Güncelle";
-            this.update.ColumnEdit = this.repositoryItemButtonUpdate;
-            this.update.MinWidth = 25;
-            this.update.Name = "update";
-            this.update.Visible = true;
-            this.update.VisibleIndex = 31;
-            this.update.Width = 66;
             // 
             // repositoryItemButtonUpdate
             // 
@@ -697,7 +705,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Güncelle", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonUpdate.Name = "repositoryItemButtonUpdate";
             this.repositoryItemButtonUpdate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.repositoryItemButtonUpdate.Click += new System.EventHandler(this.repositoryItemButtonUpdate_Click);
             // 
             // FrmNumuneDetay
             // 
@@ -762,9 +769,7 @@
         private DevExpress.XtraGrid.GridControl gridControl1;
         private System.Windows.Forms.BindingSource tblNumunelerBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn delete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonDelete;
-        private DevExpress.XtraGrid.Columns.GridColumn update;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonUpdate;
         private DevExpress.XtraGrid.Columns.GridColumn colid;
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_create_date;
@@ -796,5 +801,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_reach_rohs;
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_termin_tarih;
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_aciklama;
+        private DevExpress.XtraEditors.SimpleButton BtnDelete;
+        private DevExpress.XtraEditors.SimpleButton BtnUpdate;
     }
 }

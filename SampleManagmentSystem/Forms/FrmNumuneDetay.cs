@@ -56,12 +56,10 @@ namespace SampleManagmentSystem.Forms
             dateLast.EditValue = DateTime.Today;
         }
 
-        private void repositoryItemButtonDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
-            //DELETE BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
-            int selectedRowIndex = gridView1.FocusedRowHandle;
+            int selectedRowIndex = gridView1.GetSelectedRows()[0];
             int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
-
             //SİLMEK İSTEDİĞİNİZDEN EMİN MİSİNİZ MESAJI
             var sonuc = XtraMessageBox.Show($"{(gridView1.GetFocusedRow() as ListNumune_Result).nmn_kod} kodlu kaydı silmek istediğinizden emin misiniz ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //YESE TIKLANIRSA
@@ -77,10 +75,10 @@ namespace SampleManagmentSystem.Forms
             }
         }
 
-        private void repositoryItemButtonUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             //UPDATE BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
-            int selectedRowIndex = gridView1.FocusedRowHandle;
+            int selectedRowIndex = gridView1.GetSelectedRows()[0];
             int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
 
             Forms.NewNumune fr = new Forms.NewNumune(id);

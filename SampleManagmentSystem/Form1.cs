@@ -42,5 +42,12 @@ namespace SampleManagmentSystem
             Forms.FrmNumuneDetay fr = new Forms.FrmNumuneDetay();
             fr.Show();
         }
+
+        private void btnNumuneSonuc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmNumuneSonuc fr = new Forms.FrmNumuneSonuc();
+            fr.MdiParent = this;
+            fr.Show();
+        }
     }
 }
