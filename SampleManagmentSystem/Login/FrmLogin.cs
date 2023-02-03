@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace SampleManagmentSystem.Forms
 {
+    
     public partial class FrmLogin : Form
     {
         public FrmLogin()
@@ -28,6 +29,41 @@ namespace SampleManagmentSystem.Forms
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+        private void textEdit2_EditValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+        private void labelControl4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEdit1_Click(object sender, EventArgs e)
+        {
+            panel3.BackColor = Color.White;
+            panel4.BackColor = SystemColors.Control;
+        }
+
+        private void textEdit2_Click(object sender, EventArgs e)
+        {
+            panel4.BackColor = Color.White;
+            panel3.BackColor = SystemColors.Control;
+        }
+
+        private void hyperlinkLabelControl1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tbnGiris_Click(object sender, EventArgs e)
         {
 
         }

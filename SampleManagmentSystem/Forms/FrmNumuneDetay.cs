@@ -58,31 +58,45 @@ namespace SampleManagmentSystem.Forms
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            int selectedRowIndex = gridView1.GetSelectedRows()[0];
-            int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
-            //SİLMEK İSTEDİĞİNİZDEN EMİN MİSİNİZ MESAJI
-            var sonuc = XtraMessageBox.Show($"{(gridView1.GetFocusedRow() as ListNumune_Result).nmn_kod} kodlu kaydı silmek istediğinizden emin misiniz ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //YESE TIKLANIRSA
-            if (sonuc == DialogResult.Yes)
+            if (gridView1.GetSelectedRows().Length > 0)
             {
-                XtraMessageBox.Show("Siliniyor...");
-                // TABLODA VERİLEN İD YE EŞİT OLAN KAYDI BULDU
-                TblNumuneler nmn = db.TblNumuneler.Find(id);
-                //SİLDİ
-                db.TblNumuneler.Remove(nmn);
-                db.SaveChanges();
-                Listele();
+                int selectedRowIndex = gridView1.GetSelectedRows()[0];
+                if (selectedRowIndex >= 0 && selectedRowIndex < gridView1.RowCount)
+                {
+                    int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
+                    //SİLMEK İSTEDİĞİNİZDEN EMİN MİSİNİZ MESAJI
+                    var sonuc = XtraMessageBox.Show($"{(gridView1.GetFocusedRow() as ListNumune_Result).nmn_kod} kodlu kaydı silmek istediğinizden emin misiniz ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    //YESE TIKLANIRSA
+                    if (sonuc == DialogResult.Yes)
+                    {
+                        XtraMessageBox.Show("Siliniyor...");
+                        // TABLODA VERİLEN İD YE EŞİT OLAN KAYDI BULDU
+                        TblNumuneler nmn = db.TblNumuneler.Find(id);
+                        //SİLDİ
+                        db.TblNumuneler.Remove(nmn);
+                        db.SaveChanges();
+                        Listele();
+                    }
+                }
             }
+            
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
             //UPDATE BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
-            int selectedRowIndex = gridView1.GetSelectedRows()[0];
-            int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
+            if (gridView1.GetSelectedRows().Length > 0)
+            {
+                int selectedRowIndex = gridView1.GetSelectedRows()[0];
+                if (selectedRowIndex >= 0 && selectedRowIndex < gridView1.RowCount)
+                {
+                    int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
+                    Forms.NewNumune fr = new Forms.NewNumune(id);
+                    fr.Show();
+                }
+            }
 
-            Forms.NewNumune fr = new Forms.NewNumune(id);
-            fr.Show();
+            
         }
     }
 }

@@ -16,16 +16,16 @@ namespace SampleManagmentSystem
         {
             InitializeComponent();
         }
-        Forms.FrmNumune frmNumuneLab;
+        Forms.FrmNumuneSonucList sonucList;
         private void btnNumuneList2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //Mdi Kapanan Formun Yeniden Açılması ve Açık olan formun tekrardan açılmaması
-            if (frmNumuneLab == null || frmNumuneLab.IsDisposed)
+            if (sonucList == null || sonucList.IsDisposed)
             {
-                frmNumuneLab = new Forms.FrmNumune();
+                sonucList = new Forms.FrmNumuneSonucList();
                 //mdi alanında gözükmesi için this ile belirtilir
-                frmNumuneLab.MdiParent = this;
-                frmNumuneLab.Show();
+                sonucList.MdiParent = this;
+                sonucList.Show();
             }
 
         }
@@ -76,6 +76,15 @@ namespace SampleManagmentSystem
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+        Forms.FrmNumuneSonucDetay frmSonucDetay;
+        private void btnSonucDetay_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmSonucDetay == null || frmSonucDetay.IsDisposed)
+            {
+                frmSonucDetay = new Forms.FrmNumuneSonucDetay();
+                frmSonucDetay.Show();
+            }
         }
     }
 }

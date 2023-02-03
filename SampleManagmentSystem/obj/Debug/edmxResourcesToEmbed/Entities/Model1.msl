@@ -1,23 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="NUMUNE_TAKİPModelStoreContainer" CdmEntityContainer="NUMUNE_TAKİPEntities">
-    <EntitySetMapping Name="TblLab">
-      <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.TblLab">
-        <MappingFragment StoreEntitySet="TblLab">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="lab_bitis_tarih" ColumnName="lab_bitis_tarih" />
-          <ScalarProperty Name="lab_aciklama" ColumnName="lab_aciklama" />
-          <ScalarProperty Name="lab_maliyet1" ColumnName="lab_maliyet1" />
-          <ScalarProperty Name="lab_isik_hasligi" ColumnName="lab_isik_hasligi" />
-          <ScalarProperty Name="lab_isi_dayanimi" ColumnName="lab_isi_dayanimi" />
-          <ScalarProperty Name="lab_gida" ColumnName="lab_gida" />
-          <ScalarProperty Name="lab_reach_rohs_oran" ColumnName="lab_reach_rohs_oran" />
-          <ScalarProperty Name="lab_maliyet2" ColumnName="lab_maliyet2" />
-          <ScalarProperty Name="lab_sonuc" ColumnName="lab_sonuc" />
-          <ScalarProperty Name="lab_musteri_onay" ColumnName="lab_musteri_onay" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="TblNumuneler">
       <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.TblNumuneler">
         <MappingFragment StoreEntitySet="TblNumuneler">
@@ -89,5 +72,26 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <EntitySetMapping Name="NUMUNE_HAREKETLERI">
+      <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.NUMUNE_HAREKETLERI">
+        <MappingFragment StoreEntitySet="NUMUNE_HAREKETLERI">
+          <ScalarProperty Name="nmnh_aciklama" ColumnName="nmnh_aciklama" />
+          <ScalarProperty Name="nmnh_labonay" ColumnName="nmnh_labonay" />
+          <ScalarProperty Name="nmnh_gida" ColumnName="nmnh_gida" />
+          <ScalarProperty Name="nmnh_rroran" ColumnName="nmnh_rroran" />
+          <ScalarProperty Name="nmnh_isidayanim" ColumnName="nmnh_isidayanim" />
+          <ScalarProperty Name="nmnh_isikhas" ColumnName="nmnh_isikhas" />
+          <ScalarProperty Name="nmnh_maliyetYonetim" ColumnName="nmnh_maliyetYonetim" />
+          <ScalarProperty Name="nmnh_maliyetEuo" ColumnName="nmnh_maliyetEuo" />
+          <ScalarProperty Name="nmnh_bitistarih" ColumnName="nmnh_bitistarih" />
+          <ScalarProperty Name="nmnh_sonucsirano" ColumnName="nmnh_sonucsirano" />
+          <ScalarProperty Name="nmnh_nmnkod" ColumnName="nmnh_nmnkod" />
+          <ScalarProperty Name="nmnh_nmnid" ColumnName="nmnh_nmnid" />
+          <ScalarProperty Name="nmnh_lastupdate" ColumnName="nmnh_lastupdate" />
+          <ScalarProperty Name="nmnh_createdate" ColumnName="nmnh_createdate" />
+          <ScalarProperty Name="nmnh_id" ColumnName="nmnh_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

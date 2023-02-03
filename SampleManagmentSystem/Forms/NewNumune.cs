@@ -111,7 +111,7 @@ namespace SampleManagmentSystem.Forms
         private void NewNumune_Load(object sender, EventArgs e)
         {
             //TABLES
-            //******************************************************************************************************
+            //*******************************************************************************************************************************************************************************************
             // ACİLİYET 
             DataTable dtAciliyet = new DataTable();
             dtAciliyet.Columns.Add("Deger", typeof(string));
@@ -189,7 +189,8 @@ namespace SampleManagmentSystem.Forms
             lookUpUrunGrubu.Properties.ValueMember = "sta_kod";
             lookUpUrunGrubu.Properties.DisplayMember = "sta_isim";
             lookUpUrunGrubu.Properties.DataSource = urunGrubu;
-
+            //NUMUNE KODUNUN YAPISININ AYARLANMASI VE VERİ TABANINDAN ÇEKİLMESİ
+            //************************************************************************************************************************
             string nextNmnKod;
             string currentYear = DateTime.Now.ToString("yy");
             //tabloda herhangi bir kaydın olup olmadığını kontrol eder
@@ -216,10 +217,11 @@ namespace SampleManagmentSystem.Forms
                 {
                     nextNmnKod = "L" + currentYear + "0001";
                 }
-            }
-            
+            }            
             txtNmnKod.Text = nextNmnKod;
-            //**************************************************************************************************
+            //************************************************************************************************************************
+
+            //*******************************************************************************************************************************************************************************************
 
 
         }
@@ -293,7 +295,7 @@ namespace SampleManagmentSystem.Forms
             if (string.IsNullOrEmpty(txtAciklama.Text))
             {
                 XtraMessageBox.Show("Açıklama boş bırakılamaz.", "Information");
-                txtNmnKod.Focus();
+                txtAciklama.Focus();
                 return false;
             }
             nmn.nmn_lastup_date = DateTime.Now;

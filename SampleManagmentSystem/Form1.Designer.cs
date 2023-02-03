@@ -49,6 +49,7 @@
             this.btnNumuneList2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnNumuneDetay = new DevExpress.XtraBars.BarButtonItem();
             this.btnNumuneSonuc = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSonucDetay = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.home = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -97,9 +98,10 @@
             this.NewNumuneAdd,
             this.btnNumuneList2,
             this.btnNumuneDetay,
-            this.btnNumuneSonuc});
+            this.btnNumuneSonuc,
+            this.btnSonucDetay});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 8;
+            this.ribbonControl1.MaxItemId = 9;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -162,6 +164,15 @@
             this.btnNumuneSonuc.Name = "btnNumuneSonuc";
             this.btnNumuneSonuc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNumuneSonuc_ItemClick);
             // 
+            // btnSonucDetay
+            // 
+            this.btnSonucDetay.Caption = "Numune Sonuç Detay";
+            this.btnSonucDetay.Id = 8;
+            this.btnSonucDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSonucDetay.ImageOptions.Image")));
+            this.btnSonucDetay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSonucDetay.ImageOptions.LargeImage")));
+            this.btnSonucDetay.Name = "btnSonucDetay";
+            this.btnSonucDetay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSonucDetay_ItemClick);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -208,6 +219,7 @@
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnNumuneList2);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnNumuneSonuc);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnSonucDetay);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // xtraTabbedMdiManager1
@@ -278,6 +290,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonDelete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonUpdate;
         private DevExpress.XtraBars.BarButtonItem btnNumuneSonuc;
+        private DevExpress.XtraBars.BarButtonItem btnSonucDetay;
     }
 }
 

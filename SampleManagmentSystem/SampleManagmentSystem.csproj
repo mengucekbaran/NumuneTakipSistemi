@@ -122,6 +122,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Entities\NUMUNE_HAREKETLERI.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\STOKLAR.cs">
       <DependentUpon>Maskom.tt</DependentUpon>
     </Compile>
@@ -130,9 +133,6 @@
     </Compile>
     <Compile Include="Entities\STOK_ANA_GRUPLARI.cs">
       <DependentUpon>Maskom.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\TblLab.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\TblNumuneler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -145,6 +145,24 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNumuneSonucDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNumuneSonucDetay.Designer.cs">
+      <DependentUpon>FrmNumuneSonucDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNumuneSonucGir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNumuneSonucGir.Designer.cs">
+      <DependentUpon>FrmNumuneSonucGir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNumuneSonucList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNumuneSonucList.Designer.cs">
+      <DependentUpon>FrmNumuneSonucList.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -180,6 +198,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNumuneSonucDetay.resx">
+      <DependentUpon>FrmNumuneSonucDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNumuneSonucGir.resx">
+      <DependentUpon>FrmNumuneSonucGir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNumuneSonucList.resx">
+      <DependentUpon>FrmNumuneSonucList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
