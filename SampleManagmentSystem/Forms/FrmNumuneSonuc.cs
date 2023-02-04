@@ -64,6 +64,15 @@ namespace SampleManagmentSystem.Forms
                 nmnh.nmnh_createdate = DateTime.Now;
                 db.NUMUNE_HAREKETLERI.Add(nmnh);//tabloya ekler
                 db.SaveChanges(); // degisiklikleri kaydeder
+
+                //FrmNumuneSonucList formunda bulunan numuneSonucları gridViewini günceller
+                FrmNumuneSonucList frmNmnSonucList = (FrmNumuneSonucList)Application.OpenForms["FrmNumuneSonucList"];
+                if (frmNmnSonucList != null)
+                {
+                    frmNmnSonucList.ListNumuneSonuclar();
+                    frmNmnSonucList.ListSonucGirmemisler();
+                    frmNmnSonucList.UpdateGridviews();
+                }
                 XtraMessageBox.Show("Numune Sonucu Başarılı Bir Şekilde Tanımlandı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

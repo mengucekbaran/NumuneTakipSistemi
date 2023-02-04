@@ -16,7 +16,8 @@ namespace SampleManagmentSystem.Forms
     {
         MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
         NUMUNE_TAKİPEntities db = new NUMUNE_TAKİPEntities();
-        
+
+
         public NewNumune() //CREATE NUMUNE
         {
 
@@ -116,6 +117,15 @@ namespace SampleManagmentSystem.Forms
                 nmn.nmn_create_date = DateTime.Now;
                 db.TblNumuneler.Add(nmn);//tabloya ekler
                 db.SaveChanges(); // degisiklikleri kaydeder
+
+                //FrmNumuneSonucList formunda bulunan nmnSonucGirilmemis gridViewini günceller
+                FrmNumuneSonucList frmNmnSonucList = (FrmNumuneSonucList)Application.OpenForms["FrmNumuneSonucList"];
+                if (frmNmnSonucList != null)
+                {
+                    frmNmnSonucList.ListSonucGirmemisler();
+                    frmNmnSonucList.UpdateGridviews();
+                }
+
                 XtraMessageBox.Show("Numune Başarılı Bir Şekilde Tanımlandı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

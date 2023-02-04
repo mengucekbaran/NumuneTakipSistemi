@@ -16,5 +16,17 @@ namespace SampleManagmentSystem.Forms
         {
             InitializeComponent();
         }
+
+        private void BtnKaydet_Click(object sender, EventArgs e)
+        {
+            //FrmNumuneSonucList formunda bulunan numuneSonucları gridViewini günceller
+            FrmNumuneSonucList frmNmnSonucList = (FrmNumuneSonucList)Application.OpenForms["FrmNumuneSonucList"];
+            if (frmNmnSonucList != null)
+            {
+                frmNmnSonucList.ListNumuneSonuclar();
+                frmNmnSonucList.ListSonucGirmemisler();
+                frmNmnSonucList.UpdateGridviews();
+            }
+        }
     }
 }
