@@ -16,16 +16,48 @@ namespace SampleManagmentSystem.Forms
     {
         MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
         NUMUNE_TAKİPEntities db = new NUMUNE_TAKİPEntities();
+        
         public NewNumune() //CREATE NUMUNE
         {
+
             InitializeComponent();
+            //NUMUNE KODUNUN YAPISININ AYARLANMASI VE VERİ TABANINDAN ÇEKİLMESİ
+            //************************************************************************************************************************
+            string nextNmnKod;
+            string currentYear = DateTime.Now.ToString("yy");
+            //tabloda herhangi bir kaydın olup olmadığını kontrol eder
+            int isExist = db.TblNumuneler.Count();
+            if (isExist == 0)
+            {
+                nextNmnKod = "L" + currentYear + "0001";
+            }
+            else
+            {
+                //idye göre küçükten büyüğe sıralar ve son kaydın numune kodunu alır
+                var prevNumunekod = db.TblNumuneler.OrderByDescending(x => x.id).FirstOrDefault().nmn_kod;
+                //L230015 ise son kayıt Sonrakini L230016 yapar       
+
+                //son numune kodun yılını alır
+                string year = prevNumunekod.Substring(1, prevNumunekod.Length - 5);
+
+                if (currentYear == year)
+                {
+                    int nextNumber = int.Parse(prevNumunekod.Substring(prevNumunekod.Length - 4)) + 1;
+                    nextNmnKod = "L" + currentYear + nextNumber.ToString("D4");
+                }
+                else
+                {
+                    nextNmnKod = "L" + currentYear + "0001";
+                }
+            }
+            txtNmnKod.Text = nextNmnKod;
             SetTodayDate();
         }
-        public NewNumune(int id) //UPDATE NUMUNE
+        public NewNumune(string nmnKod) //UPDATE NUMUNE
         {
             InitializeComponent();
-            TblNumuneler nmn = db.TblNumuneler.Find(id);
-            if (nmn.id == id)
+            TblNumuneler nmn = db.TblNumuneler.FirstOrDefault(n => n.nmn_kod == nmnKod);
+            if (nmn.nmn_kod == nmnKod)
             {
                 //BUTONLARIN GÖRÜNÜRLÜĞÜNÜ AYARLAMA
                 BtnKaydet.Visible = false;
@@ -33,6 +65,7 @@ namespace SampleManagmentSystem.Forms
                 //FORM ELEMANLARINI TIKLANAN KAYIDIN BİLGİLERİYLE DOLDURMA
                 txtNmnKod.Enabled = false;
                 txtNmnKod.EditValue = nmn.nmn_kod;
+                txtNmnAd.EditValue = nmn.nmn_ad;
                 lookUpCariAd.EditValue = nmn.nmn_cari_kod;
                 lookUpCariSvy.EditValue = nmn.nmn_cari_seviye;
                 lookUpAdayCari.EditValue = nmn.nmn_adaycari_kod;
@@ -56,6 +89,8 @@ namespace SampleManagmentSystem.Forms
                 radioGroupGida.EditValue = nmn.nmn_gida;
                 radioGroupReachRohs.EditValue = nmn.nmn_reach_rohs;
                 txtAciklama.EditValue = nmn.nmn_aciklama;
+                spinIsikHasligi.EditValue = nmn.nmn_isik_hasligi;
+                txtIsiDayanim.EditValue = nmn.nmn_isi_dayanim;
             }
         }
         //VAZGEC 
@@ -106,10 +141,11 @@ namespace SampleManagmentSystem.Forms
             }
 
         }
-
         //SAYFA YÜKLENDİĞİNDE YAPILACAKLAR
         private void NewNumune_Load(object sender, EventArgs e)
-        {
+        {         
+            labelterminTarih.Visible = false;//ŞİMDİLİK
+            txtTerminTarih.Visible = false;
             //TABLES
             //*******************************************************************************************************************************************************************************************
             // ACİLİYET 
@@ -189,41 +225,10 @@ namespace SampleManagmentSystem.Forms
             lookUpUrunGrubu.Properties.ValueMember = "sta_kod";
             lookUpUrunGrubu.Properties.DisplayMember = "sta_isim";
             lookUpUrunGrubu.Properties.DataSource = urunGrubu;
-            //NUMUNE KODUNUN YAPISININ AYARLANMASI VE VERİ TABANINDAN ÇEKİLMESİ
+
             //************************************************************************************************************************
-            string nextNmnKod;
-            string currentYear = DateTime.Now.ToString("yy");
-            //tabloda herhangi bir kaydın olup olmadığını kontrol eder
-            int isExist = db.TblNumuneler.Count();
-            if (isExist == 0)
-            {
-                nextNmnKod = "L" + currentYear + "0001";
-            }
-            else
-            {
-                //idye göre küçükten büyüğe sıralar ve son kaydın numune kodunu alır
-                var prevNumunekod = db.TblNumuneler.OrderByDescending(x => x.id).FirstOrDefault().nmn_kod;
-                //L230015 ise son kayıt Sonrakini L230016 yapar       
-
-                //son numune kodun yılını alır
-                string year = prevNumunekod.Substring(1, prevNumunekod.Length - 5);
-
-                if (currentYear == year)
-                {
-                    int nextNumber = int.Parse(prevNumunekod.Substring(prevNumunekod.Length - 4)) + 1;
-                    nextNmnKod = "L" + currentYear + nextNumber.ToString("D4");
-                }
-                else
-                {
-                    nextNmnKod = "L" + currentYear + "0001";
-                }
-            }            
-            txtNmnKod.Text = nextNmnKod;
-            //************************************************************************************************************************
-
+ 
             //*******************************************************************************************************************************************************************************************
-
-
         }
         //FORMDAKİ DEĞERLERİ 
         public bool PostFormElementToDb(TblNumuneler nmn)
@@ -233,6 +238,29 @@ namespace SampleManagmentSystem.Forms
             {
                 XtraMessageBox.Show("Numune kodu boş bırakılamaz.", "Information");
                 txtNmnKod.Focus();
+                return false;
+            }
+            if (Convert.ToDecimal(spinIsikHasligi.Value) < 2 || spinIsikHasligi.Value > 8)
+            {
+                XtraMessageBox.Show("Işık Haslığı  2 ile 8 arasında değer alabilir.", "Information");
+                txtSipMktr.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtIsiDayanim.Text))
+            {
+                XtraMessageBox.Show("Proses ısı dayanımı boş bırakılamaz.", "Information");
+                txtIsiDayanim.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtUretilecekUrun.Text))
+            {
+                XtraMessageBox.Show("Üretilecek ürün bilgisi boş bırakılamaz.", "Information");
+                txtUretilecekUrun.Focus();
+                return false;
+            }
+            if (lookUpHammadde.EditValue == null)
+            {
+                lookUpHammadde.ShowPopup();
                 return false;
             }
             if (lookUpCariAd.EditValue==null)
@@ -310,41 +338,25 @@ namespace SampleManagmentSystem.Forms
             nmn.nmn_deneme_miktar = float.Parse(txtDenemeMktr.Text);
             nmn.nmn_fiyat_cins = lookUpDoviz.Text;
             nmn.nmn_gida = radioGroupGida.Properties.Items[radioGroupGida.SelectedIndex].Description;
-            // seçili olan checkboxların değerlerini bir listeye alır
-            //CheckEdit[] checkEdits = new CheckEdit[] { chEdit1, chEdit2, chEdit3, chEdit4, chEdit5,
-            //                                           chEdit6, chEdit7, chEdit8,chEdit9,chEdit10,chEdit11,chEdit12 };
-            //List<string> checkedValues = new List<string>();
-            //string temp="";
-            //for (int i = 0; i < checkEdits.Length; i++)
-            //{
-            //    if (checkEdits[i].Checked)
-            //        checkedValues.Add(checkEdits[i].Text);
-            //}
-            //foreach(string item in checkedValues)
-            //{
-            //    temp += item + ",";
-            //}
-            //nmn.nmn_hammadde = temp;
             nmn.nmn_hammadde = lookUpHammadde.Text;
             nmn.nmn_hdf_fiyat = float.Parse(txtHedefFiyat.Text);
             nmn.nmn_urun_grubu = lookUpUrunGrubu.Text;
             nmn.nmn_urungrup_kod = lookUpUrunGrubu.EditValue.ToString();
             nmn.nmn_kod = txtNmnKod.Text;
+            nmn.nmn_ad = txtNmnAd.Text;
             nmn.nmn_mfi = float.Parse(txtMfi.Text);
-            //nmn.nmn_mfi = txtEdit1 + ',' + txtEdit2 + ',' + txtEdit3 + ',' + txtEdit4 + ',' + txtEdit5
-            //                + ',' + txtEdit6 + ',' + txtEdit7 + ',' + txtEdit8 + ',' + txtEdit9;
             nmn.nmn_mus_yetkili = txtMusYetkili.Text;
             nmn.nmn_oran = float.Parse(txtKullanımOran.Text);
             nmn.nmn_reach_rohs = radioGroupReachRohs.Properties.Items[radioGroupReachRohs.SelectedIndex].Description;
             nmn.nmn_rkpcari_unvan = txtRkpUnvan.Text;
             nmn.nmn_rkpcari_urunkod = txtRkpUrunKod.Text;
             nmn.nmn_sip_miktar = float.Parse(txtSipMktr.Text);
-
-            //MessageBox.Show("Lütfen sayısal bir değer giriniz.");
             nmn.nmn_tarih = txtAlisTarih.DateTime;
             nmn.nmn_termin_tarih = txtTerminTarih.DateTime;
             nmn.nmn_tur = lookUpNmnTur.Text;
             nmn.nmn_uretilecek_urun = txtUretilecekUrun.Text;
+            nmn.nmn_isik_hasligi = (int)spinIsikHasligi.Value;
+            nmn.nmn_isi_dayanim = txtIsiDayanim.Text;
             return true;
         }
         // parametre verilen lookUpEdite ,parametre verilen tabloyu atar ve görüntülenmesini sağlar
@@ -360,7 +372,5 @@ namespace SampleManagmentSystem.Forms
             txtAlisTarih.EditValue = DateTime.Today;
             txtTerminTarih.EditValue = DateTime.Today;
         }
-
-
     }
 }

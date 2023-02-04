@@ -42,5 +42,9 @@ namespace SampleManagmentSystem.Entities
         public string nmn_reach_rohs { get; set; }
         public System.DateTime nmn_termin_tarih { get; set; }
         public string nmn_aciklama { get; set; }
+        public string nmn_urungrup_kod { get; set; }
+        public double nmn_isik_hasligi { get; set; }
+        public string nmn_isi_dayanim { get; set; }
+        public string nmn_ad { get; set; }
     }
 }

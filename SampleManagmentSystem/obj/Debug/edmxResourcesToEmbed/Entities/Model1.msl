@@ -1,10 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="NUMUNE_TAKİPModelStoreContainer" CdmEntityContainer="NUMUNE_TAKİPEntities">
+    <EntitySetMapping Name="NUMUNE_HAREKETLERI">
+      <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.NUMUNE_HAREKETLERI">
+        <MappingFragment StoreEntitySet="NUMUNE_HAREKETLERI">
+          <ScalarProperty Name="nmnh_id" ColumnName="nmnh_id" />
+          <ScalarProperty Name="nmnh_createdate" ColumnName="nmnh_createdate" />
+          <ScalarProperty Name="nmnh_lastupdate" ColumnName="nmnh_lastupdate" />
+          <ScalarProperty Name="nmnh_nmnid" ColumnName="nmnh_nmnid" />
+          <ScalarProperty Name="nmnh_nmnkod" ColumnName="nmnh_nmnkod" />
+          <ScalarProperty Name="nmnh_sonucsirano" ColumnName="nmnh_sonucsirano" />
+          <ScalarProperty Name="nmnh_bitistarih" ColumnName="nmnh_bitistarih" />
+          <ScalarProperty Name="nmnh_maliyetEuo" ColumnName="nmnh_maliyetEuo" />
+          <ScalarProperty Name="nmnh_maliyetYonetim" ColumnName="nmnh_maliyetYonetim" />
+          <ScalarProperty Name="nmnh_isikhas" ColumnName="nmnh_isikhas" />
+          <ScalarProperty Name="nmnh_isidayanim" ColumnName="nmnh_isidayanim" />
+          <ScalarProperty Name="nmnh_rroran" ColumnName="nmnh_rroran" />
+          <ScalarProperty Name="nmnh_gida" ColumnName="nmnh_gida" />
+          <ScalarProperty Name="nmnh_labonay" ColumnName="nmnh_labonay" />
+          <ScalarProperty Name="nmnh_aciklama" ColumnName="nmnh_aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="TblNumuneler">
       <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.TblNumuneler">
         <MappingFragment StoreEntitySet="TblNumuneler">
-          <ScalarProperty Name="nmn_urungrup_kod" ColumnName="nmn_urungrup_kod" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="nmn_create_date" ColumnName="nmn_create_date" />
           <ScalarProperty Name="nmn_lastup_date" ColumnName="nmn_lastup_date" />
@@ -34,6 +54,10 @@
           <ScalarProperty Name="nmn_reach_rohs" ColumnName="nmn_reach_rohs" />
           <ScalarProperty Name="nmn_termin_tarih" ColumnName="nmn_termin_tarih" />
           <ScalarProperty Name="nmn_aciklama" ColumnName="nmn_aciklama" />
+          <ScalarProperty Name="nmn_urungrup_kod" ColumnName="nmn_urungrup_kod" />
+          <ScalarProperty Name="nmn_isik_hasligi" ColumnName="nmn_isik_hasligi" />
+          <ScalarProperty Name="nmn_isi_dayanim" ColumnName="nmn_isi_dayanim" />
+          <ScalarProperty Name="nmn_ad" ColumnName="nmn_ad" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -69,29 +93,12 @@
           <ScalarProperty Name="nmn_reach_rohs" ColumnName="nmn_reach_rohs" />
           <ScalarProperty Name="nmn_termin_tarih" ColumnName="nmn_termin_tarih" />
           <ScalarProperty Name="nmn_aciklama" ColumnName="nmn_aciklama" />
+          <ScalarProperty Name="nmn_urungrup_kod" ColumnName="nmn_urungrup_kod" />
+          <ScalarProperty Name="nmn_isik_hasligi" ColumnName="nmn_isik_hasligi" />
+          <ScalarProperty Name="nmn_isi_dayanim" ColumnName="nmn_isi_dayanim" />
+          <ScalarProperty Name="nmn_ad" ColumnName="nmn_ad" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <EntitySetMapping Name="NUMUNE_HAREKETLERI">
-      <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.NUMUNE_HAREKETLERI">
-        <MappingFragment StoreEntitySet="NUMUNE_HAREKETLERI">
-          <ScalarProperty Name="nmnh_aciklama" ColumnName="nmnh_aciklama" />
-          <ScalarProperty Name="nmnh_labonay" ColumnName="nmnh_labonay" />
-          <ScalarProperty Name="nmnh_gida" ColumnName="nmnh_gida" />
-          <ScalarProperty Name="nmnh_rroran" ColumnName="nmnh_rroran" />
-          <ScalarProperty Name="nmnh_isidayanim" ColumnName="nmnh_isidayanim" />
-          <ScalarProperty Name="nmnh_isikhas" ColumnName="nmnh_isikhas" />
-          <ScalarProperty Name="nmnh_maliyetYonetim" ColumnName="nmnh_maliyetYonetim" />
-          <ScalarProperty Name="nmnh_maliyetEuo" ColumnName="nmnh_maliyetEuo" />
-          <ScalarProperty Name="nmnh_bitistarih" ColumnName="nmnh_bitistarih" />
-          <ScalarProperty Name="nmnh_sonucsirano" ColumnName="nmnh_sonucsirano" />
-          <ScalarProperty Name="nmnh_nmnkod" ColumnName="nmnh_nmnkod" />
-          <ScalarProperty Name="nmnh_nmnid" ColumnName="nmnh_nmnid" />
-          <ScalarProperty Name="nmnh_lastupdate" ColumnName="nmnh_lastupdate" />
-          <ScalarProperty Name="nmnh_createdate" ColumnName="nmnh_createdate" />
-          <ScalarProperty Name="nmnh_id" ColumnName="nmnh_id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -76,12 +76,10 @@ namespace SampleManagmentSystem.Forms
             
             //UPDATE BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
             int selectedRowIndex = gridView1.FocusedRowHandle;
-            int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
-
-            Forms.NewNumune fr = new Forms.NewNumune(id);
+            string nmnKod = gridView1.GetRowCellValue(selectedRowIndex, "nmn_kod").ToString();
+            Forms.NewNumune fr = new Forms.NewNumune(nmnKod);
             fr.Show();
         }
-
 
     }
     

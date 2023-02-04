@@ -29,7 +29,5 @@ namespace SampleManagmentSystem.Entities
         public Nullable<byte> nmnh_gida { get; set; }
         public byte nmnh_labonay { get; set; }
         public string nmnh_aciklama { get; set; }
-    
-        public virtual TblNumuneler TblNumuneler { get; set; }
     }
 }

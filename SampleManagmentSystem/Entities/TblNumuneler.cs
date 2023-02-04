@@ -14,12 +14,6 @@ namespace SampleManagmentSystem.Entities
     
     public partial class TblNumuneler
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TblNumuneler()
-        {
-            this.NUMUNE_HAREKETLERI = new HashSet<NUMUNE_HAREKETLERI>();
-        }
-    
         public int id { get; set; }
         public System.DateTime nmn_create_date { get; set; }
         public System.DateTime nmn_lastup_date { get; set; }
@@ -50,8 +44,8 @@ namespace SampleManagmentSystem.Entities
         public System.DateTime nmn_termin_tarih { get; set; }
         public string nmn_aciklama { get; set; }
         public string nmn_urungrup_kod { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NUMUNE_HAREKETLERI> NUMUNE_HAREKETLERI { get; set; }
+        public double nmn_isik_hasligi { get; set; }
+        public string nmn_isi_dayanim { get; set; }
+        public string nmn_ad { get; set; }
     }
 }

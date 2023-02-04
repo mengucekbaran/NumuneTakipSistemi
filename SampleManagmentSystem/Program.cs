@@ -18,7 +18,7 @@ namespace SampleManagmentSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             FrmLogin frmLogin = new FrmLogin();
-            //if(frmLogin.ShowDialog()== DialogResult.OK)
+            //if (frmLogin.ShowDialog() == DialogResult.OK)
             {
                 Application.Run(new Form1());
             }

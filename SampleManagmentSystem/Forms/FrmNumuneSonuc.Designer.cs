@@ -30,11 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNumuneSonuc));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.txtNmnKod = new DevExpress.XtraEditors.TextEdit();
+            this.lookUpNmnKod = new DevExpress.XtraEditors.LookUpEdit();
+            this.spinMaliyetYonetim = new DevExpress.XtraEditors.SpinEdit();
+            this.spinDayanim = new DevExpress.XtraEditors.SpinEdit();
+            this.spinRrOran = new DevExpress.XtraEditors.SpinEdit();
+            this.spinMaliyetEuro = new DevExpress.XtraEditors.SpinEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.spinHassas = new DevExpress.XtraEditors.SpinEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.radioGroupLabOnay = new DevExpress.XtraEditors.RadioGroup();
+            this.radioGroupGida = new DevExpress.XtraEditors.RadioGroup();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.dateBitisTarih = new DevExpress.XtraEditors.DateEdit();
+            this.txtAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
@@ -42,19 +53,9 @@
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.btnVazgec = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.lookUpNmnKod = new DevExpress.XtraEditors.LookUpEdit();
-            this.spinMaliyetYonetim = new DevExpress.XtraEditors.SpinEdit();
-            this.spinDayanim = new DevExpress.XtraEditors.SpinEdit();
-            this.spinRrOran = new DevExpress.XtraEditors.SpinEdit();
-            this.spinMaliyetEuro = new DevExpress.XtraEditors.SpinEdit();
-            this.spinHassas = new DevExpress.XtraEditors.SpinEdit();
-            this.radioGroupLabOnay = new DevExpress.XtraEditors.RadioGroup();
-            this.radioGroupGida = new DevExpress.XtraEditors.RadioGroup();
-            this.dateBitisTarih = new DevExpress.XtraEditors.DateEdit();
-            this.txtAciklama = new DevExpress.XtraEditors.MemoEdit();
-            this.txtNmnKod = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinMaliyetYonetim.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinDayanim.Properties)).BeginInit();
@@ -66,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateBitisTarih.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBitisTarih.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -98,114 +98,13 @@
             this.panelControl1.Size = new System.Drawing.Size(1208, 384);
             this.panelControl1.TabIndex = 50;
             // 
-            // labelControl9
+            // txtNmnKod
             // 
-            this.labelControl9.Location = new System.Drawing.Point(712, 68);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(90, 16);
-            this.labelControl9.TabIndex = 92;
-            this.labelControl9.Text = "Yönetim Maliyet";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(210, 118);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(100, 16);
-            this.labelControl3.TabIndex = 90;
-            this.labelControl3.Text = "Reach-Rohs Oran";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(22, 118);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(69, 16);
-            this.labelControl5.TabIndex = 88;
-            this.labelControl5.Text = "Isı Dayanımı";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(210, 68);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(79, 16);
-            this.labelControl4.TabIndex = 86;
-            this.labelControl4.Text = "Işık Hassaslığı";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(22, 22);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(79, 16);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Numune Kodu";
-            // 
-            // labelControl23
-            // 
-            this.labelControl23.Location = new System.Drawing.Point(22, 220);
-            this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(51, 16);
-            this.labelControl23.TabIndex = 44;
-            this.labelControl23.Text = "Açıklama";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(712, 22);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(111, 16);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Numune Bitiş Tarihi";
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Location = new System.Drawing.Point(712, 118);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(53, 16);
-            this.labelControl18.TabIndex = 40;
-            this.labelControl18.Text = "Lab Onay";
-            // 
-            // labelControl19
-            // 
-            this.labelControl19.Location = new System.Drawing.Point(22, 166);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(98, 16);
-            this.labelControl19.TabIndex = 38;
-            this.labelControl19.Text = "Gıdaya Uygun Mu";
-            // 
-            // labelControl20
-            // 
-            this.labelControl20.Location = new System.Drawing.Point(22, 68);
-            this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(76, 16);
-            this.labelControl20.TabIndex = 36;
-            this.labelControl20.Text = "Maliyet EURO";
-            // 
-            // btnVazgec
-            // 
-            this.btnVazgec.Appearance.BackColor = System.Drawing.Color.DarkRed;
-            this.btnVazgec.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.btnVazgec.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnVazgec.Appearance.Options.UseBackColor = true;
-            this.btnVazgec.Appearance.Options.UseFont = true;
-            this.btnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVazgec.ImageOptions.Image")));
-            this.btnVazgec.Location = new System.Drawing.Point(883, 381);
-            this.btnVazgec.Name = "btnVazgec";
-            this.btnVazgec.Size = new System.Drawing.Size(134, 42);
-            this.btnVazgec.TabIndex = 53;
-            this.btnVazgec.Text = "Vazgeç";
-            this.btnVazgec.Click += new System.EventHandler(this.btnVazgec_Click);
-            // 
-            // BtnKaydet
-            // 
-            this.BtnKaydet.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.BtnKaydet.Appearance.Options.UseBackColor = true;
-            this.BtnKaydet.Appearance.Options.UseFont = true;
-            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
-            this.BtnKaydet.Location = new System.Drawing.Point(1032, 381);
-            this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(134, 42);
-            this.BtnKaydet.TabIndex = 52;
-            this.BtnKaydet.Text = "Kaydet";
-            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
+            this.txtNmnKod.Location = new System.Drawing.Point(117, 16);
+            this.txtNmnKod.Name = "txtNmnKod";
+            this.txtNmnKod.Size = new System.Drawing.Size(286, 22);
+            this.txtNmnKod.TabIndex = 103;
+            this.txtNmnKod.Visible = false;
             // 
             // lookUpNmnKod
             // 
@@ -289,10 +188,34 @@
             this.spinMaliyetEuro.Size = new System.Drawing.Size(77, 24);
             this.spinMaliyetEuro.TabIndex = 96;
             // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(712, 68);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(90, 16);
+            this.labelControl9.TabIndex = 92;
+            this.labelControl9.Text = "Yönetim Maliyet";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(210, 118);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(100, 16);
+            this.labelControl3.TabIndex = 90;
+            this.labelControl3.Text = "Reach-Rohs Oran";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(22, 118);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(69, 16);
+            this.labelControl5.TabIndex = 88;
+            this.labelControl5.Text = "Isı Dayanımı";
+            // 
             // spinHassas
             // 
             this.spinHassas.EditValue = new decimal(new int[] {
-            0,
+            2,
             0,
             0,
             0});
@@ -304,8 +227,26 @@
             this.spinHassas.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.spinHassas.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.spinHassas.Properties.Mask.EditMask = "f";
+            this.spinHassas.Properties.MaxValue = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.spinHassas.Properties.MinValue = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             this.spinHassas.Size = new System.Drawing.Size(77, 24);
             this.spinHassas.TabIndex = 87;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(210, 68);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(60, 16);
+            this.labelControl4.TabIndex = 86;
+            this.labelControl4.Text = "Işık Haslığı";
             // 
             // radioGroupLabOnay
             // 
@@ -343,6 +284,14 @@
             this.radioGroupGida.TabIndex = 76;
             this.radioGroupGida.Tag = "";
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(22, 22);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(79, 16);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Numune Kodu";
+            // 
             // dateBitisTarih
             // 
             this.dateBitisTarih.EditValue = null;
@@ -368,13 +317,74 @@
             this.txtAciklama.Size = new System.Drawing.Size(718, 151);
             this.txtAciklama.TabIndex = 45;
             // 
-            // txtNmnKod
+            // labelControl23
             // 
-            this.txtNmnKod.Location = new System.Drawing.Point(117, 16);
-            this.txtNmnKod.Name = "txtNmnKod";
-            this.txtNmnKod.Size = new System.Drawing.Size(286, 22);
-            this.txtNmnKod.TabIndex = 103;
-            this.txtNmnKod.Visible = false;
+            this.labelControl23.Location = new System.Drawing.Point(22, 220);
+            this.labelControl23.Name = "labelControl23";
+            this.labelControl23.Size = new System.Drawing.Size(51, 16);
+            this.labelControl23.TabIndex = 44;
+            this.labelControl23.Text = "Açıklama";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(712, 22);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(111, 16);
+            this.labelControl2.TabIndex = 2;
+            this.labelControl2.Text = "Numune Bitiş Tarihi";
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Location = new System.Drawing.Point(712, 118);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(53, 16);
+            this.labelControl18.TabIndex = 40;
+            this.labelControl18.Text = "Lab Onay";
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Location = new System.Drawing.Point(22, 166);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(98, 16);
+            this.labelControl19.TabIndex = 38;
+            this.labelControl19.Text = "Gıdaya Uygun Mu";
+            // 
+            // labelControl20
+            // 
+            this.labelControl20.Location = new System.Drawing.Point(22, 68);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(76, 16);
+            this.labelControl20.TabIndex = 36;
+            this.labelControl20.Text = "Maliyet EURO";
+            // 
+            // btnVazgec
+            // 
+            this.btnVazgec.Appearance.BackColor = System.Drawing.Color.DarkRed;
+            this.btnVazgec.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.btnVazgec.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnVazgec.Appearance.Options.UseBackColor = true;
+            this.btnVazgec.Appearance.Options.UseFont = true;
+            this.btnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVazgec.ImageOptions.Image")));
+            this.btnVazgec.Location = new System.Drawing.Point(883, 381);
+            this.btnVazgec.Name = "btnVazgec";
+            this.btnVazgec.Size = new System.Drawing.Size(134, 42);
+            this.btnVazgec.TabIndex = 53;
+            this.btnVazgec.Text = "Vazgeç";
+            this.btnVazgec.Click += new System.EventHandler(this.btnVazgec_Click);
+            // 
+            // BtnKaydet
+            // 
+            this.BtnKaydet.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.BtnKaydet.Appearance.Options.UseBackColor = true;
+            this.BtnKaydet.Appearance.Options.UseFont = true;
+            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
+            this.BtnKaydet.Location = new System.Drawing.Point(1032, 381);
+            this.BtnKaydet.Name = "BtnKaydet";
+            this.BtnKaydet.Size = new System.Drawing.Size(134, 42);
+            this.BtnKaydet.TabIndex = 52;
+            this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // FrmNumuneSonuc
             // 
@@ -390,6 +400,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinMaliyetYonetim.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinDayanim.Properties)).EndInit();
@@ -401,7 +412,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateBitisTarih.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBitisTarih.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

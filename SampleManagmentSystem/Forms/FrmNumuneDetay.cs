@@ -90,8 +90,8 @@ namespace SampleManagmentSystem.Forms
                 int selectedRowIndex = gridView1.GetSelectedRows()[0];
                 if (selectedRowIndex >= 0 && selectedRowIndex < gridView1.RowCount)
                 {
-                    int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
-                    Forms.NewNumune fr = new Forms.NewNumune(id);
+                    string nmnKod = gridView1.GetRowCellValue(selectedRowIndex, "nmn_kod").ToString();
+                    Forms.NewNumune fr = new Forms.NewNumune(nmnKod);
                     fr.Show();
                 }
             }

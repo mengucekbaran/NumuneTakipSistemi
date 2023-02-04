@@ -27,8 +27,8 @@ namespace SampleManagmentSystem.Entities
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<TblNumuneler> TblNumuneler { get; set; }
         public virtual DbSet<NUMUNE_HAREKETLERI> NUMUNE_HAREKETLERI { get; set; }
+        public virtual DbSet<TblNumuneler> TblNumuneler { get; set; }
     
         public virtual ObjectResult<ListNumune_Result> ListNumune(Nullable<System.DateTime> ilk_tarih, Nullable<System.DateTime> son_tarih)
         {

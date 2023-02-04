@@ -187,6 +187,7 @@
             this.colid.FieldName = "id";
             this.colid.MinWidth = 25;
             this.colid.Name = "colid";
+            this.colid.OptionsColumn.AllowEdit = false;
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
             this.colid.Width = 106;
@@ -196,6 +197,7 @@
             this.colnmn_kod.FieldName = "nmn_kod";
             this.colnmn_kod.MinWidth = 25;
             this.colnmn_kod.Name = "colnmn_kod";
+            this.colnmn_kod.OptionsColumn.AllowEdit = false;
             this.colnmn_kod.Visible = true;
             this.colnmn_kod.VisibleIndex = 1;
             this.colnmn_kod.Width = 141;
@@ -205,6 +207,7 @@
             this.colnmn_cari_kod.FieldName = "nmn_cari_kod";
             this.colnmn_cari_kod.MinWidth = 25;
             this.colnmn_cari_kod.Name = "colnmn_cari_kod";
+            this.colnmn_cari_kod.OptionsColumn.AllowEdit = false;
             this.colnmn_cari_kod.Visible = true;
             this.colnmn_cari_kod.VisibleIndex = 2;
             this.colnmn_cari_kod.Width = 97;
@@ -214,6 +217,7 @@
             this.colnmn_cari_unvan.FieldName = "nmn_cari_unvan";
             this.colnmn_cari_unvan.MinWidth = 25;
             this.colnmn_cari_unvan.Name = "colnmn_cari_unvan";
+            this.colnmn_cari_unvan.OptionsColumn.AllowEdit = false;
             this.colnmn_cari_unvan.Visible = true;
             this.colnmn_cari_unvan.VisibleIndex = 3;
             this.colnmn_cari_unvan.Width = 107;
@@ -223,6 +227,7 @@
             this.colnmn_tarih.FieldName = "nmn_tarih";
             this.colnmn_tarih.MinWidth = 25;
             this.colnmn_tarih.Name = "colnmn_tarih";
+            this.colnmn_tarih.OptionsColumn.AllowEdit = false;
             this.colnmn_tarih.Visible = true;
             this.colnmn_tarih.VisibleIndex = 4;
             this.colnmn_tarih.Width = 148;
@@ -232,6 +237,7 @@
             this.colnmn_cari_seviye.FieldName = "nmn_cari_seviye";
             this.colnmn_cari_seviye.MinWidth = 25;
             this.colnmn_cari_seviye.Name = "colnmn_cari_seviye";
+            this.colnmn_cari_seviye.OptionsColumn.AllowEdit = false;
             this.colnmn_cari_seviye.Visible = true;
             this.colnmn_cari_seviye.VisibleIndex = 5;
             this.colnmn_cari_seviye.Width = 128;
@@ -241,6 +247,7 @@
             this.colnmn_aciliyet.FieldName = "nmn_aciliyet";
             this.colnmn_aciliyet.MinWidth = 25;
             this.colnmn_aciliyet.Name = "colnmn_aciliyet";
+            this.colnmn_aciliyet.OptionsColumn.AllowEdit = false;
             this.colnmn_aciliyet.Visible = true;
             this.colnmn_aciliyet.VisibleIndex = 6;
             this.colnmn_aciliyet.Width = 92;
@@ -250,6 +257,7 @@
             this.colnmn_adaycari_unvan.FieldName = "nmn_adaycari_unvan";
             this.colnmn_adaycari_unvan.MinWidth = 25;
             this.colnmn_adaycari_unvan.Name = "colnmn_adaycari_unvan";
+            this.colnmn_adaycari_unvan.OptionsColumn.AllowEdit = false;
             this.colnmn_adaycari_unvan.Visible = true;
             this.colnmn_adaycari_unvan.VisibleIndex = 7;
             this.colnmn_adaycari_unvan.Width = 74;
@@ -259,6 +267,7 @@
             this.colnmn_sip_miktar.FieldName = "nmn_sip_miktar";
             this.colnmn_sip_miktar.MinWidth = 25;
             this.colnmn_sip_miktar.Name = "colnmn_sip_miktar";
+            this.colnmn_sip_miktar.OptionsColumn.AllowEdit = false;
             this.colnmn_sip_miktar.Visible = true;
             this.colnmn_sip_miktar.VisibleIndex = 8;
             this.colnmn_sip_miktar.Width = 72;
@@ -268,6 +277,7 @@
             this.colnmn_deneme_miktar.FieldName = "nmn_deneme_miktar";
             this.colnmn_deneme_miktar.MinWidth = 25;
             this.colnmn_deneme_miktar.Name = "colnmn_deneme_miktar";
+            this.colnmn_deneme_miktar.OptionsColumn.AllowEdit = false;
             this.colnmn_deneme_miktar.Visible = true;
             this.colnmn_deneme_miktar.VisibleIndex = 9;
             this.colnmn_deneme_miktar.Width = 45;
@@ -277,6 +287,7 @@
             this.colnmn_hdf_fiyat.FieldName = "nmn_hdf_fiyat";
             this.colnmn_hdf_fiyat.MinWidth = 25;
             this.colnmn_hdf_fiyat.Name = "colnmn_hdf_fiyat";
+            this.colnmn_hdf_fiyat.OptionsColumn.AllowEdit = false;
             this.colnmn_hdf_fiyat.Visible = true;
             this.colnmn_hdf_fiyat.VisibleIndex = 10;
             this.colnmn_hdf_fiyat.Width = 60;
@@ -286,6 +297,7 @@
             this.colnmn_fiyat_cins.FieldName = "nmn_fiyat_cins";
             this.colnmn_fiyat_cins.MinWidth = 25;
             this.colnmn_fiyat_cins.Name = "colnmn_fiyat_cins";
+            this.colnmn_fiyat_cins.OptionsColumn.AllowEdit = false;
             this.colnmn_fiyat_cins.Visible = true;
             this.colnmn_fiyat_cins.VisibleIndex = 11;
             this.colnmn_fiyat_cins.Width = 95;
@@ -296,6 +308,7 @@
             this.delete.ColumnEdit = this.repositoryItemButtonDelete;
             this.delete.MinWidth = 25;
             this.delete.Name = "delete";
+            this.delete.OptionsColumn.AllowEdit = false;
             this.delete.Visible = true;
             this.delete.VisibleIndex = 12;
             this.delete.Width = 94;
@@ -316,6 +329,7 @@
             this.update.ColumnEdit = this.repositoryItemButtonUpdate;
             this.update.MinWidth = 25;
             this.update.Name = "update";
+            this.update.OptionsColumn.AllowEdit = false;
             this.update.Visible = true;
             this.update.VisibleIndex = 13;
             this.update.Width = 94;

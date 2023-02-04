@@ -54,19 +54,13 @@
     <Property Name="nmn_termin_tarih" Type="datetime" Nullable="false" />
     <Property Name="nmn_aciklama" Type="nvarchar(max)" Nullable="false" />
     <Property Name="nmn_urungrup_kod" Type="nvarchar" MaxLength="25" />
+    <Property Name="nmn_isik_hasligi" Type="float" Nullable="false" />
+    <Property Name="nmn_isi_dayanim" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="nmn_ad" Type="nvarchar" MaxLength="120" Nullable="false" />
   </EntityType>
-  <Association Name="FK_NUMUNE_HAREKETLERI_TblNumuneler">
-    <End Role="TblNumuneler" Type="Self.TblNumuneler" Multiplicity="1" />
-    <End Role="NUMUNE_HAREKETLERI" Type="Self.NUMUNE_HAREKETLERI" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TblNumuneler">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="NUMUNE_HAREKETLERI">
-        <PropertyRef Name="nmnh_nmnid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'fk_numune_kod' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="fk_numune_kod" />-->
   <Function Name="ListNumune" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ilk_tarih" Type="datetime2" Mode="In" />
     <Parameter Name="son_tarih" Type="datetime2" Mode="In" />
@@ -74,9 +68,5 @@
   <EntityContainer Name="NUMUNE_TAKİPModelStoreContainer">
     <EntitySet Name="NUMUNE_HAREKETLERI" EntityType="Self.NUMUNE_HAREKETLERI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblNumuneler" EntityType="Self.TblNumuneler" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_NUMUNE_HAREKETLERI_TblNumuneler" Association="Self.FK_NUMUNE_HAREKETLERI_TblNumuneler">
-      <End Role="TblNumuneler" EntitySet="TblNumuneler" />
-      <End Role="NUMUNE_HAREKETLERI" EntitySet="NUMUNE_HAREKETLERI" />
-    </AssociationSet>
   </EntityContainer>
 </Schema>
