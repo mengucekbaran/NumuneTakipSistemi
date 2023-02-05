@@ -186,95 +186,105 @@
             // 
             // colid
             // 
+            this.colid.Caption = "ID";
             this.colid.FieldName = "id";
             this.colid.MinWidth = 25;
             this.colid.Name = "colid";
             this.colid.OptionsColumn.AllowEdit = false;
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
-            this.colid.Width = 106;
+            this.colid.Width = 30;
             // 
             // colnmn_kod
             // 
+            this.colnmn_kod.Caption = "NUMUNE KODU";
             this.colnmn_kod.FieldName = "nmn_kod";
             this.colnmn_kod.MinWidth = 25;
             this.colnmn_kod.Name = "colnmn_kod";
             this.colnmn_kod.OptionsColumn.AllowEdit = false;
             this.colnmn_kod.Visible = true;
             this.colnmn_kod.VisibleIndex = 2;
-            this.colnmn_kod.Width = 141;
+            this.colnmn_kod.Width = 88;
             // 
             // colnmn_ad
             // 
+            this.colnmn_ad.Caption = "NUMUNE AD";
             this.colnmn_ad.FieldName = "nmn_ad";
             this.colnmn_ad.MinWidth = 25;
             this.colnmn_ad.Name = "colnmn_ad";
             this.colnmn_ad.Visible = true;
             this.colnmn_ad.VisibleIndex = 1;
-            this.colnmn_ad.Width = 94;
+            this.colnmn_ad.Width = 98;
             // 
             // colnmn_cari_kod
             // 
+            this.colnmn_cari_kod.Caption = "CARİ KOD";
             this.colnmn_cari_kod.FieldName = "nmn_cari_kod";
             this.colnmn_cari_kod.MinWidth = 25;
             this.colnmn_cari_kod.Name = "colnmn_cari_kod";
             this.colnmn_cari_kod.OptionsColumn.AllowEdit = false;
             this.colnmn_cari_kod.Visible = true;
             this.colnmn_cari_kod.VisibleIndex = 3;
-            this.colnmn_cari_kod.Width = 97;
+            this.colnmn_cari_kod.Width = 88;
             // 
             // colnmn_cari_unvan
             // 
+            this.colnmn_cari_unvan.Caption = "CARİ UNVAN";
             this.colnmn_cari_unvan.FieldName = "nmn_cari_unvan";
             this.colnmn_cari_unvan.MinWidth = 25;
             this.colnmn_cari_unvan.Name = "colnmn_cari_unvan";
             this.colnmn_cari_unvan.OptionsColumn.AllowEdit = false;
             this.colnmn_cari_unvan.Visible = true;
             this.colnmn_cari_unvan.VisibleIndex = 4;
-            this.colnmn_cari_unvan.Width = 107;
+            this.colnmn_cari_unvan.Width = 101;
             // 
             // colnmn_tarih
             // 
+            this.colnmn_tarih.Caption = "ALIŞ TARİHİ";
             this.colnmn_tarih.FieldName = "nmn_tarih";
             this.colnmn_tarih.MinWidth = 25;
             this.colnmn_tarih.Name = "colnmn_tarih";
             this.colnmn_tarih.OptionsColumn.AllowEdit = false;
             this.colnmn_tarih.Visible = true;
             this.colnmn_tarih.VisibleIndex = 5;
-            this.colnmn_tarih.Width = 148;
+            this.colnmn_tarih.Width = 102;
             // 
             // colnmn_cari_seviye
             // 
+            this.colnmn_cari_seviye.Caption = "CARİ SEVİYE";
             this.colnmn_cari_seviye.FieldName = "nmn_cari_seviye";
             this.colnmn_cari_seviye.MinWidth = 25;
             this.colnmn_cari_seviye.Name = "colnmn_cari_seviye";
             this.colnmn_cari_seviye.OptionsColumn.AllowEdit = false;
             this.colnmn_cari_seviye.Visible = true;
             this.colnmn_cari_seviye.VisibleIndex = 6;
-            this.colnmn_cari_seviye.Width = 128;
+            this.colnmn_cari_seviye.Width = 86;
             // 
             // colnmn_aciliyet
             // 
+            this.colnmn_aciliyet.Caption = "ACİLİYET";
             this.colnmn_aciliyet.FieldName = "nmn_aciliyet";
             this.colnmn_aciliyet.MinWidth = 25;
             this.colnmn_aciliyet.Name = "colnmn_aciliyet";
             this.colnmn_aciliyet.OptionsColumn.AllowEdit = false;
             this.colnmn_aciliyet.Visible = true;
             this.colnmn_aciliyet.VisibleIndex = 7;
-            this.colnmn_aciliyet.Width = 92;
+            this.colnmn_aciliyet.Width = 71;
             // 
             // colnmn_adaycari_unvan
             // 
+            this.colnmn_adaycari_unvan.Caption = "ADAY CARİ UNVAN";
             this.colnmn_adaycari_unvan.FieldName = "nmn_adaycari_unvan";
             this.colnmn_adaycari_unvan.MinWidth = 25;
             this.colnmn_adaycari_unvan.Name = "colnmn_adaycari_unvan";
             this.colnmn_adaycari_unvan.OptionsColumn.AllowEdit = false;
             this.colnmn_adaycari_unvan.Visible = true;
             this.colnmn_adaycari_unvan.VisibleIndex = 8;
-            this.colnmn_adaycari_unvan.Width = 74;
+            this.colnmn_adaycari_unvan.Width = 94;
             // 
             // colnmn_sip_miktar
             // 
+            this.colnmn_sip_miktar.Caption = "SİPARİŞ MİKTAR";
             this.colnmn_sip_miktar.FieldName = "nmn_sip_miktar";
             this.colnmn_sip_miktar.MinWidth = 25;
             this.colnmn_sip_miktar.Name = "colnmn_sip_miktar";
@@ -285,41 +295,46 @@
             // 
             // colnmn_deneme_miktar
             // 
+            this.colnmn_deneme_miktar.Caption = "DENEME MİKTAR";
             this.colnmn_deneme_miktar.FieldName = "nmn_deneme_miktar";
             this.colnmn_deneme_miktar.MinWidth = 25;
             this.colnmn_deneme_miktar.Name = "colnmn_deneme_miktar";
             this.colnmn_deneme_miktar.OptionsColumn.AllowEdit = false;
             this.colnmn_deneme_miktar.Visible = true;
             this.colnmn_deneme_miktar.VisibleIndex = 10;
-            this.colnmn_deneme_miktar.Width = 45;
+            this.colnmn_deneme_miktar.Width = 72;
             // 
             // colnmn_hdf_fiyat
             // 
+            this.colnmn_hdf_fiyat.Caption = "HEDEF FİYAT";
             this.colnmn_hdf_fiyat.FieldName = "nmn_hdf_fiyat";
             this.colnmn_hdf_fiyat.MinWidth = 25;
             this.colnmn_hdf_fiyat.Name = "colnmn_hdf_fiyat";
             this.colnmn_hdf_fiyat.OptionsColumn.AllowEdit = false;
             this.colnmn_hdf_fiyat.Visible = true;
             this.colnmn_hdf_fiyat.VisibleIndex = 11;
-            this.colnmn_hdf_fiyat.Width = 60;
+            this.colnmn_hdf_fiyat.Width = 68;
             // 
             // colnmn_fiyat_cins
             // 
+            this.colnmn_fiyat_cins.Caption = "FİYAT CİNS";
             this.colnmn_fiyat_cins.FieldName = "nmn_fiyat_cins";
             this.colnmn_fiyat_cins.MinWidth = 25;
             this.colnmn_fiyat_cins.Name = "colnmn_fiyat_cins";
             this.colnmn_fiyat_cins.OptionsColumn.AllowEdit = false;
             this.colnmn_fiyat_cins.Visible = true;
             this.colnmn_fiyat_cins.VisibleIndex = 12;
-            this.colnmn_fiyat_cins.Width = 95;
+            this.colnmn_fiyat_cins.Width = 73;
             // 
             // delete
             // 
-            this.delete.Caption = "Sil";
+            this.delete.Caption = "SİL";
             this.delete.ColumnEdit = this.repositoryItemButtonDelete;
             this.delete.MinWidth = 25;
             this.delete.Name = "delete";
-            this.delete.Width = 94;
+            this.delete.Visible = true;
+            this.delete.VisibleIndex = 14;
+            this.delete.Width = 82;
             // 
             // repositoryItemButtonDelete
             // 
@@ -329,16 +344,17 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonDelete.Name = "repositoryItemButtonDelete";
             this.repositoryItemButtonDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryItemButtonDelete.Click += new System.EventHandler(this.repositoryItemButtonDelete_Click_1);
             // 
             // update
             // 
-            this.update.Caption = "Güncelle";
+            this.update.Caption = "GÜNCELLE";
             this.update.ColumnEdit = this.repositoryItemButtonUpdate;
             this.update.MinWidth = 25;
             this.update.Name = "update";
             this.update.Visible = true;
             this.update.VisibleIndex = 13;
-            this.update.Width = 94;
+            this.update.Width = 40;
             // 
             // repositoryItemButtonUpdate
             // 

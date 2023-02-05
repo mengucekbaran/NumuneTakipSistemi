@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MikroDB_V16ModelStoreContainer" CdmEntityContainer="MikroDB_V16Entities">
+    <EntitySetMapping Name="KULLANICILAR">
+      <EntityTypeMapping TypeName="MikroDB_V16Model.KULLANICILAR">
+        <MappingFragment StoreEntitySet="KULLANICILAR">
+          <ScalarProperty Name="User_Guid" ColumnName="User_Guid" />
+          <ScalarProperty Name="User_DBCno" ColumnName="User_DBCno" />
+          <ScalarProperty Name="User_SpecRECno" ColumnName="User_SpecRECno" />
+          <ScalarProperty Name="User_iptal" ColumnName="User_iptal" />
+          <ScalarProperty Name="User_fileid" ColumnName="User_fileid" />
+          <ScalarProperty Name="User_hidden" ColumnName="User_hidden" />
+          <ScalarProperty Name="User_kilitli" ColumnName="User_kilitli" />
+          <ScalarProperty Name="User_degisti" ColumnName="User_degisti" />
+          <ScalarProperty Name="User_checksum" ColumnName="User_checksum" />
+          <ScalarProperty Name="User_create_user" ColumnName="User_create_user" />
+          <ScalarProperty Name="User_create_date" ColumnName="User_create_date" />
+          <ScalarProperty Name="User_lastup_user" ColumnName="User_lastup_user" />
+          <ScalarProperty Name="User_lastup_date" ColumnName="User_lastup_date" />
+          <ScalarProperty Name="User_special1" ColumnName="User_special1" />
+          <ScalarProperty Name="User_special2" ColumnName="User_special2" />
+          <ScalarProperty Name="User_special3" ColumnName="User_special3" />
+          <ScalarProperty Name="User_no" ColumnName="User_no" />
+          <ScalarProperty Name="User_name" ColumnName="User_name" />
+          <ScalarProperty Name="User_pw" ColumnName="User_pw" />
+          <ScalarProperty Name="User_LongName" ColumnName="User_LongName" />
+          <ScalarProperty Name="User_LoginName" ColumnName="User_LoginName" />
+          <ScalarProperty Name="User_EMail" ColumnName="User_EMail" />
+          <ScalarProperty Name="User_InSystem" ColumnName="User_InSystem" />
+          <ScalarProperty Name="User_ProgNo" ColumnName="User_ProgNo" />
+          <ScalarProperty Name="User_Modules" ColumnName="User_Modules" />
+          <ScalarProperty Name="User_random" ColumnName="User_random" />
+          <ScalarProperty Name="User_DBase" ColumnName="User_DBase" />
+          <ScalarProperty Name="User_SifreTipi" ColumnName="User_SifreTipi" />
+          <ScalarProperty Name="User_SifreDegisim_date" ColumnName="User_SifreDegisim_date" />
+          <ScalarProperty Name="User_pasif" ColumnName="User_pasif" />
+          <ScalarProperty Name="User_FirstIP" ColumnName="User_FirstIP" />
+          <ScalarProperty Name="User_LastIP" ColumnName="User_LastIP" />
+          <ScalarProperty Name="User_PrevPW1" ColumnName="User_PrevPW1" />
+          <ScalarProperty Name="User_PrevPW2" ColumnName="User_PrevPW2" />
+          <ScalarProperty Name="User_PrevPW3" ColumnName="User_PrevPW3" />
+          <ScalarProperty Name="User_PrevPW4" ColumnName="User_PrevPW4" />
+          <ScalarProperty Name="User_PrevPW5" ColumnName="User_PrevPW5" />
+          <ScalarProperty Name="User_DomainAndUserName" ColumnName="User_DomainAndUserName" />
+          <ScalarProperty Name="User_DefaultDBKod" ColumnName="User_DefaultDBKod" />
+          <ScalarProperty Name="User_eMikroMail" ColumnName="User_eMikroMail" />
+          <ScalarProperty Name="User_eMikroSifre" ColumnName="User_eMikroSifre" />
+          <ScalarProperty Name="User_KEPHesap" ColumnName="User_KEPHesap" />
+          <ScalarProperty Name="User_KEPCepTelefonu" ColumnName="User_KEPCepTelefonu" />
+          <ScalarProperty Name="User_KEPSifre" ColumnName="User_KEPSifre" />
+          <ScalarProperty Name="User_KEPTcNo" ColumnName="User_KEPTcNo" />
+          <ScalarProperty Name="User_Eimza_tipi" ColumnName="User_Eimza_tipi" />
+          <ScalarProperty Name="User_Eimza_surucusu" ColumnName="User_Eimza_surucusu" />
+          <ScalarProperty Name="User_Eimza_sifre" ColumnName="User_Eimza_sifre" />
+          <ScalarProperty Name="User_SRVfl" ColumnName="User_SRVfl" />
+          <ScalarProperty Name="User_outlook_takvim_senk_fl" ColumnName="User_outlook_takvim_senk_fl" />
+          <ScalarProperty Name="User_gmail_takvim_senk_fl" ColumnName="User_gmail_takvim_senk_fl" />
+          <ScalarProperty Name="User_gmail_takvim_ical_adres" ColumnName="User_gmail_takvim_ical_adres" />
+          <ScalarProperty Name="User_pc_name" ColumnName="User_pc_name" />
+          <ScalarProperty Name="User_outlook_takvim_senk_dk" ColumnName="User_outlook_takvim_senk_dk" />
+          <ScalarProperty Name="User_gmail_takvim_senk_dk" ColumnName="User_gmail_takvim_senk_dk" />
+          <ScalarProperty Name="User_kbs_sifre" ColumnName="User_kbs_sifre" />
+          <ScalarProperty Name="User_LVKN" ColumnName="User_LVKN" />
+          <ScalarProperty Name="User_idm_user_invitations_id" ColumnName="User_idm_user_invitations_id" />
+          <ScalarProperty Name="User_idm_user_id" ColumnName="User_idm_user_id" />
+          <ScalarProperty Name="User_idm_user_invitations_int_id" ColumnName="User_idm_user_invitations_int_id" />
+          <ScalarProperty Name="User_idm_user_email" ColumnName="User_idm_user_email" />
+          <ScalarProperty Name="User_Hatali_giris_sayisi" ColumnName="User_Hatali_giris_sayisi" />
+          <ScalarProperty Name="User_Ceptel" ColumnName="User_Ceptel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KULLANICILAR_USER">
+      <EntityTypeMapping TypeName="MikroDB_V16Model.KULLANICILAR_USER">
+        <MappingFragment StoreEntitySet="KULLANICILAR_USER">
+          <ScalarProperty Name="Record_uid" ColumnName="Record_uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

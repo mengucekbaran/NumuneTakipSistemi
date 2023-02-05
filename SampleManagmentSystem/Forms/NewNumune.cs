@@ -17,7 +17,7 @@ namespace SampleManagmentSystem.Forms
         MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
         NUMUNE_TAKİPEntities db = new NUMUNE_TAKİPEntities();
 
-
+        string nextAdayCariKod;
         public NewNumune() //CREATE NUMUNE
         {
 
@@ -52,6 +52,18 @@ namespace SampleManagmentSystem.Forms
                 }
             }
             txtNmnKod.Text = nextNmnKod;
+            //idye göre küçükten büyüğe sıralar ve son kaydın numune kodunu alır
+            //var prevAdayCariKod = db.TblNumuneler.OrderByDescending(x => x.id).FirstOrDefault().nmn_adaycari_kod;
+            //if (prevAdayCariKod == null)
+            //{
+            //    nextAdayCariKod = "AC0001";
+            //}
+            //else
+            //{
+            //    int nextNumber = int.Parse(prevAdayCariKod.Substring(prevAdayCariKod.Length - 4)) + 1;
+            //    nextNmnKod = "AC" + nextNumber.ToString("D4");
+            //}
+
             SetTodayDate();
         }
         public NewNumune(string nmnKod) //UPDATE NUMUNE
@@ -215,16 +227,17 @@ namespace SampleManagmentSystem.Forms
             lookUpCariAd.Properties.ValueMember = "cari_kod";
             lookUpCariAd.Properties.DisplayMember = "unvan";
             lookUpCariAd.Properties.DataSource = cariHesaplar;
-            //ADAY CARİLER
-            var adayCariler = (from x in dbMaskom.ADAY_CARI_HESAPLAR
-                               select new
-                               {
-                                   x.adaycr_kod,
-                                   unvan = x.adaycr_unvan1 + x.adaycr_unvan2
-                               }).ToList();
+
+            var adayCari = (from x in dbMaskom.ADAY_CARI_HESAPLAR
+                                select new
+                                {
+                                    x.adaycr_kod,
+                                    unvan = x.adaycr_unvan1 + x.adaycr_unvan2
+                                }).ToList();
             lookUpAdayCari.Properties.ValueMember = "adaycr_kod";
             lookUpAdayCari.Properties.DisplayMember = "unvan";
-            lookUpAdayCari.Properties.DataSource = adayCariler;
+            lookUpAdayCari.Properties.DataSource = adayCari;
+
             //URUN GRUBU
             var urunGrubu = (from x in dbMaskom.STOK_ALT_GRUPLARI
                              select new
@@ -290,7 +303,7 @@ namespace SampleManagmentSystem.Forms
                 txtTerminTarih.Focus();
                 return false;
             }
-            if (lookUpAdayCari.EditValue == null)
+            if (lookUpAdayCari.EditValue == null )
             {
                 lookUpAdayCari.ShowPopup();
                 return false;

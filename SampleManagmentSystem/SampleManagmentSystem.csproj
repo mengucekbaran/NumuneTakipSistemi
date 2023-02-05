@@ -89,6 +89,12 @@
     <Compile Include="Entities\CARI_HESAPLAR.cs">
       <DependentUpon>Maskom.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\KULLANICILAR.cs">
+      <DependentUpon>MikroDB_V16.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\KULLANICILAR_USER.cs">
+      <DependentUpon>MikroDB_V16.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\ListNumune_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -106,6 +112,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Maskom.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MikroDB_V16.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MikroDB_V16.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MikroDB_V16.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MikroDB_V16.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MikroDB_V16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MikroDB_V16.edmx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -245,6 +266,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="Entities\MikroDB_V16.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MikroDB_V16.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entities\MikroDB_V16.edmx.diagram">
+      <DependentUpon>MikroDB_V16.edmx</DependentUpon>
+    </None>
     <None Include="Entities\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
@@ -287,6 +315,16 @@
       <DependentUpon>Maskom.edmx</DependentUpon>
       <LastGenOutput>Maskom.cs</LastGenOutput>
     </Content>
+    <Content Include="Entities\MikroDB_V16.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MikroDB_V16.edmx</DependentUpon>
+      <LastGenOutput>MikroDB_V16.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\MikroDB_V16.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MikroDB_V16.edmx</DependentUpon>
+      <LastGenOutput>MikroDB_V16.cs</LastGenOutput>
+    </Content>
     <Content Include="Entities\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -297,6 +335,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\2824437_48lab_school_science_tube_icon1.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

@@ -82,11 +82,11 @@
             this.lookUpUrunGrubu = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpCariAd = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpNmnTur = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpAdayCari = new DevExpress.XtraEditors.LookUpEdit();
             this.txtSipMktr = new DevExpress.XtraEditors.SpinEdit();
             this.btnVazgec = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.lookUpAdayCari = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnAd.Properties)).BeginInit();
@@ -116,8 +116,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpUrunGrubu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpCariAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnTur.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpAdayCari.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpAdayCari.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -178,7 +178,7 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(653, 221);
+            this.labelControl9.Location = new System.Drawing.Point(653, 189);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(156, 16);
             this.labelControl9.TabIndex = 30;
@@ -194,7 +194,7 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(653, 187);
+            this.labelControl11.Location = new System.Drawing.Point(653, 155);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(121, 16);
             this.labelControl11.TabIndex = 26;
@@ -226,7 +226,7 @@
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(653, 154);
+            this.labelControl15.Location = new System.Drawing.Point(311, 223);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(61, 16);
             this.labelControl15.TabIndex = 18;
@@ -242,7 +242,7 @@
             // 
             // labelterminTarih
             // 
-            this.labelterminTarih.Location = new System.Drawing.Point(653, 457);
+            this.labelterminTarih.Location = new System.Drawing.Point(653, 403);
             this.labelterminTarih.Name = "labelterminTarih";
             this.labelterminTarih.Size = new System.Drawing.Size(78, 16);
             this.labelterminTarih.TabIndex = 42;
@@ -250,7 +250,7 @@
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(653, 369);
+            this.labelControl18.Location = new System.Drawing.Point(653, 337);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(68, 16);
             this.labelControl18.TabIndex = 40;
@@ -258,7 +258,7 @@
             // 
             // labelControl19
             // 
-            this.labelControl19.Location = new System.Drawing.Point(653, 331);
+            this.labelControl19.Location = new System.Drawing.Point(653, 299);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(98, 16);
             this.labelControl19.TabIndex = 38;
@@ -342,8 +342,8 @@
             this.panelControl1.Controls.Add(this.lookUpUrunGrubu);
             this.panelControl1.Controls.Add(this.lookUpCariAd);
             this.panelControl1.Controls.Add(this.lookUpNmnTur);
-            this.panelControl1.Controls.Add(this.lookUpAdayCari);
             this.panelControl1.Controls.Add(this.txtSipMktr);
+            this.panelControl1.Controls.Add(this.lookUpAdayCari);
             this.panelControl1.Location = new System.Drawing.Point(12, 9);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1186, 669);
@@ -366,14 +366,14 @@
             // 
             // txtIsiDayanim
             // 
-            this.txtIsiDayanim.Location = new System.Drawing.Point(828, 290);
+            this.txtIsiDayanim.Location = new System.Drawing.Point(828, 258);
             this.txtIsiDayanim.Name = "txtIsiDayanim";
             this.txtIsiDayanim.Size = new System.Drawing.Size(340, 22);
             this.txtIsiDayanim.TabIndex = 23;
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(653, 293);
+            this.labelControl26.Location = new System.Drawing.Point(653, 261);
             this.labelControl26.Name = "labelControl26";
             this.labelControl26.Size = new System.Drawing.Size(111, 16);
             this.labelControl26.TabIndex = 88;
@@ -386,7 +386,7 @@
             0,
             0,
             0});
-            this.spinIsikHasligi.Location = new System.Drawing.Point(827, 254);
+            this.spinIsikHasligi.Location = new System.Drawing.Point(827, 222);
             this.spinIsikHasligi.Name = "spinIsikHasligi";
             this.spinIsikHasligi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -410,7 +410,7 @@
             // 
             // labelControl25
             // 
-            this.labelControl25.Location = new System.Drawing.Point(653, 258);
+            this.labelControl25.Location = new System.Drawing.Point(653, 226);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(60, 16);
             this.labelControl25.TabIndex = 86;
@@ -485,7 +485,7 @@
             this.txtHedefFiyat.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtHedefFiyat.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtHedefFiyat.Properties.Mask.EditMask = "f";
-            this.txtHedefFiyat.Size = new System.Drawing.Size(340, 24);
+            this.txtHedefFiyat.Size = new System.Drawing.Size(98, 24);
             this.txtHedefFiyat.TabIndex = 8;
             // 
             // radioGroupCariKnm
@@ -527,7 +527,7 @@
             // radioGroupReachRohs
             // 
             this.radioGroupReachRohs.EditValue = "Reach";
-            this.radioGroupReachRohs.Location = new System.Drawing.Point(816, 361);
+            this.radioGroupReachRohs.Location = new System.Drawing.Point(816, 329);
             this.radioGroupReachRohs.Name = "radioGroupReachRohs";
             this.radioGroupReachRohs.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.radioGroupReachRohs.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -545,7 +545,7 @@
             // radioGroupGida
             // 
             this.radioGroupGida.EditValue = "Evet";
-            this.radioGroupGida.Location = new System.Drawing.Point(816, 319);
+            this.radioGroupGida.Location = new System.Drawing.Point(816, 287);
             this.radioGroupGida.Name = "radioGroupGida";
             this.radioGroupGida.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.radioGroupGida.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -621,14 +621,14 @@
             // 
             // txtUretilecekUrun
             // 
-            this.txtUretilecekUrun.Location = new System.Drawing.Point(828, 218);
+            this.txtUretilecekUrun.Location = new System.Drawing.Point(828, 186);
             this.txtUretilecekUrun.Name = "txtUretilecekUrun";
             this.txtUretilecekUrun.Size = new System.Drawing.Size(340, 22);
             this.txtUretilecekUrun.TabIndex = 21;
             // 
             // txtRkpUrunKod
             // 
-            this.txtRkpUrunKod.Location = new System.Drawing.Point(828, 184);
+            this.txtRkpUrunKod.Location = new System.Drawing.Point(828, 152);
             this.txtRkpUrunKod.Name = "txtRkpUrunKod";
             this.txtRkpUrunKod.Size = new System.Drawing.Size(340, 22);
             this.txtRkpUrunKod.TabIndex = 20;
@@ -650,7 +650,7 @@
             // txtTerminTarih
             // 
             this.txtTerminTarih.EditValue = null;
-            this.txtTerminTarih.Location = new System.Drawing.Point(828, 454);
+            this.txtTerminTarih.Location = new System.Drawing.Point(828, 400);
             this.txtTerminTarih.Name = "txtTerminTarih";
             this.txtTerminTarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -677,12 +677,12 @@
             // 
             // lookUpDoviz
             // 
-            this.lookUpDoviz.Location = new System.Drawing.Point(828, 151);
+            this.lookUpDoviz.Location = new System.Drawing.Point(391, 220);
             this.lookUpDoviz.Name = "lookUpDoviz";
             this.lookUpDoviz.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpDoviz.Properties.NullText = "";
-            this.lookUpDoviz.Size = new System.Drawing.Size(340, 22);
+            this.lookUpDoviz.Size = new System.Drawing.Size(147, 22);
             this.lookUpDoviz.TabIndex = 6;
             // 
             // lookUpUrunGrubu
@@ -714,16 +714,6 @@
             this.lookUpNmnTur.Properties.NullText = "";
             this.lookUpNmnTur.Size = new System.Drawing.Size(340, 22);
             this.lookUpNmnTur.TabIndex = 11;
-            // 
-            // lookUpAdayCari
-            // 
-            this.lookUpAdayCari.Location = new System.Drawing.Point(197, 152);
-            this.lookUpAdayCari.Name = "lookUpAdayCari";
-            this.lookUpAdayCari.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpAdayCari.Properties.NullText = "";
-            this.lookUpAdayCari.Size = new System.Drawing.Size(340, 22);
-            this.lookUpAdayCari.TabIndex = 5;
             // 
             // txtSipMktr
             // 
@@ -787,6 +777,16 @@
             this.BtnGuncelle.Visible = false;
             this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
+            // lookUpAdayCari
+            // 
+            this.lookUpAdayCari.Location = new System.Drawing.Point(197, 152);
+            this.lookUpAdayCari.Name = "lookUpAdayCari";
+            this.lookUpAdayCari.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpAdayCari.Properties.NullText = "";
+            this.lookUpAdayCari.Size = new System.Drawing.Size(340, 22);
+            this.lookUpAdayCari.TabIndex = 5;
+            // 
             // NewNumune
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -830,8 +830,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpUrunGrubu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpCariAd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnTur.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpAdayCari.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpAdayCari.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -880,7 +880,6 @@
         private DevExpress.XtraEditors.LookUpEdit lookUpNmnTur;
         private DevExpress.XtraEditors.RadioGroup radioGroupGida;
         private DevExpress.XtraEditors.RadioGroup radioGroupReachRohs;
-        private DevExpress.XtraEditors.LookUpEdit lookUpAdayCari;
         private DevExpress.XtraEditors.LabelControl labelControl21;
         private DevExpress.XtraEditors.LookUpEdit lookUpAciliyet;
         private DevExpress.XtraEditors.RadioGroup radioGroupCariKnm;
@@ -896,5 +895,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl26;
         private DevExpress.XtraEditors.TextEdit txtNmnAd;
         private DevExpress.XtraEditors.LabelControl labelControl17;
+        private DevExpress.XtraEditors.LookUpEdit lookUpAdayCari;
     }
 }

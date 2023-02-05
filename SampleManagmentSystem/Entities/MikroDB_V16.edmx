@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MikroDB_V16Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="KULLANICILAR">
+          <Key>
+            <PropertyRef Name="User_Guid" />
+          </Key>
+          <Property Name="User_Guid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="User_DBCno" Type="smallint" Nullable="false" />
+          <Property Name="User_SpecRECno" Type="int" />
+          <Property Name="User_iptal" Type="bit" />
+          <Property Name="User_fileid" Type="smallint" />
+          <Property Name="User_hidden" Type="bit" />
+          <Property Name="User_kilitli" Type="bit" />
+          <Property Name="User_degisti" Type="bit" />
+          <Property Name="User_checksum" Type="int" />
+          <Property Name="User_create_user" Type="smallint" />
+          <Property Name="User_create_date" Type="datetime" Nullable="false" />
+          <Property Name="User_lastup_user" Type="smallint" />
+          <Property Name="User_lastup_date" Type="datetime" />
+          <Property Name="User_special1" Type="nvarchar" MaxLength="4" />
+          <Property Name="User_special2" Type="nvarchar" MaxLength="4" />
+          <Property Name="User_special3" Type="nvarchar" MaxLength="4" />
+          <Property Name="User_no" Type="int" />
+          <Property Name="User_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="User_pw" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_LongName" Type="nvarchar" MaxLength="50" />
+          <Property Name="User_LoginName" Type="nvarchar" MaxLength="20" />
+          <Property Name="User_EMail" Type="nvarchar" MaxLength="50" />
+          <Property Name="User_InSystem" Type="bit" />
+          <Property Name="User_ProgNo" Type="tinyint" />
+          <Property Name="User_Modules" Type="nvarchar" MaxLength="100" />
+          <Property Name="User_random" Type="int" />
+          <Property Name="User_DBase" Type="nvarchar" MaxLength="25" />
+          <Property Name="User_SifreTipi" Type="tinyint" />
+          <Property Name="User_SifreDegisim_date" Type="datetime" />
+          <Property Name="User_pasif" Type="bit" />
+          <Property Name="User_FirstIP" Type="nvarchar" MaxLength="15" />
+          <Property Name="User_LastIP" Type="nvarchar" MaxLength="15" />
+          <Property Name="User_PrevPW1" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_PrevPW2" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_PrevPW3" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_PrevPW4" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_PrevPW5" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_DomainAndUserName" Type="nvarchar" MaxLength="120" />
+          <Property Name="User_DefaultDBKod" Type="nvarchar" MaxLength="25" />
+          <Property Name="User_eMikroMail" Type="nvarchar" MaxLength="50" />
+          <Property Name="User_eMikroSifre" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_KEPHesap" Type="nvarchar" MaxLength="50" />
+          <Property Name="User_KEPCepTelefonu" Type="nvarchar" MaxLength="10" />
+          <Property Name="User_KEPSifre" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_KEPTcNo" Type="nvarchar" MaxLength="11" />
+          <Property Name="User_Eimza_tipi" Type="tinyint" />
+          <Property Name="User_Eimza_surucusu" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_Eimza_sifre" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_SRVfl" Type="bit" />
+          <Property Name="User_outlook_takvim_senk_fl" Type="bit" />
+          <Property Name="User_gmail_takvim_senk_fl" Type="bit" />
+          <Property Name="User_gmail_takvim_ical_adres" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_pc_name" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_outlook_takvim_senk_dk" Type="smallint" />
+          <Property Name="User_gmail_takvim_senk_dk" Type="smallint" />
+          <Property Name="User_kbs_sifre" Type="nvarchar" MaxLength="127" />
+          <Property Name="User_LVKN" Type="nvarchar" MaxLength="50" />
+          <Property Name="User_idm_user_invitations_id" Type="uniqueidentifier" />
+          <Property Name="User_idm_user_id" Type="uniqueidentifier" />
+          <Property Name="User_idm_user_invitations_int_id" Type="int" />
+          <Property Name="User_idm_user_email" Type="nvarchar" MaxLength="50" />
+          <Property Name="User_Hatali_giris_sayisi" Type="tinyint" />
+          <Property Name="User_Ceptel" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="KULLANICILAR_USER">
+          <Key>
+            <PropertyRef Name="Record_uid" />
+          </Key>
+          <Property Name="Record_uid" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MikroDB_V16ModelStoreContainer">
+          <EntitySet Name="KULLANICILAR" EntityType="Self.KULLANICILAR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KULLANICILAR_USER" EntityType="Self.KULLANICILAR_USER" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MikroDB_V16Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="KULLANICILAR">
+          <Key>
+            <PropertyRef Name="User_Guid" />
+          </Key>
+          <Property Name="User_Guid" Type="Guid" Nullable="false" />
+          <Property Name="User_DBCno" Type="Int16" Nullable="false" />
+          <Property Name="User_SpecRECno" Type="Int32" />
+          <Property Name="User_iptal" Type="Boolean" />
+          <Property Name="User_fileid" Type="Int16" />
+          <Property Name="User_hidden" Type="Boolean" />
+          <Property Name="User_kilitli" Type="Boolean" />
+          <Property Name="User_degisti" Type="Boolean" />
+          <Property Name="User_checksum" Type="Int32" />
+          <Property Name="User_create_user" Type="Int16" />
+          <Property Name="User_create_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="User_lastup_user" Type="Int16" />
+          <Property Name="User_lastup_date" Type="DateTime" Precision="3" />
+          <Property Name="User_special1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="User_special2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="User_special3" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="User_no" Type="Int32" />
+          <Property Name="User_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="User_pw" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_LongName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="User_LoginName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="User_EMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="User_InSystem" Type="Boolean" />
+          <Property Name="User_ProgNo" Type="Byte" />
+          <Property Name="User_Modules" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="User_random" Type="Int32" />
+          <Property Name="User_DBase" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="User_SifreTipi" Type="Byte" />
+          <Property Name="User_SifreDegisim_date" Type="DateTime" Precision="3" />
+          <Property Name="User_pasif" Type="Boolean" />
+          <Property Name="User_FirstIP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="User_LastIP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="User_PrevPW1" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_PrevPW2" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_PrevPW3" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_PrevPW4" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_PrevPW5" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_DomainAndUserName" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="User_DefaultDBKod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="User_eMikroMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="User_eMikroSifre" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_KEPHesap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="User_KEPCepTelefonu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="User_KEPSifre" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_KEPTcNo" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="User_Eimza_tipi" Type="Byte" />
+          <Property Name="User_Eimza_surucusu" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_Eimza_sifre" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_SRVfl" Type="Boolean" />
+          <Property Name="User_outlook_takvim_senk_fl" Type="Boolean" />
+          <Property Name="User_gmail_takvim_senk_fl" Type="Boolean" />
+          <Property Name="User_gmail_takvim_ical_adres" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_pc_name" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_outlook_takvim_senk_dk" Type="Int16" />
+          <Property Name="User_gmail_takvim_senk_dk" Type="Int16" />
+          <Property Name="User_kbs_sifre" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="User_LVKN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="User_idm_user_invitations_id" Type="Guid" />
+          <Property Name="User_idm_user_id" Type="Guid" />
+          <Property Name="User_idm_user_invitations_int_id" Type="Int32" />
+          <Property Name="User_idm_user_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="User_Hatali_giris_sayisi" Type="Byte" />
+          <Property Name="User_Ceptel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="MikroDB_V16Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="KULLANICILAR" EntityType="Self.KULLANICILAR" />
+          <EntitySet Name="KULLANICILAR_USER" EntityType="MikroDB_V16Model.KULLANICILAR_USER" />
+        </EntityContainer>
+        <EntityType Name="KULLANICILAR_USER">
+          <Key>
+            <PropertyRef Name="Record_uid" />
+          </Key>
+          <Property Name="Record_uid" Type="Guid" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MikroDB_V16ModelStoreContainer" CdmEntityContainer="MikroDB_V16Entities">
+          <EntitySetMapping Name="KULLANICILAR">
+            <EntityTypeMapping TypeName="MikroDB_V16Model.KULLANICILAR">
+              <MappingFragment StoreEntitySet="KULLANICILAR">
+                <ScalarProperty Name="User_Guid" ColumnName="User_Guid" />
+                <ScalarProperty Name="User_DBCno" ColumnName="User_DBCno" />
+                <ScalarProperty Name="User_SpecRECno" ColumnName="User_SpecRECno" />
+                <ScalarProperty Name="User_iptal" ColumnName="User_iptal" />
+                <ScalarProperty Name="User_fileid" ColumnName="User_fileid" />
+                <ScalarProperty Name="User_hidden" ColumnName="User_hidden" />
+                <ScalarProperty Name="User_kilitli" ColumnName="User_kilitli" />
+                <ScalarProperty Name="User_degisti" ColumnName="User_degisti" />
+                <ScalarProperty Name="User_checksum" ColumnName="User_checksum" />
+                <ScalarProperty Name="User_create_user" ColumnName="User_create_user" />
+                <ScalarProperty Name="User_create_date" ColumnName="User_create_date" />
+                <ScalarProperty Name="User_lastup_user" ColumnName="User_lastup_user" />
+                <ScalarProperty Name="User_lastup_date" ColumnName="User_lastup_date" />
+                <ScalarProperty Name="User_special1" ColumnName="User_special1" />
+                <ScalarProperty Name="User_special2" ColumnName="User_special2" />
+                <ScalarProperty Name="User_special3" ColumnName="User_special3" />
+                <ScalarProperty Name="User_no" ColumnName="User_no" />
+                <ScalarProperty Name="User_name" ColumnName="User_name" />
+                <ScalarProperty Name="User_pw" ColumnName="User_pw" />
+                <ScalarProperty Name="User_LongName" ColumnName="User_LongName" />
+                <ScalarProperty Name="User_LoginName" ColumnName="User_LoginName" />
+                <ScalarProperty Name="User_EMail" ColumnName="User_EMail" />
+                <ScalarProperty Name="User_InSystem" ColumnName="User_InSystem" />
+                <ScalarProperty Name="User_ProgNo" ColumnName="User_ProgNo" />
+                <ScalarProperty Name="User_Modules" ColumnName="User_Modules" />
+                <ScalarProperty Name="User_random" ColumnName="User_random" />
+                <ScalarProperty Name="User_DBase" ColumnName="User_DBase" />
+                <ScalarProperty Name="User_SifreTipi" ColumnName="User_SifreTipi" />
+                <ScalarProperty Name="User_SifreDegisim_date" ColumnName="User_SifreDegisim_date" />
+                <ScalarProperty Name="User_pasif" ColumnName="User_pasif" />
+                <ScalarProperty Name="User_FirstIP" ColumnName="User_FirstIP" />
+                <ScalarProperty Name="User_LastIP" ColumnName="User_LastIP" />
+                <ScalarProperty Name="User_PrevPW1" ColumnName="User_PrevPW1" />
+                <ScalarProperty Name="User_PrevPW2" ColumnName="User_PrevPW2" />
+                <ScalarProperty Name="User_PrevPW3" ColumnName="User_PrevPW3" />
+                <ScalarProperty Name="User_PrevPW4" ColumnName="User_PrevPW4" />
+                <ScalarProperty Name="User_PrevPW5" ColumnName="User_PrevPW5" />
+                <ScalarProperty Name="User_DomainAndUserName" ColumnName="User_DomainAndUserName" />
+                <ScalarProperty Name="User_DefaultDBKod" ColumnName="User_DefaultDBKod" />
+                <ScalarProperty Name="User_eMikroMail" ColumnName="User_eMikroMail" />
+                <ScalarProperty Name="User_eMikroSifre" ColumnName="User_eMikroSifre" />
+                <ScalarProperty Name="User_KEPHesap" ColumnName="User_KEPHesap" />
+                <ScalarProperty Name="User_KEPCepTelefonu" ColumnName="User_KEPCepTelefonu" />
+                <ScalarProperty Name="User_KEPSifre" ColumnName="User_KEPSifre" />
+                <ScalarProperty Name="User_KEPTcNo" ColumnName="User_KEPTcNo" />
+                <ScalarProperty Name="User_Eimza_tipi" ColumnName="User_Eimza_tipi" />
+                <ScalarProperty Name="User_Eimza_surucusu" ColumnName="User_Eimza_surucusu" />
+                <ScalarProperty Name="User_Eimza_sifre" ColumnName="User_Eimza_sifre" />
+                <ScalarProperty Name="User_SRVfl" ColumnName="User_SRVfl" />
+                <ScalarProperty Name="User_outlook_takvim_senk_fl" ColumnName="User_outlook_takvim_senk_fl" />
+                <ScalarProperty Name="User_gmail_takvim_senk_fl" ColumnName="User_gmail_takvim_senk_fl" />
+                <ScalarProperty Name="User_gmail_takvim_ical_adres" ColumnName="User_gmail_takvim_ical_adres" />
+                <ScalarProperty Name="User_pc_name" ColumnName="User_pc_name" />
+                <ScalarProperty Name="User_outlook_takvim_senk_dk" ColumnName="User_outlook_takvim_senk_dk" />
+                <ScalarProperty Name="User_gmail_takvim_senk_dk" ColumnName="User_gmail_takvim_senk_dk" />
+                <ScalarProperty Name="User_kbs_sifre" ColumnName="User_kbs_sifre" />
+                <ScalarProperty Name="User_LVKN" ColumnName="User_LVKN" />
+                <ScalarProperty Name="User_idm_user_invitations_id" ColumnName="User_idm_user_invitations_id" />
+                <ScalarProperty Name="User_idm_user_id" ColumnName="User_idm_user_id" />
+                <ScalarProperty Name="User_idm_user_invitations_int_id" ColumnName="User_idm_user_invitations_int_id" />
+                <ScalarProperty Name="User_idm_user_email" ColumnName="User_idm_user_email" />
+                <ScalarProperty Name="User_Hatali_giris_sayisi" ColumnName="User_Hatali_giris_sayisi" />
+                <ScalarProperty Name="User_Ceptel" ColumnName="User_Ceptel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KULLANICILAR_USER">
+            <EntityTypeMapping TypeName="MikroDB_V16Model.KULLANICILAR_USER">
+              <MappingFragment StoreEntitySet="KULLANICILAR_USER">
+                <ScalarProperty Name="Record_uid" ColumnName="Record_uid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

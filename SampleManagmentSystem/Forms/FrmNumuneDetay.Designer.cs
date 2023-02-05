@@ -420,6 +420,7 @@
             // 
             // colid
             // 
+            this.colid.Caption = "ID";
             this.colid.FieldName = "id";
             this.colid.MinWidth = 25;
             this.colid.Name = "colid";
@@ -430,6 +431,7 @@
             // 
             // colnmn_create_date
             // 
+            this.colnmn_create_date.Caption = "CREATE DATE";
             this.colnmn_create_date.FieldName = "nmn_create_date";
             this.colnmn_create_date.MinWidth = 25;
             this.colnmn_create_date.Name = "colnmn_create_date";
@@ -440,6 +442,7 @@
             // 
             // colnmn_lastup_date
             // 
+            this.colnmn_lastup_date.Caption = "LASTUP DATE";
             this.colnmn_lastup_date.FieldName = "nmn_lastup_date";
             this.colnmn_lastup_date.MinWidth = 25;
             this.colnmn_lastup_date.Name = "colnmn_lastup_date";
@@ -450,6 +453,7 @@
             // 
             // colnmn_kod
             // 
+            this.colnmn_kod.Caption = "NUMUNE KOD";
             this.colnmn_kod.FieldName = "nmn_kod";
             this.colnmn_kod.MinWidth = 25;
             this.colnmn_kod.Name = "colnmn_kod";
@@ -460,6 +464,7 @@
             // 
             // colnmn_cari_kod
             // 
+            this.colnmn_cari_kod.Caption = "CARİ KOD";
             this.colnmn_cari_kod.FieldName = "nmn_cari_kod";
             this.colnmn_cari_kod.MinWidth = 25;
             this.colnmn_cari_kod.Name = "colnmn_cari_kod";
@@ -470,6 +475,7 @@
             // 
             // colnmn_cari_unvan
             // 
+            this.colnmn_cari_unvan.Caption = "CARİ UNVAN";
             this.colnmn_cari_unvan.FieldName = "nmn_cari_unvan";
             this.colnmn_cari_unvan.MinWidth = 25;
             this.colnmn_cari_unvan.Name = "colnmn_cari_unvan";
@@ -480,6 +486,7 @@
             // 
             // colnmn_tarih
             // 
+            this.colnmn_tarih.Caption = "ALIŞ TARİHİ";
             this.colnmn_tarih.FieldName = "nmn_tarih";
             this.colnmn_tarih.MinWidth = 25;
             this.colnmn_tarih.Name = "colnmn_tarih";
@@ -490,6 +497,7 @@
             // 
             // colnmn_cari_seviye
             // 
+            this.colnmn_cari_seviye.Caption = "CARİ SEVİYE";
             this.colnmn_cari_seviye.FieldName = "nmn_cari_seviye";
             this.colnmn_cari_seviye.MinWidth = 25;
             this.colnmn_cari_seviye.Name = "colnmn_cari_seviye";
@@ -500,6 +508,7 @@
             // 
             // colnmn_aciliyet
             // 
+            this.colnmn_aciliyet.Caption = "ACİLİYET";
             this.colnmn_aciliyet.FieldName = "nmn_aciliyet";
             this.colnmn_aciliyet.MinWidth = 25;
             this.colnmn_aciliyet.Name = "colnmn_aciliyet";
@@ -510,6 +519,7 @@
             // 
             // colnmn_adaycari_kod
             // 
+            this.colnmn_adaycari_kod.Caption = "ADAY CARİ KOD";
             this.colnmn_adaycari_kod.FieldName = "nmn_adaycari_kod";
             this.colnmn_adaycari_kod.MinWidth = 25;
             this.colnmn_adaycari_kod.Name = "colnmn_adaycari_kod";
@@ -520,6 +530,7 @@
             // 
             // colnmn_adaycari_unvan
             // 
+            this.colnmn_adaycari_unvan.Caption = "ADAY CARİ UNVAN";
             this.colnmn_adaycari_unvan.FieldName = "nmn_adaycari_unvan";
             this.colnmn_adaycari_unvan.MinWidth = 25;
             this.colnmn_adaycari_unvan.Name = "colnmn_adaycari_unvan";
@@ -530,6 +541,7 @@
             // 
             // colnmn_adaycari_konum
             // 
+            this.colnmn_adaycari_konum.Caption = "ADAY CARİ KONUM";
             this.colnmn_adaycari_konum.FieldName = "nmn_adaycari_konum";
             this.colnmn_adaycari_konum.MinWidth = 25;
             this.colnmn_adaycari_konum.Name = "colnmn_adaycari_konum";
@@ -540,6 +552,7 @@
             // 
             // colnmn_sip_miktar
             // 
+            this.colnmn_sip_miktar.Caption = "SİPARİŞ MİKTARI";
             this.colnmn_sip_miktar.FieldName = "nmn_sip_miktar";
             this.colnmn_sip_miktar.MinWidth = 25;
             this.colnmn_sip_miktar.Name = "colnmn_sip_miktar";
@@ -550,6 +563,7 @@
             // 
             // colnmn_deneme_miktar
             // 
+            this.colnmn_deneme_miktar.Caption = "DENEME MİKTARI";
             this.colnmn_deneme_miktar.FieldName = "nmn_deneme_miktar";
             this.colnmn_deneme_miktar.MinWidth = 25;
             this.colnmn_deneme_miktar.Name = "colnmn_deneme_miktar";
@@ -560,6 +574,7 @@
             // 
             // colnmn_hdf_fiyat
             // 
+            this.colnmn_hdf_fiyat.Caption = "HEDEF FİYAT";
             this.colnmn_hdf_fiyat.FieldName = "nmn_hdf_fiyat";
             this.colnmn_hdf_fiyat.MinWidth = 25;
             this.colnmn_hdf_fiyat.Name = "colnmn_hdf_fiyat";
@@ -570,6 +585,7 @@
             // 
             // colnmn_fiyat_cins
             // 
+            this.colnmn_fiyat_cins.Caption = "FİYAT CİNS";
             this.colnmn_fiyat_cins.FieldName = "nmn_fiyat_cins";
             this.colnmn_fiyat_cins.MinWidth = 25;
             this.colnmn_fiyat_cins.Name = "colnmn_fiyat_cins";
@@ -580,6 +596,7 @@
             // 
             // colnmn_mus_yetkili
             // 
+            this.colnmn_mus_yetkili.Caption = "MÜSTERİ YETKİLİSİ";
             this.colnmn_mus_yetkili.FieldName = "nmn_mus_yetkili";
             this.colnmn_mus_yetkili.MinWidth = 25;
             this.colnmn_mus_yetkili.Name = "colnmn_mus_yetkili";
@@ -590,6 +607,7 @@
             // 
             // colnmn_urungrup_kod
             // 
+            this.colnmn_urungrup_kod.Caption = "ÜRÜN GRUPKOD";
             this.colnmn_urungrup_kod.FieldName = "nmn_urungrup_kod";
             this.colnmn_urungrup_kod.MinWidth = 25;
             this.colnmn_urungrup_kod.Name = "colnmn_urungrup_kod";
@@ -600,6 +618,7 @@
             // 
             // colnmn_urun_grubu
             // 
+            this.colnmn_urun_grubu.Caption = "ÜRÜN GRUBU";
             this.colnmn_urun_grubu.FieldName = "nmn_urun_grubu";
             this.colnmn_urun_grubu.MinWidth = 25;
             this.colnmn_urun_grubu.Name = "colnmn_urun_grubu";
@@ -610,6 +629,7 @@
             // 
             // colnmn_rkpcari_unvan
             // 
+            this.colnmn_rkpcari_unvan.Caption = "RAKİP CARİ UNVAN";
             this.colnmn_rkpcari_unvan.FieldName = "nmn_rkpcari_unvan";
             this.colnmn_rkpcari_unvan.MinWidth = 25;
             this.colnmn_rkpcari_unvan.Name = "colnmn_rkpcari_unvan";
@@ -620,6 +640,7 @@
             // 
             // colnmn_rkpcari_urunkod
             // 
+            this.colnmn_rkpcari_urunkod.Caption = "RAKİP CARİ URUNKOD";
             this.colnmn_rkpcari_urunkod.FieldName = "nmn_rkpcari_urunkod";
             this.colnmn_rkpcari_urunkod.MinWidth = 25;
             this.colnmn_rkpcari_urunkod.Name = "colnmn_rkpcari_urunkod";
@@ -630,6 +651,7 @@
             // 
             // colnmn_tur
             // 
+            this.colnmn_tur.Caption = "NUMUNE TÜR";
             this.colnmn_tur.FieldName = "nmn_tur";
             this.colnmn_tur.MinWidth = 25;
             this.colnmn_tur.Name = "colnmn_tur";
@@ -640,6 +662,7 @@
             // 
             // colnmn_uretilecek_urun
             // 
+            this.colnmn_uretilecek_urun.Caption = "ÜRETİLECEK ÜRÜN";
             this.colnmn_uretilecek_urun.FieldName = "nmn_uretilecek_urun";
             this.colnmn_uretilecek_urun.MinWidth = 25;
             this.colnmn_uretilecek_urun.Name = "colnmn_uretilecek_urun";
@@ -650,6 +673,7 @@
             // 
             // colnmn_hammadde
             // 
+            this.colnmn_hammadde.Caption = "HAMMADDE";
             this.colnmn_hammadde.FieldName = "nmn_hammadde";
             this.colnmn_hammadde.MinWidth = 25;
             this.colnmn_hammadde.Name = "colnmn_hammadde";
@@ -660,6 +684,7 @@
             // 
             // colnmn_mfi
             // 
+            this.colnmn_mfi.Caption = "MFI";
             this.colnmn_mfi.FieldName = "nmn_mfi";
             this.colnmn_mfi.MinWidth = 25;
             this.colnmn_mfi.Name = "colnmn_mfi";
@@ -670,6 +695,7 @@
             // 
             // colnmn_oran
             // 
+            this.colnmn_oran.Caption = "NUMUNE ORAN";
             this.colnmn_oran.FieldName = "nmn_oran";
             this.colnmn_oran.MinWidth = 25;
             this.colnmn_oran.Name = "colnmn_oran";
@@ -680,6 +706,7 @@
             // 
             // colnmn_gida
             // 
+            this.colnmn_gida.Caption = "GİDAYA UYGUN MU";
             this.colnmn_gida.FieldName = "nmn_gida";
             this.colnmn_gida.MinWidth = 25;
             this.colnmn_gida.Name = "colnmn_gida";
@@ -690,6 +717,7 @@
             // 
             // colnmn_reach_rohs
             // 
+            this.colnmn_reach_rohs.Caption = "REACH/ROHS";
             this.colnmn_reach_rohs.FieldName = "nmn_reach_rohs";
             this.colnmn_reach_rohs.MinWidth = 25;
             this.colnmn_reach_rohs.Name = "colnmn_reach_rohs";
@@ -700,6 +728,7 @@
             // 
             // colnmn_termin_tarih
             // 
+            this.colnmn_termin_tarih.Caption = "TERMİN TARİH";
             this.colnmn_termin_tarih.FieldName = "nmn_termin_tarih";
             this.colnmn_termin_tarih.MinWidth = 25;
             this.colnmn_termin_tarih.Name = "colnmn_termin_tarih";
@@ -710,6 +739,7 @@
             // 
             // colnmn_aciklama
             // 
+            this.colnmn_aciklama.Caption = "AÇIKLAMA";
             this.colnmn_aciklama.FieldName = "nmn_aciklama";
             this.colnmn_aciklama.MinWidth = 25;
             this.colnmn_aciklama.Name = "colnmn_aciklama";

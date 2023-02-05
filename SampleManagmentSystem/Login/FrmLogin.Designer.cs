@@ -39,7 +39,6 @@
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
-            this.txtKullanici = new DevExpress.XtraEditors.TextEdit();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
             this.txtSifre = new DevExpress.XtraEditors.TextEdit();
@@ -47,17 +46,17 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.hyperlinkLabelControl2 = new DevExpress.XtraEditors.HyperlinkLabelControl();
+            this.lookUpKullanici = new DevExpress.XtraEditors.LookUpEdit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullanici.Properties)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpKullanici.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -137,8 +136,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.lookUpKullanici);
             this.panel3.Controls.Add(this.pictureEdit2);
-            this.panel3.Controls.Add(this.txtKullanici);
             this.panel3.Location = new System.Drawing.Point(337, 231);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(504, 50);
@@ -158,21 +157,6 @@
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEdit2.Size = new System.Drawing.Size(30, 30);
             this.pictureEdit2.TabIndex = 7;
-            // 
-            // txtKullanici
-            // 
-            this.txtKullanici.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtKullanici.EditValue = "";
-            this.txtKullanici.Location = new System.Drawing.Point(70, 10);
-            this.txtKullanici.Name = "txtKullanici";
-            this.txtKullanici.Properties.Appearance.Font = new System.Drawing.Font("Dutch801 Rm BT", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtKullanici.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtKullanici.Properties.Appearance.Options.UseFont = true;
-            this.txtKullanici.Properties.Appearance.Options.UseForeColor = true;
-            this.txtKullanici.Size = new System.Drawing.Size(380, 28);
-            this.txtKullanici.TabIndex = 0;
-            this.txtKullanici.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
-            this.txtKullanici.Click += new System.EventHandler(this.textEdit1_Click);
             // 
             // panel4
             // 
@@ -250,7 +234,7 @@
             this.hyperlinkLabelControl1.Appearance.Options.UseBackColor = true;
             this.hyperlinkLabelControl1.Appearance.Options.UseFont = true;
             this.hyperlinkLabelControl1.Appearance.Options.UseForeColor = true;
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(253, 3);
+            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(164, 3);
             this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
             this.hyperlinkLabelControl1.Size = new System.Drawing.Size(131, 18);
             this.hyperlinkLabelControl1.TabIndex = 7;
@@ -260,26 +244,22 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Control;
-            this.panel5.Controls.Add(this.hyperlinkLabelControl2);
             this.panel5.Controls.Add(this.hyperlinkLabelControl1);
             this.panel5.Location = new System.Drawing.Point(339, 499);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(456, 27);
             this.panel5.TabIndex = 8;
             // 
-            // hyperlinkLabelControl2
+            // lookUpKullanici
             // 
-            this.hyperlinkLabelControl2.Appearance.BackColor = System.Drawing.Color.White;
-            this.hyperlinkLabelControl2.Appearance.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.hyperlinkLabelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.hyperlinkLabelControl2.Appearance.Options.UseBackColor = true;
-            this.hyperlinkLabelControl2.Appearance.Options.UseFont = true;
-            this.hyperlinkLabelControl2.Appearance.Options.UseForeColor = true;
-            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(83, 3);
-            this.hyperlinkLabelControl2.Name = "hyperlinkLabelControl2";
-            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(120, 18);
-            this.hyperlinkLabelControl2.TabIndex = 8;
-            this.hyperlinkLabelControl2.Text = "Şifremi Unuttum";
+            this.lookUpKullanici.EditValue = "";
+            this.lookUpKullanici.Location = new System.Drawing.Point(72, 16);
+            this.lookUpKullanici.Name = "lookUpKullanici";
+            this.lookUpKullanici.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpKullanici.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lookUpKullanici.Size = new System.Drawing.Size(380, 22);
+            this.lookUpKullanici.TabIndex = 9;
             // 
             // FrmLogin
             // 
@@ -304,12 +284,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullanici.Properties)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpKullanici.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,7 +304,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private DevExpress.XtraEditors.TextEdit txtKullanici;
         private System.Windows.Forms.Panel panel4;
         private DevExpress.XtraEditors.TextEdit txtSifre;
         private DevExpress.XtraEditors.LabelControl labelControl4;
@@ -334,6 +313,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
         private System.Windows.Forms.Panel panel5;
-        private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl2;
+        private DevExpress.XtraEditors.LookUpEdit lookUpKullanici;
     }
 }

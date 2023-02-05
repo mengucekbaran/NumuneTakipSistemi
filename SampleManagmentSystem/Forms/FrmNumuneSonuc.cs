@@ -43,7 +43,9 @@ namespace SampleManagmentSystem.Forms
                              select new
                              {
                                  x.id,
-                                 x.nmn_kod
+                                 x.nmn_kod,
+                                 x.nmn_ad,
+                                 x.nmn_cari_unvan
                              }).ToList();
             lookUpNmnKod.Properties.ValueMember = "id";
             lookUpNmnKod.Properties.DisplayMember = "nmn_kod";

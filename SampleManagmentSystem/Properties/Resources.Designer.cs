@@ -73,6 +73,16 @@ namespace SampleManagmentSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2824437_48lab_school_science_tube_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("2824437_48lab_school_science_tube_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2824437_lab_school_science_tube_icon {
             get {
                 object obj = ResourceManager.GetObject("2824437_lab_school_science_tube_icon", resourceCulture);

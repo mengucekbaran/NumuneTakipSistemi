@@ -113,7 +113,7 @@
             this.lookUpNmnKod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpNmnKod.Properties.NullText = "";
-            this.lookUpNmnKod.Size = new System.Drawing.Size(286, 22);
+            this.lookUpNmnKod.Size = new System.Drawing.Size(370, 22);
             this.lookUpNmnKod.TabIndex = 102;
             // 
             // spinMaliyetYonetim
@@ -159,7 +159,7 @@
             0,
             0,
             0});
-            this.spinRrOran.Location = new System.Drawing.Point(326, 114);
+            this.spinRrOran.Location = new System.Drawing.Point(410, 114);
             this.spinRrOran.Name = "spinRrOran";
             this.spinRrOran.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -198,7 +198,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(210, 118);
+            this.labelControl3.Location = new System.Drawing.Point(277, 118);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(100, 16);
             this.labelControl3.TabIndex = 90;
@@ -219,7 +219,7 @@
             0,
             0,
             0});
-            this.spinHassas.Location = new System.Drawing.Point(326, 64);
+            this.spinHassas.Location = new System.Drawing.Point(410, 64);
             this.spinHassas.Name = "spinHassas";
             this.spinHassas.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -242,7 +242,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(210, 68);
+            this.labelControl4.Location = new System.Drawing.Point(277, 68);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(60, 16);
             this.labelControl4.TabIndex = 86;

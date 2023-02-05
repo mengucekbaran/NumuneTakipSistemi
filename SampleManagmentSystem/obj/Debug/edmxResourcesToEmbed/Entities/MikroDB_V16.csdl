@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MikroDB_V16Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="KULLANICILAR">
+    <Key>
+      <PropertyRef Name="User_Guid" />
+    </Key>
+    <Property Name="User_Guid" Type="Guid" Nullable="false" />
+    <Property Name="User_DBCno" Type="Int16" Nullable="false" />
+    <Property Name="User_SpecRECno" Type="Int32" />
+    <Property Name="User_iptal" Type="Boolean" />
+    <Property Name="User_fileid" Type="Int16" />
+    <Property Name="User_hidden" Type="Boolean" />
+    <Property Name="User_kilitli" Type="Boolean" />
+    <Property Name="User_degisti" Type="Boolean" />
+    <Property Name="User_checksum" Type="Int32" />
+    <Property Name="User_create_user" Type="Int16" />
+    <Property Name="User_create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="User_lastup_user" Type="Int16" />
+    <Property Name="User_lastup_date" Type="DateTime" Precision="3" />
+    <Property Name="User_special1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="User_special2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="User_special3" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="User_no" Type="Int32" />
+    <Property Name="User_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="User_pw" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_LongName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="User_LoginName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="User_EMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="User_InSystem" Type="Boolean" />
+    <Property Name="User_ProgNo" Type="Byte" />
+    <Property Name="User_Modules" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="User_random" Type="Int32" />
+    <Property Name="User_DBase" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="User_SifreTipi" Type="Byte" />
+    <Property Name="User_SifreDegisim_date" Type="DateTime" Precision="3" />
+    <Property Name="User_pasif" Type="Boolean" />
+    <Property Name="User_FirstIP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="User_LastIP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="User_PrevPW1" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_PrevPW2" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_PrevPW3" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_PrevPW4" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_PrevPW5" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_DomainAndUserName" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="User_DefaultDBKod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="User_eMikroMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="User_eMikroSifre" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_KEPHesap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="User_KEPCepTelefonu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="User_KEPSifre" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_KEPTcNo" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="User_Eimza_tipi" Type="Byte" />
+    <Property Name="User_Eimza_surucusu" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_Eimza_sifre" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_SRVfl" Type="Boolean" />
+    <Property Name="User_outlook_takvim_senk_fl" Type="Boolean" />
+    <Property Name="User_gmail_takvim_senk_fl" Type="Boolean" />
+    <Property Name="User_gmail_takvim_ical_adres" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_pc_name" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_outlook_takvim_senk_dk" Type="Int16" />
+    <Property Name="User_gmail_takvim_senk_dk" Type="Int16" />
+    <Property Name="User_kbs_sifre" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="User_LVKN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="User_idm_user_invitations_id" Type="Guid" />
+    <Property Name="User_idm_user_id" Type="Guid" />
+    <Property Name="User_idm_user_invitations_int_id" Type="Int32" />
+    <Property Name="User_idm_user_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="User_Hatali_giris_sayisi" Type="Byte" />
+    <Property Name="User_Ceptel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="MikroDB_V16Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="KULLANICILAR" EntityType="Self.KULLANICILAR" />
+    <EntitySet Name="KULLANICILAR_USER" EntityType="MikroDB_V16Model.KULLANICILAR_USER" />
+  </EntityContainer>
+  <EntityType Name="KULLANICILAR_USER">
+    <Key>
+      <PropertyRef Name="Record_uid" />
+    </Key>
+    <Property Name="Record_uid" Type="Guid" Nullable="false" />
+  </EntityType>
+</Schema>

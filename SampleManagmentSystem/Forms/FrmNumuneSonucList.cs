@@ -1,4 +1,5 @@
-﻿using SampleManagmentSystem.Entities;
+﻿using DevExpress.XtraGrid.Views.Grid;
+using SampleManagmentSystem.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +42,8 @@ namespace SampleManagmentSystem.Forms
             {
                 x.nmnh_nmnkod,
                 x.nmnh_sonucsirano,
-                labonayDisplayValue = x.nmnh_labonay == 1 ? "ONAYLANDI" : "ONAYLANMADI"
+                x.nmnh_labonay
+                //labonayDisplayValue = x.nmnh_labonay == 1 ? "ONAYLANDI" : "ONAYLANMADI"
             }).ToList();
             numuneSonuclari.DataSource = sonuclar;
         }
@@ -50,7 +52,40 @@ namespace SampleManagmentSystem.Forms
             ListNumuneSonuclar();
             ListSonucGirmemisler();
         }
+        private void gridView1_RowStyle_1(object sender, RowStyleEventArgs e)
+        {
+            GridView View = sender as GridView;
+            if (e.RowHandle >= 0)
+            {
+                var labOnay = View.GetRowCellValue(e.RowHandle, View.Columns["nmnh_labonay"]);
+                if (labOnay.ToString() == "1")
+                {
+                    e.Appearance.BackColor = Color.FromArgb(150,Color.ForestGreen);
+                    e.Appearance.BackColor2 = Color.FromArgb(150, Color.ForestGreen);
+                }
+                else
+                {
+                    e.Appearance.BackColor = Color.FromArgb(150, Color.Salmon);
+                    e.Appearance.BackColor2 = Color.FromArgb(150, Color.Salmon);
+                }
+            }
 
+        }
 
+        private void gridView1_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            if (e.Column.FieldName == "nmnh_labonay")
+            {
+                int labOnay = Convert.ToInt32(e.CellValue);
+                if (labOnay == 1)
+                {
+                    e.DisplayText = "✔";
+                }
+                else
+                {
+                    e.DisplayText = "❌";
+                }
+            }
+        }
     }
 }
