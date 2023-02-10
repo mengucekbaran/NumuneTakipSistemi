@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SampleManagmentSystem.Entities;
+using SampleManagmentSystem.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,12 +12,22 @@ using System.Windows.Forms;
 
 namespace SampleManagmentSystem
 {
+
     public partial class Form1 : Form
     {
+
+        MikroDB_V16Entities dbMikro = new MikroDB_V16Entities();
+        MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
         public Form1()
         {
             InitializeComponent();
+            homePage.Visible = false;
+            if (ActiveUser.Instance.YetkiSonucEkleme == false)
+            {
+                lab.Visible = false;
+            }
         }
+        //SONUÇ LİSTESİ
         Forms.FrmNumuneSonucList sonucList;
         private void btnNumuneList2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -73,10 +85,7 @@ namespace SampleManagmentSystem
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
         Forms.FrmNumuneSonucDetay frmSonucDetay;
         private void btnSonucDetay_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -85,6 +94,16 @@ namespace SampleManagmentSystem
                 frmSonucDetay = new Forms.FrmNumuneSonucDetay();
                 frmSonucDetay.Show();
             }
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -17,6 +17,14 @@ namespace SampleManagmentSystem.Forms
         public FrmNumuneDetay()
         {
             InitializeComponent();
+            if(ActiveUser.Instance.YetkiDüzeltme == false)
+            {
+                BtnUpdate.Visible = false;
+            }
+            if (ActiveUser.Instance.YetkiSilme == false)
+            {
+                BtnDelete.Visible = false;
+            }
         }
         NUMUNE_TAKİPEntities db = new NUMUNE_TAKİPEntities();
         void Listele()
@@ -97,6 +105,11 @@ namespace SampleManagmentSystem.Forms
             }
 
             
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

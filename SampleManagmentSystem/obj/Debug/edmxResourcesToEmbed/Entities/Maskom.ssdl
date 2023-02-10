@@ -286,6 +286,16 @@
     <Property Name="cari_baba_adi" Type="nvarchar" MaxLength="50" />
     <Property Name="cari_faal_terk" Type="tinyint" />
   </EntityType>
+  <EntityType Name="KULLANICILAR_USER">
+    <Key>
+      <PropertyRef Name="Record_uid" />
+    </Key>
+    <Property Name="Record_uid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Numune_Giris" Type="bit" />
+    <Property Name="Numune_Duzeltme" Type="bit" />
+    <Property Name="Numune_Silme" Type="bit" />
+    <Property Name="Numune_Sonuc_Giris" Type="bit" />
+  </EntityType>
   <EntityType Name="STOK_ALT_GRUPLARI">
     <Key>
       <PropertyRef Name="sta_Guid" />
@@ -612,6 +622,7 @@
   <EntityContainer Name="MikroDB_V16_MASKOMModelStoreContainer">
     <EntitySet Name="ADAY_CARI_HESAPLAR" EntityType="Self.ADAY_CARI_HESAPLAR" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CARI_HESAPLAR" EntityType="Self.CARI_HESAPLAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KULLANICILAR_USER" EntityType="Self.KULLANICILAR_USER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="STOK_ALT_GRUPLARI" EntityType="Self.STOK_ALT_GRUPLARI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="STOK_ANA_GRUPLARI" EntityType="Self.STOK_ANA_GRUPLARI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="STOKLAR" EntityType="Self.STOKLAR" Schema="dbo" store:Type="Tables" />

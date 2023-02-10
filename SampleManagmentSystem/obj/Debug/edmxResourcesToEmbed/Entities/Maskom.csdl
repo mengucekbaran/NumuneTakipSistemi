@@ -616,5 +616,16 @@
     <EntitySet Name="STOK_ANA_GRUPLARI" EntityType="Self.STOK_ANA_GRUPLARI" />
     <EntitySet Name="STOKLAR" EntityType="Self.STOKLAR" />
     <EntitySet Name="URUNLER" EntityType="Self.URUNLER" />
+    <EntitySet Name="KULLANICILAR_USER" EntityType="MikroDB_V16_MASKOMModel.KULLANICILAR_USER" />
   </EntityContainer>
+  <EntityType Name="KULLANICILAR_USER">
+    <Key>
+      <PropertyRef Name="Record_uid" />
+    </Key>
+    <Property Name="Record_uid" Type="Guid" Nullable="false" />
+    <Property Name="Numune_Giris" Type="Boolean" />
+    <Property Name="Numune_Duzeltme" Type="Boolean" />
+    <Property Name="Numune_Silme" Type="Boolean" />
+    <Property Name="Numune_Sonuc_Giris" Type="Boolean" />
+  </EntityType>
 </Schema>

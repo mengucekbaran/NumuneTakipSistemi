@@ -15,9 +15,18 @@ namespace SampleManagmentSystem.Forms
     public partial class FrmNumune : Form
     {
         NUMUNE_TAKİPEntities db = new NUMUNE_TAKİPEntities();
+        MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
         public FrmNumune()
         {
             InitializeComponent();
+            if(ActiveUser.Instance.YetkiDüzeltme== false)
+            {
+                gridView1.Columns["update"].Visible = false;
+            }
+            if (ActiveUser.Instance.YetkiSilme == false)
+            {
+                gridView1.Columns["delete"].Visible = false;
+            }
         }
         public void Listele()
         {
@@ -49,29 +58,6 @@ namespace SampleManagmentSystem.Forms
             dateFirst.EditValue = dateTimeObj;
             dateLast.EditValue = DateTime.Today;
         }
-        //DELETE NUMUNE 
-        private void repositoryItemButtonDelete_Click(object sender, EventArgs e)
-        {
-            //DELETE BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
-            int selectedRowIndex = gridView1.FocusedRowHandle;
-            int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
-
-            //SİLMEK İSTEDİĞİNİZDEN EMİN MİSİNİZ MESAJI
-            var sonuc = XtraMessageBox.Show($"{(gridView1.GetFocusedRow() as ListNumune_Result).nmn_kod} kodlu kaydı silmek istediğinizden emin misiniz ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //YESE TIKLANIRSA
-            if (sonuc == DialogResult.Yes)
-            {
-                XtraMessageBox.Show("Siliniyor...");
-                // TABLODA VERİLEN İD YE EŞİT OLAN KAYDI BULDU
-                TblNumuneler nmn = db.TblNumuneler.Find(id);
-                NUMUNE_HAREKETLERI nmnh = db.NUMUNE_HAREKETLERI.FirstOrDefault(x => x.nmnh_nmnkod == nmn.nmn_kod);
-                //SİLDİ
-                db.NUMUNE_HAREKETLERI.Remove(nmnh);
-                db.TblNumuneler.Remove(nmn);
-                db.SaveChanges();
-                Listele();
-            }
-        }
         //UPDATE BUTONUNA BASILDIĞINDA YAPILACAKLAR
         private void repositoryItemButtonUpdate_Click(object sender, EventArgs e)
         {
@@ -82,7 +68,7 @@ namespace SampleManagmentSystem.Forms
             Forms.NewNumune fr = new Forms.NewNumune(nmnKod);
             fr.Show();
         }
-
+        //DELETE NUMUNE 
         private void repositoryItemButtonDelete_Click_1(object sender, EventArgs e)
         {
             //DELETE BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
@@ -104,6 +90,11 @@ namespace SampleManagmentSystem.Forms
                 db.SaveChanges();
                 Listele();
             }
+        }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     

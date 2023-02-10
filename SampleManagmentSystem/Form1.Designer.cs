@@ -51,7 +51,7 @@
             this.btnNumuneSonuc = new DevExpress.XtraBars.BarButtonItem();
             this.btnSonucDetay = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.homePage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.home = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.numune = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -106,10 +106,11 @@
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1,
+            this.homePage,
             this.ribbonPage2,
             this.lab});
-            this.ribbonControl1.Size = new System.Drawing.Size(1208, 215);
+            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
+            this.ribbonControl1.Size = new System.Drawing.Size(1208, 193);
             // 
             // barButtonItem1
             // 
@@ -139,7 +140,7 @@
             // 
             // btnNumuneList2
             // 
-            this.btnNumuneList2.Caption = "Numune Listesi";
+            this.btnNumuneList2.Caption = "Numune Sonuç Listesi";
             this.btnNumuneList2.Id = 4;
             this.btnNumuneList2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNumuneList2.ImageOptions.Image")));
             this.btnNumuneList2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNumuneList2.ImageOptions.LargeImage")));
@@ -179,13 +180,13 @@
             this.ribbonPageCategory1.Text = "ribbonPageCategory1";
             this.ribbonPageCategory1.Visible = false;
             // 
-            // ribbonPage1
+            // homePage
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.homePage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.home});
-            this.ribbonPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.ImageOptions.Image")));
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Ana Sayfa";
+            this.homePage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.ImageOptions.Image")));
+            this.homePage.Name = "homePage";
+            this.homePage.Text = "Ana Sayfa";
             // 
             // home
             // 
@@ -255,7 +256,10 @@
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Numune Yönetim Sistemi";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).EndInit();
@@ -270,7 +274,7 @@
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage homePage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup home;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem bntNumuneList;

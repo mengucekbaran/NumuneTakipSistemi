@@ -93,7 +93,7 @@
       <DependentUpon>MikroDB_V16.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\KULLANICILAR_USER.cs">
-      <DependentUpon>MikroDB_V16.tt</DependentUpon>
+      <DependentUpon>Maskom.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\ListNumune_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>

@@ -103,6 +103,8 @@
             this.colnmn_aciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -117,6 +119,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -242,9 +247,10 @@
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.dateFirst);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(25, 30);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1448, 114);
+            this.groupControl1.Size = new System.Drawing.Size(1493, 114);
             this.groupControl1.TabIndex = 4;
             // 
             // BtnUpdate
@@ -362,13 +368,14 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.tblNumunelerBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(25, 150);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(2, 116);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonDelete,
             this.repositoryItemButtonUpdate});
-            this.gridControl1.Size = new System.Drawing.Size(1448, 483);
+            this.gridControl1.Size = new System.Drawing.Size(1493, 553);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -766,13 +773,32 @@
             this.repositoryItemButtonUpdate.Name = "repositoryItemButtonUpdate";
             this.repositoryItemButtonUpdate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panelControl1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1497, 671);
+            this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.gridControl1);
+            this.panelControl1.Controls.Add(this.groupControl1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1497, 671);
+            this.panelControl1.TabIndex = 6;
+            // 
             // FrmNumuneDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1497, 698);
-            this.Controls.Add(this.gridControl1);
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "FrmNumuneDetay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -794,6 +820,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -863,5 +892,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_aciklama;
         private DevExpress.XtraEditors.SimpleButton BtnDelete;
         private DevExpress.XtraEditors.SimpleButton BtnUpdate;
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

@@ -32,7 +32,12 @@ namespace SampleManagmentSystem.Forms
             var sonucGirilmemisler = nmn.Where(x => !nmnh.Contains(x.nmn_kod)).Select(x => new
             {
                 x.nmn_kod,
-                x.nmn_ad
+                x.nmn_ad,
+                x.nmn_cari_kod,
+                x.nmn_cari_unvan,
+                x.nmn_tarih,
+                x.nmn_cari_seviye
+
             }).ToList();
             nmnSonucGirilmemis.DataSource = sonucGirilmemisler;
         }
@@ -54,25 +59,21 @@ namespace SampleManagmentSystem.Forms
         }
         private void gridView1_RowStyle_1(object sender, RowStyleEventArgs e)
         {
-            GridView View = sender as GridView;
-            if (e.RowHandle >= 0)
-            {
-                var labOnay = View.GetRowCellValue(e.RowHandle, View.Columns["nmnh_labonay"]);
-                if (labOnay.ToString() == "1")
-                {
-                    e.Appearance.BackColor = Color.FromArgb(150,Color.ForestGreen);
-                    e.Appearance.BackColor2 = Color.FromArgb(150, Color.ForestGreen);
-                }
-                else
-                {
-                    e.Appearance.BackColor = Color.FromArgb(150, Color.Salmon);
-                    e.Appearance.BackColor2 = Color.FromArgb(150, Color.Salmon);
-                }
-            }
+
 
         }
 
         private void gridView1_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+
+        }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gridView1_CustomDrawCell_1(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
         {
             if (e.Column.FieldName == "nmnh_labonay")
             {
@@ -84,6 +85,25 @@ namespace SampleManagmentSystem.Forms
                 else
                 {
                     e.DisplayText = "❌";
+                }
+            }
+        }
+
+        private void gridView1_RowStyle(object sender, RowStyleEventArgs e)
+        {
+            GridView View = sender as GridView;
+            if (e.RowHandle >= 0)
+            {
+                var labOnay = View.GetRowCellValue(e.RowHandle, View.Columns["nmnh_labonay"]);
+                if (labOnay.ToString() == "1")
+                {
+                    e.Appearance.BackColor = Color.FromArgb(150, Color.ForestGreen);
+                    e.Appearance.BackColor2 = Color.FromArgb(150, Color.ForestGreen);
+                }
+                else
+                {
+                    e.Appearance.BackColor = Color.FromArgb(150, Color.Salmon);
+                    e.Appearance.BackColor2 = Color.FromArgb(150, Color.Salmon);
                 }
             }
         }

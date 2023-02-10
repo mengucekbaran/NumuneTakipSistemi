@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MikroDB_V16_MASKOMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MikroDB_V16_MASKOMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ADAY_CARI_HESAPLAR">
           <Key>
             <PropertyRef Name="adaycr_Guid" />
@@ -290,6 +290,16 @@
           <Property Name="cari_sirket_turu" Type="tinyint" />
           <Property Name="cari_baba_adi" Type="nvarchar" MaxLength="50" />
           <Property Name="cari_faal_terk" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="KULLANICILAR_USER">
+          <Key>
+            <PropertyRef Name="Record_uid" />
+          </Key>
+          <Property Name="Record_uid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Numune_Giris" Type="bit" />
+          <Property Name="Numune_Duzeltme" Type="bit" />
+          <Property Name="Numune_Silme" Type="bit" />
+          <Property Name="Numune_Sonuc_Giris" Type="bit" />
         </EntityType>
         <EntityType Name="STOK_ALT_GRUPLARI">
           <Key>
@@ -617,13 +627,13 @@
         <EntityContainer Name="MikroDB_V16_MASKOMModelStoreContainer">
           <EntitySet Name="ADAY_CARI_HESAPLAR" EntityType="Self.ADAY_CARI_HESAPLAR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CARI_HESAPLAR" EntityType="Self.CARI_HESAPLAR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KULLANICILAR_USER" EntityType="Self.KULLANICILAR_USER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="STOK_ALT_GRUPLARI" EntityType="Self.STOK_ALT_GRUPLARI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="STOK_ANA_GRUPLARI" EntityType="Self.STOK_ANA_GRUPLARI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="STOKLAR" EntityType="Self.STOKLAR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="URUNLER" EntityType="Self.URUNLER" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MikroDB_V16_MASKOMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1243,7 +1253,18 @@
           <EntitySet Name="STOK_ANA_GRUPLARI" EntityType="Self.STOK_ANA_GRUPLARI" />
           <EntitySet Name="STOKLAR" EntityType="Self.STOKLAR" />
           <EntitySet Name="URUNLER" EntityType="Self.URUNLER" />
+          <EntitySet Name="KULLANICILAR_USER" EntityType="MikroDB_V16_MASKOMModel.KULLANICILAR_USER" />
         </EntityContainer>
+        <EntityType Name="KULLANICILAR_USER">
+          <Key>
+            <PropertyRef Name="Record_uid" />
+          </Key>
+          <Property Name="Record_uid" Type="Guid" Nullable="false" />
+          <Property Name="Numune_Giris" Type="Boolean" />
+          <Property Name="Numune_Duzeltme" Type="Boolean" />
+          <Property Name="Numune_Silme" Type="Boolean" />
+          <Property Name="Numune_Sonuc_Giris" Type="Boolean" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1862,6 +1883,17 @@
                 <ScalarProperty Name="uru_recete_ismi5" ColumnName="uru_recete_ismi5" />
                 <ScalarProperty Name="uru_varsayilan_recete_tanim_kodu" ColumnName="uru_varsayilan_recete_tanim_kodu" />
                 <ScalarProperty Name="uru_varsayilan_recete_cins" ColumnName="uru_varsayilan_recete_cins" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KULLANICILAR_USER">
+            <EntityTypeMapping TypeName="MikroDB_V16_MASKOMModel.KULLANICILAR_USER">
+              <MappingFragment StoreEntitySet="KULLANICILAR_USER">
+                <ScalarProperty Name="Numune_Sonuc_Giris" ColumnName="Numune_Sonuc_Giris" />
+                <ScalarProperty Name="Numune_Silme" ColumnName="Numune_Silme" />
+                <ScalarProperty Name="Numune_Duzeltme" ColumnName="Numune_Duzeltme" />
+                <ScalarProperty Name="Numune_Giris" ColumnName="Numune_Giris" />
+                <ScalarProperty Name="Record_uid" ColumnName="Record_uid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -24,6 +24,7 @@ namespace SampleManagmentSystem.Forms
             InitializeComponent();
             //NUMUNE KODUNUN YAPISININ AYARLANMASI VE VERİ TABANINDAN ÇEKİLMESİ
             //************************************************************************************************************************
+
             string nextNmnKod;
             string currentYear = DateTime.Now.ToString("yy");
             //tabloda herhangi bir kaydın olup olmadığını kontrol eder
@@ -107,13 +108,13 @@ namespace SampleManagmentSystem.Forms
             }
         }
         //VAZGEC 
-        private void btnVazgec_Click(object sender, EventArgs e)
+        private void btnVazgec_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
         // KAYDET BUTONUNA TIKLANDIĞINDA YAPILACAKLAR
 
-        private void BtnKaydet_Click(object sender, EventArgs e)
+        private void BtnKaydet_Click_1(object sender, EventArgs e)
         {
             TblNumuneler nmn = new TblNumuneler();
             //Girilen numune kodu kontrolü
@@ -145,7 +146,7 @@ namespace SampleManagmentSystem.Forms
             
         }
         // GÜNCELLE BUTONUNA TIKLANDIĞINDA YAPILACAKLAR
-        private void BtnGuncelle_Click(object sender, EventArgs e)
+        private void BtnGuncelle_Click_1(object sender, EventArgs e)
         {
             //FirstOrDefault, belirli bir koşula uyan ilk öğeyi döndüren veya eğer bu tür bir öğe bulunamazsa varsayılan değer döndüren bir LINQ uzantı metodudur.
             TblNumuneler nmn = db.TblNumuneler.FirstOrDefault(x => x.nmn_kod == txtNmnKod.EditValue.ToString());
@@ -261,6 +262,12 @@ namespace SampleManagmentSystem.Forms
             {
                 XtraMessageBox.Show("Numune kodu boş bırakılamaz.", "Information");
                 txtNmnKod.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtNmnAd.Text))
+            {
+                XtraMessageBox.Show("Numune ad boş bırakılamaz.", "Information");
+                txtNmnAd.Focus();
                 return false;
             }
             if (Convert.ToDecimal(spinIsikHasligi.Value) < 2 || spinIsikHasligi.Value > 8)
@@ -395,5 +402,7 @@ namespace SampleManagmentSystem.Forms
             txtAlisTarih.EditValue = DateTime.Today;
             txtTerminTarih.EditValue = DateTime.Today;
         }
+
+
     }
 }

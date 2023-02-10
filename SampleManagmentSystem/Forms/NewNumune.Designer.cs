@@ -29,30 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewNumune));
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.labelterminTarih = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.txtNmnAd = new DevExpress.XtraEditors.TextEdit();
+            this.btnVazgec = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.txtIsiDayanim = new DevExpress.XtraEditors.TextEdit();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.spinIsikHasligi = new DevExpress.XtraEditors.SpinEdit();
@@ -69,13 +52,34 @@
             this.lookUpHammadde = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtAlisTarih = new DevExpress.XtraEditors.DateEdit();
             this.txtAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.txtNmnKod = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelterminTarih = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.txtUretilecekUrun = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.txtRkpUrunKod = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.txtMusYetkili = new DevExpress.XtraEditors.TextEdit();
             this.txtRkpUnvan = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.txtTerminTarih = new DevExpress.XtraEditors.DateEdit();
             this.lookUpCariSvy = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpDoviz = new DevExpress.XtraEditors.LookUpEdit();
@@ -83,12 +87,11 @@
             this.lookUpCariAd = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpNmnTur = new DevExpress.XtraEditors.LookUpEdit();
             this.txtSipMktr = new DevExpress.XtraEditors.SpinEdit();
-            this.btnVazgec = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lookUpAdayCari = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIsiDayanim.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinIsikHasligi.Properties)).BeginInit();
@@ -117,266 +120,157 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpCariAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnTur.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpAdayCari.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(23, 23);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(79, 16);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Numune Kodu";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(653, 22);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(108, 16);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Numune Alış Tarihi";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(23, 122);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(73, 16);
-            this.labelControl4.TabIndex = 4;
-            this.labelControl4.Text = "Cari Seviyesi";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(23, 438);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(140, 16);
-            this.labelControl5.TabIndex = 14;
-            this.labelControl5.Text = "Numune Deneme Miktarı";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(23, 189);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(144, 16);
-            this.labelControl6.TabIndex = 12;
-            this.labelControl6.Text = "Öngörülen Sipariş Miktarı";
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(653, 89);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(98, 16);
-            this.labelControl7.TabIndex = 10;
-            this.labelControl7.Text = "Aday Cari Konum";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Location = new System.Drawing.Point(23, 155);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(55, 16);
-            this.labelControl8.TabIndex = 8;
-            this.labelControl8.Text = "Aday Cari";
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Location = new System.Drawing.Point(653, 189);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(156, 16);
-            this.labelControl9.TabIndex = 30;
-            this.labelControl9.Text = "Numune İle Üretilecek Ürün";
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Location = new System.Drawing.Point(23, 324);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(71, 16);
-            this.labelControl10.TabIndex = 28;
-            this.labelControl10.Text = "Numune Tür";
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Location = new System.Drawing.Point(653, 155);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(121, 16);
-            this.labelControl11.TabIndex = 26;
-            this.labelControl11.Text = "Rakip Cari Ürün Kodu";
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Location = new System.Drawing.Point(23, 290);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(97, 16);
-            this.labelControl12.TabIndex = 24;
-            this.labelControl12.Text = "Rakip Cari Ünvan";
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Location = new System.Drawing.Point(653, 123);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(65, 16);
-            this.labelControl13.TabIndex = 22;
-            this.labelControl13.Text = "Ürün Grubu";
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Location = new System.Drawing.Point(23, 257);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(88, 16);
-            this.labelControl14.TabIndex = 20;
-            this.labelControl14.Text = "Müşteri Yetkilisi";
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Location = new System.Drawing.Point(311, 223);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(61, 16);
-            this.labelControl15.TabIndex = 18;
-            this.labelControl15.Text = "Döviz Cinsi";
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Location = new System.Drawing.Point(23, 223);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(64, 16);
-            this.labelControl16.TabIndex = 16;
-            this.labelControl16.Text = "Hedef Fiyat";
-            // 
-            // labelterminTarih
-            // 
-            this.labelterminTarih.Location = new System.Drawing.Point(653, 403);
-            this.labelterminTarih.Name = "labelterminTarih";
-            this.labelterminTarih.Size = new System.Drawing.Size(78, 16);
-            this.labelterminTarih.TabIndex = 42;
-            this.labelterminTarih.Text = "Termin Tarihi";
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Location = new System.Drawing.Point(653, 337);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(68, 16);
-            this.labelControl18.TabIndex = 40;
-            this.labelControl18.Text = "Reach/Rohs";
-            // 
-            // labelControl19
-            // 
-            this.labelControl19.Location = new System.Drawing.Point(653, 299);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(98, 16);
-            this.labelControl19.TabIndex = 38;
-            this.labelControl19.Text = "Gıdaya Uygun Mu";
-            // 
-            // labelControl20
-            // 
-            this.labelControl20.Location = new System.Drawing.Point(23, 362);
-            this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(83, 16);
-            this.labelControl20.TabIndex = 36;
-            this.labelControl20.Text = "Kullanım Oranı";
-            // 
-            // labelControl22
-            // 
-            this.labelControl22.Location = new System.Drawing.Point(23, 400);
-            this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(101, 16);
-            this.labelControl22.TabIndex = 32;
-            this.labelControl22.Text = "Hammadde Bilgisi";
-            // 
-            // labelControl23
-            // 
-            this.labelControl23.Location = new System.Drawing.Point(23, 490);
-            this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(51, 16);
-            this.labelControl23.TabIndex = 44;
-            this.labelControl23.Text = "Açıklama";
-            // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.txtNmnAd);
-            this.panelControl1.Controls.Add(this.labelControl17);
-            this.panelControl1.Controls.Add(this.txtIsiDayanim);
-            this.panelControl1.Controls.Add(this.labelControl26);
-            this.panelControl1.Controls.Add(this.spinIsikHasligi);
-            this.panelControl1.Controls.Add(this.labelControl25);
-            this.panelControl1.Controls.Add(this.txtDenemeMktr);
-            this.panelControl1.Controls.Add(this.txtMfi);
-            this.panelControl1.Controls.Add(this.txtKullanımOran);
-            this.panelControl1.Controls.Add(this.txtHedefFiyat);
-            this.panelControl1.Controls.Add(this.radioGroupCariKnm);
-            this.panelControl1.Controls.Add(this.lookUpAciliyet);
-            this.panelControl1.Controls.Add(this.labelControl21);
-            this.panelControl1.Controls.Add(this.radioGroupReachRohs);
-            this.panelControl1.Controls.Add(this.radioGroupGida);
-            this.panelControl1.Controls.Add(this.lookUpHammadde);
-            this.panelControl1.Controls.Add(this.labelControl24);
-            this.panelControl1.Controls.Add(this.labelControl3);
-            this.panelControl1.Controls.Add(this.labelControl1);
-            this.panelControl1.Controls.Add(this.txtAlisTarih);
-            this.panelControl1.Controls.Add(this.txtAciklama);
-            this.panelControl1.Controls.Add(this.txtNmnKod);
-            this.panelControl1.Controls.Add(this.labelControl23);
-            this.panelControl1.Controls.Add(this.labelControl2);
-            this.panelControl1.Controls.Add(this.labelControl4);
-            this.panelControl1.Controls.Add(this.labelterminTarih);
-            this.panelControl1.Controls.Add(this.labelControl18);
-            this.panelControl1.Controls.Add(this.labelControl8);
-            this.panelControl1.Controls.Add(this.labelControl19);
-            this.panelControl1.Controls.Add(this.labelControl7);
-            this.panelControl1.Controls.Add(this.labelControl20);
-            this.panelControl1.Controls.Add(this.labelControl6);
-            this.panelControl1.Controls.Add(this.labelControl5);
-            this.panelControl1.Controls.Add(this.labelControl22);
-            this.panelControl1.Controls.Add(this.txtUretilecekUrun);
-            this.panelControl1.Controls.Add(this.labelControl16);
-            this.panelControl1.Controls.Add(this.labelControl9);
-            this.panelControl1.Controls.Add(this.labelControl15);
-            this.panelControl1.Controls.Add(this.labelControl10);
-            this.panelControl1.Controls.Add(this.txtRkpUrunKod);
-            this.panelControl1.Controls.Add(this.labelControl14);
-            this.panelControl1.Controls.Add(this.labelControl11);
-            this.panelControl1.Controls.Add(this.txtMusYetkili);
-            this.panelControl1.Controls.Add(this.txtRkpUnvan);
-            this.panelControl1.Controls.Add(this.labelControl13);
-            this.panelControl1.Controls.Add(this.labelControl12);
-            this.panelControl1.Controls.Add(this.txtTerminTarih);
-            this.panelControl1.Controls.Add(this.lookUpCariSvy);
-            this.panelControl1.Controls.Add(this.lookUpDoviz);
-            this.panelControl1.Controls.Add(this.lookUpUrunGrubu);
-            this.panelControl1.Controls.Add(this.lookUpCariAd);
-            this.panelControl1.Controls.Add(this.lookUpNmnTur);
-            this.panelControl1.Controls.Add(this.txtSipMktr);
-            this.panelControl1.Controls.Add(this.lookUpAdayCari);
-            this.panelControl1.Location = new System.Drawing.Point(12, 9);
+            this.panelControl1.Controls.Add(this.panel1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1186, 669);
+            this.panelControl1.Size = new System.Drawing.Size(1210, 735);
             this.panelControl1.TabIndex = 49;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.BtnGuncelle);
+            this.panel1.Controls.Add(this.txtNmnAd);
+            this.panel1.Controls.Add(this.btnVazgec);
+            this.panel1.Controls.Add(this.labelControl17);
+            this.panel1.Controls.Add(this.BtnKaydet);
+            this.panel1.Controls.Add(this.txtIsiDayanim);
+            this.panel1.Controls.Add(this.labelControl26);
+            this.panel1.Controls.Add(this.spinIsikHasligi);
+            this.panel1.Controls.Add(this.labelControl25);
+            this.panel1.Controls.Add(this.txtDenemeMktr);
+            this.panel1.Controls.Add(this.txtMfi);
+            this.panel1.Controls.Add(this.txtKullanımOran);
+            this.panel1.Controls.Add(this.txtHedefFiyat);
+            this.panel1.Controls.Add(this.radioGroupCariKnm);
+            this.panel1.Controls.Add(this.lookUpAciliyet);
+            this.panel1.Controls.Add(this.labelControl21);
+            this.panel1.Controls.Add(this.radioGroupReachRohs);
+            this.panel1.Controls.Add(this.radioGroupGida);
+            this.panel1.Controls.Add(this.lookUpHammadde);
+            this.panel1.Controls.Add(this.labelControl24);
+            this.panel1.Controls.Add(this.labelControl3);
+            this.panel1.Controls.Add(this.labelControl1);
+            this.panel1.Controls.Add(this.txtAlisTarih);
+            this.panel1.Controls.Add(this.txtAciklama);
+            this.panel1.Controls.Add(this.txtNmnKod);
+            this.panel1.Controls.Add(this.labelControl23);
+            this.panel1.Controls.Add(this.labelControl2);
+            this.panel1.Controls.Add(this.labelControl4);
+            this.panel1.Controls.Add(this.labelterminTarih);
+            this.panel1.Controls.Add(this.labelControl18);
+            this.panel1.Controls.Add(this.labelControl8);
+            this.panel1.Controls.Add(this.labelControl19);
+            this.panel1.Controls.Add(this.labelControl7);
+            this.panel1.Controls.Add(this.labelControl20);
+            this.panel1.Controls.Add(this.labelControl6);
+            this.panel1.Controls.Add(this.labelControl5);
+            this.panel1.Controls.Add(this.labelControl22);
+            this.panel1.Controls.Add(this.txtUretilecekUrun);
+            this.panel1.Controls.Add(this.labelControl16);
+            this.panel1.Controls.Add(this.labelControl9);
+            this.panel1.Controls.Add(this.labelControl15);
+            this.panel1.Controls.Add(this.labelControl10);
+            this.panel1.Controls.Add(this.txtRkpUrunKod);
+            this.panel1.Controls.Add(this.labelControl14);
+            this.panel1.Controls.Add(this.labelControl11);
+            this.panel1.Controls.Add(this.txtMusYetkili);
+            this.panel1.Controls.Add(this.txtRkpUnvan);
+            this.panel1.Controls.Add(this.labelControl13);
+            this.panel1.Controls.Add(this.labelControl12);
+            this.panel1.Controls.Add(this.txtTerminTarih);
+            this.panel1.Controls.Add(this.lookUpCariSvy);
+            this.panel1.Controls.Add(this.lookUpDoviz);
+            this.panel1.Controls.Add(this.lookUpUrunGrubu);
+            this.panel1.Controls.Add(this.lookUpCariAd);
+            this.panel1.Controls.Add(this.lookUpNmnTur);
+            this.panel1.Controls.Add(this.txtSipMktr);
+            this.panel1.Controls.Add(this.lookUpAdayCari);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1206, 731);
+            this.panel1.TabIndex = 91;
+            // 
+            // BtnGuncelle
+            // 
+            this.BtnGuncelle.Appearance.BackColor = System.Drawing.Color.OrangeRed;
+            this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.BtnGuncelle.Appearance.Options.UseBackColor = true;
+            this.BtnGuncelle.Appearance.Options.UseFont = true;
+            this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.ImageOptions.Image")));
+            this.BtnGuncelle.Location = new System.Drawing.Point(1054, 675);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(134, 42);
+            this.BtnGuncelle.TabIndex = 189;
+            this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.Visible = false;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click_1);
             // 
             // txtNmnAd
             // 
-            this.txtNmnAd.Location = new System.Drawing.Point(198, 51);
+            this.txtNmnAd.Location = new System.Drawing.Point(193, 45);
             this.txtNmnAd.Name = "txtNmnAd";
             this.txtNmnAd.Size = new System.Drawing.Size(340, 22);
-            this.txtNmnAd.TabIndex = 2;
+            this.txtNmnAd.TabIndex = 150;
+            // 
+            // btnVazgec
+            // 
+            this.btnVazgec.Appearance.BackColor = System.Drawing.Color.DarkRed;
+            this.btnVazgec.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.btnVazgec.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnVazgec.Appearance.Options.UseBackColor = true;
+            this.btnVazgec.Appearance.Options.UseFont = true;
+            this.btnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVazgec.ImageOptions.Image")));
+            this.btnVazgec.Location = new System.Drawing.Point(905, 675);
+            this.btnVazgec.Name = "btnVazgec";
+            this.btnVazgec.Size = new System.Drawing.Size(134, 42);
+            this.btnVazgec.TabIndex = 187;
+            this.btnVazgec.Text = "Vazgeç";
+            this.btnVazgec.Click += new System.EventHandler(this.btnVazgec_Click_1);
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(23, 54);
+            this.labelControl17.Location = new System.Drawing.Point(18, 48);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(66, 16);
-            this.labelControl17.TabIndex = 90;
+            this.labelControl17.TabIndex = 204;
             this.labelControl17.Text = "Numune Ad";
+            // 
+            // BtnKaydet
+            // 
+            this.BtnKaydet.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.BtnKaydet.Appearance.Options.UseBackColor = true;
+            this.BtnKaydet.Appearance.Options.UseFont = true;
+            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
+            this.BtnKaydet.Location = new System.Drawing.Point(1054, 675);
+            this.BtnKaydet.Name = "BtnKaydet";
+            this.BtnKaydet.Size = new System.Drawing.Size(134, 42);
+            this.BtnKaydet.TabIndex = 199;
+            this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click_1);
             // 
             // txtIsiDayanim
             // 
-            this.txtIsiDayanim.Location = new System.Drawing.Point(828, 258);
+            this.txtIsiDayanim.Location = new System.Drawing.Point(823, 252);
             this.txtIsiDayanim.Name = "txtIsiDayanim";
             this.txtIsiDayanim.Size = new System.Drawing.Size(340, 22);
-            this.txtIsiDayanim.TabIndex = 23;
+            this.txtIsiDayanim.TabIndex = 181;
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(653, 261);
+            this.labelControl26.Location = new System.Drawing.Point(648, 255);
             this.labelControl26.Name = "labelControl26";
             this.labelControl26.Size = new System.Drawing.Size(111, 16);
-            this.labelControl26.TabIndex = 88;
+            this.labelControl26.TabIndex = 203;
             this.labelControl26.Text = "Proses Isı Dayanımı";
             // 
             // spinIsikHasligi
@@ -386,7 +280,7 @@
             0,
             0,
             0});
-            this.spinIsikHasligi.Location = new System.Drawing.Point(827, 222);
+            this.spinIsikHasligi.Location = new System.Drawing.Point(822, 216);
             this.spinIsikHasligi.Name = "spinIsikHasligi";
             this.spinIsikHasligi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -406,14 +300,14 @@
             0,
             0});
             this.spinIsikHasligi.Size = new System.Drawing.Size(340, 24);
-            this.spinIsikHasligi.TabIndex = 22;
+            this.spinIsikHasligi.TabIndex = 179;
             // 
             // labelControl25
             // 
-            this.labelControl25.Location = new System.Drawing.Point(653, 226);
+            this.labelControl25.Location = new System.Drawing.Point(648, 220);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(60, 16);
-            this.labelControl25.TabIndex = 86;
+            this.labelControl25.TabIndex = 202;
             this.labelControl25.Text = "Işık Haslığı";
             // 
             // txtDenemeMktr
@@ -423,7 +317,7 @@
             0,
             0,
             0});
-            this.txtDenemeMktr.Location = new System.Drawing.Point(198, 434);
+            this.txtDenemeMktr.Location = new System.Drawing.Point(193, 428);
             this.txtDenemeMktr.Name = "txtDenemeMktr";
             this.txtDenemeMktr.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -432,7 +326,7 @@
             this.txtDenemeMktr.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtDenemeMktr.Properties.Mask.EditMask = "f";
             this.txtDenemeMktr.Size = new System.Drawing.Size(340, 24);
-            this.txtDenemeMktr.TabIndex = 15;
+            this.txtDenemeMktr.TabIndex = 169;
             // 
             // txtMfi
             // 
@@ -441,7 +335,7 @@
             0,
             0,
             0});
-            this.txtMfi.Location = new System.Drawing.Point(411, 395);
+            this.txtMfi.Location = new System.Drawing.Point(406, 389);
             this.txtMfi.Name = "txtMfi";
             this.txtMfi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -450,7 +344,7 @@
             this.txtMfi.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtMfi.Properties.Mask.EditMask = "f";
             this.txtMfi.Size = new System.Drawing.Size(126, 24);
-            this.txtMfi.TabIndex = 14;
+            this.txtMfi.TabIndex = 167;
             // 
             // txtKullanımOran
             // 
@@ -459,7 +353,7 @@
             0,
             0,
             0});
-            this.txtKullanımOran.Location = new System.Drawing.Point(197, 358);
+            this.txtKullanımOran.Location = new System.Drawing.Point(192, 352);
             this.txtKullanımOran.Name = "txtKullanımOran";
             this.txtKullanımOran.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -468,7 +362,7 @@
             this.txtKullanımOran.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtKullanımOran.Properties.Mask.EditMask = "f";
             this.txtKullanımOran.Size = new System.Drawing.Size(340, 24);
-            this.txtKullanımOran.TabIndex = 12;
+            this.txtKullanımOran.TabIndex = 165;
             // 
             // txtHedefFiyat
             // 
@@ -477,7 +371,7 @@
             0,
             0,
             0});
-            this.txtHedefFiyat.Location = new System.Drawing.Point(197, 219);
+            this.txtHedefFiyat.Location = new System.Drawing.Point(192, 213);
             this.txtHedefFiyat.Name = "txtHedefFiyat";
             this.txtHedefFiyat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -486,12 +380,12 @@
             this.txtHedefFiyat.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtHedefFiyat.Properties.Mask.EditMask = "f";
             this.txtHedefFiyat.Size = new System.Drawing.Size(98, 24);
-            this.txtHedefFiyat.TabIndex = 8;
+            this.txtHedefFiyat.TabIndex = 159;
             // 
             // radioGroupCariKnm
             // 
             this.radioGroupCariKnm.EditValue = "Yurt İçi";
-            this.radioGroupCariKnm.Location = new System.Drawing.Point(828, 81);
+            this.radioGroupCariKnm.Location = new System.Drawing.Point(823, 75);
             this.radioGroupCariKnm.Name = "radioGroupCariKnm";
             this.radioGroupCariKnm.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.radioGroupCariKnm.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -503,31 +397,31 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Yurt İçi", "Yurt İçi", true, "Yurtici", "Yurtici"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Yurt Dışı", "Yurt Dışı", true, "YurtDisi", "YurtDisi")});
             this.radioGroupCariKnm.Size = new System.Drawing.Size(236, 36);
-            this.radioGroupCariKnm.TabIndex = 18;
+            this.radioGroupCariKnm.TabIndex = 174;
             this.radioGroupCariKnm.Tag = "";
             // 
             // lookUpAciliyet
             // 
-            this.lookUpAciliyet.Location = new System.Drawing.Point(828, 51);
+            this.lookUpAciliyet.Location = new System.Drawing.Point(823, 45);
             this.lookUpAciliyet.Name = "lookUpAciliyet";
             this.lookUpAciliyet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpAciliyet.Properties.NullText = "";
             this.lookUpAciliyet.Size = new System.Drawing.Size(340, 22);
-            this.lookUpAciliyet.TabIndex = 17;
+            this.lookUpAciliyet.TabIndex = 172;
             // 
             // labelControl21
             // 
-            this.labelControl21.Location = new System.Drawing.Point(373, 400);
+            this.labelControl21.Location = new System.Drawing.Point(368, 394);
             this.labelControl21.Name = "labelControl21";
             this.labelControl21.Size = new System.Drawing.Size(22, 16);
-            this.labelControl21.TabIndex = 78;
+            this.labelControl21.TabIndex = 201;
             this.labelControl21.Text = "MFI";
             // 
             // radioGroupReachRohs
             // 
             this.radioGroupReachRohs.EditValue = "Reach";
-            this.radioGroupReachRohs.Location = new System.Drawing.Point(816, 329);
+            this.radioGroupReachRohs.Location = new System.Drawing.Point(811, 323);
             this.radioGroupReachRohs.Name = "radioGroupReachRohs";
             this.radioGroupReachRohs.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.radioGroupReachRohs.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -539,13 +433,13 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Reach", "Reach", true, "Reach", "Reach"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Rohs", "Rohs", true, "Rohs", "Rohs")});
             this.radioGroupReachRohs.Size = new System.Drawing.Size(236, 36);
-            this.radioGroupReachRohs.TabIndex = 25;
+            this.radioGroupReachRohs.TabIndex = 184;
             this.radioGroupReachRohs.Tag = "";
             // 
             // radioGroupGida
             // 
             this.radioGroupGida.EditValue = "Evet";
-            this.radioGroupGida.Location = new System.Drawing.Point(816, 287);
+            this.radioGroupGida.Location = new System.Drawing.Point(811, 281);
             this.radioGroupGida.Name = "radioGroupGida";
             this.radioGroupGida.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.radioGroupGida.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -557,39 +451,47 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Evet", "Evet", true, "GidayaUygun", "GidayaUygun"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Hayır", "Hayır", true, "GidayaUygunDegil", "GidayaUygunDegil")});
             this.radioGroupGida.Size = new System.Drawing.Size(236, 36);
-            this.radioGroupGida.TabIndex = 24;
+            this.radioGroupGida.TabIndex = 183;
             this.radioGroupGida.Tag = "";
             // 
             // lookUpHammadde
             // 
-            this.lookUpHammadde.Location = new System.Drawing.Point(197, 397);
+            this.lookUpHammadde.Location = new System.Drawing.Point(192, 391);
             this.lookUpHammadde.Name = "lookUpHammadde";
             this.lookUpHammadde.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpHammadde.Properties.NullText = "";
             this.lookUpHammadde.Size = new System.Drawing.Size(158, 22);
-            this.lookUpHammadde.TabIndex = 13;
+            this.lookUpHammadde.TabIndex = 166;
             // 
             // labelControl24
             // 
-            this.labelControl24.Location = new System.Drawing.Point(23, 89);
+            this.labelControl24.Location = new System.Drawing.Point(18, 83);
             this.labelControl24.Name = "labelControl24";
             this.labelControl24.Size = new System.Drawing.Size(62, 16);
-            this.labelControl24.TabIndex = 48;
+            this.labelControl24.TabIndex = 200;
             this.labelControl24.Text = "Cari Unvan";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(653, 57);
+            this.labelControl3.Location = new System.Drawing.Point(648, 51);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(94, 16);
-            this.labelControl3.TabIndex = 46;
+            this.labelControl3.TabIndex = 198;
             this.labelControl3.Text = "Numune Aciliyeti";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(18, 17);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(79, 16);
+            this.labelControl1.TabIndex = 148;
+            this.labelControl1.Text = "Numune Kodu";
             // 
             // txtAlisTarih
             // 
             this.txtAlisTarih.EditValue = null;
-            this.txtAlisTarih.Location = new System.Drawing.Point(828, 19);
+            this.txtAlisTarih.Location = new System.Drawing.Point(823, 13);
             this.txtAlisTarih.Name = "txtAlisTarih";
             this.txtAlisTarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -602,55 +504,215 @@
             this.txtAlisTarih.Properties.Mask.EditMask = "";
             this.txtAlisTarih.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.txtAlisTarih.Size = new System.Drawing.Size(340, 22);
-            this.txtAlisTarih.TabIndex = 16;
+            this.txtAlisTarih.TabIndex = 171;
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(132, 488);
+            this.txtAciklama.Location = new System.Drawing.Point(96, 482);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Size = new System.Drawing.Size(846, 176);
-            this.txtAciklama.TabIndex = 26;
+            this.txtAciklama.TabIndex = 186;
             // 
             // txtNmnKod
             // 
             this.txtNmnKod.Enabled = false;
-            this.txtNmnKod.Location = new System.Drawing.Point(197, 20);
+            this.txtNmnKod.Location = new System.Drawing.Point(192, 14);
             this.txtNmnKod.Name = "txtNmnKod";
             this.txtNmnKod.Size = new System.Drawing.Size(340, 22);
-            this.txtNmnKod.TabIndex = 1;
+            this.txtNmnKod.TabIndex = 149;
+            // 
+            // labelControl23
+            // 
+            this.labelControl23.Location = new System.Drawing.Point(18, 484);
+            this.labelControl23.Name = "labelControl23";
+            this.labelControl23.Size = new System.Drawing.Size(51, 16);
+            this.labelControl23.TabIndex = 197;
+            this.labelControl23.Text = "Açıklama";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(648, 16);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(108, 16);
+            this.labelControl2.TabIndex = 151;
+            this.labelControl2.Text = "Numune Alış Tarihi";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(18, 116);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(73, 16);
+            this.labelControl4.TabIndex = 153;
+            this.labelControl4.Text = "Cari Seviyesi";
+            // 
+            // labelterminTarih
+            // 
+            this.labelterminTarih.Location = new System.Drawing.Point(648, 397);
+            this.labelterminTarih.Name = "labelterminTarih";
+            this.labelterminTarih.Size = new System.Drawing.Size(78, 16);
+            this.labelterminTarih.TabIndex = 195;
+            this.labelterminTarih.Text = "Termin Tarihi";
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Location = new System.Drawing.Point(648, 331);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(68, 16);
+            this.labelControl18.TabIndex = 194;
+            this.labelControl18.Text = "Reach/Rohs";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(18, 149);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(55, 16);
+            this.labelControl8.TabIndex = 158;
+            this.labelControl8.Text = "Aday Cari";
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Location = new System.Drawing.Point(648, 293);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(98, 16);
+            this.labelControl19.TabIndex = 193;
+            this.labelControl19.Text = "Gıdaya Uygun Mu";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(648, 83);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(98, 16);
+            this.labelControl7.TabIndex = 162;
+            this.labelControl7.Text = "Aday Cari Konum";
+            // 
+            // labelControl20
+            // 
+            this.labelControl20.Location = new System.Drawing.Point(18, 356);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(83, 16);
+            this.labelControl20.TabIndex = 192;
+            this.labelControl20.Text = "Kullanım Oranı";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(18, 183);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(144, 16);
+            this.labelControl6.TabIndex = 164;
+            this.labelControl6.Text = "Öngörülen Sipariş Miktarı";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(18, 432);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(140, 16);
+            this.labelControl5.TabIndex = 168;
+            this.labelControl5.Text = "Numune Deneme Miktarı";
+            // 
+            // labelControl22
+            // 
+            this.labelControl22.Location = new System.Drawing.Point(18, 394);
+            this.labelControl22.Name = "labelControl22";
+            this.labelControl22.Size = new System.Drawing.Size(101, 16);
+            this.labelControl22.TabIndex = 191;
+            this.labelControl22.Text = "Hammadde Bilgisi";
             // 
             // txtUretilecekUrun
             // 
-            this.txtUretilecekUrun.Location = new System.Drawing.Point(828, 186);
+            this.txtUretilecekUrun.Location = new System.Drawing.Point(823, 180);
             this.txtUretilecekUrun.Name = "txtUretilecekUrun";
             this.txtUretilecekUrun.Size = new System.Drawing.Size(340, 22);
-            this.txtUretilecekUrun.TabIndex = 21;
+            this.txtUretilecekUrun.TabIndex = 178;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Location = new System.Drawing.Point(18, 217);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(64, 16);
+            this.labelControl16.TabIndex = 170;
+            this.labelControl16.Text = "Hedef Fiyat";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(648, 183);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(156, 16);
+            this.labelControl9.TabIndex = 190;
+            this.labelControl9.Text = "Numune İle Üretilecek Ürün";
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(306, 217);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(61, 16);
+            this.labelControl15.TabIndex = 173;
+            this.labelControl15.Text = "Döviz Cinsi";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(18, 318);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(71, 16);
+            this.labelControl10.TabIndex = 188;
+            this.labelControl10.Text = "Numune Tür";
             // 
             // txtRkpUrunKod
             // 
-            this.txtRkpUrunKod.Location = new System.Drawing.Point(828, 152);
+            this.txtRkpUrunKod.Location = new System.Drawing.Point(823, 146);
             this.txtRkpUrunKod.Name = "txtRkpUrunKod";
             this.txtRkpUrunKod.Size = new System.Drawing.Size(340, 22);
-            this.txtRkpUrunKod.TabIndex = 20;
+            this.txtRkpUrunKod.TabIndex = 177;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Location = new System.Drawing.Point(18, 251);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(88, 16);
+            this.labelControl14.TabIndex = 176;
+            this.labelControl14.Text = "Müşteri Yetkilisi";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Location = new System.Drawing.Point(648, 149);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(121, 16);
+            this.labelControl11.TabIndex = 185;
+            this.labelControl11.Text = "Rakip Cari Ürün Kodu";
             // 
             // txtMusYetkili
             // 
-            this.txtMusYetkili.Location = new System.Drawing.Point(197, 254);
+            this.txtMusYetkili.Location = new System.Drawing.Point(192, 248);
             this.txtMusYetkili.Name = "txtMusYetkili";
             this.txtMusYetkili.Size = new System.Drawing.Size(340, 22);
-            this.txtMusYetkili.TabIndex = 9;
+            this.txtMusYetkili.TabIndex = 160;
             // 
             // txtRkpUnvan
             // 
-            this.txtRkpUnvan.Location = new System.Drawing.Point(197, 287);
+            this.txtRkpUnvan.Location = new System.Drawing.Point(192, 281);
             this.txtRkpUnvan.Name = "txtRkpUnvan";
             this.txtRkpUnvan.Size = new System.Drawing.Size(340, 22);
-            this.txtRkpUnvan.TabIndex = 10;
+            this.txtRkpUnvan.TabIndex = 161;
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Location = new System.Drawing.Point(648, 117);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(65, 16);
+            this.labelControl13.TabIndex = 180;
+            this.labelControl13.Text = "Ürün Grubu";
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(18, 284);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(97, 16);
+            this.labelControl12.TabIndex = 182;
+            this.labelControl12.Text = "Rakip Cari Ünvan";
             // 
             // txtTerminTarih
             // 
             this.txtTerminTarih.EditValue = null;
-            this.txtTerminTarih.Location = new System.Drawing.Point(828, 400);
+            this.txtTerminTarih.Location = new System.Drawing.Point(823, 394);
             this.txtTerminTarih.Name = "txtTerminTarih";
             this.txtTerminTarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -663,57 +725,57 @@
             this.txtTerminTarih.Properties.Mask.EditMask = "";
             this.txtTerminTarih.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.txtTerminTarih.Size = new System.Drawing.Size(340, 22);
-            this.txtTerminTarih.TabIndex = 43;
+            this.txtTerminTarih.TabIndex = 196;
             // 
             // lookUpCariSvy
             // 
-            this.lookUpCariSvy.Location = new System.Drawing.Point(197, 119);
+            this.lookUpCariSvy.Location = new System.Drawing.Point(192, 113);
             this.lookUpCariSvy.Name = "lookUpCariSvy";
             this.lookUpCariSvy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpCariSvy.Properties.NullText = "";
             this.lookUpCariSvy.Size = new System.Drawing.Size(340, 22);
-            this.lookUpCariSvy.TabIndex = 4;
+            this.lookUpCariSvy.TabIndex = 154;
             // 
             // lookUpDoviz
             // 
-            this.lookUpDoviz.Location = new System.Drawing.Point(391, 220);
+            this.lookUpDoviz.Location = new System.Drawing.Point(386, 214);
             this.lookUpDoviz.Name = "lookUpDoviz";
             this.lookUpDoviz.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpDoviz.Properties.NullText = "";
             this.lookUpDoviz.Size = new System.Drawing.Size(147, 22);
-            this.lookUpDoviz.TabIndex = 6;
+            this.lookUpDoviz.TabIndex = 156;
             // 
             // lookUpUrunGrubu
             // 
-            this.lookUpUrunGrubu.Location = new System.Drawing.Point(828, 123);
+            this.lookUpUrunGrubu.Location = new System.Drawing.Point(823, 117);
             this.lookUpUrunGrubu.Name = "lookUpUrunGrubu";
             this.lookUpUrunGrubu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpUrunGrubu.Properties.NullText = "";
             this.lookUpUrunGrubu.Size = new System.Drawing.Size(340, 22);
-            this.lookUpUrunGrubu.TabIndex = 19;
+            this.lookUpUrunGrubu.TabIndex = 175;
             // 
             // lookUpCariAd
             // 
-            this.lookUpCariAd.Location = new System.Drawing.Point(197, 86);
+            this.lookUpCariAd.Location = new System.Drawing.Point(192, 80);
             this.lookUpCariAd.Name = "lookUpCariAd";
             this.lookUpCariAd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpCariAd.Properties.NullText = "";
             this.lookUpCariAd.Size = new System.Drawing.Size(340, 22);
-            this.lookUpCariAd.TabIndex = 3;
+            this.lookUpCariAd.TabIndex = 152;
             // 
             // lookUpNmnTur
             // 
-            this.lookUpNmnTur.Location = new System.Drawing.Point(197, 321);
+            this.lookUpNmnTur.Location = new System.Drawing.Point(192, 315);
             this.lookUpNmnTur.Name = "lookUpNmnTur";
             this.lookUpNmnTur.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpNmnTur.Properties.NullText = "";
             this.lookUpNmnTur.Size = new System.Drawing.Size(340, 22);
-            this.lookUpNmnTur.TabIndex = 11;
+            this.lookUpNmnTur.TabIndex = 163;
             // 
             // txtSipMktr
             // 
@@ -722,7 +784,7 @@
             0,
             0,
             0});
-            this.txtSipMktr.Location = new System.Drawing.Point(197, 186);
+            this.txtSipMktr.Location = new System.Drawing.Point(192, 180);
             this.txtSipMktr.Name = "txtSipMktr";
             this.txtSipMktr.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -731,78 +793,46 @@
             this.txtSipMktr.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtSipMktr.Properties.Mask.EditMask = "f";
             this.txtSipMktr.Size = new System.Drawing.Size(340, 24);
-            this.txtSipMktr.TabIndex = 7;
+            this.txtSipMktr.TabIndex = 157;
             // 
-            // btnVazgec
+            // dataGridView1
             // 
-            this.btnVazgec.Appearance.BackColor = System.Drawing.Color.DarkRed;
-            this.btnVazgec.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.btnVazgec.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnVazgec.Appearance.Options.UseBackColor = true;
-            this.btnVazgec.Appearance.Options.UseFont = true;
-            this.btnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVazgec.ImageOptions.Image")));
-            this.btnVazgec.Location = new System.Drawing.Point(897, 684);
-            this.btnVazgec.Name = "btnVazgec";
-            this.btnVazgec.Size = new System.Drawing.Size(134, 42);
-            this.btnVazgec.TabIndex = 27;
-            this.btnVazgec.Text = "Vazgeç";
-            this.btnVazgec.Click += new System.EventHandler(this.btnVazgec_Click);
-            // 
-            // BtnKaydet
-            // 
-            this.BtnKaydet.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.BtnKaydet.Appearance.Options.UseBackColor = true;
-            this.BtnKaydet.Appearance.Options.UseFont = true;
-            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
-            this.BtnKaydet.Location = new System.Drawing.Point(1046, 684);
-            this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(134, 42);
-            this.BtnKaydet.TabIndex = 46;
-            this.BtnKaydet.Text = "Kaydet";
-            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
-            // 
-            // BtnGuncelle
-            // 
-            this.BtnGuncelle.Appearance.BackColor = System.Drawing.Color.OrangeRed;
-            this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.BtnGuncelle.Appearance.Options.UseBackColor = true;
-            this.BtnGuncelle.Appearance.Options.UseFont = true;
-            this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.ImageOptions.Image")));
-            this.BtnGuncelle.Location = new System.Drawing.Point(1046, 684);
-            this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(134, 42);
-            this.BtnGuncelle.TabIndex = 28;
-            this.BtnGuncelle.Text = "Güncelle";
-            this.BtnGuncelle.Visible = false;
-            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1206, 731);
+            this.dataGridView1.TabIndex = 0;
             // 
             // lookUpAdayCari
             // 
-            this.lookUpAdayCari.Location = new System.Drawing.Point(197, 152);
+            this.lookUpAdayCari.Location = new System.Drawing.Point(192, 146);
             this.lookUpAdayCari.Name = "lookUpAdayCari";
             this.lookUpAdayCari.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpAdayCari.Properties.NullText = "";
             this.lookUpAdayCari.Size = new System.Drawing.Size(340, 22);
-            this.lookUpAdayCari.TabIndex = 5;
+            this.lookUpAdayCari.TabIndex = 155;
             // 
             // NewNumune
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 735);
-            this.Controls.Add(this.BtnGuncelle);
             this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.btnVazgec);
-            this.Controls.Add(this.BtnKaydet);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "NewNumune";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yeni Numune Tanımlama Kartı";
             this.Load += new System.EventHandler(this.NewNumune_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnAd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIsiDayanim.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinIsikHasligi.Properties)).EndInit();
@@ -831,6 +861,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpCariAd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnTur.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpAdayCari.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -838,63 +869,65 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txtNmnKod;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.TextEdit txtUretilecekUrun;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.TextEdit txtRkpUrunKod;
-        private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.TextEdit txtRkpUnvan;
-        private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.TextEdit txtMusYetkili;
-        private DevExpress.XtraEditors.LabelControl labelControl14;
-        private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.LabelControl labelControl16;
-        private DevExpress.XtraEditors.LabelControl labelterminTarih;
-        private DevExpress.XtraEditors.LabelControl labelControl18;
-        private DevExpress.XtraEditors.LabelControl labelControl19;
-        private DevExpress.XtraEditors.LabelControl labelControl20;
-        private DevExpress.XtraEditors.LabelControl labelControl22;
-        private DevExpress.XtraEditors.LabelControl labelControl23;
-        private DevExpress.XtraEditors.MemoEdit txtAciklama;
-        private DevExpress.XtraEditors.SimpleButton BtnKaydet;
-        private DevExpress.XtraEditors.SimpleButton btnVazgec;
-        private DevExpress.XtraEditors.DateEdit txtAlisTarih;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.DateEdit txtTerminTarih;
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
+        private DevExpress.XtraEditors.TextEdit txtNmnAd;
+        private DevExpress.XtraEditors.SimpleButton btnVazgec;
+        private DevExpress.XtraEditors.LabelControl labelControl17;
+        private DevExpress.XtraEditors.SimpleButton BtnKaydet;
+        private DevExpress.XtraEditors.TextEdit txtIsiDayanim;
+        private DevExpress.XtraEditors.LabelControl labelControl26;
+        private DevExpress.XtraEditors.SpinEdit spinIsikHasligi;
+        private DevExpress.XtraEditors.LabelControl labelControl25;
+        private DevExpress.XtraEditors.SpinEdit txtDenemeMktr;
+        private DevExpress.XtraEditors.SpinEdit txtMfi;
+        private DevExpress.XtraEditors.SpinEdit txtKullanımOran;
+        private DevExpress.XtraEditors.SpinEdit txtHedefFiyat;
+        private DevExpress.XtraEditors.RadioGroup radioGroupCariKnm;
+        private DevExpress.XtraEditors.LookUpEdit lookUpAciliyet;
+        private DevExpress.XtraEditors.LabelControl labelControl21;
+        private DevExpress.XtraEditors.RadioGroup radioGroupReachRohs;
+        private DevExpress.XtraEditors.RadioGroup radioGroupGida;
+        private DevExpress.XtraEditors.LookUpEdit lookUpHammadde;
         private DevExpress.XtraEditors.LabelControl labelControl24;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.DateEdit txtAlisTarih;
+        private DevExpress.XtraEditors.MemoEdit txtAciklama;
+        private DevExpress.XtraEditors.TextEdit txtNmnKod;
+        private DevExpress.XtraEditors.LabelControl labelControl23;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelterminTarih;
+        private DevExpress.XtraEditors.LabelControl labelControl18;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.LabelControl labelControl19;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl labelControl20;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl22;
+        private DevExpress.XtraEditors.TextEdit txtUretilecekUrun;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.TextEdit txtRkpUrunKod;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.TextEdit txtMusYetkili;
+        private DevExpress.XtraEditors.TextEdit txtRkpUnvan;
+        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.DateEdit txtTerminTarih;
         private DevExpress.XtraEditors.LookUpEdit lookUpCariSvy;
         private DevExpress.XtraEditors.LookUpEdit lookUpDoviz;
         private DevExpress.XtraEditors.LookUpEdit lookUpUrunGrubu;
-        private DevExpress.XtraEditors.LookUpEdit lookUpHammadde;
         private DevExpress.XtraEditors.LookUpEdit lookUpCariAd;
         private DevExpress.XtraEditors.LookUpEdit lookUpNmnTur;
-        private DevExpress.XtraEditors.RadioGroup radioGroupGida;
-        private DevExpress.XtraEditors.RadioGroup radioGroupReachRohs;
-        private DevExpress.XtraEditors.LabelControl labelControl21;
-        private DevExpress.XtraEditors.LookUpEdit lookUpAciliyet;
-        private DevExpress.XtraEditors.RadioGroup radioGroupCariKnm;
-        private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
         private DevExpress.XtraEditors.SpinEdit txtSipMktr;
-        private DevExpress.XtraEditors.SpinEdit txtKullanımOran;
-        private DevExpress.XtraEditors.SpinEdit txtHedefFiyat;
-        private DevExpress.XtraEditors.SpinEdit txtDenemeMktr;
-        private DevExpress.XtraEditors.SpinEdit txtMfi;
-        private DevExpress.XtraEditors.SpinEdit spinIsikHasligi;
-        private DevExpress.XtraEditors.LabelControl labelControl25;
-        private DevExpress.XtraEditors.TextEdit txtIsiDayanim;
-        private DevExpress.XtraEditors.LabelControl labelControl26;
-        private DevExpress.XtraEditors.TextEdit txtNmnAd;
-        private DevExpress.XtraEditors.LabelControl labelControl17;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraEditors.LookUpEdit lookUpAdayCari;
     }
 }

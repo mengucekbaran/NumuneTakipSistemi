@@ -72,6 +72,7 @@
             this.repositoryItemButtonUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.tblNumunelerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateLast.Properties.CalendarTimeProperties)).BeginInit();
@@ -84,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNumunelerBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -93,10 +95,12 @@
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.dateFirst);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(1, 1);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1195, 103);
+            this.groupControl1.Size = new System.Drawing.Size(1208, 98);
             this.groupControl1.TabIndex = 1;
+            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // BtnList
             // 
@@ -330,6 +334,7 @@
             // 
             this.delete.Caption = "SİL";
             this.delete.ColumnEdit = this.repositoryItemButtonDelete;
+            this.delete.FieldName = "delete";
             this.delete.MinWidth = 25;
             this.delete.Name = "delete";
             this.delete.Visible = true;
@@ -350,6 +355,7 @@
             // 
             this.update.Caption = "GÜNCELLE";
             this.update.ColumnEdit = this.repositoryItemButtonUpdate;
+            this.update.FieldName = "update";
             this.update.MinWidth = 25;
             this.update.Name = "update";
             this.update.Visible = true;
@@ -369,13 +375,14 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.tblNumunelerBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(1, 105);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 98);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonDelete,
             this.repositoryItemButtonUpdate});
-            this.gridControl1.Size = new System.Drawing.Size(1195, 420);
+            this.gridControl1.Size = new System.Drawing.Size(1208, 446);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -384,15 +391,26 @@
             // 
             this.tblNumunelerBindingSource.DataSource = typeof(SampleManagmentSystem.Entities.TblNumuneler);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.gridControl1);
+            this.panel1.Controls.Add(this.groupControl1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1208, 544);
+            this.panel1.TabIndex = 2;
+            // 
             // FrmNumune
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1208, 544);
-            this.Controls.Add(this.groupControl1);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.panel1);
             this.Name = "FrmNumune";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Numuneler";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmNumune_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -407,6 +425,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNumunelerBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -439,5 +458,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn update;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonUpdate;
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_ad;
+        private System.Windows.Forms.Panel panel1;
     }
 }

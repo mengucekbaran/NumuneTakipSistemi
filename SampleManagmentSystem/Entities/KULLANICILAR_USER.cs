@@ -15,5 +15,9 @@ namespace SampleManagmentSystem.Entities
     public partial class KULLANICILAR_USER
     {
         public System.Guid Record_uid { get; set; }
+        public Nullable<bool> Numune_Giris { get; set; }
+        public Nullable<bool> Numune_Duzeltme { get; set; }
+        public Nullable<bool> Numune_Silme { get; set; }
+        public Nullable<bool> Numune_Sonuc_Giris { get; set; }
     }
 }

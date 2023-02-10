@@ -616,5 +616,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="KULLANICILAR_USER">
+      <EntityTypeMapping TypeName="MikroDB_V16_MASKOMModel.KULLANICILAR_USER">
+        <MappingFragment StoreEntitySet="KULLANICILAR_USER">
+          <ScalarProperty Name="Numune_Sonuc_Giris" ColumnName="Numune_Sonuc_Giris" />
+          <ScalarProperty Name="Numune_Silme" ColumnName="Numune_Silme" />
+          <ScalarProperty Name="Numune_Duzeltme" ColumnName="Numune_Duzeltme" />
+          <ScalarProperty Name="Numune_Giris" ColumnName="Numune_Giris" />
+          <ScalarProperty Name="Record_uid" ColumnName="Record_uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

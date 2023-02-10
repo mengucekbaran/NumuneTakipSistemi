@@ -31,5 +31,6 @@ namespace SampleManagmentSystem.Entities
         public virtual DbSet<STOK_ANA_GRUPLARI> STOK_ANA_GRUPLARI { get; set; }
         public virtual DbSet<STOKLAR> STOKLAR { get; set; }
         public virtual DbSet<URUNLER> URUNLER { get; set; }
+        public virtual DbSet<KULLANICILAR_USER> KULLANICILAR_USER { get; set; }
     }
 }

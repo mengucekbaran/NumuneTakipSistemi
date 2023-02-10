@@ -394,7 +394,10 @@
             this.Controls.Add(this.btnVazgec);
             this.Controls.Add(this.BtnKaydet);
             this.Controls.Add(this.panelControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FrmNumuneSonuc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Numune Sonucu Tanımlama";
             this.Load += new System.EventHandler(this.FrmNumuneSonuc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
