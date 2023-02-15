@@ -17,14 +17,14 @@ namespace SampleManagmentSystem.Forms
         MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
         NUMUNE_TAKİPEntities db = new NUMUNE_TAKİPEntities();
 
-        string nextAdayCariKod;
+        private string nextAdayCariKod;
         public NewNumune() //CREATE NUMUNE
         {
 
             InitializeComponent();
             //NUMUNE KODUNUN YAPISININ AYARLANMASI VE VERİ TABANINDAN ÇEKİLMESİ
             //************************************************************************************************************************
-
+            
             string nextNmnKod;
             string currentYear = DateTime.Now.ToString("yy");
             //tabloda herhangi bir kaydın olup olmadığını kontrol eder
@@ -53,17 +53,21 @@ namespace SampleManagmentSystem.Forms
                 }
             }
             txtNmnKod.Text = nextNmnKod;
+
+            
             //idye göre küçükten büyüğe sıralar ve son kaydın numune kodunu alır
-            //var prevAdayCariKod = db.TblNumuneler.OrderByDescending(x => x.id).FirstOrDefault().nmn_adaycari_kod;
-            //if (prevAdayCariKod == null)
-            //{
-            //    nextAdayCariKod = "AC0001";
-            //}
-            //else
-            //{
-            //    int nextNumber = int.Parse(prevAdayCariKod.Substring(prevAdayCariKod.Length - 4)) + 1;
-            //    nextNmnKod = "AC" + nextNumber.ToString("D4");
-            //}
+            
+            if (db.TblNumuneler.Any()) // tablo boş dolu kontrolü
+            {
+                var prevAdayCariKod = db.TblNumuneler.OrderByDescending(x => x.id).FirstOrDefault().nmn_adaycari_kod;
+                int nextNumber = int.Parse(prevAdayCariKod.Substring(prevAdayCariKod.Length - 4)) + 1;
+                nextAdayCariKod = "AC" + nextNumber.ToString("D4");
+                
+            }
+            else
+            {
+                nextAdayCariKod = "AC0001";
+            }
 
             SetTodayDate();
         }
@@ -82,7 +86,7 @@ namespace SampleManagmentSystem.Forms
                 txtNmnAd.EditValue = nmn.nmn_ad;
                 lookUpCariAd.EditValue = nmn.nmn_cari_kod;
                 lookUpCariSvy.EditValue = nmn.nmn_cari_seviye;
-                lookUpAdayCari.EditValue = nmn.nmn_adaycari_kod;
+                txtAdayCari.EditValue = nmn.nmn_adaycari_unvan;
                 txtSipMktr.EditValue = nmn.nmn_sip_miktar;
                 txtHedefFiyat.EditValue = nmn.nmn_hdf_fiyat;
                 txtMusYetkili.EditValue = nmn.nmn_mus_yetkili;
@@ -229,16 +233,6 @@ namespace SampleManagmentSystem.Forms
             lookUpCariAd.Properties.DisplayMember = "unvan";
             lookUpCariAd.Properties.DataSource = cariHesaplar;
 
-            var adayCari = (from x in dbMaskom.ADAY_CARI_HESAPLAR
-                                select new
-                                {
-                                    x.adaycr_kod,
-                                    unvan = x.adaycr_unvan1 + x.adaycr_unvan2
-                                }).ToList();
-            lookUpAdayCari.Properties.ValueMember = "adaycr_kod";
-            lookUpAdayCari.Properties.DisplayMember = "unvan";
-            lookUpAdayCari.Properties.DataSource = adayCari;
-
             //URUN GRUBU
             var urunGrubu = (from x in dbMaskom.STOK_ALT_GRUPLARI
                              select new
@@ -293,8 +287,9 @@ namespace SampleManagmentSystem.Forms
                 lookUpHammadde.ShowPopup();
                 return false;
             }
-            if (lookUpCariAd.EditValue==null)
+            if (lookUpCariAd.EditValue==null && string.IsNullOrEmpty(txtAdayCari.Text))
             {
+                XtraMessageBox.Show("Cari ünvan ya da aday cari ünvandan biri girilmelidir.", "Information");
                 lookUpCariAd.ShowPopup();
                 return false;
             }
@@ -310,11 +305,12 @@ namespace SampleManagmentSystem.Forms
                 txtTerminTarih.Focus();
                 return false;
             }
-            if (lookUpAdayCari.EditValue == null )
-            {
-                lookUpAdayCari.ShowPopup();
-                return false;
-            }
+            //if (lookUpAdayCari.EditValue == null )
+            //{
+            //    lookUpAdayCari.ShowPopup();
+            //    return false;
+            //}
+
             if (lookUpUrunGrubu.EditValue == null)
             {
                 lookUpUrunGrubu.ShowPopup();
@@ -356,13 +352,22 @@ namespace SampleManagmentSystem.Forms
                 txtAciklama.Focus();
                 return false;
             }
+
             nmn.nmn_lastup_date = DateTime.Now;
             nmn.nmn_aciklama = txtAciklama.Text;
             nmn.nmn_aciliyet = lookUpAciliyet.Text;
-            nmn.nmn_adaycari_kod = lookUpAdayCari.EditValue.ToString(); ;
-            nmn.nmn_adaycari_unvan = lookUpAdayCari.Text;
-            nmn.nmn_adaycari_konum = radioGroupCariKnm.Properties.Items[radioGroupCariKnm.SelectedIndex].Description; ;
-            nmn.nmn_cari_kod = lookUpCariAd.EditValue.ToString();
+            nmn.nmn_adaycari_kod = nextAdayCariKod; 
+            nmn.nmn_adaycari_unvan = txtAdayCari.Text;
+            nmn.nmn_adaycari_konum = radioGroupCariKnm.Properties.Items[radioGroupCariKnm.SelectedIndex].Description;
+            if (lookUpCariAd.EditValue == null)
+            {
+                nmn.nmn_cari_kod = "";
+            }
+            else
+            {
+                nmn.nmn_cari_kod = lookUpCariAd.EditValue.ToString();
+                
+            }
             nmn.nmn_cari_unvan = lookUpCariAd.Text;
             nmn.nmn_cari_seviye = lookUpCariSvy.Text;
             nmn.nmn_deneme_miktar = float.Parse(txtDenemeMktr.Text);
@@ -403,6 +408,28 @@ namespace SampleManagmentSystem.Forms
             txtTerminTarih.EditValue = DateTime.Today;
         }
 
+        private bool lookupEdit1EditValueChangedEnabled=true;
+        private bool txtAdayCariEditValueChangedEnabled = true;
 
+        private void lookUpCariAd_EditValueChanged(object sender, EventArgs e)
+        {
+            lookupEdit1EditValueChangedEnabled = false; // EditValueChanged olayını devre dışı bırak
+            if (txtAdayCariEditValueChangedEnabled)
+            {
+                txtAdayCari.Text = ""; // TextEdit kontrolünün içeriğini temizle
+            }
+            lookupEdit1EditValueChangedEnabled = true; // EditValueChanged olayını tekrar etkinleştir
+
+        }
+
+        private void txtAdayCari_TextChanged(object sender, EventArgs e)
+        {
+            txtAdayCariEditValueChangedEnabled = false;
+            if (lookupEdit1EditValueChangedEnabled)
+            {
+                lookUpCariAd.EditValue = null; // LookupEdit kontrolünün seçimini temizle
+            }
+            txtAdayCariEditValueChangedEnabled = true;
     }
+}
 }

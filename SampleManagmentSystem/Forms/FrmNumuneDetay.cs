@@ -80,9 +80,22 @@ namespace SampleManagmentSystem.Forms
                         XtraMessageBox.Show("Siliniyor...");
                         // TABLODA VERİLEN İD YE EŞİT OLAN KAYDI BULDU
                         TblNumuneler nmn = db.TblNumuneler.Find(id);
+                        var nmnh = db.NUMUNE_HAREKETLERI.Where(x => x.nmnh_nmnkod == nmn.nmn_kod).ToList();
+                        foreach (var item in nmnh)
+                        {
+                            db.NUMUNE_HAREKETLERI.Remove(item); //nmnh_koduna sahip tüm kayıtları sil
+                        }
                         //SİLDİ
                         db.TblNumuneler.Remove(nmn);
                         db.SaveChanges();
+                        //FrmNumuneSonucList formunda bulunan numuneSonucları gridViewini günceller
+                        FrmNumuneSonucList frmNmnSonucList = (FrmNumuneSonucList)Application.OpenForms["FrmNumuneSonucList"];
+                        if (frmNmnSonucList != null)
+                        {
+                            frmNmnSonucList.ListNumuneSonuclar();
+                            frmNmnSonucList.ListSonucGirmemisler();
+                            frmNmnSonucList.UpdateGridviews();
+                        }
                         Listele();
                     }
                 }

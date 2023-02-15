@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewNumune));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtAdayCari = new DevExpress.XtraEditors.TextEdit();
             this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.txtNmnAd = new DevExpress.XtraEditors.TextEdit();
             this.btnVazgec = new DevExpress.XtraEditors.SimpleButton();
@@ -88,10 +89,10 @@
             this.lookUpNmnTur = new DevExpress.XtraEditors.LookUpEdit();
             this.txtSipMktr = new DevExpress.XtraEditors.SpinEdit();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lookUpAdayCari = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdayCari.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIsiDayanim.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinIsikHasligi.Properties)).BeginInit();
@@ -121,7 +122,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnTur.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpAdayCari.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -135,6 +135,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtAdayCari);
             this.panel1.Controls.Add(this.BtnGuncelle);
             this.panel1.Controls.Add(this.txtNmnAd);
             this.panel1.Controls.Add(this.btnVazgec);
@@ -191,13 +192,20 @@
             this.panel1.Controls.Add(this.lookUpCariAd);
             this.panel1.Controls.Add(this.lookUpNmnTur);
             this.panel1.Controls.Add(this.txtSipMktr);
-            this.panel1.Controls.Add(this.lookUpAdayCari);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1206, 731);
             this.panel1.TabIndex = 91;
+            // 
+            // txtAdayCari
+            // 
+            this.txtAdayCari.Location = new System.Drawing.Point(192, 114);
+            this.txtAdayCari.Name = "txtAdayCari";
+            this.txtAdayCari.Size = new System.Drawing.Size(340, 22);
+            this.txtAdayCari.TabIndex = 205;
+            this.txtAdayCari.TextChanged += new System.EventHandler(this.txtAdayCari_TextChanged);
             // 
             // BtnGuncelle
             // 
@@ -539,7 +547,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(18, 116);
+            this.labelControl4.Location = new System.Drawing.Point(18, 149);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(73, 16);
             this.labelControl4.TabIndex = 153;
@@ -563,11 +571,11 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(18, 149);
+            this.labelControl8.Location = new System.Drawing.Point(18, 117);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(55, 16);
+            this.labelControl8.Size = new System.Drawing.Size(94, 16);
             this.labelControl8.TabIndex = 158;
-            this.labelControl8.Text = "Aday Cari";
+            this.labelControl8.Text = "Aday Cari Unvan";
             // 
             // labelControl19
             // 
@@ -729,7 +737,7 @@
             // 
             // lookUpCariSvy
             // 
-            this.lookUpCariSvy.Location = new System.Drawing.Point(192, 113);
+            this.lookUpCariSvy.Location = new System.Drawing.Point(192, 146);
             this.lookUpCariSvy.Name = "lookUpCariSvy";
             this.lookUpCariSvy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -766,6 +774,7 @@
             this.lookUpCariAd.Properties.NullText = "";
             this.lookUpCariAd.Size = new System.Drawing.Size(340, 22);
             this.lookUpCariAd.TabIndex = 152;
+            this.lookUpCariAd.EditValueChanged += new System.EventHandler(this.lookUpCariAd_EditValueChanged);
             // 
             // lookUpNmnTur
             // 
@@ -807,16 +816,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1206, 731);
             this.dataGridView1.TabIndex = 0;
             // 
-            // lookUpAdayCari
-            // 
-            this.lookUpAdayCari.Location = new System.Drawing.Point(192, 146);
-            this.lookUpAdayCari.Name = "lookUpAdayCari";
-            this.lookUpAdayCari.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpAdayCari.Properties.NullText = "";
-            this.lookUpAdayCari.Size = new System.Drawing.Size(340, 22);
-            this.lookUpAdayCari.TabIndex = 155;
-            // 
             // NewNumune
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -833,6 +832,7 @@
             this.panelControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdayCari.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnAd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIsiDayanim.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinIsikHasligi.Properties)).EndInit();
@@ -862,7 +862,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnTur.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpAdayCari.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -928,6 +927,6 @@
         private DevExpress.XtraEditors.LookUpEdit lookUpNmnTur;
         private DevExpress.XtraEditors.SpinEdit txtSipMktr;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private DevExpress.XtraEditors.LookUpEdit lookUpAdayCari;
+        private DevExpress.XtraEditors.TextEdit txtAdayCari;
     }
 }
