@@ -107,6 +107,20 @@ namespace SampleManagmentSystem.Forms
         {
 
         }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void repositoryItemButtonDetay_Click(object sender, EventArgs e)
+        {
+            //DETAY BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
+            int selectedRowIndex = gridView1.FocusedRowHandle;
+            string nmnKod = gridView1.GetRowCellValue(selectedRowIndex, "nmn_kod").ToString();
+            Forms.FrmNumuneSonucList2 fr = new Forms.FrmNumuneSonucList2(nmnKod);
+            fr.Show();
+        }
     }
     
 }

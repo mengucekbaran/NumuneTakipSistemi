@@ -250,8 +250,8 @@
             // 
             // radioGroupLabOnay
             // 
-            this.radioGroupLabOnay.EditValue = "Onaylanmadı";
-            this.radioGroupLabOnay.Location = new System.Drawing.Point(857, 106);
+            this.radioGroupLabOnay.EditValue = "Devam Ediyor";
+            this.radioGroupLabOnay.Location = new System.Drawing.Point(857, 103);
             this.radioGroupLabOnay.Name = "radioGroupLabOnay";
             this.radioGroupLabOnay.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.radioGroupLabOnay.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -261,8 +261,9 @@
             this.radioGroupLabOnay.Properties.Columns = 2;
             this.radioGroupLabOnay.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Onaylanmadı", "Onaylanmadı", true, "Onaylanmadı", "Onaylanmadı"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Onaylandı", "Onaylandı", true, "Onaylandı", "Onaylandı")});
-            this.radioGroupLabOnay.Size = new System.Drawing.Size(271, 36);
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Onaylandı", "Onaylandı", true, "Onaylandı", "Onaylandı"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Devam Ediyor", "Devam Ediyor", true, "Devam Ediyor", "Devam Ediyor")});
+            this.radioGroupLabOnay.Size = new System.Drawing.Size(291, 76);
             this.radioGroupLabOnay.TabIndex = 77;
             this.radioGroupLabOnay.Tag = "";
             // 
@@ -398,7 +399,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmNumuneSonuc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Numune Sonucu Tanımlama";
+            this.Text = "Numune Sonucu Tanımlama Kartı";
             this.Load += new System.EventHandler(this.FrmNumuneSonuc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -427,7 +428,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.SpinEdit spinHassas;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.RadioGroup radioGroupLabOnay;
         private DevExpress.XtraEditors.RadioGroup radioGroupGida;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.DateEdit dateBitisTarih;
@@ -445,5 +445,6 @@
         private DevExpress.XtraEditors.SpinEdit spinMaliyetYonetim;
         private DevExpress.XtraEditors.LookUpEdit lookUpNmnKod;
         private DevExpress.XtraEditors.TextEdit txtNmnKod;
+        private DevExpress.XtraEditors.RadioGroup radioGroupLabOnay;
     }
 }

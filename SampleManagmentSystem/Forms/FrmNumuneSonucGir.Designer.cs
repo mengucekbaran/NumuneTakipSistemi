@@ -373,7 +373,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmNumuneSonucGir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmNumuneSonucGir";
+            this.Text = "Numune Sonucu Tanımlama Kartı";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -406,7 +406,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.SpinEdit spinHassas;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.RadioGroup radioGroupLabOnay;
         private DevExpress.XtraEditors.RadioGroup radioGroupGida;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.DateEdit dateBitisTarih;
@@ -417,5 +416,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl19;
         private DevExpress.XtraEditors.LabelControl labelControl20;
         private DevExpress.XtraEditors.TextEdit lookUpNmnKod;
+        private DevExpress.XtraEditors.RadioGroup radioGroupLabOnay;
     }
 }

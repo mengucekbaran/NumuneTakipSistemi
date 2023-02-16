@@ -28,13 +28,13 @@
     <Property Name="nmn_create_date" Type="datetime" Nullable="false" />
     <Property Name="nmn_lastup_date" Type="datetime" Nullable="false" />
     <Property Name="nmn_kod" Type="nvarchar" MaxLength="25" Nullable="false" />
-    <Property Name="nmn_cari_kod" Type="nvarchar" MaxLength="25" Nullable="false" />
-    <Property Name="nmn_cari_unvan" Type="nvarchar" MaxLength="120" Nullable="false" />
+    <Property Name="nmn_cari_kod" Type="nvarchar" MaxLength="25" />
+    <Property Name="nmn_cari_unvan" Type="nvarchar" MaxLength="120" />
     <Property Name="nmn_tarih" Type="datetime" Nullable="false" />
     <Property Name="nmn_cari_seviye" Type="nvarchar" MaxLength="25" />
     <Property Name="nmn_aciliyet" Type="nvarchar" MaxLength="25" />
-    <Property Name="nmn_adaycari_kod" Type="nvarchar" MaxLength="25" Nullable="false" />
-    <Property Name="nmn_adaycari_unvan" Type="nvarchar" MaxLength="120" Nullable="false" />
+    <Property Name="nmn_adaycari_kod" Type="nvarchar" MaxLength="25" />
+    <Property Name="nmn_adaycari_unvan" Type="nvarchar" MaxLength="120" />
     <Property Name="nmn_adaycari_konum" Type="nvarchar" MaxLength="25" Nullable="false" />
     <Property Name="nmn_sip_miktar" Type="float" Nullable="false" />
     <Property Name="nmn_deneme_miktar" Type="float" Nullable="false" />

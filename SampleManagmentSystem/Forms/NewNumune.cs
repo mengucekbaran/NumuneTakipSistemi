@@ -53,23 +53,26 @@ namespace SampleManagmentSystem.Forms
                 }
             }
             txtNmnKod.Text = nextNmnKod;
-
-            
+            nextAdayCariKod=SetAdayCariKod();
+            SetTodayDate();
+        }
+        public string SetAdayCariKod()
+        {
             //idye göre küçükten büyüğe sıralar ve son kaydın numune kodunu alır
-            
+            string nextAc;
             if (db.TblNumuneler.Any()) // tablo boş dolu kontrolü
             {
+                
                 var prevAdayCariKod = db.TblNumuneler.OrderByDescending(x => x.id).FirstOrDefault().nmn_adaycari_kod;
                 int nextNumber = int.Parse(prevAdayCariKod.Substring(prevAdayCariKod.Length - 4)) + 1;
-                nextAdayCariKod = "AC" + nextNumber.ToString("D4");
-                
+                nextAc = "AC" + nextNumber.ToString("D4");
+                return nextAc;
             }
             else
             {
-                nextAdayCariKod = "AC0001";
+                nextAc = "AC0001";
+                return nextAc;
             }
-
-            SetTodayDate();
         }
         public NewNumune(string nmnKod) //UPDATE NUMUNE
         {
@@ -77,6 +80,8 @@ namespace SampleManagmentSystem.Forms
             TblNumuneler nmn = db.TblNumuneler.FirstOrDefault(n => n.nmn_kod == nmnKod);
             if (nmn.nmn_kod == nmnKod)
             {
+                string AdayCariKod = db.TblNumuneler.OrderByDescending(x => x.id).FirstOrDefault().nmn_adaycari_kod.ToString();
+                nextAdayCariKod = SetAdayCariKod();
                 //BUTONLARIN GÖRÜNÜRLÜĞÜNÜ AYARLAMA
                 BtnKaydet.Visible = false;
                 BtnGuncelle.Visible = true;

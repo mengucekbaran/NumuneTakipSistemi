@@ -718,7 +718,7 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "FrmNumuneSonucDetay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmNumuneSonucDetay";
+            this.Text = "Numune Sonuc Detayları";
             this.Load += new System.EventHandler(this.FrmNumuneSonucDetay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

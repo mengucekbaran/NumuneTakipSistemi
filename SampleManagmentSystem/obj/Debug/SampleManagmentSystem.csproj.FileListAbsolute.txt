@@ -118,3 +118,4 @@ C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\obj\Debug
 C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\obj\Debug\SampleManagmentSystem.Forms.FrmNumuneSonucList.resources
 C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\obj\Debug\SampleManagmentSystem.Forms.FrmLogin.resources
 C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\obj\Debug\SampleManagmentSystem.Form1.resources
+C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\obj\Debug\SampleManagmentSystem.Forms.FrmNumuneSonucList2.resources
