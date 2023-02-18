@@ -21,6 +21,7 @@ namespace SampleManagmentSystem.Entities
         public string nmnh_nmnkod { get; set; }
         public int nmnh_sonucsirano { get; set; }
         public System.DateTime nmnh_bitistarih { get; set; }
+        public System.DateTime nmnh_alistarih { get; set; }
         public Nullable<double> nmnh_maliyetEuo { get; set; }
         public Nullable<double> nmnh_maliyetYonetim { get; set; }
         public Nullable<double> nmnh_isikhas { get; set; }

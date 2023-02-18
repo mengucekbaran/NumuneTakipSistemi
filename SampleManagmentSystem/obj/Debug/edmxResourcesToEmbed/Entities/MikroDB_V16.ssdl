@@ -68,14 +68,7 @@
     <Property Name="User_Hatali_giris_sayisi" Type="tinyint" />
     <Property Name="User_Ceptel" Type="nvarchar" MaxLength="20" />
   </EntityType>
-  <EntityType Name="KULLANICILAR_USER">
-    <Key>
-      <PropertyRef Name="Record_uid" />
-    </Key>
-    <Property Name="Record_uid" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
   <EntityContainer Name="MikroDB_V16ModelStoreContainer">
     <EntitySet Name="KULLANICILAR" EntityType="Self.KULLANICILAR" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="KULLANICILAR_USER" EntityType="Self.KULLANICILAR_USER" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

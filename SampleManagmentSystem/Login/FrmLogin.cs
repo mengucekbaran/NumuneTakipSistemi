@@ -34,17 +34,22 @@ namespace SampleManagmentSystem.Forms
         }
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            var kullanicilar = (from x in dbMikro.KULLANICILAR
+            var yetkiliKullanicilar = dbMaskom.KULLANICILAR_USER
+                .Where(k => (k.Numune_Duzeltme==true || k.Numune_Giris==true || k.Numune_Silme==true|| k.Numune_Sonuc_Giris==true))
+                .ToList();
+            var kullanicilar = (from yetkili in yetkiliKullanicilar
+                                join user in dbMikro.KULLANICILAR on yetkili.Record_uid equals user.User_Guid
                                 select new
-                                {
-                                    x.User_no,
-                                    x.User_name,
-                                    x.User_LongName
-                                  
+                                {                                   
+                                    user.User_no,
+                                    user.User_name,
+                                    user.User_LongName                                  
                                 }).ToList();
             lookUpKullanici.Properties.ValueMember = "User_no";
             lookUpKullanici.Properties.DisplayMember = "User_name";
             lookUpKullanici.Properties.DataSource = kullanicilar;
+
+
         }
 
         private void textEdit1_EditValueChanged(object sender, EventArgs e)

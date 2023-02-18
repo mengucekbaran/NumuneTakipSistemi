@@ -50,6 +50,11 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.BtnList = new DevExpress.XtraEditors.SimpleButton();
             this.dateLast = new DevExpress.XtraEditors.DateEdit();
@@ -75,11 +80,13 @@
             this.repositoryItemButtonDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.update = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.detay = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonDetay = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.tblNumunelerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.detay = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemButtonDetay = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.musOnay = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonMusOnay = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateLast.Properties.CalendarTimeProperties)).BeginInit();
@@ -90,10 +97,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDetay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNumunelerBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDetay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMusOnay)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -190,7 +198,8 @@
             this.colnmn_fiyat_cins,
             this.delete,
             this.update,
-            this.detay});
+            this.detay,
+            this.musOnay});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gridView1.Name = "gridView1";
@@ -206,7 +215,7 @@
             this.colid.OptionsColumn.AllowEdit = false;
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
-            this.colid.Width = 40;
+            this.colid.Width = 39;
             // 
             // colnmn_kod
             // 
@@ -217,7 +226,7 @@
             this.colnmn_kod.OptionsColumn.AllowEdit = false;
             this.colnmn_kod.Visible = true;
             this.colnmn_kod.VisibleIndex = 2;
-            this.colnmn_kod.Width = 120;
+            this.colnmn_kod.Width = 79;
             // 
             // colnmn_ad
             // 
@@ -227,7 +236,7 @@
             this.colnmn_ad.Name = "colnmn_ad";
             this.colnmn_ad.Visible = true;
             this.colnmn_ad.VisibleIndex = 1;
-            this.colnmn_ad.Width = 105;
+            this.colnmn_ad.Width = 69;
             // 
             // colnmn_cari_kod
             // 
@@ -238,7 +247,7 @@
             this.colnmn_cari_kod.OptionsColumn.AllowEdit = false;
             this.colnmn_cari_kod.Visible = true;
             this.colnmn_cari_kod.VisibleIndex = 3;
-            this.colnmn_cari_kod.Width = 104;
+            this.colnmn_cari_kod.Width = 68;
             // 
             // colnmn_cari_unvan
             // 
@@ -249,7 +258,7 @@
             this.colnmn_cari_unvan.OptionsColumn.AllowEdit = false;
             this.colnmn_cari_unvan.Visible = true;
             this.colnmn_cari_unvan.VisibleIndex = 4;
-            this.colnmn_cari_unvan.Width = 128;
+            this.colnmn_cari_unvan.Width = 84;
             // 
             // colnmn_tarih
             // 
@@ -260,7 +269,7 @@
             this.colnmn_tarih.OptionsColumn.AllowEdit = false;
             this.colnmn_tarih.Visible = true;
             this.colnmn_tarih.VisibleIndex = 5;
-            this.colnmn_tarih.Width = 123;
+            this.colnmn_tarih.Width = 81;
             // 
             // colnmn_cari_seviye
             // 
@@ -271,7 +280,7 @@
             this.colnmn_cari_seviye.OptionsColumn.AllowEdit = false;
             this.colnmn_cari_seviye.Visible = true;
             this.colnmn_cari_seviye.VisibleIndex = 6;
-            this.colnmn_cari_seviye.Width = 121;
+            this.colnmn_cari_seviye.Width = 80;
             // 
             // colnmn_aciliyet
             // 
@@ -282,7 +291,7 @@
             this.colnmn_aciliyet.OptionsColumn.AllowEdit = false;
             this.colnmn_aciliyet.Visible = true;
             this.colnmn_aciliyet.VisibleIndex = 7;
-            this.colnmn_aciliyet.Width = 87;
+            this.colnmn_aciliyet.Width = 57;
             // 
             // colnmn_adaycari_unvan
             // 
@@ -293,7 +302,7 @@
             this.colnmn_adaycari_unvan.OptionsColumn.AllowEdit = false;
             this.colnmn_adaycari_unvan.Visible = true;
             this.colnmn_adaycari_unvan.VisibleIndex = 8;
-            this.colnmn_adaycari_unvan.Width = 133;
+            this.colnmn_adaycari_unvan.Width = 87;
             // 
             // colnmn_sip_miktar
             // 
@@ -304,7 +313,7 @@
             this.colnmn_sip_miktar.OptionsColumn.AllowEdit = false;
             this.colnmn_sip_miktar.Visible = true;
             this.colnmn_sip_miktar.VisibleIndex = 9;
-            this.colnmn_sip_miktar.Width = 122;
+            this.colnmn_sip_miktar.Width = 68;
             // 
             // colnmn_deneme_miktar
             // 
@@ -315,7 +324,7 @@
             this.colnmn_deneme_miktar.OptionsColumn.AllowEdit = false;
             this.colnmn_deneme_miktar.Visible = true;
             this.colnmn_deneme_miktar.VisibleIndex = 10;
-            this.colnmn_deneme_miktar.Width = 127;
+            this.colnmn_deneme_miktar.Width = 76;
             // 
             // colnmn_hdf_fiyat
             // 
@@ -326,7 +335,7 @@
             this.colnmn_hdf_fiyat.OptionsColumn.AllowEdit = false;
             this.colnmn_hdf_fiyat.Visible = true;
             this.colnmn_hdf_fiyat.VisibleIndex = 11;
-            this.colnmn_hdf_fiyat.Width = 125;
+            this.colnmn_hdf_fiyat.Width = 63;
             // 
             // colnmn_fiyat_cins
             // 
@@ -337,7 +346,7 @@
             this.colnmn_fiyat_cins.OptionsColumn.AllowEdit = false;
             this.colnmn_fiyat_cins.Visible = true;
             this.colnmn_fiyat_cins.VisibleIndex = 12;
-            this.colnmn_fiyat_cins.Width = 89;
+            this.colnmn_fiyat_cins.Width = 80;
             // 
             // delete
             // 
@@ -348,7 +357,7 @@
             this.delete.Name = "delete";
             this.delete.Visible = true;
             this.delete.VisibleIndex = 14;
-            this.delete.Width = 63;
+            this.delete.Width = 42;
             // 
             // repositoryItemButtonDelete
             // 
@@ -369,7 +378,7 @@
             this.update.Name = "update";
             this.update.Visible = true;
             this.update.VisibleIndex = 13;
-            this.update.Width = 80;
+            this.update.Width = 60;
             // 
             // repositoryItemButtonUpdate
             // 
@@ -381,6 +390,27 @@
             this.repositoryItemButtonUpdate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repositoryItemButtonUpdate.Click += new System.EventHandler(this.repositoryItemButtonUpdate_Click);
             // 
+            // detay
+            // 
+            this.detay.Caption = "DETAY";
+            this.detay.ColumnEdit = this.repositoryItemButtonDetay;
+            this.detay.FieldName = "detay";
+            this.detay.MinWidth = 25;
+            this.detay.Name = "detay";
+            this.detay.Visible = true;
+            this.detay.VisibleIndex = 15;
+            this.detay.Width = 53;
+            // 
+            // repositoryItemButtonDetay
+            // 
+            this.repositoryItemButtonDetay.AutoHeight = false;
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
+            this.repositoryItemButtonDetay.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "detay", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonDetay.Name = "repositoryItemButtonDetay";
+            this.repositoryItemButtonDetay.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryItemButtonDetay.Click += new System.EventHandler(this.repositoryItemButtonDetay_Click);
+            // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.tblNumunelerBindingSource;
@@ -391,7 +421,8 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonDelete,
             this.repositoryItemButtonUpdate,
-            this.repositoryItemButtonDetay});
+            this.repositoryItemButtonDetay,
+            this.repositoryItemButtonMusOnay});
             this.gridControl1.Size = new System.Drawing.Size(1208, 446);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -412,26 +443,26 @@
             this.panel1.Size = new System.Drawing.Size(1208, 544);
             this.panel1.TabIndex = 2;
             // 
-            // detay
+            // musOnay
             // 
-            this.detay.Caption = "DETAY";
-            this.detay.ColumnEdit = this.repositoryItemButtonDetay;
-            this.detay.FieldName = "detay";
-            this.detay.MinWidth = 25;
-            this.detay.Name = "detay";
-            this.detay.Visible = true;
-            this.detay.VisibleIndex = 15;
-            this.detay.Width = 94;
+            this.musOnay.Caption = "MÜŞTERİ ONAY";
+            this.musOnay.ColumnEdit = this.repositoryItemButtonMusOnay;
+            this.musOnay.FieldName = "musOnay";
+            this.musOnay.MinWidth = 25;
+            this.musOnay.Name = "musOnay";
+            this.musOnay.Visible = true;
+            this.musOnay.VisibleIndex = 16;
+            this.musOnay.Width = 92;
             // 
-            // repositoryItemButtonDetay
+            // repositoryItemButtonMusOnay
             // 
-            this.repositoryItemButtonDetay.AutoHeight = false;
-            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
-            this.repositoryItemButtonDetay.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "detay", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryItemButtonDetay.Name = "repositoryItemButtonDetay";
-            this.repositoryItemButtonDetay.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.repositoryItemButtonDetay.Click += new System.EventHandler(this.repositoryItemButtonDetay_Click);
+            this.repositoryItemButtonMusOnay.AutoHeight = false;
+            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
+            this.repositoryItemButtonMusOnay.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "musOnay", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonMusOnay.Name = "repositoryItemButtonMusOnay";
+            this.repositoryItemButtonMusOnay.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryItemButtonMusOnay.Click += new System.EventHandler(this.repositoryItemButtonMusOnay_Click);
             // 
             // FrmNumune
             // 
@@ -455,10 +486,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDetay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNumunelerBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDetay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMusOnay)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -494,5 +526,7 @@
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraGrid.Columns.GridColumn detay;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonDetay;
+        private DevExpress.XtraGrid.Columns.GridColumn musOnay;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonMusOnay;
     }
 }

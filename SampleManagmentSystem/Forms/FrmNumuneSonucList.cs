@@ -82,9 +82,13 @@ namespace SampleManagmentSystem.Forms
                 {
                     e.DisplayText = "✔";
                 }
-                else
+                else if (labOnay == 0)
                 {
                     e.DisplayText = "❌";
+                }
+                else
+                {
+                    e.DisplayText = "DEVAM EDİYOR";
                 }
             }
         }
@@ -95,15 +99,21 @@ namespace SampleManagmentSystem.Forms
             if (e.RowHandle >= 0)
             {
                 var labOnay = View.GetRowCellValue(e.RowHandle, View.Columns["nmnh_labonay"]);
-                if (labOnay.ToString() == "1")
+                if (labOnay.ToString() == "0")
+                {
+
+                    e.Appearance.BackColor = Color.FromArgb(150, Color.Salmon);
+                    e.Appearance.BackColor2 = Color.FromArgb(150, Color.Salmon);
+                }
+                else if (labOnay.ToString() == "1")
                 {
                     e.Appearance.BackColor = Color.FromArgb(150, Color.ForestGreen);
                     e.Appearance.BackColor2 = Color.FromArgb(150, Color.ForestGreen);
                 }
                 else
                 {
-                    e.Appearance.BackColor = Color.FromArgb(150, Color.Salmon);
-                    e.Appearance.BackColor2 = Color.FromArgb(150, Color.Salmon);
+                    e.Appearance.BackColor = Color.FromArgb(150, Color.Blue);
+                    e.Appearance.BackColor2 = Color.FromArgb(150, Color.Blue);
                 }
             }
         }

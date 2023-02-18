@@ -16,6 +16,7 @@
           <Property Name="nmnh_nmnkod" Type="nvarchar" MaxLength="25" Nullable="false" />
           <Property Name="nmnh_sonucsirano" Type="int" Nullable="false" />
           <Property Name="nmnh_bitistarih" Type="datetime" Nullable="false" />
+          <Property Name="nmnh_alistarih" Type="datetime" Nullable="false" />
           <Property Name="nmnh_maliyetEuo" Type="float" />
           <Property Name="nmnh_maliyetYonetim" Type="float" />
           <Property Name="nmnh_isikhas" Type="float" />
@@ -78,26 +79,6 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="NUMUNE_TAKİPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="NUMUNE_HAREKETLERI">
-          <Key>
-            <PropertyRef Name="nmnh_id" />
-          </Key>
-          <Property Name="nmnh_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nmnh_createdate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="nmnh_lastupdate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="nmnh_nmnid" Type="Int32" Nullable="false" />
-          <Property Name="nmnh_nmnkod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="nmnh_sonucsirano" Type="Int32" Nullable="false" />
-          <Property Name="nmnh_bitistarih" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="nmnh_maliyetEuo" Type="Double" />
-          <Property Name="nmnh_maliyetYonetim" Type="Double" />
-          <Property Name="nmnh_isikhas" Type="Double" />
-          <Property Name="nmnh_isidayanim" Type="Double" />
-          <Property Name="nmnh_rroran" Type="Double" />
-          <Property Name="nmnh_gida" Type="Byte" />
-          <Property Name="nmnh_labonay" Type="Byte" Nullable="false" />
-          <Property Name="nmnh_aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
         <EntityType Name="TblNumuneler">
           <Key>
             <PropertyRef Name="id" />
@@ -137,12 +118,12 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <Property Name="nmn_ad" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityContainer Name="NUMUNE_TAKİPEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="NUMUNE_HAREKETLERI" EntityType="Self.NUMUNE_HAREKETLERI" />
           <EntitySet Name="TblNumuneler" EntityType="Self.TblNumuneler" />
           <FunctionImport Name="ListNumune" ReturnType="Collection(NUMUNE_TAKİPModel.ListNumune_Result)">
             <Parameter Name="ilk_tarih" Mode="In" Type="DateTime" />
             <Parameter Name="son_tarih" Mode="In" Type="DateTime" />
           </FunctionImport>
+          <EntitySet Name="NUMUNE_HAREKETLERI" EntityType="NUMUNE_TAKİPModel.NUMUNE_HAREKETLERI" />
         </EntityContainer>
         <ComplexType Name="ListNumune_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -179,33 +160,33 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <Property Type="String" Name="nmn_isi_dayanim" Nullable="false" MaxLength="25" />
           <Property Type="String" Name="nmn_ad" Nullable="false" MaxLength="120" />
         </ComplexType>
+        <EntityType Name="NUMUNE_HAREKETLERI">
+          <Key>
+            <PropertyRef Name="nmnh_id" />
+          </Key>
+          <Property Name="nmnh_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nmnh_createdate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="nmnh_lastupdate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="nmnh_nmnid" Type="Int32" Nullable="false" />
+          <Property Name="nmnh_nmnkod" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="nmnh_sonucsirano" Type="Int32" Nullable="false" />
+          <Property Name="nmnh_bitistarih" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="nmnh_alistarih" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="nmnh_maliyetEuo" Type="Double" />
+          <Property Name="nmnh_maliyetYonetim" Type="Double" />
+          <Property Name="nmnh_isikhas" Type="Double" />
+          <Property Name="nmnh_isidayanim" Type="Double" />
+          <Property Name="nmnh_rroran" Type="Double" />
+          <Property Name="nmnh_gida" Type="Byte" />
+          <Property Name="nmnh_labonay" Type="Byte" Nullable="false" />
+          <Property Name="nmnh_aciklama" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="NUMUNE_TAKİPModelStoreContainer" CdmEntityContainer="NUMUNE_TAKİPEntities">
-          <EntitySetMapping Name="NUMUNE_HAREKETLERI">
-            <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.NUMUNE_HAREKETLERI">
-              <MappingFragment StoreEntitySet="NUMUNE_HAREKETLERI">
-                <ScalarProperty Name="nmnh_id" ColumnName="nmnh_id" />
-                <ScalarProperty Name="nmnh_createdate" ColumnName="nmnh_createdate" />
-                <ScalarProperty Name="nmnh_lastupdate" ColumnName="nmnh_lastupdate" />
-                <ScalarProperty Name="nmnh_nmnid" ColumnName="nmnh_nmnid" />
-                <ScalarProperty Name="nmnh_nmnkod" ColumnName="nmnh_nmnkod" />
-                <ScalarProperty Name="nmnh_sonucsirano" ColumnName="nmnh_sonucsirano" />
-                <ScalarProperty Name="nmnh_bitistarih" ColumnName="nmnh_bitistarih" />
-                <ScalarProperty Name="nmnh_maliyetEuo" ColumnName="nmnh_maliyetEuo" />
-                <ScalarProperty Name="nmnh_maliyetYonetim" ColumnName="nmnh_maliyetYonetim" />
-                <ScalarProperty Name="nmnh_isikhas" ColumnName="nmnh_isikhas" />
-                <ScalarProperty Name="nmnh_isidayanim" ColumnName="nmnh_isidayanim" />
-                <ScalarProperty Name="nmnh_rroran" ColumnName="nmnh_rroran" />
-                <ScalarProperty Name="nmnh_gida" ColumnName="nmnh_gida" />
-                <ScalarProperty Name="nmnh_labonay" ColumnName="nmnh_labonay" />
-                <ScalarProperty Name="nmnh_aciklama" ColumnName="nmnh_aciklama" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TblNumuneler">
             <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.TblNumuneler">
               <MappingFragment StoreEntitySet="TblNumuneler">
@@ -284,6 +265,28 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="NUMUNE_HAREKETLERI">
+            <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.NUMUNE_HAREKETLERI">
+              <MappingFragment StoreEntitySet="NUMUNE_HAREKETLERI">
+                <ScalarProperty Name="nmnh_aciklama" ColumnName="nmnh_aciklama" />
+                <ScalarProperty Name="nmnh_labonay" ColumnName="nmnh_labonay" />
+                <ScalarProperty Name="nmnh_gida" ColumnName="nmnh_gida" />
+                <ScalarProperty Name="nmnh_rroran" ColumnName="nmnh_rroran" />
+                <ScalarProperty Name="nmnh_isidayanim" ColumnName="nmnh_isidayanim" />
+                <ScalarProperty Name="nmnh_isikhas" ColumnName="nmnh_isikhas" />
+                <ScalarProperty Name="nmnh_maliyetYonetim" ColumnName="nmnh_maliyetYonetim" />
+                <ScalarProperty Name="nmnh_maliyetEuo" ColumnName="nmnh_maliyetEuo" />
+                <ScalarProperty Name="nmnh_alistarih" ColumnName="nmnh_alistarih" />
+                <ScalarProperty Name="nmnh_bitistarih" ColumnName="nmnh_bitistarih" />
+                <ScalarProperty Name="nmnh_sonucsirano" ColumnName="nmnh_sonucsirano" />
+                <ScalarProperty Name="nmnh_nmnkod" ColumnName="nmnh_nmnkod" />
+                <ScalarProperty Name="nmnh_nmnid" ColumnName="nmnh_nmnid" />
+                <ScalarProperty Name="nmnh_lastupdate" ColumnName="nmnh_lastupdate" />
+                <ScalarProperty Name="nmnh_createdate" ColumnName="nmnh_createdate" />
+                <ScalarProperty Name="nmnh_id" ColumnName="nmnh_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

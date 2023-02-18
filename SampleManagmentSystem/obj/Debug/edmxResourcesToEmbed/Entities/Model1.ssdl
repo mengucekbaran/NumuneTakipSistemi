@@ -11,6 +11,7 @@
     <Property Name="nmnh_nmnkod" Type="nvarchar" MaxLength="25" Nullable="false" />
     <Property Name="nmnh_sonucsirano" Type="int" Nullable="false" />
     <Property Name="nmnh_bitistarih" Type="datetime" Nullable="false" />
+    <Property Name="nmnh_alistarih" Type="datetime" Nullable="false" />
     <Property Name="nmnh_maliyetEuo" Type="float" />
     <Property Name="nmnh_maliyetYonetim" Type="float" />
     <Property Name="nmnh_isikhas" Type="float" />

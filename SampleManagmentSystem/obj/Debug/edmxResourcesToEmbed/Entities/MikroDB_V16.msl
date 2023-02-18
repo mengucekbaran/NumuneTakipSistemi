@@ -70,12 +70,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="KULLANICILAR_USER">
-      <EntityTypeMapping TypeName="MikroDB_V16Model.KULLANICILAR_USER">
-        <MappingFragment StoreEntitySet="KULLANICILAR_USER">
-          <ScalarProperty Name="Record_uid" ColumnName="Record_uid" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

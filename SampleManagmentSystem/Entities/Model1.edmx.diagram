@@ -5,8 +5,8 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="d85ef39da05942f59355f31e9dfd80ee" Name="Diagram1">
-        <EntityTypeShape EntityType="NUMUNE_TAKİPModel.NUMUNE_HAREKETLERI" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NUMUNE_TAKİPModel.TblNumuneler" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NUMUNE_TAKİPModel.NUMUNE_HAREKETLERI" Width="1.5" PointX="0.625" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

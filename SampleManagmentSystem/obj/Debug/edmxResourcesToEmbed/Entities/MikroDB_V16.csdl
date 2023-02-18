@@ -70,12 +70,5 @@
   </EntityType>
   <EntityContainer Name="MikroDB_V16Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="KULLANICILAR" EntityType="Self.KULLANICILAR" />
-    <EntitySet Name="KULLANICILAR_USER" EntityType="MikroDB_V16Model.KULLANICILAR_USER" />
   </EntityContainer>
-  <EntityType Name="KULLANICILAR_USER">
-    <Key>
-      <PropertyRef Name="Record_uid" />
-    </Key>
-    <Property Name="Record_uid" Type="Guid" Nullable="false" />
-  </EntityType>
 </Schema>

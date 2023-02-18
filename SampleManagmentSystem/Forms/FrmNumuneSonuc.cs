@@ -20,12 +20,14 @@ namespace SampleManagmentSystem.Forms
             
             InitializeComponent();
             dateBitisTarih.EditValue = DateTime.Now;
+            dateAlisTarih.EditValue = DateTime.Now;
 
         }
         public FrmNumuneSonuc( int id)
         {
             InitializeComponent();
             dateBitisTarih.EditValue = DateTime.Now;
+            dateAlisTarih.EditValue = DateTime.Now;
             TblNumuneler nmn = db.TblNumuneler.Find(id);
             if (nmn.id == id)
             {
@@ -117,7 +119,12 @@ namespace SampleManagmentSystem.Forms
                 }
 
             }
-
+            if (dateAlisTarih.DateTime == Convert.ToDateTime("1-01-0001"))
+            {
+                XtraMessageBox.Show("Geçerli bir tarih giriniz.", "Information");
+                dateAlisTarih.Focus();
+                return false;
+            }
             if (dateBitisTarih.DateTime == Convert.ToDateTime("1-01-0001"))
             {
                 XtraMessageBox.Show("Geçerli bir tarih giriniz.", "Information");
@@ -177,6 +184,7 @@ namespace SampleManagmentSystem.Forms
             }
             nmnh.nmnh_sonucsirano = nextSiraNo;
             nmnh.nmnh_bitistarih = dateBitisTarih.DateTime;
+            nmnh.nmnh_alistarih = dateAlisTarih.DateTime;
             nmnh.nmnh_maliyetEuo = (float)spinMaliyetEuro.Value;
             nmnh.nmnh_isikhas = (float)spinHassas.Value;
             nmnh.nmnh_isidayanim = (float)spinDayanim.Value;

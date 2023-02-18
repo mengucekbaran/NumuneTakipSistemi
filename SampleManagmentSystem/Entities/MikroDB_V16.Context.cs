@@ -26,6 +26,5 @@ namespace SampleManagmentSystem.Entities
         }
     
         public virtual DbSet<KULLANICILAR> KULLANICILAR { get; set; }
-        public virtual DbSet<KULLANICILAR_USER> KULLANICILAR_USER { get; set; }
     }
 }

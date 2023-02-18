@@ -121,6 +121,15 @@ namespace SampleManagmentSystem.Forms
             Forms.FrmNumuneSonucList2 fr = new Forms.FrmNumuneSonucList2(nmnKod);
             fr.Show();
         }
+
+        private void repositoryItemButtonMusOnay_Click(object sender, EventArgs e)
+        {
+            //MÜŞTERİ ONAY BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
+            int selectedRowIndex = gridView1.FocusedRowHandle;
+            string nmnKod = gridView1.GetRowCellValue(selectedRowIndex, "nmn_kod").ToString();
+            Forms.FrmMusteriOnay fr = new Forms.FrmMusteriOnay();
+            fr.Show();
+        }
     }
     
 }

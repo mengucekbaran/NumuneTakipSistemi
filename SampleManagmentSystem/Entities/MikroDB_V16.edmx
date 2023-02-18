@@ -73,15 +73,8 @@
           <Property Name="User_Hatali_giris_sayisi" Type="tinyint" />
           <Property Name="User_Ceptel" Type="nvarchar" MaxLength="20" />
         </EntityType>
-        <EntityType Name="KULLANICILAR_USER">
-          <Key>
-            <PropertyRef Name="Record_uid" />
-          </Key>
-          <Property Name="Record_uid" Type="uniqueidentifier" Nullable="false" />
-        </EntityType>
         <EntityContainer Name="MikroDB_V16ModelStoreContainer">
           <EntitySet Name="KULLANICILAR" EntityType="Self.KULLANICILAR" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="KULLANICILAR_USER" EntityType="Self.KULLANICILAR_USER" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -157,14 +150,7 @@
         </EntityType>
         <EntityContainer Name="MikroDB_V16Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="KULLANICILAR" EntityType="Self.KULLANICILAR" />
-          <EntitySet Name="KULLANICILAR_USER" EntityType="MikroDB_V16Model.KULLANICILAR_USER" />
         </EntityContainer>
-        <EntityType Name="KULLANICILAR_USER">
-          <Key>
-            <PropertyRef Name="Record_uid" />
-          </Key>
-          <Property Name="Record_uid" Type="Guid" Nullable="false" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -237,13 +223,6 @@
                 <ScalarProperty Name="User_idm_user_email" ColumnName="User_idm_user_email" />
                 <ScalarProperty Name="User_Hatali_giris_sayisi" ColumnName="User_Hatali_giris_sayisi" />
                 <ScalarProperty Name="User_Ceptel" ColumnName="User_Ceptel" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="KULLANICILAR_USER">
-            <EntityTypeMapping TypeName="MikroDB_V16Model.KULLANICILAR_USER">
-              <MappingFragment StoreEntitySet="KULLANICILAR_USER">
-                <ScalarProperty Name="Record_uid" ColumnName="Record_uid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
