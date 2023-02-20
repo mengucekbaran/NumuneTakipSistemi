@@ -134,9 +134,9 @@ namespace SampleManagmentSystem.Forms
                 txtNmnKod.Focus();
                 return;
             }
+            nmn.nmn_create_date = DateTime.Now;
             if (PostFormElementToDb(nmn))
-            {
-                nmn.nmn_create_date = DateTime.Now;
+            {                
                 db.TblNumuneler.Add(nmn);//tabloya ekler
                 db.SaveChanges(); // degisiklikleri kaydeder
 
@@ -357,7 +357,7 @@ namespace SampleManagmentSystem.Forms
                 txtAciklama.Focus();
                 return false;
             }
-
+            nmn.nmn_user_no = ActiveUser.Instance.UserNo;
             nmn.nmn_lastup_date = DateTime.Now;
             nmn.nmn_aciklama = txtAciklama.Text;
             nmn.nmn_aciliyet = lookUpAciliyet.Text;

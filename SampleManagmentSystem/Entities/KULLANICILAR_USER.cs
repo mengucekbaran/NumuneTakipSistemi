@@ -19,5 +19,6 @@ namespace SampleManagmentSystem.Entities
         public Nullable<bool> Numune_Duzeltme { get; set; }
         public Nullable<bool> Numune_Silme { get; set; }
         public Nullable<bool> Numune_Sonuc_Giris { get; set; }
+        public Nullable<bool> Numune_Listeleme { get; set; }
     }
 }

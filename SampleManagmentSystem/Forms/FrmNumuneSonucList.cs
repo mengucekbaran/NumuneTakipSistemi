@@ -29,7 +29,7 @@ namespace SampleManagmentSystem.Forms
         {
             var nmn = db.TblNumuneler.ToList();
             var nmnh = db.NUMUNE_HAREKETLERI.Select(x => x.nmnh_nmnkod).ToList();
-            var sonucGirilmemisler = nmn.Where(x => !nmnh.Contains(x.nmn_kod)).Select(x => new
+            var sonucGirilmemisler = nmn.OrderBy(x=>x.nmn_kod).Where(x => !nmnh.Contains(x.nmn_kod)).Select(x => new
             {
                 x.nmn_kod,
                 x.nmn_ad,
@@ -43,7 +43,7 @@ namespace SampleManagmentSystem.Forms
         }
         public void ListNumuneSonuclar()
         {
-            var sonuclar = db.NUMUNE_HAREKETLERI.Select(x => new
+            var sonuclar = db.NUMUNE_HAREKETLERI.OrderBy(x => x.nmnh_nmnkod).Select(x => new
             {
                 x.nmnh_nmnkod,
                 x.nmnh_sonucsirano,
@@ -57,23 +57,7 @@ namespace SampleManagmentSystem.Forms
             ListNumuneSonuclar();
             ListSonucGirmemisler();
         }
-        private void gridView1_RowStyle_1(object sender, RowStyleEventArgs e)
-        {
-
-
-        }
-
         private void gridView1_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
-        {
-
-        }
-
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void gridView1_CustomDrawCell_1(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
         {
             if (e.Column.FieldName == "nmnh_labonay")
             {
@@ -93,7 +77,7 @@ namespace SampleManagmentSystem.Forms
             }
         }
 
-        private void gridView1_RowStyle(object sender, RowStyleEventArgs e)
+        private void gridView1_RowStyle_1(object sender, RowStyleEventArgs e)
         {
             GridView View = sender as GridView;
             if (e.RowHandle >= 0)

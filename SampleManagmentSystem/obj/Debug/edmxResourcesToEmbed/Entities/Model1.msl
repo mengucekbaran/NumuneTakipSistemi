@@ -4,6 +4,9 @@
     <EntitySetMapping Name="TblNumuneler">
       <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.TblNumuneler">
         <MappingFragment StoreEntitySet="TblNumuneler">
+          <ScalarProperty Name="nmn_user_no" ColumnName="nmn_user_no" />
+          <ScalarProperty Name="nmn_musonay_aciklama" ColumnName="nmn_musonay_aciklama" />
+          <ScalarProperty Name="nmn_musonay" ColumnName="nmn_musonay" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="nmn_create_date" ColumnName="nmn_create_date" />
           <ScalarProperty Name="nmn_lastup_date" ColumnName="nmn_lastup_date" />
@@ -101,5 +104,47 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ListAllNumune" FunctionName="NUMUNE_TAKİPModel.Store.ListAllNumune">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NUMUNE_TAKİPModel.ListAllNumune_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nmn_create_date" ColumnName="nmn_create_date" />
+          <ScalarProperty Name="nmn_lastup_date" ColumnName="nmn_lastup_date" />
+          <ScalarProperty Name="nmn_kod" ColumnName="nmn_kod" />
+          <ScalarProperty Name="nmn_cari_kod" ColumnName="nmn_cari_kod" />
+          <ScalarProperty Name="nmn_cari_unvan" ColumnName="nmn_cari_unvan" />
+          <ScalarProperty Name="nmn_tarih" ColumnName="nmn_tarih" />
+          <ScalarProperty Name="nmn_cari_seviye" ColumnName="nmn_cari_seviye" />
+          <ScalarProperty Name="nmn_aciliyet" ColumnName="nmn_aciliyet" />
+          <ScalarProperty Name="nmn_adaycari_kod" ColumnName="nmn_adaycari_kod" />
+          <ScalarProperty Name="nmn_adaycari_unvan" ColumnName="nmn_adaycari_unvan" />
+          <ScalarProperty Name="nmn_adaycari_konum" ColumnName="nmn_adaycari_konum" />
+          <ScalarProperty Name="nmn_sip_miktar" ColumnName="nmn_sip_miktar" />
+          <ScalarProperty Name="nmn_deneme_miktar" ColumnName="nmn_deneme_miktar" />
+          <ScalarProperty Name="nmn_hdf_fiyat" ColumnName="nmn_hdf_fiyat" />
+          <ScalarProperty Name="nmn_fiyat_cins" ColumnName="nmn_fiyat_cins" />
+          <ScalarProperty Name="nmn_mus_yetkili" ColumnName="nmn_mus_yetkili" />
+          <ScalarProperty Name="nmn_urun_grubu" ColumnName="nmn_urun_grubu" />
+          <ScalarProperty Name="nmn_rkpcari_unvan" ColumnName="nmn_rkpcari_unvan" />
+          <ScalarProperty Name="nmn_rkpcari_urunkod" ColumnName="nmn_rkpcari_urunkod" />
+          <ScalarProperty Name="nmn_tur" ColumnName="nmn_tur" />
+          <ScalarProperty Name="nmn_uretilecek_urun" ColumnName="nmn_uretilecek_urun" />
+          <ScalarProperty Name="nmn_hammadde" ColumnName="nmn_hammadde" />
+          <ScalarProperty Name="nmn_mfi" ColumnName="nmn_mfi" />
+          <ScalarProperty Name="nmn_oran" ColumnName="nmn_oran" />
+          <ScalarProperty Name="nmn_gida" ColumnName="nmn_gida" />
+          <ScalarProperty Name="nmn_reach_rohs" ColumnName="nmn_reach_rohs" />
+          <ScalarProperty Name="nmn_termin_tarih" ColumnName="nmn_termin_tarih" />
+          <ScalarProperty Name="nmn_aciklama" ColumnName="nmn_aciklama" />
+          <ScalarProperty Name="nmn_urungrup_kod" ColumnName="nmn_urungrup_kod" />
+          <ScalarProperty Name="nmn_isik_hasligi" ColumnName="nmn_isik_hasligi" />
+          <ScalarProperty Name="nmn_isi_dayanim" ColumnName="nmn_isi_dayanim" />
+          <ScalarProperty Name="nmn_ad" ColumnName="nmn_ad" />
+          <ScalarProperty Name="nmn_musonay" ColumnName="nmn_musonay" />
+          <ScalarProperty Name="nmn_musonay_aciklama" ColumnName="nmn_musonay_aciklama" />
+          <ScalarProperty Name="nmn_user_no" ColumnName="nmn_user_no" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

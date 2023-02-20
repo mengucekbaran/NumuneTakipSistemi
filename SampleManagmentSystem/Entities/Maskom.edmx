@@ -300,6 +300,7 @@
           <Property Name="Numune_Duzeltme" Type="bit" />
           <Property Name="Numune_Silme" Type="bit" />
           <Property Name="Numune_Sonuc_Giris" Type="bit" />
+          <Property Name="Numune_Listeleme" Type="bit" />
         </EntityType>
         <EntityType Name="STOK_ALT_GRUPLARI">
           <Key>
@@ -1264,6 +1265,7 @@
           <Property Name="Numune_Duzeltme" Type="Boolean" />
           <Property Name="Numune_Silme" Type="Boolean" />
           <Property Name="Numune_Sonuc_Giris" Type="Boolean" />
+          <Property Name="Numune_Listeleme" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1889,6 +1891,7 @@
           <EntitySetMapping Name="KULLANICILAR_USER">
             <EntityTypeMapping TypeName="MikroDB_V16_MASKOMModel.KULLANICILAR_USER">
               <MappingFragment StoreEntitySet="KULLANICILAR_USER">
+                <ScalarProperty Name="Numune_Listeleme" ColumnName="Numune_Listeleme" />
                 <ScalarProperty Name="Numune_Sonuc_Giris" ColumnName="Numune_Sonuc_Giris" />
                 <ScalarProperty Name="Numune_Silme" ColumnName="Numune_Silme" />
                 <ScalarProperty Name="Numune_Duzeltme" ColumnName="Numune_Duzeltme" />

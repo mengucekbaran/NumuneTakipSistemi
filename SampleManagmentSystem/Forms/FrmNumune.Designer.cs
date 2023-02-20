@@ -82,11 +82,11 @@
             this.repositoryItemButtonUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.detay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonDetay = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.musOnay = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonMusOnay = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.tblNumunelerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.musOnay = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemButtonMusOnay = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateLast.Properties.CalendarTimeProperties)).BeginInit();
@@ -98,10 +98,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDetay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMusOnay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNumunelerBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMusOnay)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -116,7 +116,6 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1208, 98);
             this.groupControl1.TabIndex = 1;
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // BtnList
             // 
@@ -225,8 +224,8 @@
             this.colnmn_kod.Name = "colnmn_kod";
             this.colnmn_kod.OptionsColumn.AllowEdit = false;
             this.colnmn_kod.Visible = true;
-            this.colnmn_kod.VisibleIndex = 2;
-            this.colnmn_kod.Width = 79;
+            this.colnmn_kod.VisibleIndex = 1;
+            this.colnmn_kod.Width = 99;
             // 
             // colnmn_ad
             // 
@@ -234,9 +233,10 @@
             this.colnmn_ad.FieldName = "nmn_ad";
             this.colnmn_ad.MinWidth = 25;
             this.colnmn_ad.Name = "colnmn_ad";
+            this.colnmn_ad.OptionsColumn.AllowEdit = false;
             this.colnmn_ad.Visible = true;
-            this.colnmn_ad.VisibleIndex = 1;
-            this.colnmn_ad.Width = 69;
+            this.colnmn_ad.VisibleIndex = 2;
+            this.colnmn_ad.Width = 82;
             // 
             // colnmn_cari_kod
             // 
@@ -247,7 +247,7 @@
             this.colnmn_cari_kod.OptionsColumn.AllowEdit = false;
             this.colnmn_cari_kod.Visible = true;
             this.colnmn_cari_kod.VisibleIndex = 3;
-            this.colnmn_cari_kod.Width = 68;
+            this.colnmn_cari_kod.Width = 65;
             // 
             // colnmn_cari_unvan
             // 
@@ -258,7 +258,7 @@
             this.colnmn_cari_unvan.OptionsColumn.AllowEdit = false;
             this.colnmn_cari_unvan.Visible = true;
             this.colnmn_cari_unvan.VisibleIndex = 4;
-            this.colnmn_cari_unvan.Width = 84;
+            this.colnmn_cari_unvan.Width = 80;
             // 
             // colnmn_tarih
             // 
@@ -269,7 +269,7 @@
             this.colnmn_tarih.OptionsColumn.AllowEdit = false;
             this.colnmn_tarih.Visible = true;
             this.colnmn_tarih.VisibleIndex = 5;
-            this.colnmn_tarih.Width = 81;
+            this.colnmn_tarih.Width = 77;
             // 
             // colnmn_cari_seviye
             // 
@@ -280,7 +280,7 @@
             this.colnmn_cari_seviye.OptionsColumn.AllowEdit = false;
             this.colnmn_cari_seviye.Visible = true;
             this.colnmn_cari_seviye.VisibleIndex = 6;
-            this.colnmn_cari_seviye.Width = 80;
+            this.colnmn_cari_seviye.Width = 76;
             // 
             // colnmn_aciliyet
             // 
@@ -291,7 +291,7 @@
             this.colnmn_aciliyet.OptionsColumn.AllowEdit = false;
             this.colnmn_aciliyet.Visible = true;
             this.colnmn_aciliyet.VisibleIndex = 7;
-            this.colnmn_aciliyet.Width = 57;
+            this.colnmn_aciliyet.Width = 54;
             // 
             // colnmn_adaycari_unvan
             // 
@@ -302,7 +302,7 @@
             this.colnmn_adaycari_unvan.OptionsColumn.AllowEdit = false;
             this.colnmn_adaycari_unvan.Visible = true;
             this.colnmn_adaycari_unvan.VisibleIndex = 8;
-            this.colnmn_adaycari_unvan.Width = 87;
+            this.colnmn_adaycari_unvan.Width = 82;
             // 
             // colnmn_sip_miktar
             // 
@@ -313,7 +313,7 @@
             this.colnmn_sip_miktar.OptionsColumn.AllowEdit = false;
             this.colnmn_sip_miktar.Visible = true;
             this.colnmn_sip_miktar.VisibleIndex = 9;
-            this.colnmn_sip_miktar.Width = 68;
+            this.colnmn_sip_miktar.Width = 65;
             // 
             // colnmn_deneme_miktar
             // 
@@ -324,7 +324,7 @@
             this.colnmn_deneme_miktar.OptionsColumn.AllowEdit = false;
             this.colnmn_deneme_miktar.Visible = true;
             this.colnmn_deneme_miktar.VisibleIndex = 10;
-            this.colnmn_deneme_miktar.Width = 76;
+            this.colnmn_deneme_miktar.Width = 72;
             // 
             // colnmn_hdf_fiyat
             // 
@@ -335,7 +335,7 @@
             this.colnmn_hdf_fiyat.OptionsColumn.AllowEdit = false;
             this.colnmn_hdf_fiyat.Visible = true;
             this.colnmn_hdf_fiyat.VisibleIndex = 11;
-            this.colnmn_hdf_fiyat.Width = 63;
+            this.colnmn_hdf_fiyat.Width = 60;
             // 
             // colnmn_fiyat_cins
             // 
@@ -346,7 +346,7 @@
             this.colnmn_fiyat_cins.OptionsColumn.AllowEdit = false;
             this.colnmn_fiyat_cins.Visible = true;
             this.colnmn_fiyat_cins.VisibleIndex = 12;
-            this.colnmn_fiyat_cins.Width = 80;
+            this.colnmn_fiyat_cins.Width = 76;
             // 
             // delete
             // 
@@ -357,7 +357,7 @@
             this.delete.Name = "delete";
             this.delete.Visible = true;
             this.delete.VisibleIndex = 14;
-            this.delete.Width = 42;
+            this.delete.Width = 39;
             // 
             // repositoryItemButtonDelete
             // 
@@ -378,7 +378,7 @@
             this.update.Name = "update";
             this.update.Visible = true;
             this.update.VisibleIndex = 13;
-            this.update.Width = 60;
+            this.update.Width = 57;
             // 
             // repositoryItemButtonUpdate
             // 
@@ -399,7 +399,7 @@
             this.detay.Name = "detay";
             this.detay.Visible = true;
             this.detay.VisibleIndex = 15;
-            this.detay.Width = 53;
+            this.detay.Width = 50;
             // 
             // repositoryItemButtonDetay
             // 
@@ -410,6 +410,27 @@
             this.repositoryItemButtonDetay.Name = "repositoryItemButtonDetay";
             this.repositoryItemButtonDetay.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repositoryItemButtonDetay.Click += new System.EventHandler(this.repositoryItemButtonDetay_Click);
+            // 
+            // musOnay
+            // 
+            this.musOnay.Caption = "MÜŞTERİ ONAY";
+            this.musOnay.ColumnEdit = this.repositoryItemButtonMusOnay;
+            this.musOnay.FieldName = "musOnay";
+            this.musOnay.MinWidth = 25;
+            this.musOnay.Name = "musOnay";
+            this.musOnay.Visible = true;
+            this.musOnay.VisibleIndex = 16;
+            this.musOnay.Width = 105;
+            // 
+            // repositoryItemButtonMusOnay
+            // 
+            this.repositoryItemButtonMusOnay.AutoHeight = false;
+            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
+            this.repositoryItemButtonMusOnay.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "musOnay", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonMusOnay.Name = "repositoryItemButtonMusOnay";
+            this.repositoryItemButtonMusOnay.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryItemButtonMusOnay.Click += new System.EventHandler(this.repositoryItemButtonMusOnay_Click);
             // 
             // gridControl1
             // 
@@ -427,7 +448,6 @@
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // tblNumunelerBindingSource
             // 
@@ -442,27 +462,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1208, 544);
             this.panel1.TabIndex = 2;
-            // 
-            // musOnay
-            // 
-            this.musOnay.Caption = "MÜŞTERİ ONAY";
-            this.musOnay.ColumnEdit = this.repositoryItemButtonMusOnay;
-            this.musOnay.FieldName = "musOnay";
-            this.musOnay.MinWidth = 25;
-            this.musOnay.Name = "musOnay";
-            this.musOnay.Visible = true;
-            this.musOnay.VisibleIndex = 16;
-            this.musOnay.Width = 92;
-            // 
-            // repositoryItemButtonMusOnay
-            // 
-            this.repositoryItemButtonMusOnay.AutoHeight = false;
-            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
-            this.repositoryItemButtonMusOnay.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "musOnay", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryItemButtonMusOnay.Name = "repositoryItemButtonMusOnay";
-            this.repositoryItemButtonMusOnay.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.repositoryItemButtonMusOnay.Click += new System.EventHandler(this.repositoryItemButtonMusOnay_Click);
             // 
             // FrmNumune
             // 
@@ -487,10 +486,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDetay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMusOnay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNumunelerBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMusOnay)).EndInit();
             this.ResumeLayout(false);
 
         }

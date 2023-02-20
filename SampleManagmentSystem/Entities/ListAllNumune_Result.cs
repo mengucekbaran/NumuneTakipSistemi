@@ -10,9 +10,8 @@
 namespace SampleManagmentSystem.Entities
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class TblNumuneler
+    public partial class ListAllNumune_Result
     {
         public int id { get; set; }
         public System.DateTime nmn_create_date { get; set; }

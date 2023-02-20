@@ -33,10 +33,6 @@ namespace SampleManagmentSystem.Forms
             numuneSonuclari.DataSource = sonuclar;
         }
 
-        private void FrmNumuneSonucList2_Load(object sender, EventArgs e)
-        {
-            
-        }
 
         private void gridView1_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
         {

@@ -117,7 +117,6 @@
             this.Name = "FrmNumuneSonucList2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Numune Sonuçları ";
-            this.Load += new System.EventHandler(this.FrmNumuneSonucList2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numuneSonuclari)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUMUNEHAREKETLERIBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

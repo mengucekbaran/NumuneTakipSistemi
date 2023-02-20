@@ -115,6 +115,9 @@
     <Compile Include="Entities\KULLANICILAR_USER.cs">
       <DependentUpon>Maskom.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\ListAllNumune_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\ListNumune_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -199,12 +202,6 @@
     <Compile Include="Forms\FrmNumuneSonucDetay.Designer.cs">
       <DependentUpon>FrmNumuneSonucDetay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmNumuneSonucGir.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmNumuneSonucGir.Designer.cs">
-      <DependentUpon>FrmNumuneSonucGir.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FrmNumuneSonucList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,9 +254,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmNumuneSonucDetay.resx">
       <DependentUpon>FrmNumuneSonucDetay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmNumuneSonucGir.resx">
-      <DependentUpon>FrmNumuneSonucGir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmNumuneSonucList.resx">
       <DependentUpon>FrmNumuneSonucList.cs</DependentUpon>

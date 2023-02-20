@@ -34,11 +34,16 @@ namespace SampleManagmentSystem.Forms
             DateTime temp = new DateTime(); //default 01/01/0001
             DateTime? df = dateFirst.DateTime;
             DateTime? dl = dateLast.DateTime;
+            int userNo = ActiveUser.Instance.UserNo;
             if (df == temp)
                 df = null;
             if (dl == temp)
                 dl = null;
-            gridControl1.DataSource = db.ListNumune(df,dl).ToList();
+            if(ActiveUser.Instance.YetkiListeleme==true)
+                gridControl1.DataSource = db.ListAllNumune(df,dl).ToList();
+            else
+                gridControl1.DataSource = db.ListNumune(userNo, df, dl).ToList();
+
             //gridControl1.DataSource = degerler;
 
         }
@@ -66,6 +71,15 @@ namespace SampleManagmentSystem.Forms
             int selectedRowIndex = gridView1.FocusedRowHandle;
             string nmnKod = gridView1.GetRowCellValue(selectedRowIndex, "nmn_kod").ToString();
             Forms.NewNumune fr = new Forms.NewNumune(nmnKod);
+            fr.Show();
+        }
+        //MÜŞTERİ ONAY BUTONUNA BASILDIĞINDA YAPILACAKLAR
+        private void repositoryItemButtonMusOnay_Click(object sender, EventArgs e)
+        {
+            //MÜŞTERİ ONAY BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
+            int selectedRowIndex = gridView1.FocusedRowHandle;
+            string nmnKod = gridView1.GetRowCellValue(selectedRowIndex, "nmn_kod").ToString();
+            Forms.FrmMusteriOnay fr = new Forms.FrmMusteriOnay(nmnKod);
             fr.Show();
         }
         //DELETE NUMUNE 
@@ -103,15 +117,6 @@ namespace SampleManagmentSystem.Forms
             }
         }
 
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void gridControl1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void repositoryItemButtonDetay_Click(object sender, EventArgs e)
         {
@@ -122,14 +127,7 @@ namespace SampleManagmentSystem.Forms
             fr.Show();
         }
 
-        private void repositoryItemButtonMusOnay_Click(object sender, EventArgs e)
-        {
-            //MÜŞTERİ ONAY BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
-            int selectedRowIndex = gridView1.FocusedRowHandle;
-            string nmnKod = gridView1.GetRowCellValue(selectedRowIndex, "nmn_kod").ToString();
-            Forms.FrmMusteriOnay fr = new Forms.FrmMusteriOnay();
-            fr.Show();
-        }
+
     }
     
 }

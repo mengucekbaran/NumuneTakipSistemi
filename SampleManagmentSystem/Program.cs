@@ -36,11 +36,13 @@ namespace SampleManagmentSystem
         }
         // Kullanıcı kimliği, kullanıcı adı ve yetkilendirme bilgilerini tutan özellikler belirtilir.
         public string Guid { get; set; }
+        public int UserNo { get; set; }
         public string UserName { get; set; }
         public bool YetkiDüzeltme { get; set; }
         public bool YetkiSilme { get; set; }
         public bool YetkiEkleme { get; set; }
         public bool YetkiSonucEkleme { get; set; }
+        public bool YetkiListeleme { get; set; } // tüm numuneleri listeleme
         //public string Password { get; set; }
 
         // ActiveUser sınıfının tek örneğine erişmek için kullanılacak olan statik bir özellik belirtilir.

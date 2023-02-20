@@ -627,5 +627,6 @@
     <Property Name="Numune_Duzeltme" Type="Boolean" />
     <Property Name="Numune_Silme" Type="Boolean" />
     <Property Name="Numune_Sonuc_Giris" Type="Boolean" />
+    <Property Name="Numune_Listeleme" Type="Boolean" />
   </EntityType>
 </Schema>

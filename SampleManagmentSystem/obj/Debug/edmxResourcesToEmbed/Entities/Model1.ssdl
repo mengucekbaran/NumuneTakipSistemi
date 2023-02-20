@@ -58,11 +58,19 @@
     <Property Name="nmn_isik_hasligi" Type="float" Nullable="false" />
     <Property Name="nmn_isi_dayanim" Type="nvarchar" MaxLength="25" Nullable="false" />
     <Property Name="nmn_ad" Type="nvarchar" MaxLength="120" Nullable="false" />
+    <Property Name="nmn_musonay" Type="tinyint" />
+    <Property Name="nmn_musonay_aciklama" Type="nvarchar(max)" />
+    <Property Name="nmn_user_no" Type="int" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6035: The relationship 'fk_numune_kod' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
         <Association Name="fk_numune_kod" />-->
+  <Function Name="ListAllNumune" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ilk_tarih" Type="datetime2" Mode="In" />
+    <Parameter Name="son_tarih" Type="datetime2" Mode="In" />
+  </Function>
   <Function Name="ListNumune" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user_no" Type="int" Mode="In" />
     <Parameter Name="ilk_tarih" Type="datetime2" Mode="In" />
     <Parameter Name="son_tarih" Type="datetime2" Mode="In" />
   </Function>

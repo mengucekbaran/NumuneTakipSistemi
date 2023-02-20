@@ -32,21 +32,19 @@ namespace SampleManagmentSystem.Forms
             DateTime temp = new DateTime(); //default 01/01/0001
             DateTime? df = dateFirst.DateTime;
             DateTime? dl = dateLast.DateTime;
+            int userNo = ActiveUser.Instance.UserNo;
             if (df == temp)
                 df = null;
             if (dl == temp)
                 dl = null;
 
-            var degerler = db.ListNumune(df, dl);
-            gridControl1.DataSource = degerler;
+            if (ActiveUser.Instance.YetkiListeleme == true)
+                gridControl1.DataSource = db.ListAllNumune(df, dl).ToList();
+            else
+                gridControl1.DataSource = db.ListNumune(userNo, df, dl).ToList();
+
 
         }
-
-        private void BtnList_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmNumuneDetay_Load(object sender, EventArgs e)
         {
             //bindingSource1.DataSource = db.TblNumuneler.Local;
@@ -118,11 +116,6 @@ namespace SampleManagmentSystem.Forms
             }
 
             
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

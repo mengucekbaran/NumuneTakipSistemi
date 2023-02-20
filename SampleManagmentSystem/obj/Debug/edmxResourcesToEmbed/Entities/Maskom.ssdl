@@ -295,6 +295,7 @@
     <Property Name="Numune_Duzeltme" Type="bit" />
     <Property Name="Numune_Silme" Type="bit" />
     <Property Name="Numune_Sonuc_Giris" Type="bit" />
+    <Property Name="Numune_Listeleme" Type="bit" />
   </EntityType>
   <EntityType Name="STOK_ALT_GRUPLARI">
     <Key>

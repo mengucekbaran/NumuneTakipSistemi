@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNumuneSonuc));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.dateAlisTarih = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtNmnKod = new DevExpress.XtraEditors.TextEdit();
             this.lookUpNmnKod = new DevExpress.XtraEditors.LookUpEdit();
             this.spinMaliyetYonetim = new DevExpress.XtraEditors.SpinEdit();
@@ -53,10 +55,10 @@
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.btnVazgec = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.dateAlisTarih = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateAlisTarih.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateAlisTarih.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinMaliyetYonetim.Properties)).BeginInit();
@@ -69,8 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateBitisTarih.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBitisTarih.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateAlisTarih.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateAlisTarih.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -103,6 +103,32 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1208, 384);
             this.panelControl1.TabIndex = 50;
+            // 
+            // dateAlisTarih
+            // 
+            this.dateAlisTarih.EditValue = null;
+            this.dateAlisTarih.Location = new System.Drawing.Point(857, 8);
+            this.dateAlisTarih.Name = "dateAlisTarih";
+            this.dateAlisTarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateAlisTarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateAlisTarih.Properties.DisplayFormat.FormatString = "";
+            this.dateAlisTarih.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateAlisTarih.Properties.EditFormat.FormatString = "";
+            this.dateAlisTarih.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateAlisTarih.Properties.Mask.EditMask = "";
+            this.dateAlisTarih.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dateAlisTarih.Size = new System.Drawing.Size(261, 22);
+            this.dateAlisTarih.TabIndex = 105;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(712, 11);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(111, 16);
+            this.labelControl6.TabIndex = 104;
+            this.labelControl6.Text = "Numune Bitiş Tarihi";
             // 
             // txtNmnKod
             // 
@@ -393,32 +419,6 @@
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
-            // dateAlisTarih
-            // 
-            this.dateAlisTarih.EditValue = null;
-            this.dateAlisTarih.Location = new System.Drawing.Point(857, 8);
-            this.dateAlisTarih.Name = "dateAlisTarih";
-            this.dateAlisTarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateAlisTarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateAlisTarih.Properties.DisplayFormat.FormatString = "";
-            this.dateAlisTarih.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateAlisTarih.Properties.EditFormat.FormatString = "";
-            this.dateAlisTarih.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateAlisTarih.Properties.Mask.EditMask = "";
-            this.dateAlisTarih.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dateAlisTarih.Size = new System.Drawing.Size(261, 22);
-            this.dateAlisTarih.TabIndex = 105;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(712, 11);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(111, 16);
-            this.labelControl6.TabIndex = 104;
-            this.labelControl6.Text = "Numune Bitiş Tarihi";
-            // 
             // FrmNumuneSonuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -436,6 +436,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateAlisTarih.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateAlisTarih.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinMaliyetYonetim.Properties)).EndInit();
@@ -448,8 +450,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateBitisTarih.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBitisTarih.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateAlisTarih.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateAlisTarih.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
