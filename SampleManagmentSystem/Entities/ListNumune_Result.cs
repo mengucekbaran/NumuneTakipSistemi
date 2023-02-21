@@ -46,5 +46,8 @@ namespace SampleManagmentSystem.Entities
         public double nmn_isik_hasligi { get; set; }
         public string nmn_isi_dayanim { get; set; }
         public string nmn_ad { get; set; }
+        public Nullable<byte> nmn_musonay { get; set; }
+        public string nmn_musonay_aciklama { get; set; }
+        public int nmn_user_no { get; set; }
     }
 }

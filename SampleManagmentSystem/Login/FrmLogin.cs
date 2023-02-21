@@ -84,27 +84,68 @@ namespace SampleManagmentSystem.Forms
         Form1 fr;
         private void tbnGiris_Click(object sender, EventArgs e)
         {
-            var User= dbMikro.KULLANICILAR.FirstOrDefault(x => x.User_name == lookUpKullanici.Text);
-            if (User != null)
+            var seciliKullanici = dbMikro.KULLANICILAR.FirstOrDefault(x => x.User_name == lookUpKullanici.Text);
+            if (seciliKullanici != null)
             {
-                var kUser = dbMaskom.KULLANICILAR_USER;
-                ActiveUser.Instance.UserNo = Convert.ToInt32(lookUpKullanici.EditValue);
-                ActiveUser.Instance.UserName = lookUpKullanici.Text;
-                ActiveUser.Instance.Guid = User.User_Guid.ToString();
-                ActiveUser.Instance.YetkiDüzeltme =   kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Duzeltme.Value;
-                ActiveUser.Instance.YetkiSilme    =   kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Silme.Value;
-                ActiveUser.Instance.YetkiEkleme   =   kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Giris.Value;
-                ActiveUser.Instance.YetkiSonucEkleme   =   kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Sonuc_Giris.Value;
-                ActiveUser.Instance.YetkiListeleme = kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Listeleme.Value;
+                //var seciliKullanici = lookUpKullanici.GetSelectedDataRow();
+                var seciliKullaniciPassword = txtSifre.EditValue == null ? "" : txtSifre.EditValue;
 
-                fr = new Form1();
-                fr.Show();
-                this.Hide();
+                // Mikro DLl'den kontrol et password doğru mu diye -->/
+                var cdr = new myeDB.myeMain().IsPassOK(seciliKullaniciPassword.ToString(), seciliKullanici.User_pw);
+                // Mikro DLl'den kontrol et password doğru mu diye <--/
+
+                if (cdr == -1)
+                {
+                    var kUser = dbMaskom.KULLANICILAR_USER;
+                    ActiveUser.Instance.UserNo = Convert.ToInt32(lookUpKullanici.EditValue);
+                    ActiveUser.Instance.UserName = lookUpKullanici.Text;
+                    ActiveUser.Instance.Guid = seciliKullanici.User_Guid.ToString();
+                    ActiveUser.Instance.YetkiDüzeltme = kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Duzeltme.Value;
+                    ActiveUser.Instance.YetkiSilme = kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Silme.Value;
+                    ActiveUser.Instance.YetkiEkleme = kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Giris.Value;
+                    ActiveUser.Instance.YetkiSonucEkleme = kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Sonuc_Giris.Value;
+                    ActiveUser.Instance.YetkiListeleme = kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Listeleme.Value;
+                    fr = new Form1();
+                    fr.Show();
+                    this.Hide();
+                    //this.Close();
+                    //this.Visible = true;
+                    //var deger = MD5eDonustur(seciliKullanici.User_pw);
+                }
+                else
+                {
+
+                    MessageBox.Show("Hatalı parola...", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                XtraMessageBox.Show("Kullanıcı adı ya da şifre yanlış.", "Information");
+                MessageBox.Show("Kullanıcı seçiniz...", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
+
+
+            //var User= dbMikro.KULLANICILAR.FirstOrDefault(x => x.User_name == lookUpKullanici.Text);
+            //if (User != null)
+            //{
+            //    var kUser = dbMaskom.KULLANICILAR_USER;
+            //    ActiveUser.Instance.UserNo = Convert.ToInt32(lookUpKullanici.EditValue);
+            //    ActiveUser.Instance.UserName = lookUpKullanici.Text;
+            //    ActiveUser.Instance.Guid = User.User_Guid.ToString();
+            //    ActiveUser.Instance.YetkiDüzeltme =   kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Duzeltme.Value;
+            //    ActiveUser.Instance.YetkiSilme    =   kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Silme.Value;
+            //    ActiveUser.Instance.YetkiEkleme   =   kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Giris.Value;
+            //    ActiveUser.Instance.YetkiSonucEkleme   =   kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Sonuc_Giris.Value;
+            //    ActiveUser.Instance.YetkiListeleme = kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Listeleme.Value;
+
+            //    fr = new Form1();
+            //    fr.Show();
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    XtraMessageBox.Show("Kullanıcı adı ya da şifre yanlış.", "Information");
+            //}
         }
     }
 }

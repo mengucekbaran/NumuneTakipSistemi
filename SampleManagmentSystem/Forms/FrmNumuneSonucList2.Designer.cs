@@ -59,7 +59,7 @@
             // 
             // nUMUNEHAREKETLERIBindingSource
             // 
-            this.nUMUNEHAREKETLERIBindingSource.DataSource = typeof(SampleManagmentSystem.Entities.NUMUNE_HAREKETLERI);
+            //this.nUMUNEHAREKETLERIBindingSource.DataSource = typeof(SampleManagmentSystem.Entities.NUMUNE_HAREKETLERI);
             // 
             // gridView1
             // 

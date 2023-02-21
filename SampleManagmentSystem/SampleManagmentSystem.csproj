@@ -29,7 +29,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -294,10 +294,6 @@
     <None Include="Entities\Maskom.edmx.diagram">
       <DependentUpon>Maskom.edmx</DependentUpon>
     </None>
-    <EntityDeploy Include="Entities\Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <EntityDeploy Include="Entities\MikroDB_V16.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MikroDB_V16.Designer.cs</LastGenOutput>
@@ -305,6 +301,10 @@
     <None Include="Entities\MikroDB_V16.edmx.diagram">
       <DependentUpon>MikroDB_V16.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Entities\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="Entities\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>

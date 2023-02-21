@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="NUMUNE_TAKİPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="NUMUNE_HAREKETLERI">
     <Key>
       <PropertyRef Name="nmnh_id" />
@@ -74,7 +74,7 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
     <Parameter Name="ilk_tarih" Type="datetime2" Mode="In" />
     <Parameter Name="son_tarih" Type="datetime2" Mode="In" />
   </Function>
-  <EntityContainer Name="NUMUNE_TAKİPModelStoreContainer">
+  <EntityContainer Name="Model1StoreContainer">
     <EntitySet Name="NUMUNE_HAREKETLERI" EntityType="Self.NUMUNE_HAREKETLERI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblNumuneler" EntityType="Self.TblNumuneler" Schema="dbo" store:Type="Tables" />
   </EntityContainer>

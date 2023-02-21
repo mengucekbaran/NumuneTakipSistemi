@@ -65,6 +65,7 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.musteri_onay = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nUMUNEHAREKETLERIBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUMUNEHAREKETLERIBindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -85,14 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // nUMUNEHAREKETLERIBindingSource
-            // 
-            this.nUMUNEHAREKETLERIBindingSource.DataSource = typeof(SampleManagmentSystem.Entities.NUMUNE_HAREKETLERI);
-            // 
-            // nUMUNEHAREKETLERIBindingSource1
-            // 
-            this.nUMUNEHAREKETLERIBindingSource1.DataSource = typeof(SampleManagmentSystem.Entities.NUMUNE_HAREKETLERI);
             // 
             // panel1
             // 
@@ -126,7 +119,7 @@
             // 
             // numuneSonuclari
             // 
-            this.numuneSonuclari.DataSource = this.nUMUNEHAREKETLERIBindingSource1;
+            this.numuneSonuclari.DataSource = this.nUMUNEHAREKETLERIBindingSource;
             this.numuneSonuclari.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numuneSonuclari.EmbeddedNavigator.BackgroundImage = global::SampleManagmentSystem.Properties.Resources._2824437_48lab_school_science_tube_icon1;
             this.numuneSonuclari.Location = new System.Drawing.Point(2, 28);
@@ -144,7 +137,8 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colnmnh_nmnkod,
             this.colnmnh_sonucsirano,
-            this.colnmnh_labonay});
+            this.colnmnh_labonay,
+            this.musteri_onay});
             this.gridView1.GridControl = this.numuneSonuclari;
             this.gridView1.Name = "gridView1";
             this.gridView1.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gridView1_CustomDrawCell);
@@ -336,6 +330,16 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
+            // musteri_onay
+            // 
+            this.musteri_onay.Caption = "MÜŞTERİ ONAY";
+            this.musteri_onay.FieldName = "musteri_onay";
+            this.musteri_onay.MinWidth = 25;
+            this.musteri_onay.Name = "musteri_onay";
+            this.musteri_onay.Visible = true;
+            this.musteri_onay.VisibleIndex = 3;
+            this.musteri_onay.Width = 94;
+            // 
             // FrmNumuneSonucList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -394,5 +398,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colnmnh_labonay;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraGrid.Columns.GridColumn musteri_onay;
     }
 }

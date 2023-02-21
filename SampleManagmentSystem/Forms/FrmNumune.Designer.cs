@@ -451,7 +451,7 @@
             // 
             // tblNumunelerBindingSource
             // 
-            this.tblNumunelerBindingSource.DataSource = typeof(SampleManagmentSystem.Entities.TblNumuneler);
+            //this.tblNumunelerBindingSource.DataSource = typeof(SampleManagmentSystem.Entities.TblNumuneler);
             // 
             // panel1
             // 
