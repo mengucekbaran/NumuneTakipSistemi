@@ -18,6 +18,7 @@ namespace SampleManagmentSystem.Entities
         public System.DateTime nmn_create_date { get; set; }
         public System.DateTime nmn_lastup_date { get; set; }
         public string nmn_kod { get; set; }
+        public string nmn_ad { get; set; }
         public string nmn_cari_kod { get; set; }
         public string nmn_cari_unvan { get; set; }
         public System.DateTime nmn_tarih { get; set; }
@@ -46,7 +47,6 @@ namespace SampleManagmentSystem.Entities
         public string nmn_urungrup_kod { get; set; }
         public double nmn_isik_hasligi { get; set; }
         public string nmn_isi_dayanim { get; set; }
-        public string nmn_ad { get; set; }
         public Nullable<byte> nmn_musonay { get; set; }
         public string nmn_musonay_aciklama { get; set; }
         public int nmn_user_no { get; set; }

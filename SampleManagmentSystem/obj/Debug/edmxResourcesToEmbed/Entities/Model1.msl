@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="NUMUNE_TAKİPEntities">
+  <EntityContainerMapping StorageEntityContainer="NUMUNE_TAKİPModelStoreContainer" CdmEntityContainer="NUMUNE_TAKİPEntities">
     <EntitySetMapping Name="NUMUNE_HAREKETLERI">
-      <EntityTypeMapping TypeName="Model1.NUMUNE_HAREKETLERI">
+      <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.NUMUNE_HAREKETLERI">
         <MappingFragment StoreEntitySet="NUMUNE_HAREKETLERI">
           <ScalarProperty Name="nmnh_id" ColumnName="nmnh_id" />
           <ScalarProperty Name="nmnh_createdate" ColumnName="nmnh_createdate" />
@@ -24,12 +24,13 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TblNumuneler">
-      <EntityTypeMapping TypeName="Model1.TblNumuneler">
+      <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.TblNumuneler">
         <MappingFragment StoreEntitySet="TblNumuneler">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="nmn_create_date" ColumnName="nmn_create_date" />
           <ScalarProperty Name="nmn_lastup_date" ColumnName="nmn_lastup_date" />
           <ScalarProperty Name="nmn_kod" ColumnName="nmn_kod" />
+          <ScalarProperty Name="nmn_ad" ColumnName="nmn_ad" />
           <ScalarProperty Name="nmn_cari_kod" ColumnName="nmn_cari_kod" />
           <ScalarProperty Name="nmn_cari_unvan" ColumnName="nmn_cari_unvan" />
           <ScalarProperty Name="nmn_tarih" ColumnName="nmn_tarih" />
@@ -58,20 +59,20 @@
           <ScalarProperty Name="nmn_urungrup_kod" ColumnName="nmn_urungrup_kod" />
           <ScalarProperty Name="nmn_isik_hasligi" ColumnName="nmn_isik_hasligi" />
           <ScalarProperty Name="nmn_isi_dayanim" ColumnName="nmn_isi_dayanim" />
-          <ScalarProperty Name="nmn_ad" ColumnName="nmn_ad" />
           <ScalarProperty Name="nmn_musonay" ColumnName="nmn_musonay" />
           <ScalarProperty Name="nmn_musonay_aciklama" ColumnName="nmn_musonay_aciklama" />
           <ScalarProperty Name="nmn_user_no" ColumnName="nmn_user_no" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="ListAllNumune" FunctionName="Model1.Store.ListAllNumune">
+    <FunctionImportMapping FunctionImportName="ListAllNumune" FunctionName="NUMUNE_TAKİPModel.Store.ListAllNumune">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="Model1.ListAllNumune_Result">
+        <ComplexTypeMapping TypeName="NUMUNE_TAKİPModel.ListAllNumune_Result">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="nmn_create_date" ColumnName="nmn_create_date" />
           <ScalarProperty Name="nmn_lastup_date" ColumnName="nmn_lastup_date" />
           <ScalarProperty Name="nmn_kod" ColumnName="nmn_kod" />
+          <ScalarProperty Name="nmn_ad" ColumnName="nmn_ad" />
           <ScalarProperty Name="nmn_cari_kod" ColumnName="nmn_cari_kod" />
           <ScalarProperty Name="nmn_cari_unvan" ColumnName="nmn_cari_unvan" />
           <ScalarProperty Name="nmn_tarih" ColumnName="nmn_tarih" />
@@ -100,20 +101,21 @@
           <ScalarProperty Name="nmn_urungrup_kod" ColumnName="nmn_urungrup_kod" />
           <ScalarProperty Name="nmn_isik_hasligi" ColumnName="nmn_isik_hasligi" />
           <ScalarProperty Name="nmn_isi_dayanim" ColumnName="nmn_isi_dayanim" />
-          <ScalarProperty Name="nmn_ad" ColumnName="nmn_ad" />
           <ScalarProperty Name="nmn_musonay" ColumnName="nmn_musonay" />
+          <ScalarProperty Name="nmn_musonay_str" ColumnName="nmn_musonay_str" />
           <ScalarProperty Name="nmn_musonay_aciklama" ColumnName="nmn_musonay_aciklama" />
           <ScalarProperty Name="nmn_user_no" ColumnName="nmn_user_no" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="ListNumune" FunctionName="Model1.Store.ListNumune">
+    <FunctionImportMapping FunctionImportName="ListNumune" FunctionName="NUMUNE_TAKİPModel.Store.ListNumune">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="Model1.ListNumune_Result">
+        <ComplexTypeMapping TypeName="NUMUNE_TAKİPModel.ListNumune_Result">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="nmn_create_date" ColumnName="nmn_create_date" />
           <ScalarProperty Name="nmn_lastup_date" ColumnName="nmn_lastup_date" />
           <ScalarProperty Name="nmn_kod" ColumnName="nmn_kod" />
+          <ScalarProperty Name="nmn_ad" ColumnName="nmn_ad" />
           <ScalarProperty Name="nmn_cari_kod" ColumnName="nmn_cari_kod" />
           <ScalarProperty Name="nmn_cari_unvan" ColumnName="nmn_cari_unvan" />
           <ScalarProperty Name="nmn_tarih" ColumnName="nmn_tarih" />
@@ -142,8 +144,8 @@
           <ScalarProperty Name="nmn_urungrup_kod" ColumnName="nmn_urungrup_kod" />
           <ScalarProperty Name="nmn_isik_hasligi" ColumnName="nmn_isik_hasligi" />
           <ScalarProperty Name="nmn_isi_dayanim" ColumnName="nmn_isi_dayanim" />
-          <ScalarProperty Name="nmn_ad" ColumnName="nmn_ad" />
           <ScalarProperty Name="nmn_musonay" ColumnName="nmn_musonay" />
+          <ScalarProperty Name="nmn_musonay_str" ColumnName="nmn_musonay_str" />
           <ScalarProperty Name="nmn_musonay_aciklama" ColumnName="nmn_musonay_aciklama" />
           <ScalarProperty Name="nmn_user_no" ColumnName="nmn_user_no" />
         </ComplexTypeMapping>

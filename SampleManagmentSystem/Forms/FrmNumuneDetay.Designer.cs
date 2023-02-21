@@ -100,6 +100,8 @@
             this.colnmn_oran = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnmn_gida = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnmn_reach_rohs = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_musonay_str = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_musonay_aciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnmn_aciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -380,10 +382,6 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // tblNumunelerBindingSource
-            // 
-            //this.tblNumunelerBindingSource.DataSource = typeof(SampleManagmentSystem.Entities.TblNumuneler);
-            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -416,6 +414,8 @@
             this.colnmn_oran,
             this.colnmn_gida,
             this.colnmn_reach_rohs,
+            this.colnmn_musonay_str,
+            this.colnmn_musonay_aciklama,
             this.colnmn_aciklama});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
@@ -744,6 +744,28 @@
             this.colnmn_reach_rohs.VisibleIndex = 28;
             this.colnmn_reach_rohs.Width = 101;
             // 
+            // colnmn_musonay_str
+            // 
+            this.colnmn_musonay_str.Caption = "MÜŞTERİ ONAY";
+            this.colnmn_musonay_str.FieldName = "nmn_musonay_str";
+            this.colnmn_musonay_str.MinWidth = 25;
+            this.colnmn_musonay_str.Name = "colnmn_musonay_str";
+            this.colnmn_musonay_str.OptionsColumn.AllowEdit = false;
+            this.colnmn_musonay_str.Visible = true;
+            this.colnmn_musonay_str.VisibleIndex = 29;
+            this.colnmn_musonay_str.Width = 94;
+            // 
+            // colnmn_musonay_aciklama
+            // 
+            this.colnmn_musonay_aciklama.Caption = "MÜŞTERİ AÇIKLAMA";
+            this.colnmn_musonay_aciklama.FieldName = "nmn_musonay_aciklama";
+            this.colnmn_musonay_aciklama.MinWidth = 25;
+            this.colnmn_musonay_aciklama.Name = "colnmn_musonay_aciklama";
+            this.colnmn_musonay_aciklama.OptionsColumn.AllowEdit = false;
+            this.colnmn_musonay_aciklama.Visible = true;
+            this.colnmn_musonay_aciklama.VisibleIndex = 30;
+            this.colnmn_musonay_aciklama.Width = 94;
+            // 
             // colnmn_aciklama
             // 
             this.colnmn_aciklama.Caption = "AÇIKLAMA";
@@ -752,7 +774,7 @@
             this.colnmn_aciklama.Name = "colnmn_aciklama";
             this.colnmn_aciklama.OptionsColumn.AllowEdit = false;
             this.colnmn_aciklama.Visible = true;
-            this.colnmn_aciklama.VisibleIndex = 29;
+            this.colnmn_aciklama.VisibleIndex = 31;
             this.colnmn_aciklama.Width = 102;
             // 
             // repositoryItemButtonDelete
@@ -893,5 +915,7 @@
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_ad;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_musonay_str;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_musonay_aciklama;
     }
 }

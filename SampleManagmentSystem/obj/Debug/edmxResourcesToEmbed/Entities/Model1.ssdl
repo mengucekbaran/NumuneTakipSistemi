@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="NUMUNE_TAKİPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="NUMUNE_HAREKETLERI">
     <Key>
       <PropertyRef Name="nmnh_id" />
@@ -29,6 +29,7 @@
     <Property Name="nmn_create_date" Type="datetime" Nullable="false" />
     <Property Name="nmn_lastup_date" Type="datetime" Nullable="false" />
     <Property Name="nmn_kod" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="nmn_ad" Type="nvarchar" MaxLength="120" Nullable="false" />
     <Property Name="nmn_cari_kod" Type="nvarchar" MaxLength="25" />
     <Property Name="nmn_cari_unvan" Type="nvarchar" MaxLength="120" />
     <Property Name="nmn_tarih" Type="datetime" Nullable="false" />
@@ -57,7 +58,6 @@
     <Property Name="nmn_urungrup_kod" Type="nvarchar" MaxLength="25" />
     <Property Name="nmn_isik_hasligi" Type="float" Nullable="false" />
     <Property Name="nmn_isi_dayanim" Type="nvarchar" MaxLength="25" Nullable="false" />
-    <Property Name="nmn_ad" Type="nvarchar" MaxLength="120" Nullable="false" />
     <Property Name="nmn_musonay" Type="tinyint" />
     <Property Name="nmn_musonay_aciklama" Type="nvarchar(max)" />
     <Property Name="nmn_user_no" Type="int" Nullable="false" />
@@ -74,7 +74,7 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
     <Parameter Name="ilk_tarih" Type="datetime2" Mode="In" />
     <Parameter Name="son_tarih" Type="datetime2" Mode="In" />
   </Function>
-  <EntityContainer Name="Model1StoreContainer">
+  <EntityContainer Name="NUMUNE_TAKİPModelStoreContainer">
     <EntitySet Name="NUMUNE_HAREKETLERI" EntityType="Self.NUMUNE_HAREKETLERI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblNumuneler" EntityType="Self.TblNumuneler" Schema="dbo" store:Type="Tables" />
   </EntityContainer>

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -80,18 +81,29 @@ namespace SampleManagmentSystem.Forms
         private void hyperlinkLabelControl1_Click(object sender, EventArgs e)
         {
             this.Close();
+            return;
         }
         Form1 fr;
         private void tbnGiris_Click(object sender, EventArgs e)
         {
             var seciliKullanici = dbMikro.KULLANICILAR.FirstOrDefault(x => x.User_name == lookUpKullanici.Text);
+            var cdr = 0;
             if (seciliKullanici != null)
             {
                 //var seciliKullanici = lookUpKullanici.GetSelectedDataRow();
                 var seciliKullaniciPassword = txtSifre.EditValue == null ? "" : txtSifre.EditValue;
-
+                
                 // Mikro DLl'den kontrol et password doğru mu diye -->/
-                var cdr = new myeDB.myeMain().IsPassOK(seciliKullaniciPassword.ToString(), seciliKullanici.User_pw);
+                 try
+                {
+                    cdr = new myeDB.myeMain().IsPassOK(seciliKullaniciPassword.ToString(), seciliKullanici.User_pw);
+                }
+                catch (COMException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            
+           
                 // Mikro DLl'den kontrol et password doğru mu diye <--/
 
                 if (cdr == -1)
@@ -105,6 +117,8 @@ namespace SampleManagmentSystem.Forms
                     ActiveUser.Instance.YetkiEkleme = kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Giris.Value;
                     ActiveUser.Instance.YetkiSonucEkleme = kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Sonuc_Giris.Value;
                     ActiveUser.Instance.YetkiListeleme = kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Listeleme.Value;
+                    ActiveUser.Instance.YetkiMusteriOnay = kUser.FirstOrDefault(x => x.Record_uid.ToString() == ActiveUser.Instance.Guid).Numune_Musteri_Onay_Girme.Value;
+
                     fr = new Form1();
                     fr.Show();
                     this.Hide();

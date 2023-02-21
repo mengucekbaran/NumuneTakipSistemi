@@ -191,8 +191,8 @@ namespace SampleManagmentSystem.Forms
             DataTable dtDoviz = new DataTable();
             dtDoviz.Columns.Add("Deger", typeof(string));
             dtDoviz.Rows.Add("TL");
-            dtDoviz.Rows.Add("DOLAR");
-            dtDoviz.Rows.Add("EURO");
+            dtDoviz.Rows.Add("USD");
+            dtDoviz.Rows.Add("EUR");
             dtDoviz.Rows.Add("GBP");
             lookUpShow(lookUpDoviz, dtDoviz);
             //TÜR - NUMUNENİN GELME ŞEKLİ

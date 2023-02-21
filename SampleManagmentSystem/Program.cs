@@ -43,6 +43,7 @@ namespace SampleManagmentSystem
         public bool YetkiEkleme { get; set; }
         public bool YetkiSonucEkleme { get; set; }
         public bool YetkiListeleme { get; set; } // tüm numuneleri listeleme
+        public bool YetkiMusteriOnay { get; set; } //müşteri onay girme
         //public string Password { get; set; }
 
         // ActiveUser sınıfının tek örneğine erişmek için kullanılacak olan statik bir özellik belirtilir.

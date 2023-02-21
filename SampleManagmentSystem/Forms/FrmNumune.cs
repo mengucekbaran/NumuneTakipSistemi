@@ -27,6 +27,10 @@ namespace SampleManagmentSystem.Forms
             {
                 gridView1.Columns["delete"].Visible = false;
             }
+            if (ActiveUser.Instance.YetkiMusteriOnay == false)
+            {
+                gridView1.Columns["musOnay"].Visible = false;
+            }
         }
         public void Listele()
         {
@@ -90,7 +94,7 @@ namespace SampleManagmentSystem.Forms
             int id = (int)gridView1.GetRowCellValue(selectedRowIndex, "id");
 
             //SİLMEK İSTEDİĞİNİZDEN EMİN MİSİNİZ MESAJI
-            var sonuc = XtraMessageBox.Show($"{(gridView1.GetFocusedRow() as ListNumune_Result).nmn_kod} kodlu kaydı silmek istediğinizden emin misiniz ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var sonuc = XtraMessageBox.Show($"{(gridView1.GetFocusedRow() as ListAllNumune_Result).nmn_kod} kodlu kaydı silmek istediğinizden emin misiniz ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //YESE TIKLANIRSA
             if (sonuc == DialogResult.Yes)
             {

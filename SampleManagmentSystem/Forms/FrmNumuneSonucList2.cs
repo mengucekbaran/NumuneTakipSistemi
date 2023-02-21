@@ -23,13 +23,21 @@ namespace SampleManagmentSystem.Forms
         }
         public void ListNumuneSonuclar(string nmnKod)
         {
-            var sonuclar = db.NUMUNE_HAREKETLERI.Select(x => new
-            {
-                x.nmnh_nmnkod,
-                x.nmnh_sonucsirano,
-                x.nmnh_labonay
-                //labonayDisplayValue = x.nmnh_labonay == 1 ? "ONAYLANDI" : "ONAYLANMADI"
-            }).Where(x => x.nmnh_nmnkod==nmnKod).ToList();
+            var sonuclar = (from nmnh in db.NUMUNE_HAREKETLERI
+                            join nmn in db.TblNumuneler
+                            on nmnh.nmnh_nmnkod equals nmn.nmn_kod
+                            orderby nmnh.nmnh_nmnkod
+                            select new
+                            {
+                                nmnh.nmnh_nmnkod,
+                                nmnh.nmnh_sonucsirano,
+                                nmnh.nmnh_labonay,
+                                musteri_onay = nmnh.nmnh_labonay == 1 ?
+                                (nmn.nmn_musonay == 1 ? "ONAYLANDI" : 
+                                 nmn.nmn_musonay == 0 ? "ONAYLANMADI":"BEKLENİYOR") : 
+                                 ""
+                                //labonayDisplayValue = nmn.nmnh_labonay == 1 ? "ONAYLANDI" : "ONAYLANMADI"
+                            }).Where(x => x.nmnh_nmnkod==nmnKod).ToList();
             numuneSonuclari.DataSource = sonuclar;
         }
 

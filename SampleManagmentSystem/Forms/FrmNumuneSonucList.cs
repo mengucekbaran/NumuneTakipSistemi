@@ -55,11 +55,6 @@ namespace SampleManagmentSystem.Forms
                                 musteri_onay = nmnh.nmnh_labonay == 1 ? (nmn.nmn_musonay==1?"ONAYLANDI" : "ONAYLANMADI") : ""
                                 //labonayDisplayValue = nmn.nmnh_labonay == 1 ? "ONAYLANDI" : "ONAYLANMADI"
                             }).ToList();
-
-
-
-
-
                      numuneSonuclari.DataSource = sonuclar;
         }
         private void FrmNumuneSonucList_Load(object sender, EventArgs e)

@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="dd7ca6d099c34da8abcd48cc1e7a53b1" Name="Diagram1">
-        <EntityTypeShape EntityType="Model1.NUMUNE_HAREKETLERI" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model1.TblNumuneler" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="71fc0ab84ea344f583ea27109ce23c54" Name="Diagram1">
+        <EntityTypeShape EntityType="NUMUNE_TAKİPModel.NUMUNE_HAREKETLERI" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NUMUNE_TAKİPModel.TblNumuneler" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

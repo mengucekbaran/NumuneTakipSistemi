@@ -36,6 +36,7 @@
             this.colnmnh_sonucsirano = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnmnh_labonay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.musteri_onay = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numuneSonuclari)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUMUNEHAREKETLERIBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -57,16 +58,13 @@
             this.numuneSonuclari.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // nUMUNEHAREKETLERIBindingSource
-            // 
-            //this.nUMUNEHAREKETLERIBindingSource.DataSource = typeof(SampleManagmentSystem.Entities.NUMUNE_HAREKETLERI);
-            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colnmnh_nmnkod,
             this.colnmnh_sonucsirano,
-            this.colnmnh_labonay});
+            this.colnmnh_labonay,
+            this.musteri_onay});
             this.gridView1.GridControl = this.numuneSonuclari;
             this.gridView1.Name = "gridView1";
             this.gridView1.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gridView1_CustomDrawCell);
@@ -108,6 +106,16 @@
             this.repositoryItemTextEdit1.AutoHeight = false;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
+            // musteri_onay
+            // 
+            this.musteri_onay.Caption = "MÜŞTERİ ONAY";
+            this.musteri_onay.FieldName = "musteri_onay";
+            this.musteri_onay.MinWidth = 25;
+            this.musteri_onay.Name = "musteri_onay";
+            this.musteri_onay.Visible = true;
+            this.musteri_onay.VisibleIndex = 3;
+            this.musteri_onay.Width = 94;
+            // 
             // FrmNumuneSonucList2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -134,5 +142,6 @@
         private System.Windows.Forms.BindingSource nUMUNEHAREKETLERIBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colnmnh_nmnkod;
         private DevExpress.XtraGrid.Columns.GridColumn colnmnh_sonucsirano;
+        private DevExpress.XtraGrid.Columns.GridColumn musteri_onay;
     }
 }

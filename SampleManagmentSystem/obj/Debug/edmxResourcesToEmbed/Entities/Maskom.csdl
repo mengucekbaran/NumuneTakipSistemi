@@ -628,5 +628,6 @@
     <Property Name="Numune_Silme" Type="Boolean" />
     <Property Name="Numune_Sonuc_Giris" Type="Boolean" />
     <Property Name="Numune_Listeleme" Type="Boolean" />
+    <Property Name="Numune_Musteri_Onay_Girme" Type="Boolean" />
   </EntityType>
 </Schema>
