@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="NUMUNE_TAKİPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="NUMUNE_TAKİPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="NUMUNE_HAREKETLERI">
           <Key>
             <PropertyRef Name="nmnh_id" />
@@ -42,7 +42,7 @@
           <Property Name="nmn_aciliyet" Type="nvarchar" MaxLength="25" />
           <Property Name="nmn_adaycari_kod" Type="nvarchar" MaxLength="25" />
           <Property Name="nmn_adaycari_unvan" Type="nvarchar" MaxLength="120" />
-          <Property Name="nmn_adaycari_konum" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="nmn_adaycari_konum" Type="nvarchar" MaxLength="25" />
           <Property Name="nmn_sip_miktar" Type="float" Nullable="false" />
           <Property Name="nmn_deneme_miktar" Type="float" Nullable="false" />
           <Property Name="nmn_hdf_fiyat" Type="float" Nullable="false" />
@@ -66,6 +66,7 @@
           <Property Name="nmn_musonay" Type="tinyint" />
           <Property Name="nmn_musonay_aciklama" Type="nvarchar(max)" />
           <Property Name="nmn_user_no" Type="int" Nullable="false" />
+          <Property Name="nmn_temsilcikod" Type="nvarchar" MaxLength="25" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6035: The relationship 'fk_numune_kod' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
@@ -83,8 +84,7 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <EntitySet Name="NUMUNE_HAREKETLERI" EntityType="Self.NUMUNE_HAREKETLERI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblNumuneler" EntityType="Self.TblNumuneler" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="NUMUNE_TAKİPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -125,7 +125,7 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <Property Name="nmn_aciliyet" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="nmn_adaycari_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="nmn_adaycari_unvan" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
-          <Property Name="nmn_adaycari_konum" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nmn_adaycari_konum" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="nmn_sip_miktar" Type="Double" Nullable="false" />
           <Property Name="nmn_deneme_miktar" Type="Double" Nullable="false" />
           <Property Name="nmn_hdf_fiyat" Type="Double" Nullable="false" />
@@ -149,6 +149,7 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <Property Name="nmn_musonay" Type="Byte" />
           <Property Name="nmn_musonay_aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="nmn_user_no" Type="Int32" Nullable="false" />
+          <Property Name="nmn_temsilcikod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="NUMUNE_TAKİPEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="NUMUNE_HAREKETLERI" EntityType="Self.NUMUNE_HAREKETLERI" />
@@ -272,6 +273,7 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <EntitySetMapping Name="TblNumuneler">
             <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.TblNumuneler">
               <MappingFragment StoreEntitySet="TblNumuneler">
+                <ScalarProperty Name="nmn_temsilcikod" ColumnName="nmn_temsilcikod" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nmn_create_date" ColumnName="nmn_create_date" />
                 <ScalarProperty Name="nmn_lastup_date" ColumnName="nmn_lastup_date" />

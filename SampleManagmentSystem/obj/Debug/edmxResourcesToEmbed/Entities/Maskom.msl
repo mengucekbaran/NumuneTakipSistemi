@@ -629,5 +629,66 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CARI_PERSONEL_TANIMLARI">
+      <EntityTypeMapping TypeName="MikroDB_V16_MASKOMModel.CARI_PERSONEL_TANIMLARI">
+        <MappingFragment StoreEntitySet="CARI_PERSONEL_TANIMLARI">
+          <ScalarProperty Name="cari_per_TcKimlikNo" ColumnName="cari_per_TcKimlikNo" />
+          <ScalarProperty Name="cari_per_KEP_adresi" ColumnName="cari_per_KEP_adresi" />
+          <ScalarProperty Name="cari_per_kasiyerfirmaid" ColumnName="cari_per_kasiyerfirmaid" />
+          <ScalarProperty Name="cari_takvim_kodu" ColumnName="cari_takvim_kodu" />
+          <ScalarProperty Name="cari_per_mail" ColumnName="cari_per_mail" />
+          <ScalarProperty Name="cari_per_cepno" ColumnName="cari_per_cepno" />
+          <ScalarProperty Name="cari_per_depono" ColumnName="cari_per_depono" />
+          <ScalarProperty Name="cari_per_userno" ColumnName="cari_per_userno" />
+          <ScalarProperty Name="cari_per_kasiyerAmiri" ColumnName="cari_per_kasiyerAmiri" />
+          <ScalarProperty Name="cari_per_kasiyersifresi" ColumnName="cari_per_kasiyersifresi" />
+          <ScalarProperty Name="cari_per_kasiyerkodu" ColumnName="cari_per_kasiyerkodu" />
+          <ScalarProperty Name="cari_per_basmprimyuz5" ColumnName="cari_per_basmprimyuz5" />
+          <ScalarProperty Name="cari_per_basmprimcirotav5" ColumnName="cari_per_basmprimcirotav5" />
+          <ScalarProperty Name="cari_per_basmprimyuz4" ColumnName="cari_per_basmprimyuz4" />
+          <ScalarProperty Name="cari_per_basmprimcirotav4" ColumnName="cari_per_basmprimcirotav4" />
+          <ScalarProperty Name="cari_per_basmprimyuz3" ColumnName="cari_per_basmprimyuz3" />
+          <ScalarProperty Name="cari_per_basmprimcirotav3" ColumnName="cari_per_basmprimcirotav3" />
+          <ScalarProperty Name="cari_per_basmprimyuz2" ColumnName="cari_per_basmprimyuz2" />
+          <ScalarProperty Name="cari_per_basmprimcirotav2" ColumnName="cari_per_basmprimcirotav2" />
+          <ScalarProperty Name="cari_per_basmprimyuz1" ColumnName="cari_per_basmprimyuz1" />
+          <ScalarProperty Name="cari_per_basmprimcirotav1" ColumnName="cari_per_basmprimcirotav1" />
+          <ScalarProperty Name="cari_per_prim_carpani" ColumnName="cari_per_prim_carpani" />
+          <ScalarProperty Name="cari_per_prim_yuzde" ColumnName="cari_per_prim_yuzde" />
+          <ScalarProperty Name="cari_per_prim_adet" ColumnName="cari_per_prim_adet" />
+          <ScalarProperty Name="cari_per_banka_swiftkodu" ColumnName="cari_per_banka_swiftkodu" />
+          <ScalarProperty Name="cari_per_banka_hesapno" ColumnName="cari_per_banka_hesapno" />
+          <ScalarProperty Name="cari_per_banka_tcmb_ilkod" ColumnName="cari_per_banka_tcmb_ilkod" />
+          <ScalarProperty Name="cari_per_banka_tcmb_subekod" ColumnName="cari_per_banka_tcmb_subekod" />
+          <ScalarProperty Name="cari_per_banka_tcmb_kod" ColumnName="cari_per_banka_tcmb_kod" />
+          <ScalarProperty Name="cari_per_muhkod4" ColumnName="cari_per_muhkod4" />
+          <ScalarProperty Name="cari_per_muhkod3" ColumnName="cari_per_muhkod3" />
+          <ScalarProperty Name="cari_per_muhkod2" ColumnName="cari_per_muhkod2" />
+          <ScalarProperty Name="cari_per_muhkod1" ColumnName="cari_per_muhkod1" />
+          <ScalarProperty Name="cari_per_muhkod0" ColumnName="cari_per_muhkod0" />
+          <ScalarProperty Name="cari_per_doviz_cinsi" ColumnName="cari_per_doviz_cinsi" />
+          <ScalarProperty Name="cari_per_tip" ColumnName="cari_per_tip" />
+          <ScalarProperty Name="cari_per_soyadi" ColumnName="cari_per_soyadi" />
+          <ScalarProperty Name="cari_per_adi" ColumnName="cari_per_adi" />
+          <ScalarProperty Name="cari_per_kod" ColumnName="cari_per_kod" />
+          <ScalarProperty Name="cari_per_special3" ColumnName="cari_per_special3" />
+          <ScalarProperty Name="cari_per_special2" ColumnName="cari_per_special2" />
+          <ScalarProperty Name="cari_per_special1" ColumnName="cari_per_special1" />
+          <ScalarProperty Name="cari_per_lastup_date" ColumnName="cari_per_lastup_date" />
+          <ScalarProperty Name="cari_per_lastup_user" ColumnName="cari_per_lastup_user" />
+          <ScalarProperty Name="cari_per_create_date" ColumnName="cari_per_create_date" />
+          <ScalarProperty Name="cari_per_create_user" ColumnName="cari_per_create_user" />
+          <ScalarProperty Name="cari_per_checksum" ColumnName="cari_per_checksum" />
+          <ScalarProperty Name="cari_per_degisti" ColumnName="cari_per_degisti" />
+          <ScalarProperty Name="cari_per_kilitli" ColumnName="cari_per_kilitli" />
+          <ScalarProperty Name="cari_per_hidden" ColumnName="cari_per_hidden" />
+          <ScalarProperty Name="cari_per_fileid" ColumnName="cari_per_fileid" />
+          <ScalarProperty Name="cari_per_iptal" ColumnName="cari_per_iptal" />
+          <ScalarProperty Name="cari_per_SpecRECno" ColumnName="cari_per_SpecRECno" />
+          <ScalarProperty Name="cari_per_DBCno" ColumnName="cari_per_DBCno" />
+          <ScalarProperty Name="cari_per_Guid" ColumnName="cari_per_Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

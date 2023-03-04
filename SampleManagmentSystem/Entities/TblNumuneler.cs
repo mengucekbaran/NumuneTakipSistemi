@@ -50,5 +50,6 @@ namespace SampleManagmentSystem.Entities
         public Nullable<byte> nmn_musonay { get; set; }
         public string nmn_musonay_aciklama { get; set; }
         public int nmn_user_no { get; set; }
+        public string nmn_temsilcikod { get; set; }
     }
 }

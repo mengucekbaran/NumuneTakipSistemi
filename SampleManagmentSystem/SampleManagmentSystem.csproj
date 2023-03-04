@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>C:\baran\PROIT\MaskomNumuneTakip\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -108,6 +108,9 @@
       <DependentUpon>Maskom.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\CARI_HESAPLAR.cs">
+      <DependentUpon>Maskom.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CARI_PERSONEL_TANIMLARI.cs">
       <DependentUpon>Maskom.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\KULLANICILAR.cs">
@@ -323,7 +326,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2824437_lab_school_science_tube_icon.ico" />

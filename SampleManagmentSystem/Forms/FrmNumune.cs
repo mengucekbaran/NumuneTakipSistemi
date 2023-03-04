@@ -15,7 +15,7 @@ namespace SampleManagmentSystem.Forms
     public partial class FrmNumune : Form
     {
         NUMUNE_TAKİPEntities db = new NUMUNE_TAKİPEntities();
-        MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
+        //MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
         public FrmNumune()
         {
             InitializeComponent();

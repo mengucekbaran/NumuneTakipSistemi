@@ -17,7 +17,7 @@ namespace SampleManagmentSystem
     {
 
         MikroDB_V16Entities dbMikro = new MikroDB_V16Entities();
-        MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
+        //MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
         public Form1()
         {
             InitializeComponent();

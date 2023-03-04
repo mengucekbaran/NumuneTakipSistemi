@@ -126,14 +126,15 @@
             // 
             this.labelControl6.Location = new System.Drawing.Point(712, 11);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(111, 16);
+            this.labelControl6.Size = new System.Drawing.Size(108, 16);
             this.labelControl6.TabIndex = 104;
-            this.labelControl6.Text = "Numune Bitiş Tarihi";
+            this.labelControl6.Text = "Numune Alış Tarihi";
             // 
             // txtNmnKod
             // 
             this.txtNmnKod.Location = new System.Drawing.Point(117, 16);
             this.txtNmnKod.Name = "txtNmnKod";
+            this.txtNmnKod.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNmnKod.Size = new System.Drawing.Size(286, 22);
             this.txtNmnKod.TabIndex = 103;
             this.txtNmnKod.Visible = false;
@@ -347,6 +348,7 @@
             // 
             this.txtAciklama.Location = new System.Drawing.Point(117, 218);
             this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAciklama.Size = new System.Drawing.Size(718, 151);
             this.txtAciklama.TabIndex = 45;
             // 

@@ -26,6 +26,7 @@
     <EntitySetMapping Name="TblNumuneler">
       <EntityTypeMapping TypeName="NUMUNE_TAKİPModel.TblNumuneler">
         <MappingFragment StoreEntitySet="TblNumuneler">
+          <ScalarProperty Name="nmn_temsilcikod" ColumnName="nmn_temsilcikod" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="nmn_create_date" ColumnName="nmn_create_date" />
           <ScalarProperty Name="nmn_lastup_date" ColumnName="nmn_lastup_date" />

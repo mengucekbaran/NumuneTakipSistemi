@@ -32,5 +32,6 @@ namespace SampleManagmentSystem.Entities
         public virtual DbSet<STOKLAR> STOKLAR { get; set; }
         public virtual DbSet<URUNLER> URUNLER { get; set; }
         public virtual DbSet<KULLANICILAR_USER> KULLANICILAR_USER { get; set; }
+        public virtual DbSet<CARI_PERSONEL_TANIMLARI> CARI_PERSONEL_TANIMLARI { get; set; }
     }
 }

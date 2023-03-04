@@ -23,16 +23,6 @@ namespace SampleManagmentSystem.Forms
         {
             InitializeComponent();
         }
-
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl1_Click(object sender, EventArgs e)
-        {
-
-        }
         private void FrmLogin_Load(object sender, EventArgs e)
         {
             var yetkiliKullanicilar = dbMaskom.KULLANICILAR_USER
@@ -52,20 +42,6 @@ namespace SampleManagmentSystem.Forms
 
 
         }
-
-        private void textEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-        private void textEdit2_EditValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-        private void labelControl4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textEdit1_Click(object sender, EventArgs e)
         {
             panel3.BackColor = Color.White;
@@ -161,5 +137,7 @@ namespace SampleManagmentSystem.Forms
             //    XtraMessageBox.Show("Kullanıcı adı ya da şifre yanlış.", "Information");
             //}
         }
+
+
     }
 }

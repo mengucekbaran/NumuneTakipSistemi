@@ -617,6 +617,7 @@
     <EntitySet Name="STOKLAR" EntityType="Self.STOKLAR" />
     <EntitySet Name="URUNLER" EntityType="Self.URUNLER" />
     <EntitySet Name="KULLANICILAR_USER" EntityType="MikroDB_V16_MASKOMModel.KULLANICILAR_USER" />
+    <EntitySet Name="CARI_PERSONEL_TANIMLARI" EntityType="MikroDB_V16_MASKOMModel.CARI_PERSONEL_TANIMLARI" />
   </EntityContainer>
   <EntityType Name="KULLANICILAR_USER">
     <Key>
@@ -629,5 +630,65 @@
     <Property Name="Numune_Sonuc_Giris" Type="Boolean" />
     <Property Name="Numune_Listeleme" Type="Boolean" />
     <Property Name="Numune_Musteri_Onay_Girme" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="CARI_PERSONEL_TANIMLARI">
+    <Key>
+      <PropertyRef Name="cari_per_Guid" />
+    </Key>
+    <Property Name="cari_per_Guid" Type="Guid" Nullable="false" />
+    <Property Name="cari_per_DBCno" Type="Int16" Nullable="false" />
+    <Property Name="cari_per_SpecRECno" Type="Int32" />
+    <Property Name="cari_per_iptal" Type="Boolean" />
+    <Property Name="cari_per_fileid" Type="Int16" />
+    <Property Name="cari_per_hidden" Type="Boolean" />
+    <Property Name="cari_per_kilitli" Type="Boolean" />
+    <Property Name="cari_per_degisti" Type="Boolean" />
+    <Property Name="cari_per_checksum" Type="Int32" />
+    <Property Name="cari_per_create_user" Type="Int16" />
+    <Property Name="cari_per_create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cari_per_lastup_user" Type="Int16" />
+    <Property Name="cari_per_lastup_date" Type="DateTime" Precision="3" />
+    <Property Name="cari_per_special1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_special2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_special3" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_soyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_tip" Type="Byte" />
+    <Property Name="cari_per_doviz_cinsi" Type="Byte" />
+    <Property Name="cari_per_muhkod0" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_muhkod1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_muhkod2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_muhkod3" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_muhkod4" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_banka_tcmb_kod" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_banka_tcmb_subekod" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_banka_tcmb_ilkod" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_banka_hesapno" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_banka_swiftkodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_prim_adet" Type="Double" />
+    <Property Name="cari_per_prim_yuzde" Type="Double" />
+    <Property Name="cari_per_prim_carpani" Type="Double" />
+    <Property Name="cari_per_basmprimcirotav1" Type="Double" />
+    <Property Name="cari_per_basmprimyuz1" Type="Double" />
+    <Property Name="cari_per_basmprimcirotav2" Type="Double" />
+    <Property Name="cari_per_basmprimyuz2" Type="Double" />
+    <Property Name="cari_per_basmprimcirotav3" Type="Double" />
+    <Property Name="cari_per_basmprimyuz3" Type="Double" />
+    <Property Name="cari_per_basmprimcirotav4" Type="Double" />
+    <Property Name="cari_per_basmprimyuz4" Type="Double" />
+    <Property Name="cari_per_basmprimcirotav5" Type="Double" />
+    <Property Name="cari_per_basmprimyuz5" Type="Double" />
+    <Property Name="cari_per_kasiyerkodu" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_kasiyersifresi" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_kasiyerAmiri" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_userno" Type="Int32" />
+    <Property Name="cari_per_depono" Type="Int32" />
+    <Property Name="cari_per_cepno" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cari_takvim_kodu" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_kasiyerfirmaid" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_KEP_adresi" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="cari_per_TcKimlikNo" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

@@ -38,6 +38,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lookUpKullanici = new DevExpress.XtraEditors.LookUpEdit();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
@@ -46,17 +47,17 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lookUpKullanici = new DevExpress.XtraEditors.LookUpEdit();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpKullanici.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpKullanici.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,8 +84,7 @@
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(167, 16);
             this.labelControl4.TabIndex = 8;
-            this.labelControl4.Text = "V 1.0 Tüm Hakları Saklıdır";
-            this.labelControl4.Click += new System.EventHandler(this.labelControl4_Click);
+            this.labelControl4.Text = "V 1.1 Tüm Hakları Saklıdır";
             // 
             // panel2
             // 
@@ -131,7 +131,6 @@
             this.labelControl1.Size = new System.Drawing.Size(282, 18);
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "Numune Takip ve Yönetim Sistemi ";
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // panel3
             // 
@@ -142,6 +141,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(504, 50);
             this.panel3.TabIndex = 1;
+            // 
+            // lookUpKullanici
+            // 
+            this.lookUpKullanici.EditValue = "";
+            this.lookUpKullanici.Location = new System.Drawing.Point(72, 16);
+            this.lookUpKullanici.Name = "lookUpKullanici";
+            this.lookUpKullanici.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpKullanici.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lookUpKullanici.Size = new System.Drawing.Size(380, 22);
+            this.lookUpKullanici.TabIndex = 9;
             // 
             // pictureEdit2
             // 
@@ -196,7 +206,6 @@
             this.txtSifre.Properties.UseSystemPasswordChar = true;
             this.txtSifre.Size = new System.Drawing.Size(380, 28);
             this.txtSifre.TabIndex = 0;
-            this.txtSifre.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
             this.txtSifre.Click += new System.EventHandler(this.textEdit2_Click);
             // 
             // tbnGiris
@@ -250,17 +259,6 @@
             this.panel5.Size = new System.Drawing.Size(456, 27);
             this.panel5.TabIndex = 8;
             // 
-            // lookUpKullanici
-            // 
-            this.lookUpKullanici.EditValue = "";
-            this.lookUpKullanici.Location = new System.Drawing.Point(72, 16);
-            this.lookUpKullanici.Name = "lookUpKullanici";
-            this.lookUpKullanici.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpKullanici.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lookUpKullanici.Size = new System.Drawing.Size(380, 22);
-            this.lookUpKullanici.TabIndex = 9;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -283,13 +281,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpKullanici.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpKullanici.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,5 +312,6 @@
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
         private System.Windows.Forms.Panel panel5;
         private DevExpress.XtraEditors.LookUpEdit lookUpKullanici;
+        private System.Windows.Forms.Timer timer1;
     }
 }

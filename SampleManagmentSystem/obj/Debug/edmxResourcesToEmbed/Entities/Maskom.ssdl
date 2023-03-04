@@ -286,6 +286,66 @@
     <Property Name="cari_baba_adi" Type="nvarchar" MaxLength="50" />
     <Property Name="cari_faal_terk" Type="tinyint" />
   </EntityType>
+  <EntityType Name="CARI_PERSONEL_TANIMLARI">
+    <Key>
+      <PropertyRef Name="cari_per_Guid" />
+    </Key>
+    <Property Name="cari_per_Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="cari_per_DBCno" Type="smallint" Nullable="false" />
+    <Property Name="cari_per_SpecRECno" Type="int" />
+    <Property Name="cari_per_iptal" Type="bit" />
+    <Property Name="cari_per_fileid" Type="smallint" />
+    <Property Name="cari_per_hidden" Type="bit" />
+    <Property Name="cari_per_kilitli" Type="bit" />
+    <Property Name="cari_per_degisti" Type="bit" />
+    <Property Name="cari_per_checksum" Type="int" />
+    <Property Name="cari_per_create_user" Type="smallint" />
+    <Property Name="cari_per_create_date" Type="datetime" Nullable="false" />
+    <Property Name="cari_per_lastup_user" Type="smallint" />
+    <Property Name="cari_per_lastup_date" Type="datetime" />
+    <Property Name="cari_per_special1" Type="nvarchar" MaxLength="4" />
+    <Property Name="cari_per_special2" Type="nvarchar" MaxLength="4" />
+    <Property Name="cari_per_special3" Type="nvarchar" MaxLength="4" />
+    <Property Name="cari_per_kod" Type="nvarchar" MaxLength="25" />
+    <Property Name="cari_per_adi" Type="nvarchar" MaxLength="50" />
+    <Property Name="cari_per_soyadi" Type="nvarchar" MaxLength="50" />
+    <Property Name="cari_per_tip" Type="tinyint" />
+    <Property Name="cari_per_doviz_cinsi" Type="tinyint" />
+    <Property Name="cari_per_muhkod0" Type="nvarchar" MaxLength="40" />
+    <Property Name="cari_per_muhkod1" Type="nvarchar" MaxLength="40" />
+    <Property Name="cari_per_muhkod2" Type="nvarchar" MaxLength="40" />
+    <Property Name="cari_per_muhkod3" Type="nvarchar" MaxLength="40" />
+    <Property Name="cari_per_muhkod4" Type="nvarchar" MaxLength="40" />
+    <Property Name="cari_per_banka_tcmb_kod" Type="nvarchar" MaxLength="4" />
+    <Property Name="cari_per_banka_tcmb_subekod" Type="nvarchar" MaxLength="8" />
+    <Property Name="cari_per_banka_tcmb_ilkod" Type="nvarchar" MaxLength="3" />
+    <Property Name="cari_per_banka_hesapno" Type="nvarchar" MaxLength="40" />
+    <Property Name="cari_per_banka_swiftkodu" Type="nvarchar" MaxLength="25" />
+    <Property Name="cari_per_prim_adet" Type="float" />
+    <Property Name="cari_per_prim_yuzde" Type="float" />
+    <Property Name="cari_per_prim_carpani" Type="float" />
+    <Property Name="cari_per_basmprimcirotav1" Type="float" />
+    <Property Name="cari_per_basmprimyuz1" Type="float" />
+    <Property Name="cari_per_basmprimcirotav2" Type="float" />
+    <Property Name="cari_per_basmprimyuz2" Type="float" />
+    <Property Name="cari_per_basmprimcirotav3" Type="float" />
+    <Property Name="cari_per_basmprimyuz3" Type="float" />
+    <Property Name="cari_per_basmprimcirotav4" Type="float" />
+    <Property Name="cari_per_basmprimyuz4" Type="float" />
+    <Property Name="cari_per_basmprimcirotav5" Type="float" />
+    <Property Name="cari_per_basmprimyuz5" Type="float" />
+    <Property Name="cari_per_kasiyerkodu" Type="nvarchar" MaxLength="25" />
+    <Property Name="cari_per_kasiyersifresi" Type="nvarchar" MaxLength="127" />
+    <Property Name="cari_per_kasiyerAmiri" Type="nvarchar" MaxLength="25" />
+    <Property Name="cari_per_userno" Type="int" />
+    <Property Name="cari_per_depono" Type="int" />
+    <Property Name="cari_per_cepno" Type="nvarchar" MaxLength="15" />
+    <Property Name="cari_per_mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="cari_takvim_kodu" Type="nvarchar" MaxLength="4" />
+    <Property Name="cari_per_kasiyerfirmaid" Type="nvarchar" MaxLength="15" />
+    <Property Name="cari_per_KEP_adresi" Type="nvarchar" MaxLength="80" />
+    <Property Name="cari_per_TcKimlikNo" Type="nvarchar" MaxLength="11" />
+  </EntityType>
   <EntityType Name="KULLANICILAR_USER">
     <Key>
       <PropertyRef Name="Record_uid" />
@@ -624,6 +684,7 @@
   <EntityContainer Name="MikroDB_V16_MASKOMModelStoreContainer">
     <EntitySet Name="ADAY_CARI_HESAPLAR" EntityType="Self.ADAY_CARI_HESAPLAR" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CARI_HESAPLAR" EntityType="Self.CARI_HESAPLAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CARI_PERSONEL_TANIMLARI" EntityType="Self.CARI_PERSONEL_TANIMLARI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KULLANICILAR_USER" EntityType="Self.KULLANICILAR_USER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="STOK_ALT_GRUPLARI" EntityType="Self.STOK_ALT_GRUPLARI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="STOK_ANA_GRUPLARI" EntityType="Self.STOK_ANA_GRUPLARI" Schema="dbo" store:Type="Tables" />
