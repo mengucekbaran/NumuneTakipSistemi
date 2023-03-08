@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="NUMUNE_TAKİPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="NUMUNE_TAKİPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="NUMUNE_HAREKETLERI">
           <Key>
             <PropertyRef Name="nmnh_id" />
@@ -12,7 +12,7 @@
           <Property Name="nmnh_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nmnh_createdate" Type="datetime" Nullable="false" />
           <Property Name="nmnh_lastupdate" Type="datetime" Nullable="false" />
-          <Property Name="nmnh_nmnid" Type="int" Nullable="false" />
+          <Property Name="nmnh_nmnid" Type="int" />
           <Property Name="nmnh_nmnkod" Type="nvarchar" MaxLength="25" Nullable="false" />
           <Property Name="nmnh_kod" Type="nvarchar" MaxLength="25" />
           <Property Name="nmnh_sonucsirano" Type="nvarchar" MaxLength="25" />
@@ -87,8 +87,7 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <EntitySet Name="NUMUNE_HAREKETLERI" EntityType="Self.NUMUNE_HAREKETLERI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblNumuneler" EntityType="Self.TblNumuneler" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="NUMUNE_TAKİPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -99,7 +98,7 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <Property Name="nmnh_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nmnh_createdate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="nmnh_lastupdate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="nmnh_nmnid" Type="Int32" Nullable="false" />
+          <Property Name="nmnh_nmnid" Type="Int32" Nullable="true" />
           <Property Name="nmnh_nmnkod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="nmnh_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="nmnh_sonucsirano" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />

@@ -382,6 +382,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\logo_v1.png" />
     <None Include="Resources\2824437_48lab_school_science_tube_icon1.png" />
   </ItemGroup>
   <ItemGroup>

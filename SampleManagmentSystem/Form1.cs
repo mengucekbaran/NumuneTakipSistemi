@@ -24,8 +24,25 @@ namespace SampleManagmentSystem
             homePage.Visible = false;
             if (ActiveUser.Instance.YetkiSonucEkleme == false)
             {
+                //satış giriş yaparsa numune listesini getir
+                FrmNumune frmNumune = new FrmNumune();
+                ViewChildForm(frmNumune);
                 lab.Visible = false;
             }
+            else
+            {
+                // lab giriş yaparsa numune detayı getir
+                FrmNumuneSonucDetay sonucDetay = new FrmNumuneSonucDetay();
+                ViewChildForm(sonucDetay);
+            }
+
+        }
+        //formun mdi alanında gözükmesi için bu Form1 parametre verilen formun parenti atanır
+
+        public void ViewChildForm(Form form)
+        {
+            form.MdiParent = this;
+            form.Show();
         }
         //SONUÇ LİSTESİ
         Forms.FrmNumuneSonucList sonucList;
@@ -36,8 +53,7 @@ namespace SampleManagmentSystem
             {
                 sonucList = new Forms.FrmNumuneSonucList();
                 //mdi alanında gözükmesi için this ile belirtilir
-                sonucList.MdiParent = this;
-                sonucList.Show();
+                ViewChildForm(sonucList);
             }
 
         }
@@ -49,9 +65,7 @@ namespace SampleManagmentSystem
             if(frmNumune == null || frmNumune.IsDisposed)
             {
                 frmNumune = new Forms.FrmNumune();
-                //mdi alanında gözükmesi için this ile belirtilir
-                frmNumune.MdiParent = this;
-                frmNumune.Show();
+                ViewChildForm(frmNumune);
             }
 
         }
@@ -79,21 +93,16 @@ namespace SampleManagmentSystem
             if(frmNumuneSonuc==null || frmNumuneSonuc.IsDisposed)
             {
                 frmNumuneSonuc = new Forms.FrmNumuneSonuc();
-                frmNumuneSonuc.MdiParent = this;
-                frmNumuneSonuc.Show();
+                ViewChildForm(frmNumuneSonuc);
             }
 
         }
 
 
-        Forms.FrmNumuneSonucDetay frmSonucDetay;
+
         private void btnSonucDetay_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (frmSonucDetay == null || frmSonucDetay.IsDisposed)
-            {
-                frmSonucDetay = new Forms.FrmNumuneSonucDetay();
-                frmSonucDetay.Show();
-            }
+
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -103,7 +112,17 @@ namespace SampleManagmentSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ribbonControl1.BackColor = Color.Green;
 
+        }
+        Forms.FrmNumuneSonucDetay frmSonucDetay;
+        private void btnSonucDetay_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmSonucDetay == null || frmSonucDetay.IsDisposed)
+            {
+                frmSonucDetay = new Forms.FrmNumuneSonucDetay();
+                ViewChildForm(frmSonucDetay);
+            }
         }
     }
 }

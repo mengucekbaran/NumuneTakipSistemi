@@ -44,6 +44,7 @@ namespace SampleManagmentSystem.Forms
         private void FrmNumuneSonucDetay_Load(object sender, EventArgs e)
         {
             SetTodayDate();
+            Listele();
         }
 
         private void BtnList_Click(object sender, EventArgs e)

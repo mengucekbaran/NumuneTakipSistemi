@@ -17,7 +17,7 @@ namespace SampleManagmentSystem.Entities
         public int nmnh_id { get; set; }
         public System.DateTime nmnh_createdate { get; set; }
         public System.DateTime nmnh_lastupdate { get; set; }
-        public int nmnh_nmnid { get; set; }
+        public Nullable<int> nmnh_nmnid { get; set; }
         public string nmnh_nmnkod { get; set; }
         public string nmnh_kod { get; set; }
         public string nmnh_sonucsirano { get; set; }

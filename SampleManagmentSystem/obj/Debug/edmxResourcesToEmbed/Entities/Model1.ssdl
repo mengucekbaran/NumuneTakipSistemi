@@ -7,7 +7,7 @@
     <Property Name="nmnh_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nmnh_createdate" Type="datetime" Nullable="false" />
     <Property Name="nmnh_lastupdate" Type="datetime" Nullable="false" />
-    <Property Name="nmnh_nmnid" Type="int" Nullable="false" />
+    <Property Name="nmnh_nmnid" Type="int" />
     <Property Name="nmnh_nmnkod" Type="nvarchar" MaxLength="25" Nullable="false" />
     <Property Name="nmnh_kod" Type="nvarchar" MaxLength="25" />
     <Property Name="nmnh_sonucsirano" Type="nvarchar" MaxLength="25" />

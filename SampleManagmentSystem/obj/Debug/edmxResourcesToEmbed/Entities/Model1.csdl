@@ -7,7 +7,7 @@
     <Property Name="nmnh_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nmnh_createdate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="nmnh_lastupdate" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="nmnh_nmnid" Type="Int32" Nullable="false" />
+    <Property Name="nmnh_nmnid" Type="Int32" Nullable="true" />
     <Property Name="nmnh_nmnkod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="nmnh_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="nmnh_sonucsirano" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />

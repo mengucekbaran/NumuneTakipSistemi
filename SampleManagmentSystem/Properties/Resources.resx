@@ -124,10 +124,13 @@
   <data name="2824437_lab_school_science_tube_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2824437_lab_school_science_tube_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="2824437_48lab_school_science_tube_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2824437_48lab_school_science_tube_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="2824437_lab_school_science_tube_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2824437_lab_school_science_tube_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2824437_48lab_school_science_tube_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2824437_48lab_school_science_tube_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_v1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_v1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

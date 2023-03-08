@@ -49,7 +49,6 @@
             this.btnNumuneList2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnNumuneDetay = new DevExpress.XtraBars.BarButtonItem();
             this.btnNumuneSonuc = new DevExpress.XtraBars.BarButtonItem();
-            this.btnSonucDetay = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.homePage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.home = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -62,6 +61,7 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
+            this.btnSonucDetay = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -89,6 +89,7 @@
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.BackColor = System.Drawing.SystemColors.Control;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -101,7 +102,7 @@
             this.btnNumuneSonuc,
             this.btnSonucDetay});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 9;
+            this.ribbonControl1.MaxItemId = 12;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -164,15 +165,6 @@
             this.btnNumuneSonuc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNumuneSonuc.ImageOptions.LargeImage")));
             this.btnNumuneSonuc.Name = "btnNumuneSonuc";
             this.btnNumuneSonuc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNumuneSonuc_ItemClick);
-            // 
-            // btnSonucDetay
-            // 
-            this.btnSonucDetay.Caption = "Numune Sonuç Detay";
-            this.btnSonucDetay.Id = 8;
-            this.btnSonucDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSonucDetay.ImageOptions.Image")));
-            this.btnSonucDetay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSonucDetay.ImageOptions.LargeImage")));
-            this.btnSonucDetay.Name = "btnSonucDetay";
-            this.btnSonucDetay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSonucDetay_ItemClick);
             // 
             // ribbonPageCategory1
             // 
@@ -248,10 +240,22 @@
             // 
             this.ribbonMiniToolbar1.ParentControl = this;
             // 
+            // btnSonucDetay
+            // 
+            this.btnSonucDetay.Caption = "Numune Sonuç Detay";
+            this.btnSonucDetay.Id = 11;
+            this.btnSonucDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.btnSonucDetay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.btnSonucDetay.Name = "btnSonucDetay";
+            this.btnSonucDetay.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnSonucDetay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSonucDetay_ItemClick_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1208, 753);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;

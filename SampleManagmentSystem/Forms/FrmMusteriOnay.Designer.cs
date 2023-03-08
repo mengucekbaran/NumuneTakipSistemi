@@ -155,7 +155,6 @@
             this.labelControl2.Size = new System.Drawing.Size(110, 16);
             this.labelControl2.TabIndex = 209;
             this.labelControl2.Text = "Lab Numune Sonuc";
-            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // txtLabNmnSonuc
             // 
@@ -164,7 +163,6 @@
             this.txtLabNmnSonuc.Name = "txtLabNmnSonuc";
             this.txtLabNmnSonuc.Size = new System.Drawing.Size(340, 22);
             this.txtLabNmnSonuc.TabIndex = 210;
-            this.txtLabNmnSonuc.EditValueChanged += new System.EventHandler(this.txtLabNmnSonuc_EditValueChanged);
             // 
             // FrmMusteriOnay
             // 
@@ -186,7 +184,6 @@
             this.Name = "FrmMusteriOnay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Müşteri Fiyat Onay ";
-            this.Load += new System.EventHandler(this.FrmMusteriOnay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnAd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMusAciklama.Properties)).EndInit();

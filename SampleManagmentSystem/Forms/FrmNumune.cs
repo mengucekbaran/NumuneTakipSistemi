@@ -59,6 +59,7 @@ namespace SampleManagmentSystem.Forms
         private void FrmNumune_Load(object sender, EventArgs e)
         {
             SetTodayDate();
+            Listele();
         }
         //TARİHLERE BAŞLANGI DEĞERİ ATAMA
         public void SetTodayDate()
@@ -129,11 +130,6 @@ namespace SampleManagmentSystem.Forms
             string nmnKod = gridView1.GetRowCellValue(selectedRowIndex, "nmn_kod").ToString();
             Forms.FrmNumuneSonucList2 fr = new Forms.FrmNumuneSonucList2(nmnKod);
             fr.Show();
-        }
-
-        private void gridControl1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void repositoryItemButtonNmnOnay_Click(object sender, EventArgs e)

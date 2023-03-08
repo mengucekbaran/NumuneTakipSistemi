@@ -17,7 +17,6 @@ namespace SampleManagmentSystem.Forms
         MikroDB_V16_MASKOM dbMaskom = new MikroDB_V16_MASKOM();
         NUMUNE_TAKİPEntities db = new NUMUNE_TAKİPEntities();
 
-        private string nextAdayCariKod;
         public NewNumune() //CREATE NUMUNE
         {
 
@@ -40,7 +39,7 @@ namespace SampleManagmentSystem.Forms
                 //L230015 ise son kayıt Sonrakini L230016 yapar       
 
                 //son numune kodun yılını alır
-                string year = prevNumunekod.Substring(1, prevNumunekod.Length - 5);
+                string year = prevNumunekod.Substring(2, prevNumunekod.Length - 6);
 
                 if (currentYear == year)
                 {
@@ -53,7 +52,6 @@ namespace SampleManagmentSystem.Forms
                 }
             }
             txtNmnKod.Text = nextNmnKod;
-            nextAdayCariKod=SetAdayCariKod();
             SetTodayDate();
         }
         public string SetAdayCariKod()
@@ -439,7 +437,6 @@ namespace SampleManagmentSystem.Forms
             nmn.nmn_lastup_date = DateTime.Now;
             nmn.nmn_aciklama = txtAciklama.Text;
             nmn.nmn_aciliyet = lookUpAciliyet.Text;
-            nmn.nmn_adaycari_kod = nextAdayCariKod;
             //nmn.nmn_adaycari_unvan = txtAdayCari.Text;
             //nmn.nmn_adaycari_konum = radioGroupCariKnm.Properties.Items[radioGroupCariKnm.SelectedIndex].Description;
 

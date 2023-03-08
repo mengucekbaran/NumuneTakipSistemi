@@ -65,20 +65,5 @@ namespace SampleManagmentSystem.Forms
         {
             this.Close();
         }
-
-        private void FrmMusteriOnay_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLabNmnSonuc_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

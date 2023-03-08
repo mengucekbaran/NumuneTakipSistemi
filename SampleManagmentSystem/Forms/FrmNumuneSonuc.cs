@@ -79,6 +79,7 @@ namespace SampleManagmentSystem.Forms
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             NUMUNE_HAREKETLERI nmnh = new NUMUNE_HAREKETLERI();
+
             if (PostFormElementToDb(nmnh))
             {
                 nmnh.nmnh_createdate = DateTime.Now;
@@ -131,6 +132,11 @@ namespace SampleManagmentSystem.Forms
                             return false;
                         }
                     }
+                    else
+                    {
+                        nmnh.nmnh_nmnkod = lookUpNmnKod.Text;
+                        nmnh.nmnh_nmnid = int.Parse(lookUpNmnKod.EditValue.ToString());
+                    }
                     //nmnh.nmnh_kod = SetNumuneSonuciKod(lookUpNmnKod.Text);
                 }
 
@@ -148,16 +154,31 @@ namespace SampleManagmentSystem.Forms
                 else
                 {
                     isDuplicate = db.NUMUNE_HAREKETLERI.Any(x => x.nmnh_nmnkod == txtNmnKod.Text);
-                    DialogResult result = XtraMessageBox.Show("Bu numune koduna ait sonuç zaten mevcut. Devam etmek istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result == DialogResult.Yes)
+                    if (isDuplicate)
                     {
-                        nmnh.nmnh_nmnkod = txtNmnKod.Text;
-                        nmnh.nmnh_nmnid = int.Parse(txtNmnKod.EditValue.ToString());
+                        // Önceden kaydedilmiş sonuç varsa kullanıcıya uyarı verin 
+                        //XtraMessageBox.Show("Bu numune koduna ait sonuç daha önce kaydedilmiştir. Lütfen farklı bir numune kodu seçiniz.", "Information");
+                        //XtraMessageBox.Show("Bu numune koduna ait sonuç zaten mevcut. Lütfen farklı bir numune kodu girin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        DialogResult result = XtraMessageBox.Show("Bu numune koduna ait sonuç zaten mevcut. Devam etmek istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (result == DialogResult.Yes)
+                        {
+                            nmnh.nmnh_nmnkod = txtNmnKod.Text;
+                            //nmnh.nmnh_nmnid = int.Parse(lookUpNmnKod.EditValue.ToString());
+
+                            var kayit = db.TblNumuneler.FirstOrDefault(x => x.nmn_kod == txtNmnKod.Text);
+                            nmnh.nmnh_nmnid = kayit.id;
+                        }
+                        else
+                        {
+                            this.Close();
+                            return false;
+                        }
                     }
                     else
                     {
-                        this.Close();
-                        return false;
+                        nmnh.nmnh_nmnkod = txtNmnKod.Text;
+                        var kayit = db.TblNumuneler.FirstOrDefault(x => x.nmn_kod == txtNmnKod.Text);
+                        nmnh.nmnh_nmnid = kayit.id;
                     }
                     //nmnh.nmnh_kod = SetNumuneSonuciKod(txtNmnKod.Text);
 
