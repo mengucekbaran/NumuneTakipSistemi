@@ -9,7 +9,8 @@
     <Property Name="nmnh_lastupdate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="nmnh_nmnid" Type="Int32" Nullable="false" />
     <Property Name="nmnh_nmnkod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="nmnh_sonucsirano" Type="Int32" Nullable="false" />
+    <Property Name="nmnh_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmnh_sonucsirano" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="nmnh_bitistarih" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="nmnh_alistarih" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="nmnh_maliyetEuo" Type="Double" />
@@ -62,6 +63,8 @@
     <Property Name="nmn_musonay_aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="nmn_user_no" Type="Int32" Nullable="false" />
     <Property Name="nmn_temsilcikod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="nmn_nmnonay" Type="Byte" />
+    <Property Name="nmn_nmnonay_aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityContainer Name="NUMUNE_TAKİPEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="NUMUNE_HAREKETLERI" EntityType="Self.NUMUNE_HAREKETLERI" />
@@ -82,6 +85,7 @@
     <Property Type="DateTime" Name="nmn_lastup_date" Nullable="false" Precision="23" />
     <Property Type="String" Name="nmn_kod" Nullable="false" MaxLength="25" />
     <Property Type="String" Name="nmn_ad" Nullable="false" MaxLength="120" />
+    <Property Type="String" Name="nmnh_durum" Nullable="false" MaxLength="9" />
     <Property Type="String" Name="nmn_cari_kod" Nullable="true" MaxLength="25" />
     <Property Type="String" Name="nmn_cari_unvan" Nullable="true" MaxLength="120" />
     <Property Type="DateTime" Name="nmn_tarih" Nullable="false" Precision="23" />
@@ -89,7 +93,7 @@
     <Property Type="String" Name="nmn_aciliyet" Nullable="true" MaxLength="25" />
     <Property Type="String" Name="nmn_adaycari_kod" Nullable="true" MaxLength="25" />
     <Property Type="String" Name="nmn_adaycari_unvan" Nullable="true" MaxLength="120" />
-    <Property Type="String" Name="nmn_adaycari_konum" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="nmn_adaycari_konum" Nullable="true" MaxLength="25" />
     <Property Type="Double" Name="nmn_sip_miktar" Nullable="false" />
     <Property Type="Double" Name="nmn_deneme_miktar" Nullable="false" />
     <Property Type="Double" Name="nmn_hdf_fiyat" Nullable="false" />
@@ -128,7 +132,7 @@
     <Property Type="String" Name="nmn_aciliyet" Nullable="true" MaxLength="25" />
     <Property Type="String" Name="nmn_adaycari_kod" Nullable="true" MaxLength="25" />
     <Property Type="String" Name="nmn_adaycari_unvan" Nullable="true" MaxLength="120" />
-    <Property Type="String" Name="nmn_adaycari_konum" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="nmn_adaycari_konum" Nullable="true" MaxLength="25" />
     <Property Type="Double" Name="nmn_sip_miktar" Nullable="false" />
     <Property Type="Double" Name="nmn_deneme_miktar" Nullable="false" />
     <Property Type="Double" Name="nmn_hdf_fiyat" Nullable="false" />

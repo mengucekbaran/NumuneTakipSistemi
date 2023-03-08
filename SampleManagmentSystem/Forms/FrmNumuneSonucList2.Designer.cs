@@ -34,9 +34,9 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colnmnh_nmnkod = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnmnh_sonucsirano = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colnmnh_labonay = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.musteri_fiyatonay = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnmn_nmnonay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.musteri_onay = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numuneSonuclari)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUMUNEHAREKETLERIBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -63,11 +63,10 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colnmnh_nmnkod,
             this.colnmnh_sonucsirano,
-            this.colnmnh_labonay,
-            this.musteri_onay});
+            this.musteri_fiyatonay,
+            this.colnmn_nmnonay});
             this.gridView1.GridControl = this.numuneSonuclari;
             this.gridView1.Name = "gridView1";
-            this.gridView1.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gridView1_CustomDrawCell);
             this.gridView1.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView1_RowStyle);
             // 
             // colnmnh_nmnkod
@@ -82,7 +81,7 @@
             // 
             // colnmnh_sonucsirano
             // 
-            this.colnmnh_sonucsirano.Caption = "SIRA NO";
+            this.colnmnh_sonucsirano.Caption = "LAB NUMUNE SONUÇ";
             this.colnmnh_sonucsirano.FieldName = "nmnh_sonucsirano";
             this.colnmnh_sonucsirano.MinWidth = 25;
             this.colnmnh_sonucsirano.Name = "colnmnh_sonucsirano";
@@ -90,31 +89,30 @@
             this.colnmnh_sonucsirano.VisibleIndex = 1;
             this.colnmnh_sonucsirano.Width = 94;
             // 
-            // colnmnh_labonay
+            // musteri_fiyatonay
             // 
-            this.colnmnh_labonay.Caption = "LAB ONAY";
-            this.colnmnh_labonay.ColumnEdit = this.repositoryItemTextEdit1;
-            this.colnmnh_labonay.FieldName = "nmnh_labonay";
-            this.colnmnh_labonay.MinWidth = 25;
-            this.colnmnh_labonay.Name = "colnmnh_labonay";
-            this.colnmnh_labonay.Visible = true;
-            this.colnmnh_labonay.VisibleIndex = 2;
-            this.colnmnh_labonay.Width = 94;
+            this.musteri_fiyatonay.Caption = "MÜŞTERİ FİYAT ONAY";
+            this.musteri_fiyatonay.FieldName = "musteri_fiyatonay";
+            this.musteri_fiyatonay.MinWidth = 25;
+            this.musteri_fiyatonay.Name = "musteri_fiyatonay";
+            this.musteri_fiyatonay.Visible = true;
+            this.musteri_fiyatonay.VisibleIndex = 2;
+            this.musteri_fiyatonay.Width = 94;
+            // 
+            // colnmn_nmnonay
+            // 
+            this.colnmn_nmnonay.Caption = "NUMUNE ONAY";
+            this.colnmn_nmnonay.FieldName = "nmn_nmnonay";
+            this.colnmn_nmnonay.MinWidth = 25;
+            this.colnmn_nmnonay.Name = "colnmn_nmnonay";
+            this.colnmn_nmnonay.Visible = true;
+            this.colnmn_nmnonay.VisibleIndex = 3;
+            this.colnmn_nmnonay.Width = 94;
             // 
             // repositoryItemTextEdit1
             // 
             this.repositoryItemTextEdit1.AutoHeight = false;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
-            // 
-            // musteri_onay
-            // 
-            this.musteri_onay.Caption = "MÜŞTERİ ONAY";
-            this.musteri_onay.FieldName = "musteri_onay";
-            this.musteri_onay.MinWidth = 25;
-            this.musteri_onay.Name = "musteri_onay";
-            this.musteri_onay.Visible = true;
-            this.musteri_onay.VisibleIndex = 3;
-            this.musteri_onay.Width = 94;
             // 
             // FrmNumuneSonucList2
             // 
@@ -137,11 +135,11 @@
 
         private DevExpress.XtraGrid.GridControl numuneSonuclari;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colnmnh_labonay;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private System.Windows.Forms.BindingSource nUMUNEHAREKETLERIBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colnmnh_nmnkod;
         private DevExpress.XtraGrid.Columns.GridColumn colnmnh_sonucsirano;
-        private DevExpress.XtraGrid.Columns.GridColumn musteri_onay;
+        private DevExpress.XtraGrid.Columns.GridColumn musteri_fiyatonay;
+        private DevExpress.XtraGrid.Columns.GridColumn colnmn_nmnonay;
     }
 }

@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNumuneDetay));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -81,9 +81,6 @@
             this.colnmn_tarih = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnmn_cari_seviye = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnmn_aciliyet = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colnmn_adaycari_kod = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colnmn_adaycari_unvan = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colnmn_adaycari_konum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnmn_sip_miktar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnmn_deneme_miktar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnmn_hdf_fiyat = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -395,9 +392,6 @@
             this.colnmn_tarih,
             this.colnmn_cari_seviye,
             this.colnmn_aciliyet,
-            this.colnmn_adaycari_kod,
-            this.colnmn_adaycari_unvan,
-            this.colnmn_adaycari_konum,
             this.colnmn_sip_miktar,
             this.colnmn_deneme_miktar,
             this.colnmn_hdf_fiyat,
@@ -534,39 +528,6 @@
             this.colnmn_aciliyet.Visible = true;
             this.colnmn_aciliyet.VisibleIndex = 9;
             this.colnmn_aciliyet.Width = 81;
-            // 
-            // colnmn_adaycari_kod
-            // 
-            this.colnmn_adaycari_kod.Caption = "ADAY CARİ KOD";
-            this.colnmn_adaycari_kod.FieldName = "nmn_adaycari_kod";
-            this.colnmn_adaycari_kod.MinWidth = 25;
-            this.colnmn_adaycari_kod.Name = "colnmn_adaycari_kod";
-            this.colnmn_adaycari_kod.OptionsColumn.AllowEdit = false;
-            this.colnmn_adaycari_kod.Visible = true;
-            this.colnmn_adaycari_kod.VisibleIndex = 10;
-            this.colnmn_adaycari_kod.Width = 118;
-            // 
-            // colnmn_adaycari_unvan
-            // 
-            this.colnmn_adaycari_unvan.Caption = "ADAY CARİ UNVAN";
-            this.colnmn_adaycari_unvan.FieldName = "nmn_adaycari_unvan";
-            this.colnmn_adaycari_unvan.MinWidth = 25;
-            this.colnmn_adaycari_unvan.Name = "colnmn_adaycari_unvan";
-            this.colnmn_adaycari_unvan.OptionsColumn.AllowEdit = false;
-            this.colnmn_adaycari_unvan.Visible = true;
-            this.colnmn_adaycari_unvan.VisibleIndex = 11;
-            this.colnmn_adaycari_unvan.Width = 131;
-            // 
-            // colnmn_adaycari_konum
-            // 
-            this.colnmn_adaycari_konum.Caption = "ADAY CARİ KONUM";
-            this.colnmn_adaycari_konum.FieldName = "nmn_adaycari_konum";
-            this.colnmn_adaycari_konum.MinWidth = 25;
-            this.colnmn_adaycari_konum.Name = "colnmn_adaycari_konum";
-            this.colnmn_adaycari_konum.OptionsColumn.AllowEdit = false;
-            this.colnmn_adaycari_konum.Visible = true;
-            this.colnmn_adaycari_konum.VisibleIndex = 12;
-            this.colnmn_adaycari_konum.Width = 137;
             // 
             // colnmn_sip_miktar
             // 
@@ -746,7 +707,7 @@
             // 
             // colnmn_musonay_str
             // 
-            this.colnmn_musonay_str.Caption = "MÜŞTERİ ONAY";
+            this.colnmn_musonay_str.Caption = "MÜŞTERİ FİYAT ONAY";
             this.colnmn_musonay_str.FieldName = "nmn_musonay_str";
             this.colnmn_musonay_str.MinWidth = 25;
             this.colnmn_musonay_str.Name = "colnmn_musonay_str";
@@ -780,18 +741,18 @@
             // repositoryItemButtonDelete
             // 
             this.repositoryItemButtonDelete.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             this.repositoryItemButtonDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sil", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonDelete.Name = "repositoryItemButtonDelete";
             this.repositoryItemButtonDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // repositoryItemButtonUpdate
             // 
             this.repositoryItemButtonUpdate.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
             this.repositoryItemButtonUpdate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Güncelle", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Güncelle", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonUpdate.Name = "repositoryItemButtonUpdate";
             this.repositoryItemButtonUpdate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -890,9 +851,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_tarih;
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_cari_seviye;
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_aciliyet;
-        private DevExpress.XtraGrid.Columns.GridColumn colnmn_adaycari_kod;
-        private DevExpress.XtraGrid.Columns.GridColumn colnmn_adaycari_unvan;
-        private DevExpress.XtraGrid.Columns.GridColumn colnmn_adaycari_konum;
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_sip_miktar;
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_deneme_miktar;
         private DevExpress.XtraGrid.Columns.GridColumn colnmn_hdf_fiyat;

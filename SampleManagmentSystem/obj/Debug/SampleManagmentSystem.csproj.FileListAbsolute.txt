@@ -121,3 +121,4 @@ C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\obj\Debug
 C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\obj\Debug\SampleManagmentSystem.Forms.FrmMusteriOnay.resources
 C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\obj\Debug\Interop.myeDB.dll
 C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\obj\Debug\SampleManagmentSystem.csproj.ResolveComReference.cache
+C:\Users\vedo\source\repos\SampleManagmentSystem\SampleManagmentSystem\obj\Debug\SampleManagmentSystem.Forms.FrmNumuneOnay.resources

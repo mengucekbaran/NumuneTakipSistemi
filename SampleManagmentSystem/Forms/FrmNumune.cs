@@ -77,10 +77,10 @@ namespace SampleManagmentSystem.Forms
             Forms.NewNumune fr = new Forms.NewNumune(nmnKod);
             fr.Show();
         }
-        //MÜŞTERİ ONAY BUTONUNA BASILDIĞINDA YAPILACAKLAR
+        //MÜŞTERİ FİYAT ONAY BUTONUNA BASILDIĞINDA YAPILACAKLAR
         private void repositoryItemButtonMusOnay_Click(object sender, EventArgs e)
         {
-            //MÜŞTERİ ONAY BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
+            //MÜŞTERİ FİYAT ONAY BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
             int selectedRowIndex = gridView1.FocusedRowHandle;
             string nmnKod = gridView1.GetRowCellValue(selectedRowIndex, "nmn_kod").ToString();
             Forms.FrmMusteriOnay fr = new Forms.FrmMusteriOnay(nmnKod);
@@ -131,7 +131,19 @@ namespace SampleManagmentSystem.Forms
             fr.Show();
         }
 
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void repositoryItemButtonNmnOnay_Click(object sender, EventArgs e)
+        {
+            //MÜŞTERİ FİYAT ONAY BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
+            int selectedRowIndex = gridView1.FocusedRowHandle;
+            string nmnKod = gridView1.GetRowCellValue(selectedRowIndex, "nmn_kod").ToString();
+            Forms.FrmNumuneOnay fr = new Forms.FrmNumuneOnay(nmnKod);
+            fr.Show();
+        }
     }
     
 }

@@ -184,7 +184,7 @@
             // 
             this.homePage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.home});
-            this.homePage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.ImageOptions.Image")));
+            this.homePage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("homePage.ImageOptions.Image")));
             this.homePage.Name = "homePage";
             this.homePage.Text = "Ana Sayfa";
             // 

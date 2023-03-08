@@ -51,9 +51,13 @@ namespace SampleManagmentSystem.Forms
                             {
                                 nmnh.nmnh_nmnkod,
                                 nmnh.nmnh_sonucsirano,
-                                nmnh.nmnh_labonay,
-                                musteri_onay = nmnh.nmnh_labonay == 1 ? (nmn.nmn_musonay==1?"ONAYLANDI" : "ONAYLANMADI") : ""
-                                //labonayDisplayValue = nmn.nmnh_labonay == 1 ? "ONAYLANDI" : "ONAYLANMADI"
+                                //nmnh.nmnh_labonay,
+                                //musteri_fiyatonay = nmnh.nmnh_labonay == 1 ? (nmn.nmn_musonay==1?"ONAYLANDI" : "ONAYLANMADI") : ""
+                                musteri_fiyatonay = nmn.nmn_musonay == 1 ? "ONAYLANDI" :
+                                nmn.nmn_musonay == 0 ? "ONAYLANMADI" : "",
+
+                                nmn_nmnonay = nmn.nmn_nmnonay == 1 ? "ONAYLANDI" :
+                                nmn.nmn_nmnonay == 0 ? "ONAYLANMADI" : ""
                             }).ToList();
                      numuneSonuclari.DataSource = sonuclar;
         }
@@ -62,39 +66,39 @@ namespace SampleManagmentSystem.Forms
             ListNumuneSonuclar();
             ListSonucGirmemisler();
         }
-        private void gridView1_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
-        {
-            if (e.Column.FieldName == "nmnh_labonay")
-            {
-                int labOnay = Convert.ToInt32(e.CellValue);
-                if (labOnay == 1)
-                {
-                    e.DisplayText = "✔";
-                }
-                else if (labOnay == 0)
-                {
-                    e.DisplayText = "❌";
-                }
-                else
-                {
-                    e.DisplayText = "DEVAM EDİYOR";
-                }
-            }
-        }
+        //private void gridView1_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        //{
+        //    if (e.Column.FieldName == "nmnh_labonay")
+        //    {
+        //        int labOnay = Convert.ToInt32(e.CellValue);
+        //        if (labOnay == 1)
+        //        {
+        //            e.DisplayText = "✔";
+        //        }
+        //        else if (labOnay == 0)
+        //        {
+        //            e.DisplayText = "❌";
+        //        }
+        //        else
+        //        {
+        //            e.DisplayText = "DEVAM EDİYOR";
+        //        }
+        //    }
+        //}
 
         private void gridView1_RowStyle_1(object sender, RowStyleEventArgs e)
         {
             GridView View = sender as GridView;
             if (e.RowHandle >= 0)
             {
-                var labOnay = View.GetRowCellValue(e.RowHandle, View.Columns["nmnh_labonay"]);
-                if (labOnay.ToString() == "0")
+                var nmnOnay = View.GetRowCellValue(e.RowHandle, View.Columns["nmn_nmnonay"]);
+                if (nmnOnay.ToString() == "ONAYLANMADI")
                 {
 
                     e.Appearance.BackColor = Color.FromArgb(150, Color.Salmon);
                     e.Appearance.BackColor2 = Color.FromArgb(150, Color.Salmon);
                 }
-                else if (labOnay.ToString() == "1")
+                else if (nmnOnay.ToString() == "ONAYLANDI")
                 {
                     e.Appearance.BackColor = Color.FromArgb(150, Color.ForestGreen);
                     e.Appearance.BackColor2 = Color.FromArgb(150, Color.ForestGreen);

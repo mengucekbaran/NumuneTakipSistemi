@@ -31,27 +31,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMusteriOnay));
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
-            this.txtMusAciklama = new DevExpress.XtraEditors.MemoEdit();
-            this.radioGroupMusOnay = new DevExpress.XtraEditors.RadioGroup();
-            this.btnVazgec = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.txtNmnAd = new DevExpress.XtraEditors.TextEdit();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtNmnAd = new DevExpress.XtraEditors.TextEdit();
             this.txtNmnKod = new DevExpress.XtraEditors.TextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMusAciklama.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroupMusOnay.Properties)).BeginInit();
+            this.btnVazgec = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.txtMusAciklama = new DevExpress.XtraEditors.MemoEdit();
+            this.radioGroupMusOnay = new DevExpress.XtraEditors.RadioGroup();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtLabNmnSonuc = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusAciklama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroupMusOnay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLabNmnSonuc.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(12, 126);
+            this.labelControl18.Location = new System.Drawing.Point(14, 143);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(75, 16);
+            this.labelControl18.Size = new System.Drawing.Size(106, 16);
             this.labelControl18.TabIndex = 78;
-            this.labelControl18.Text = "Müşteri Onay";
+            this.labelControl18.Text = "Müşteri Fiyat Onay";
             // 
             // labelControl23
             // 
@@ -61,31 +64,36 @@
             this.labelControl23.TabIndex = 80;
             this.labelControl23.Text = "Açıklama";
             // 
-            // txtMusAciklama
+            // labelControl17
             // 
-            this.txtMusAciklama.Location = new System.Drawing.Point(124, 193);
-            this.txtMusAciklama.Name = "txtMusAciklama";
-            this.txtMusAciklama.Size = new System.Drawing.Size(540, 164);
-            this.txtMusAciklama.TabIndex = 81;
+            this.labelControl17.Location = new System.Drawing.Point(14, 96);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(66, 16);
+            this.labelControl17.TabIndex = 208;
+            this.labelControl17.Text = "Numune Ad";
             // 
-            // radioGroupMusOnay
+            // labelControl1
             // 
-            this.radioGroupMusOnay.EditValue = "Bekleniyor";
-            this.radioGroupMusOnay.Location = new System.Drawing.Point(188, 111);
-            this.radioGroupMusOnay.Name = "radioGroupMusOnay";
-            this.radioGroupMusOnay.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.radioGroupMusOnay.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.radioGroupMusOnay.Properties.Appearance.Options.UseBackColor = true;
-            this.radioGroupMusOnay.Properties.Appearance.Options.UseFont = true;
-            this.radioGroupMusOnay.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.radioGroupMusOnay.Properties.Columns = 2;
-            this.radioGroupMusOnay.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Onaylanmadı", "Onaylanmadı", true, "Onaylanmadı", "Onaylanmadı"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Onaylandı", "Onaylandı", true, "Onaylandı", "Onaylandı"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Bekleniyor", "Bekleniyor", true, "Bekleniyor", "Bekleniyor")});
-            this.radioGroupMusOnay.Size = new System.Drawing.Size(291, 76);
-            this.radioGroupMusOnay.TabIndex = 79;
-            this.radioGroupMusOnay.Tag = "";
+            this.labelControl1.Location = new System.Drawing.Point(14, 23);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(79, 16);
+            this.labelControl1.TabIndex = 205;
+            this.labelControl1.Text = "Numune Kodu";
+            // 
+            // txtNmnAd
+            // 
+            this.txtNmnAd.Location = new System.Drawing.Point(189, 93);
+            this.txtNmnAd.Name = "txtNmnAd";
+            this.txtNmnAd.Size = new System.Drawing.Size(340, 22);
+            this.txtNmnAd.TabIndex = 207;
+            // 
+            // txtNmnKod
+            // 
+            this.txtNmnKod.Enabled = false;
+            this.txtNmnKod.Location = new System.Drawing.Point(188, 20);
+            this.txtNmnKod.Name = "txtNmnKod";
+            this.txtNmnKod.Size = new System.Drawing.Size(340, 22);
+            this.txtNmnKod.TabIndex = 206;
             // 
             // btnVazgec
             // 
@@ -116,42 +124,53 @@
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
-            // txtNmnAd
+            // txtMusAciklama
             // 
-            this.txtNmnAd.Location = new System.Drawing.Point(188, 66);
-            this.txtNmnAd.Name = "txtNmnAd";
-            this.txtNmnAd.Size = new System.Drawing.Size(340, 22);
-            this.txtNmnAd.TabIndex = 207;
+            this.txtMusAciklama.Location = new System.Drawing.Point(124, 193);
+            this.txtMusAciklama.Name = "txtMusAciklama";
+            this.txtMusAciklama.Size = new System.Drawing.Size(540, 164);
+            this.txtMusAciklama.TabIndex = 81;
             // 
-            // labelControl17
+            // radioGroupMusOnay
             // 
-            this.labelControl17.Location = new System.Drawing.Point(13, 69);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(66, 16);
-            this.labelControl17.TabIndex = 208;
-            this.labelControl17.Text = "Numune Ad";
+            this.radioGroupMusOnay.Location = new System.Drawing.Point(188, 111);
+            this.radioGroupMusOnay.Name = "radioGroupMusOnay";
+            this.radioGroupMusOnay.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.radioGroupMusOnay.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.radioGroupMusOnay.Properties.Appearance.Options.UseBackColor = true;
+            this.radioGroupMusOnay.Properties.Appearance.Options.UseFont = true;
+            this.radioGroupMusOnay.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.radioGroupMusOnay.Properties.Columns = 2;
+            this.radioGroupMusOnay.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Onaylanmadı", "Onaylanmadı", true, "Onaylanmadı", "Onaylanmadı"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Onaylandı", "Onaylandı", true, "Onaylandı", "Onaylandı")});
+            this.radioGroupMusOnay.Size = new System.Drawing.Size(291, 76);
+            this.radioGroupMusOnay.TabIndex = 79;
+            this.radioGroupMusOnay.Tag = "";
             // 
-            // labelControl1
+            // labelControl2
             // 
-            this.labelControl1.Location = new System.Drawing.Point(14, 23);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(79, 16);
-            this.labelControl1.TabIndex = 205;
-            this.labelControl1.Text = "Numune Kodu";
+            this.labelControl2.Location = new System.Drawing.Point(14, 59);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(110, 16);
+            this.labelControl2.TabIndex = 209;
+            this.labelControl2.Text = "Lab Numune Sonuc";
             // 
-            // txtNmnKod
+            // txtLabNmnSonuc
             // 
-            this.txtNmnKod.Enabled = false;
-            this.txtNmnKod.Location = new System.Drawing.Point(188, 20);
-            this.txtNmnKod.Name = "txtNmnKod";
-            this.txtNmnKod.Size = new System.Drawing.Size(340, 22);
-            this.txtNmnKod.TabIndex = 206;
+            this.txtLabNmnSonuc.Enabled = false;
+            this.txtLabNmnSonuc.Location = new System.Drawing.Point(188, 56);
+            this.txtLabNmnSonuc.Name = "txtLabNmnSonuc";
+            this.txtLabNmnSonuc.Size = new System.Drawing.Size(340, 22);
+            this.txtLabNmnSonuc.TabIndex = 210;
             // 
             // FrmMusteriOnay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 434);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.txtLabNmnSonuc);
             this.Controls.Add(this.txtNmnAd);
             this.Controls.Add(this.labelControl17);
             this.Controls.Add(this.labelControl1);
@@ -164,11 +183,13 @@
             this.Controls.Add(this.labelControl18);
             this.Name = "FrmMusteriOnay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Müşteri Onay ";
-            ((System.ComponentModel.ISupportInitialize)(this.txtMusAciklama.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroupMusOnay.Properties)).EndInit();
+            this.Text = "Müşteri Fiyat Onay ";
+            this.Load += new System.EventHandler(this.FrmMusteriOnay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnAd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusAciklama.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroupMusOnay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLabNmnSonuc.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +207,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtNmnKod;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit txtLabNmnSonuc;
     }
 }

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewNumune));
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtAdayCari = new DevExpress.XtraEditors.TextEdit();
@@ -89,6 +91,7 @@
             this.lookUpNmnTur = new DevExpress.XtraEditors.LookUpEdit();
             this.txtSipMktr = new DevExpress.XtraEditors.SpinEdit();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -122,6 +125,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnTur.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -230,6 +234,8 @@
             this.txtNmnAd.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNmnAd.Size = new System.Drawing.Size(340, 22);
             this.txtNmnAd.TabIndex = 150;
+            conditionValidationRule1.ErrorText = "This value is not valid";
+            this.dxValidationProvider1.SetValidationRule(this.txtNmnAd, conditionValidationRule1);
             // 
             // btnVazgec
             // 
@@ -875,6 +881,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpNmnTur.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSipMktr.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -941,5 +948,6 @@
         private DevExpress.XtraEditors.SpinEdit txtSipMktr;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraEditors.TextEdit txtAdayCari;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
     }
 }

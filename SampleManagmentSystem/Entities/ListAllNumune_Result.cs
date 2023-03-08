@@ -18,6 +18,7 @@ namespace SampleManagmentSystem.Entities
         public System.DateTime nmn_lastup_date { get; set; }
         public string nmn_kod { get; set; }
         public string nmn_ad { get; set; }
+        public string nmnh_durum { get; set; }
         public string nmn_cari_kod { get; set; }
         public string nmn_cari_unvan { get; set; }
         public System.DateTime nmn_tarih { get; set; }

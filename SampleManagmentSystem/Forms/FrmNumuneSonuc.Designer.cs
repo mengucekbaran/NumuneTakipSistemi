@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNumuneSonuc));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.txtSonucSiraNo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.dateAlisTarih = new DevExpress.XtraEditors.DateEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtNmnKod = new DevExpress.XtraEditors.TextEdit();
@@ -57,6 +59,7 @@
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSonucSiraNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateAlisTarih.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateAlisTarih.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).BeginInit();
@@ -76,6 +79,8 @@
             // panelControl1
             // 
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this.txtSonucSiraNo);
+            this.panelControl1.Controls.Add(this.labelControl7);
             this.panelControl1.Controls.Add(this.dateAlisTarih);
             this.panelControl1.Controls.Add(this.labelControl6);
             this.panelControl1.Controls.Add(this.txtNmnKod);
@@ -103,6 +108,22 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1208, 384);
             this.panelControl1.TabIndex = 50;
+            // 
+            // txtSonucSiraNo
+            // 
+            this.txtSonucSiraNo.Location = new System.Drawing.Point(142, 62);
+            this.txtSonucSiraNo.Name = "txtSonucSiraNo";
+            this.txtSonucSiraNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSonucSiraNo.Size = new System.Drawing.Size(286, 22);
+            this.txtSonucSiraNo.TabIndex = 108;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(22, 68);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(110, 16);
+            this.labelControl7.TabIndex = 106;
+            this.labelControl7.Text = "Lab Numune Sonuç";
             // 
             // dateAlisTarih
             // 
@@ -132,7 +153,7 @@
             // 
             // txtNmnKod
             // 
-            this.txtNmnKod.Location = new System.Drawing.Point(117, 16);
+            this.txtNmnKod.Location = new System.Drawing.Point(142, 16);
             this.txtNmnKod.Name = "txtNmnKod";
             this.txtNmnKod.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNmnKod.Size = new System.Drawing.Size(286, 22);
@@ -141,7 +162,7 @@
             // 
             // lookUpNmnKod
             // 
-            this.lookUpNmnKod.Location = new System.Drawing.Point(117, 16);
+            this.lookUpNmnKod.Location = new System.Drawing.Point(142, 16);
             this.lookUpNmnKod.Name = "lookUpNmnKod";
             this.lookUpNmnKod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -174,7 +195,7 @@
             0,
             0,
             0});
-            this.spinDayanim.Location = new System.Drawing.Point(117, 114);
+            this.spinDayanim.Location = new System.Drawing.Point(142, 153);
             this.spinDayanim.Name = "spinDayanim";
             this.spinDayanim.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -192,7 +213,7 @@
             0,
             0,
             0});
-            this.spinRrOran.Location = new System.Drawing.Point(410, 114);
+            this.spinRrOran.Location = new System.Drawing.Point(410, 153);
             this.spinRrOran.Name = "spinRrOran";
             this.spinRrOran.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -210,7 +231,7 @@
             0,
             0,
             0});
-            this.spinMaliyetEuro.Location = new System.Drawing.Point(117, 64);
+            this.spinMaliyetEuro.Location = new System.Drawing.Point(142, 103);
             this.spinMaliyetEuro.Name = "spinMaliyetEuro";
             this.spinMaliyetEuro.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -231,7 +252,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(277, 118);
+            this.labelControl3.Location = new System.Drawing.Point(277, 157);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(100, 16);
             this.labelControl3.TabIndex = 90;
@@ -239,7 +260,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(22, 118);
+            this.labelControl5.Location = new System.Drawing.Point(22, 157);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(69, 16);
             this.labelControl5.TabIndex = 88;
@@ -252,7 +273,7 @@
             0,
             0,
             0});
-            this.spinHassas.Location = new System.Drawing.Point(410, 64);
+            this.spinHassas.Location = new System.Drawing.Point(410, 103);
             this.spinHassas.Name = "spinHassas";
             this.spinHassas.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -275,7 +296,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(277, 68);
+            this.labelControl4.Location = new System.Drawing.Point(277, 107);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(60, 16);
             this.labelControl4.TabIndex = 86;
@@ -299,11 +320,12 @@
             this.radioGroupLabOnay.Size = new System.Drawing.Size(291, 76);
             this.radioGroupLabOnay.TabIndex = 77;
             this.radioGroupLabOnay.Tag = "";
+            this.radioGroupLabOnay.Visible = false;
             // 
             // radioGroupGida
             // 
             this.radioGroupGida.EditValue = "Hayır";
-            this.radioGroupGida.Location = new System.Drawing.Point(167, 154);
+            this.radioGroupGida.Location = new System.Drawing.Point(142, 193);
             this.radioGroupGida.Name = "radioGroupGida";
             this.radioGroupGida.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.radioGroupGida.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -346,7 +368,7 @@
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(117, 218);
+            this.txtAciklama.Location = new System.Drawing.Point(117, 257);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAciklama.Size = new System.Drawing.Size(718, 151);
@@ -354,7 +376,7 @@
             // 
             // labelControl23
             // 
-            this.labelControl23.Location = new System.Drawing.Point(22, 220);
+            this.labelControl23.Location = new System.Drawing.Point(22, 259);
             this.labelControl23.Name = "labelControl23";
             this.labelControl23.Size = new System.Drawing.Size(51, 16);
             this.labelControl23.TabIndex = 44;
@@ -375,10 +397,11 @@
             this.labelControl18.Size = new System.Drawing.Size(53, 16);
             this.labelControl18.TabIndex = 40;
             this.labelControl18.Text = "Lab Onay";
+            this.labelControl18.Visible = false;
             // 
             // labelControl19
             // 
-            this.labelControl19.Location = new System.Drawing.Point(22, 166);
+            this.labelControl19.Location = new System.Drawing.Point(22, 205);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(98, 16);
             this.labelControl19.TabIndex = 38;
@@ -386,7 +409,7 @@
             // 
             // labelControl20
             // 
-            this.labelControl20.Location = new System.Drawing.Point(22, 68);
+            this.labelControl20.Location = new System.Drawing.Point(22, 107);
             this.labelControl20.Name = "labelControl20";
             this.labelControl20.Size = new System.Drawing.Size(76, 16);
             this.labelControl20.TabIndex = 36;
@@ -438,6 +461,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSonucSiraNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateAlisTarih.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateAlisTarih.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).EndInit();
@@ -484,5 +508,7 @@
         private DevExpress.XtraEditors.RadioGroup radioGroupLabOnay;
         private DevExpress.XtraEditors.DateEdit dateAlisTarih;
         private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.TextEdit txtSonucSiraNo;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
     }
 }

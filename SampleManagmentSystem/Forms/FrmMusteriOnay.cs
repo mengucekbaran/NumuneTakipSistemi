@@ -23,8 +23,10 @@ namespace SampleManagmentSystem.Forms
             {
                 //FORM ELEMANLARINI TIKLANAN KAYIDIN BİLGİLERİYLE DOLDURMA
                 txtNmnKod.Enabled = false;
+                txtLabNmnSonuc.Enabled = false;
                 txtNmnAd.Enabled = false;
                 txtNmnKod.EditValue = nmn.nmn_kod;
+                //txtLabNmnSonuc.EditValue = 
                 txtNmnAd.EditValue = nmn.nmn_ad;
                 txtMusAciklama.EditValue = nmn.nmn_musonay_aciklama;
                 if(nmn.nmn_musonay != null)
@@ -37,6 +39,12 @@ namespace SampleManagmentSystem.Forms
             TblNumuneler nmn = db.TblNumuneler.FirstOrDefault(x => x.nmn_kod == txtNmnKod.EditValue.ToString());
             if (nmn != null)
             {
+                if (radioGroupMusOnay.EditValue == null)
+                {
+                    XtraMessageBox.Show("Müşteri onay boş bırakılamaz.", "Information");
+                    radioGroupMusOnay.Focus();
+                    return;
+                }
                 if (string.IsNullOrEmpty(txtMusAciklama.Text))
                 {
                     XtraMessageBox.Show("Açıklama boş bırakılamaz.", "Information");
@@ -55,6 +63,11 @@ namespace SampleManagmentSystem.Forms
         private void btnVazgec_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmMusteriOnay_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

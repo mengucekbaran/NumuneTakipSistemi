@@ -31,7 +31,7 @@ namespace SampleManagmentSystem.Forms
             int isExist = db.TblNumuneler.Count();
             if (isExist == 0)
             {
-                nextNmnKod = "L" + currentYear + "0001";
+                nextNmnKod = "L " + currentYear + "0001";
             }
             else
             {
@@ -45,11 +45,11 @@ namespace SampleManagmentSystem.Forms
                 if (currentYear == year)
                 {
                     int nextNumber = int.Parse(prevNumunekod.Substring(prevNumunekod.Length - 4)) + 1;
-                    nextNmnKod = "L" + currentYear + nextNumber.ToString("D4");
+                    nextNmnKod = "L " + currentYear + nextNumber.ToString("D4");
                 }
                 else
                 {
-                    nextNmnKod = "L" + currentYear + "0001";
+                    nextNmnKod = "L " + currentYear + "0001";
                 }
             }
             txtNmnKod.Text = nextNmnKod;
@@ -65,12 +65,12 @@ namespace SampleManagmentSystem.Forms
                 
                 var prevAdayCariKod = db.TblNumuneler.OrderByDescending(x => x.id).FirstOrDefault().nmn_adaycari_kod;
                 int nextNumber = int.Parse(prevAdayCariKod.Substring(prevAdayCariKod.Length - 4)) + 1;
-                nextAc = "AC" + nextNumber.ToString("D4");
+                nextAc = "AC " + nextNumber.ToString("D4");
                 return nextAc;
             }
             else
             {
-                nextAc = "AC0001";
+                nextAc = "AC 0001";
                 return nextAc;
             }
         }
@@ -80,8 +80,8 @@ namespace SampleManagmentSystem.Forms
             TblNumuneler nmn = db.TblNumuneler.FirstOrDefault(n => n.nmn_kod == nmnKod);
             if (nmn.nmn_kod == nmnKod)
             {
-                string AdayCariKod = db.TblNumuneler.OrderByDescending(x => x.id).FirstOrDefault().nmn_adaycari_kod.ToString();
-                nextAdayCariKod = SetAdayCariKod();
+                //string AdayCariKod = db.TblNumuneler.OrderByDescending(x => x.id).FirstOrDefault().nmn_adaycari_kod.ToString();
+                //nextAdayCariKod = SetAdayCariKod();
                 //BUTONLARIN GÖRÜNÜRLÜĞÜNÜ AYARLAMA
                 BtnKaydet.Visible = false;
                 BtnGuncelle.Visible = true;
@@ -127,7 +127,11 @@ namespace SampleManagmentSystem.Forms
         {
             TblNumuneler nmn = new TblNumuneler();
             //Girilen numune kodu kontrolü
-            bool isExist = db.TblNumuneler.Any(x => x.nmn_kod == txtNmnKod.Text);
+            if (!dxValidationProvider1.Validate()==true)
+            {
+                return;
+            }
+                bool isExist = db.TblNumuneler.Any(x => x.nmn_kod == txtNmnKod.Text);
             if (isExist)
             {
                 XtraMessageBox.Show("Bu numune kodu sistemde bulunmaktadır.Lütfen farklı bir numune kodu giriniz", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);

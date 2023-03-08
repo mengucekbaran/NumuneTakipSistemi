@@ -9,7 +9,8 @@
     <Property Name="nmnh_lastupdate" Type="datetime" Nullable="false" />
     <Property Name="nmnh_nmnid" Type="int" Nullable="false" />
     <Property Name="nmnh_nmnkod" Type="nvarchar" MaxLength="25" Nullable="false" />
-    <Property Name="nmnh_sonucsirano" Type="int" Nullable="false" />
+    <Property Name="nmnh_kod" Type="nvarchar" MaxLength="25" />
+    <Property Name="nmnh_sonucsirano" Type="nvarchar" MaxLength="25" />
     <Property Name="nmnh_bitistarih" Type="datetime" Nullable="false" />
     <Property Name="nmnh_alistarih" Type="datetime" Nullable="false" />
     <Property Name="nmnh_maliyetEuo" Type="float" />
@@ -62,6 +63,8 @@
     <Property Name="nmn_musonay_aciklama" Type="nvarchar(max)" />
     <Property Name="nmn_user_no" Type="int" Nullable="false" />
     <Property Name="nmn_temsilcikod" Type="nvarchar" MaxLength="25" />
+    <Property Name="nmn_nmnonay" Type="tinyint" />
+    <Property Name="nmn_nmnonay_aciklama" Type="nvarchar(max)" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6035: The relationship 'fk_numune_kod' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.

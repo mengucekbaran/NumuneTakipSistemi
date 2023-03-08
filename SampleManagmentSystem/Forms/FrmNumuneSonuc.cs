@@ -16,12 +16,10 @@ namespace SampleManagmentSystem.Forms
     {
         NUMUNE_TAKİPEntities db = new NUMUNE_TAKİPEntities();
         public FrmNumuneSonuc()
-        {
-            
+        {            
             InitializeComponent();
             dateBitisTarih.EditValue = DateTime.Now;
             dateAlisTarih.EditValue = DateTime.Now;
-
         }
         public FrmNumuneSonuc( int id)
         {
@@ -34,10 +32,8 @@ namespace SampleManagmentSystem.Forms
                 txtNmnKod.Visible = true;
                 txtNmnKod.Enabled = false;
                 lookUpNmnKod.Visible = false;
-                txtNmnKod.EditValue = nmn.nmn_kod;
-                
+                txtNmnKod.EditValue = nmn.nmn_kod;                
             }
-
         }
         private void FrmNumuneSonuc_Load(object sender, EventArgs e)
         {
@@ -58,7 +54,27 @@ namespace SampleManagmentSystem.Forms
             this.Close();
         }
 
+        //public string SetNumuneSonuciKod(string nmnKod)
+        //{
+        //    string nextNmnhKod;
+        //    //tabloda herhangi bir kaydın olup olmadığını kontrol eder
+        //    int isExist = db.NUMUNE_HAREKETLERI.Where(x => x.nmnh_nmnkod == nmnKod).Count();
+        //    if (isExist == 0)
+        //    {
+        //        nextNmnhKod = nmnKod+"-"+"01";
+        //    }
+        //    else
+        //    {
+        //        //idye göre küçükten büyüğe sıralar ve son kaydın numune kodunu alır
+        //        var prevNmnhKod = db.NUMUNE_HAREKETLERI.OrderByDescending(x => x.nmnh_id).FirstOrDefault().nmnh_kod;
+        //        //L230001-01 ise son kayıt Sonrakini L230001-02 yapar       
 
+        //        int nextNumber = int.Parse(prevNmnhKod.Substring(prevNmnhKod.Length - 2)) + 1;
+        //            nextNmnhKod = nextNmnhKod = nmnKod + "-" + nextNumber.ToString("D2");
+
+        //    }
+        //    return nextNmnhKod;
+        //}
         
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
@@ -85,6 +101,7 @@ namespace SampleManagmentSystem.Forms
         //FORMDAKİ DEĞERLERİ 
         public bool PostFormElementToDb(NUMUNE_HAREKETLERI nmnh)
         {
+            bool isDuplicate=false; //bu numune koduna daha önce sonuc girilmiş mi 
             //KONTROLLER
             if (lookUpNmnKod.Visible == true)
             {
@@ -96,9 +113,25 @@ namespace SampleManagmentSystem.Forms
                 }
                 else
                 {
-                    nmnh.nmnh_nmnkod = lookUpNmnKod.Text;
-                    nmnh.nmnh_nmnid = int.Parse(lookUpNmnKod.EditValue.ToString());
-
+                    isDuplicate = db.NUMUNE_HAREKETLERI.Any(x => x.nmnh_nmnkod == lookUpNmnKod.Text);
+                    if (isDuplicate)
+                    {
+                        // Önceden kaydedilmiş sonuç varsa kullanıcıya uyarı verin 
+                        //XtraMessageBox.Show("Bu numune koduna ait sonuç daha önce kaydedilmiştir. Lütfen farklı bir numune kodu seçiniz.", "Information");
+                        //XtraMessageBox.Show("Bu numune koduna ait sonuç zaten mevcut. Lütfen farklı bir numune kodu girin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        DialogResult result = XtraMessageBox.Show("Bu numune koduna ait sonuç zaten mevcut. Devam etmek istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (result == DialogResult.Yes)
+                        {
+                            nmnh.nmnh_nmnkod = lookUpNmnKod.Text;
+                            nmnh.nmnh_nmnid = int.Parse(lookUpNmnKod.EditValue.ToString());
+                        }
+                        else
+                        {
+                            this.Close();
+                            return false;
+                        }
+                    }
+                    //nmnh.nmnh_kod = SetNumuneSonuciKod(lookUpNmnKod.Text);
                 }
 
             }
@@ -114,10 +147,41 @@ namespace SampleManagmentSystem.Forms
                 }
                 else
                 {
-                    nmnh.nmnh_nmnkod = txtNmnKod.Text;
-                    nmnh.nmnh_nmnid = db.TblNumuneler.FirstOrDefault(x => x.nmn_kod == txtNmnKod.Text).id;
+                    isDuplicate = db.NUMUNE_HAREKETLERI.Any(x => x.nmnh_nmnkod == txtNmnKod.Text);
+                    DialogResult result = XtraMessageBox.Show("Bu numune koduna ait sonuç zaten mevcut. Devam etmek istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        nmnh.nmnh_nmnkod = txtNmnKod.Text;
+                        nmnh.nmnh_nmnid = int.Parse(txtNmnKod.EditValue.ToString());
+                    }
+                    else
+                    {
+                        this.Close();
+                        return false;
+                    }
+                    //nmnh.nmnh_kod = SetNumuneSonuciKod(txtNmnKod.Text);
+
                 }
 
+            }
+            //NUMUNE HAREKETLERİ TABLOSUNDA SEÇİLEN NUMUNE KODUYLA AYNI KAYIT VAR MI KONTROLÜ
+            //if (isDuplicate)
+            //{
+            //    // Önceden kaydedilmiş sonuç varsa kullanıcıya uyarı verin ve kaydetmeyi engelleyin
+            //    //XtraMessageBox.Show("Bu numune koduna ait sonuç daha önce kaydedilmiştir. Lütfen farklı bir numune kodu seçiniz.", "Information");
+            //    XtraMessageBox.Show("Bu numune koduna ait sonuç zaten mevcut. Lütfen farklı bir numune kodu girin.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    this.Close();
+            //    return false;
+            //}
+            //else
+            //{
+
+            //}
+            if (string.IsNullOrEmpty(txtSonucSiraNo.Text))
+            {
+                XtraMessageBox.Show("Sonuç sıra no boş bırakılamaz.", "Information");
+                txtSonucSiraNo.Focus();
+                return false;
             }
             if (dateAlisTarih.DateTime == Convert.ToDateTime("1-01-0001"))
             {
@@ -169,20 +233,20 @@ namespace SampleManagmentSystem.Forms
             }
             nmnh.nmnh_lastupdate = DateTime.Now;
 
-            int nextSiraNo;
-            //verilen numune koduna sahip kayıtlardan nmnh_sonucsirano en büyük olanını getirir.
-            var result = db.NUMUNE_HAREKETLERI.Where(x => x.nmnh_nmnkod==nmnh.nmnh_nmnkod).Max(x => (int?)x.nmnh_sonucsirano);
-            //null kontrol
-            if (result.HasValue)
-            {
-                int siraNo = (int)result.Value;
-                nextSiraNo = siraNo + 1;
-            }
-            else
-            {
-                nextSiraNo = 1;
-            }
-            nmnh.nmnh_sonucsirano = nextSiraNo;
+            //int nextSiraNo;
+            ////verilen numune koduna sahip kayıtlardan nmnh_sonucsirano en büyük olanını getirir.
+            //var result = db.NUMUNE_HAREKETLERI.Where(x => x.nmnh_nmnkod==nmnh.nmnh_nmnkod).Max(x => (int?)x.nmnh_sonucsirano);
+            ////null kontrol
+            //if (result.HasValue)
+            //{
+            //    int siraNo = (int)result.Value;
+            //    nextSiraNo = siraNo + 1;
+            //}
+            //else
+            //{
+            //    nextSiraNo = 1;
+            //}
+            nmnh.nmnh_sonucsirano = txtSonucSiraNo.Text;
             nmnh.nmnh_bitistarih = dateBitisTarih.DateTime;
             nmnh.nmnh_alistarih = dateAlisTarih.DateTime;
             nmnh.nmnh_maliyetEuo = (float)spinMaliyetEuro.Value;

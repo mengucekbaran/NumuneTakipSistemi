@@ -200,6 +200,12 @@
     <Compile Include="Forms\FrmMusteriOnay.Designer.cs">
       <DependentUpon>FrmMusteriOnay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmNumuneOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNumuneOnay.Designer.cs">
+      <DependentUpon>FrmNumuneOnay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmNumuneSonucDetay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMusteriOnay.resx">
       <DependentUpon>FrmMusteriOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNumuneOnay.resx">
+      <DependentUpon>FrmNumuneOnay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmNumuneSonucDetay.resx">
       <DependentUpon>FrmNumuneSonucDetay.cs</DependentUpon>
