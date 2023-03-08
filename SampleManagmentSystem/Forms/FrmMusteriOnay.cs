@@ -26,7 +26,8 @@ namespace SampleManagmentSystem.Forms
                 txtLabNmnSonuc.Enabled = false;
                 txtNmnAd.Enabled = false;
                 txtNmnKod.EditValue = nmn.nmn_kod;
-                //txtLabNmnSonuc.EditValue = 
+                var nmnh = db.NUMUNE_HAREKETLERI.FirstOrDefault(n => n.nmnh_nmnkod == nmnKod);
+                txtLabNmnSonuc.EditValue = nmnh == null ? "": nmnh.nmnh_sonucsirano;
                 txtNmnAd.EditValue = nmn.nmn_ad;
                 txtMusAciklama.EditValue = nmn.nmn_musonay_aciklama;
                 if(nmn.nmn_musonay != null)
@@ -66,6 +67,16 @@ namespace SampleManagmentSystem.Forms
         }
 
         private void FrmMusteriOnay_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLabNmnSonuc_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
         {
 
         }

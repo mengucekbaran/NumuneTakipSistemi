@@ -24,8 +24,11 @@ namespace SampleManagmentSystem.Forms
             {
                 //FORM ELEMANLARINI TIKLANAN KAYIDIN BİLGİLERİYLE DOLDURMA
                 txtNmnKod.Enabled = false;
+                txtLabNmnSonuc.Enabled = false;
                 txtNmnAd.Enabled = false;
                 txtNmnKod.EditValue = nmn.nmn_kod;
+                var nmnh = db.NUMUNE_HAREKETLERI.FirstOrDefault(n => n.nmnh_nmnkod == nmnKod);
+                txtLabNmnSonuc.EditValue = nmnh == null ? "" : nmnh.nmnh_sonucsirano;
                 txtNmnAd.EditValue = nmn.nmn_ad;
                 txtNmnOnayAciklama.EditValue = nmn.nmn_nmnonay_aciklama;
                 if (nmn.nmn_nmnonay != null)

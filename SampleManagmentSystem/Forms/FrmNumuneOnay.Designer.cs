@@ -39,15 +39,18 @@
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.txtNmnOnayAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.radioGroupNmnOnay = new DevExpress.XtraEditors.RadioGroup();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtLabNmnSonuc = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnOnayAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupNmnOnay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLabNmnSonuc.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(13, 72);
+            this.labelControl17.Location = new System.Drawing.Point(14, 88);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(66, 16);
             this.labelControl17.TabIndex = 218;
@@ -79,7 +82,7 @@
             // 
             // txtNmnAd
             // 
-            this.txtNmnAd.Location = new System.Drawing.Point(188, 69);
+            this.txtNmnAd.Location = new System.Drawing.Point(189, 85);
             this.txtNmnAd.Name = "txtNmnAd";
             this.txtNmnAd.Size = new System.Drawing.Size(340, 22);
             this.txtNmnAd.TabIndex = 217;
@@ -145,11 +148,29 @@
             this.radioGroupNmnOnay.TabIndex = 210;
             this.radioGroupNmnOnay.Tag = "";
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(14, 57);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(110, 16);
+            this.labelControl2.TabIndex = 219;
+            this.labelControl2.Text = "Lab Numune Sonuç";
+            // 
+            // txtLabNmnSonuc
+            // 
+            this.txtLabNmnSonuc.Enabled = false;
+            this.txtLabNmnSonuc.Location = new System.Drawing.Point(188, 54);
+            this.txtLabNmnSonuc.Name = "txtLabNmnSonuc";
+            this.txtLabNmnSonuc.Size = new System.Drawing.Size(340, 22);
+            this.txtLabNmnSonuc.TabIndex = 220;
+            // 
             // FrmNumuneOnay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 415);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.txtLabNmnSonuc);
             this.Controls.Add(this.txtNmnAd);
             this.Controls.Add(this.labelControl17);
             this.Controls.Add(this.labelControl1);
@@ -167,6 +188,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnOnayAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupNmnOnay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLabNmnSonuc.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +206,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private DevExpress.XtraEditors.RadioGroup radioGroupNmnOnay;
         private DevExpress.XtraEditors.LabelControl labelControl18;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit txtLabNmnSonuc;
     }
 }
