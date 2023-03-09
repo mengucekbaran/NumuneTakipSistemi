@@ -44,22 +44,32 @@ namespace SampleManagmentSystem.Forms
         public void ListNumuneSonuclar()
         {
             var sonuclar = (from nmnh in db.NUMUNE_HAREKETLERI
-                            join nmn in db.TblNumuneler
-                            on nmnh.nmnh_nmnkod equals nmn.nmn_kod
+                            join nmn in db.TblNumuneler on nmnh.nmnh_nmnkod equals nmn.nmn_kod
                             orderby nmnh.nmnh_nmnkod
                             select new
                             {
                                 nmnh.nmnh_nmnkod,
                                 nmnh.nmnh_sonucsirano,
-                                //nmnh.nmnh_labonay,
-                                //musteri_fiyatonay = nmnh.nmnh_labonay == 1 ? (nmn.nmn_musonay==1?"ONAYLANDI" : "ONAYLANMADI") : ""
+                                //(
+                                //    (from nmnh2 in db.NUMUNE_HAREKETLERI
+                                //     where nmn.nmn_kod == nmnh2.nmnh_nmnkod
+                                //     select nmnh2.nmnh_sonucsirano).FirstOrDefault()
+                                //),
                                 musteri_fiyatonay = nmn.nmn_musonay == 1 ? "ONAYLANDI" :
-                                nmn.nmn_musonay == 0 ? "ONAYLANMADI" : "",
-
+                                    nmn.nmn_musonay == 0 ? "ONAYLANMADI" : "",
                                 nmn_nmnonay = nmn.nmn_nmnonay == 1 ? "ONAYLANDI" :
-                                nmn.nmn_nmnonay == 0 ? "ONAYLANMADI" : ""
-                            }).ToList();
-                     numuneSonuclari.DataSource = sonuclar;
+                                    nmn.nmn_nmnonay == 0 ? "ONAYLANMADI" : ""
+                            })
+                .GroupBy(x => x.nmnh_nmnkod)
+                .Select(g => new {
+                     nmnh_nmnkod = g.Key,
+                     nmnh_sonucsirano = g.Select(x => x.nmnh_sonucsirano).FirstOrDefault(),
+                     musteri_fiyatonay = g.Select(x => x.musteri_fiyatonay).FirstOrDefault(),
+                     nmn_nmnonay = g.Select(x => x.nmn_nmnonay).FirstOrDefault()
+                })
+                .ToList();
+
+            numuneSonuclari.DataSource = sonuclar;
         }
         private void FrmNumuneSonucList_Load(object sender, EventArgs e)
         {

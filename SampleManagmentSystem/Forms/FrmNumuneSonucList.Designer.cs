@@ -165,7 +165,7 @@
             this.colnmnh_sonucsirano.OptionsColumn.ReadOnly = true;
             this.colnmnh_sonucsirano.Visible = true;
             this.colnmnh_sonucsirano.VisibleIndex = 1;
-            this.colnmnh_sonucsirano.Width = 123;
+            this.colnmnh_sonucsirano.Width = 134;
             // 
             // musteri_fiyatonay
             // 
@@ -177,7 +177,7 @@
             this.musteri_fiyatonay.OptionsColumn.ReadOnly = true;
             this.musteri_fiyatonay.Visible = true;
             this.musteri_fiyatonay.VisibleIndex = 2;
-            this.musteri_fiyatonay.Width = 143;
+            this.musteri_fiyatonay.Width = 135;
             // 
             // colnmn_nmnonay
             // 
@@ -189,7 +189,7 @@
             this.colnmn_nmnonay.OptionsColumn.ReadOnly = true;
             this.colnmn_nmnonay.Visible = true;
             this.colnmn_nmnonay.VisibleIndex = 3;
-            this.colnmn_nmnonay.Width = 103;
+            this.colnmn_nmnonay.Width = 100;
             // 
             // repositoryItemTextEdit1
             // 
