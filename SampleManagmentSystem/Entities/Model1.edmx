@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="NUMUNE_TAKİPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="NUMUNE_TAKİPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="NUMUNE_HAREKETLERI">
           <Key>
             <PropertyRef Name="nmnh_id" />
@@ -87,7 +87,8 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <EntitySet Name="NUMUNE_HAREKETLERI" EntityType="Self.NUMUNE_HAREKETLERI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblNumuneler" EntityType="Self.TblNumuneler" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="NUMUNE_TAKİPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -98,7 +99,7 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <Property Name="nmnh_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nmnh_createdate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="nmnh_lastupdate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="nmnh_nmnid" Type="Int32" Nullable="true" />
+          <Property Name="nmnh_nmnid" Type="Int32" />
           <Property Name="nmnh_nmnkod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="nmnh_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="nmnh_sonucsirano" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
@@ -176,7 +177,7 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <Property Type="DateTime" Name="nmn_lastup_date" Nullable="false" Precision="23" />
           <Property Type="String" Name="nmn_kod" Nullable="false" MaxLength="25" />
           <Property Type="String" Name="nmn_ad" Nullable="false" MaxLength="120" />
-          <Property Type="String" Name="nmnh_durum" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="nmnh_durum" Nullable="false" MaxLength="3" />
           <Property Type="String" Name="nmn_cari_kod" Nullable="true" MaxLength="25" />
           <Property Type="String" Name="nmn_cari_unvan" Nullable="true" MaxLength="120" />
           <Property Type="DateTime" Name="nmn_tarih" Nullable="false" Precision="23" />
@@ -208,6 +209,10 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <Property Type="Byte" Name="nmn_musonay" Nullable="true" />
           <Property Type="String" Name="nmn_musonay_str" Nullable="false" MaxLength="11" />
           <Property Type="String" Name="nmn_musonay_aciklama" Nullable="true" />
+          <Property Type="Byte" Name="nmn_nmnonay" Nullable="true" />
+          <Property Type="String" Name="nmn_nmnonay_str" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="nmn_nmnonay_aciklama" Nullable="true" />
+          <Property Type="String" Name="nmnh_sonucsirano" Nullable="true" MaxLength="25" />
           <Property Type="Int32" Name="nmn_user_no" Nullable="false" />
         </ComplexType>
         <ComplexType Name="ListNumune_Result">
@@ -247,6 +252,9 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
           <Property Type="Byte" Name="nmn_musonay" Nullable="true" />
           <Property Type="String" Name="nmn_musonay_str" Nullable="false" MaxLength="11" />
           <Property Type="String" Name="nmn_musonay_aciklama" Nullable="true" />
+          <Property Type="Byte" Name="nmn_nmnonay" Nullable="true" />
+          <Property Type="String" Name="nmn_nmnonay_str" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="nmn_nmnonay_aciklama" Nullable="true" />
           <Property Type="Int32" Name="nmn_user_no" Nullable="false" />
         </ComplexType>
       </Schema>
@@ -363,6 +371,10 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
                 <ScalarProperty Name="nmn_musonay" ColumnName="nmn_musonay" />
                 <ScalarProperty Name="nmn_musonay_str" ColumnName="nmn_musonay_str" />
                 <ScalarProperty Name="nmn_musonay_aciklama" ColumnName="nmn_musonay_aciklama" />
+                <ScalarProperty Name="nmn_nmnonay" ColumnName="nmn_nmnonay" />
+                <ScalarProperty Name="nmn_nmnonay_str" ColumnName="nmn_nmnonay_str" />
+                <ScalarProperty Name="nmn_nmnonay_aciklama" ColumnName="nmn_nmnonay_aciklama" />
+                <ScalarProperty Name="nmnh_sonucsirano" ColumnName="nmnh_sonucsirano" />
                 <ScalarProperty Name="nmn_user_no" ColumnName="nmn_user_no" />
               </ComplexTypeMapping>
             </ResultMapping>
@@ -406,6 +418,9 @@ warning 6035: The relationship 'fk_numune_kod' has columns that are not part of 
                 <ScalarProperty Name="nmn_musonay" ColumnName="nmn_musonay" />
                 <ScalarProperty Name="nmn_musonay_str" ColumnName="nmn_musonay_str" />
                 <ScalarProperty Name="nmn_musonay_aciklama" ColumnName="nmn_musonay_aciklama" />
+                <ScalarProperty Name="nmn_nmnonay" ColumnName="nmn_nmnonay" />
+                <ScalarProperty Name="nmn_nmnonay_str" ColumnName="nmn_nmnonay_str" />
+                <ScalarProperty Name="nmn_nmnonay_aciklama" ColumnName="nmn_nmnonay_aciklama" />
                 <ScalarProperty Name="nmn_user_no" ColumnName="nmn_user_no" />
               </ComplexTypeMapping>
             </ResultMapping>

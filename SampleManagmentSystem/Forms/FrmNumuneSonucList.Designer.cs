@@ -149,9 +149,11 @@
             this.colnmnh_nmnkod.FieldName = "nmnh_nmnkod";
             this.colnmnh_nmnkod.MinWidth = 25;
             this.colnmnh_nmnkod.Name = "colnmnh_nmnkod";
+            this.colnmnh_nmnkod.OptionsColumn.AllowEdit = false;
+            this.colnmnh_nmnkod.OptionsColumn.ReadOnly = true;
             this.colnmnh_nmnkod.Visible = true;
             this.colnmnh_nmnkod.VisibleIndex = 0;
-            this.colnmnh_nmnkod.Width = 94;
+            this.colnmnh_nmnkod.Width = 123;
             // 
             // colnmnh_sonucsirano
             // 
@@ -159,9 +161,11 @@
             this.colnmnh_sonucsirano.FieldName = "nmnh_sonucsirano";
             this.colnmnh_sonucsirano.MinWidth = 25;
             this.colnmnh_sonucsirano.Name = "colnmnh_sonucsirano";
+            this.colnmnh_sonucsirano.OptionsColumn.AllowEdit = false;
+            this.colnmnh_sonucsirano.OptionsColumn.ReadOnly = true;
             this.colnmnh_sonucsirano.Visible = true;
             this.colnmnh_sonucsirano.VisibleIndex = 1;
-            this.colnmnh_sonucsirano.Width = 94;
+            this.colnmnh_sonucsirano.Width = 123;
             // 
             // musteri_fiyatonay
             // 
@@ -169,19 +173,23 @@
             this.musteri_fiyatonay.FieldName = "musteri_fiyatonay";
             this.musteri_fiyatonay.MinWidth = 25;
             this.musteri_fiyatonay.Name = "musteri_fiyatonay";
+            this.musteri_fiyatonay.OptionsColumn.AllowEdit = false;
+            this.musteri_fiyatonay.OptionsColumn.ReadOnly = true;
             this.musteri_fiyatonay.Visible = true;
             this.musteri_fiyatonay.VisibleIndex = 2;
-            this.musteri_fiyatonay.Width = 94;
+            this.musteri_fiyatonay.Width = 143;
             // 
             // colnmn_nmnonay
             // 
-            this.colnmn_nmnonay.Caption = "NUMUNE ONAY";
+            this.colnmn_nmnonay.Caption = "MÜŞTERİ NUMUNE ONAY";
             this.colnmn_nmnonay.FieldName = "nmn_nmnonay";
             this.colnmn_nmnonay.MinWidth = 25;
             this.colnmn_nmnonay.Name = "colnmn_nmnonay";
+            this.colnmn_nmnonay.OptionsColumn.AllowEdit = false;
+            this.colnmn_nmnonay.OptionsColumn.ReadOnly = true;
             this.colnmn_nmnonay.Visible = true;
             this.colnmn_nmnonay.VisibleIndex = 3;
-            this.colnmn_nmnonay.Width = 94;
+            this.colnmn_nmnonay.Width = 103;
             // 
             // repositoryItemTextEdit1
             // 
@@ -233,6 +241,8 @@
             this.colnmn_kod.MinWidth = 25;
             this.colnmn_kod.Name = "colnmn_kod";
             this.colnmn_kod.OptionsColumn.AllowEdit = false;
+            this.colnmn_kod.OptionsColumn.AllowFocus = false;
+            this.colnmn_kod.OptionsColumn.ReadOnly = true;
             this.colnmn_kod.Visible = true;
             this.colnmn_kod.VisibleIndex = 0;
             this.colnmn_kod.Width = 88;
@@ -243,6 +253,8 @@
             this.colnmn_ad.FieldName = "nmn_ad";
             this.colnmn_ad.MinWidth = 25;
             this.colnmn_ad.Name = "colnmn_ad";
+            this.colnmn_ad.OptionsColumn.AllowFocus = false;
+            this.colnmn_ad.OptionsColumn.ReadOnly = true;
             this.colnmn_ad.Visible = true;
             this.colnmn_ad.VisibleIndex = 1;
             this.colnmn_ad.Width = 98;
@@ -254,6 +266,8 @@
             this.colnmn_cari_kod.MinWidth = 25;
             this.colnmn_cari_kod.Name = "colnmn_cari_kod";
             this.colnmn_cari_kod.OptionsColumn.AllowEdit = false;
+            this.colnmn_cari_kod.OptionsColumn.AllowFocus = false;
+            this.colnmn_cari_kod.OptionsColumn.ReadOnly = true;
             this.colnmn_cari_kod.Visible = true;
             this.colnmn_cari_kod.VisibleIndex = 2;
             this.colnmn_cari_kod.Width = 88;
@@ -265,6 +279,8 @@
             this.colnmn_cari_unvan.MinWidth = 25;
             this.colnmn_cari_unvan.Name = "colnmn_cari_unvan";
             this.colnmn_cari_unvan.OptionsColumn.AllowEdit = false;
+            this.colnmn_cari_unvan.OptionsColumn.AllowFocus = false;
+            this.colnmn_cari_unvan.OptionsColumn.ReadOnly = true;
             this.colnmn_cari_unvan.Visible = true;
             this.colnmn_cari_unvan.VisibleIndex = 3;
             this.colnmn_cari_unvan.Width = 101;
@@ -276,6 +292,8 @@
             this.colnmn_tarih.MinWidth = 25;
             this.colnmn_tarih.Name = "colnmn_tarih";
             this.colnmn_tarih.OptionsColumn.AllowEdit = false;
+            this.colnmn_tarih.OptionsColumn.AllowFocus = false;
+            this.colnmn_tarih.OptionsColumn.ReadOnly = true;
             this.colnmn_tarih.Visible = true;
             this.colnmn_tarih.VisibleIndex = 4;
             this.colnmn_tarih.Width = 102;
@@ -287,6 +305,8 @@
             this.colnmn_cari_seviye.MinWidth = 25;
             this.colnmn_cari_seviye.Name = "colnmn_cari_seviye";
             this.colnmn_cari_seviye.OptionsColumn.AllowEdit = false;
+            this.colnmn_cari_seviye.OptionsColumn.AllowFocus = false;
+            this.colnmn_cari_seviye.OptionsColumn.ReadOnly = true;
             this.colnmn_cari_seviye.Visible = true;
             this.colnmn_cari_seviye.VisibleIndex = 5;
             this.colnmn_cari_seviye.Width = 86;

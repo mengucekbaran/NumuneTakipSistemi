@@ -109,6 +109,10 @@
           <ScalarProperty Name="nmn_musonay" ColumnName="nmn_musonay" />
           <ScalarProperty Name="nmn_musonay_str" ColumnName="nmn_musonay_str" />
           <ScalarProperty Name="nmn_musonay_aciklama" ColumnName="nmn_musonay_aciklama" />
+          <ScalarProperty Name="nmn_nmnonay" ColumnName="nmn_nmnonay" />
+          <ScalarProperty Name="nmn_nmnonay_str" ColumnName="nmn_nmnonay_str" />
+          <ScalarProperty Name="nmn_nmnonay_aciklama" ColumnName="nmn_nmnonay_aciklama" />
+          <ScalarProperty Name="nmnh_sonucsirano" ColumnName="nmnh_sonucsirano" />
           <ScalarProperty Name="nmn_user_no" ColumnName="nmn_user_no" />
         </ComplexTypeMapping>
       </ResultMapping>
@@ -152,6 +156,9 @@
           <ScalarProperty Name="nmn_musonay" ColumnName="nmn_musonay" />
           <ScalarProperty Name="nmn_musonay_str" ColumnName="nmn_musonay_str" />
           <ScalarProperty Name="nmn_musonay_aciklama" ColumnName="nmn_musonay_aciklama" />
+          <ScalarProperty Name="nmn_nmnonay" ColumnName="nmn_nmnonay" />
+          <ScalarProperty Name="nmn_nmnonay_str" ColumnName="nmn_nmnonay_str" />
+          <ScalarProperty Name="nmn_nmnonay_aciklama" ColumnName="nmn_nmnonay_aciklama" />
           <ScalarProperty Name="nmn_user_no" ColumnName="nmn_user_no" />
         </ComplexTypeMapping>
       </ResultMapping>

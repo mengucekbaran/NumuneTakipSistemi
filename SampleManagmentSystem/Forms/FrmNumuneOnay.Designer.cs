@@ -183,7 +183,7 @@
             this.Controls.Add(this.labelControl18);
             this.Name = "FrmNumuneOnay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Numune Onay";
+            this.Text = "Müşteri Numune Onay";
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnAd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNmnOnayAciklama.Properties)).EndInit();

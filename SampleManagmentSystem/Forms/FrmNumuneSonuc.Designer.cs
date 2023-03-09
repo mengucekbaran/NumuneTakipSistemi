@@ -371,7 +371,7 @@
             this.txtAciklama.Location = new System.Drawing.Point(117, 257);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtAciklama.Size = new System.Drawing.Size(718, 151);
+            this.txtAciklama.Size = new System.Drawing.Size(706, 124);
             this.txtAciklama.TabIndex = 45;
             // 
             // labelControl23

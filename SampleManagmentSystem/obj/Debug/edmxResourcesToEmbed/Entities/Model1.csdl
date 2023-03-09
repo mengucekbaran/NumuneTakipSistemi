@@ -7,7 +7,7 @@
     <Property Name="nmnh_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nmnh_createdate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="nmnh_lastupdate" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="nmnh_nmnid" Type="Int32" Nullable="true" />
+    <Property Name="nmnh_nmnid" Type="Int32" />
     <Property Name="nmnh_nmnkod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="nmnh_kod" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="nmnh_sonucsirano" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
@@ -85,7 +85,7 @@
     <Property Type="DateTime" Name="nmn_lastup_date" Nullable="false" Precision="23" />
     <Property Type="String" Name="nmn_kod" Nullable="false" MaxLength="25" />
     <Property Type="String" Name="nmn_ad" Nullable="false" MaxLength="120" />
-    <Property Type="String" Name="nmnh_durum" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="nmnh_durum" Nullable="false" MaxLength="3" />
     <Property Type="String" Name="nmn_cari_kod" Nullable="true" MaxLength="25" />
     <Property Type="String" Name="nmn_cari_unvan" Nullable="true" MaxLength="120" />
     <Property Type="DateTime" Name="nmn_tarih" Nullable="false" Precision="23" />
@@ -117,6 +117,10 @@
     <Property Type="Byte" Name="nmn_musonay" Nullable="true" />
     <Property Type="String" Name="nmn_musonay_str" Nullable="false" MaxLength="11" />
     <Property Type="String" Name="nmn_musonay_aciklama" Nullable="true" />
+    <Property Type="Byte" Name="nmn_nmnonay" Nullable="true" />
+    <Property Type="String" Name="nmn_nmnonay_str" Nullable="false" MaxLength="11" />
+    <Property Type="String" Name="nmn_nmnonay_aciklama" Nullable="true" />
+    <Property Type="String" Name="nmnh_sonucsirano" Nullable="true" MaxLength="25" />
     <Property Type="Int32" Name="nmn_user_no" Nullable="false" />
   </ComplexType>
   <ComplexType Name="ListNumune_Result">
@@ -156,6 +160,9 @@
     <Property Type="Byte" Name="nmn_musonay" Nullable="true" />
     <Property Type="String" Name="nmn_musonay_str" Nullable="false" MaxLength="11" />
     <Property Type="String" Name="nmn_musonay_aciklama" Nullable="true" />
+    <Property Type="Byte" Name="nmn_nmnonay" Nullable="true" />
+    <Property Type="String" Name="nmn_nmnonay_str" Nullable="false" MaxLength="11" />
+    <Property Type="String" Name="nmn_nmnonay_aciklama" Nullable="true" />
     <Property Type="Int32" Name="nmn_user_no" Nullable="false" />
   </ComplexType>
 </Schema>

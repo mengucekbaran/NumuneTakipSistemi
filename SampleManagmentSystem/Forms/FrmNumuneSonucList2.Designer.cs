@@ -75,6 +75,8 @@
             this.colnmnh_nmnkod.FieldName = "nmnh_nmnkod";
             this.colnmnh_nmnkod.MinWidth = 25;
             this.colnmnh_nmnkod.Name = "colnmnh_nmnkod";
+            this.colnmnh_nmnkod.OptionsColumn.AllowEdit = false;
+            this.colnmnh_nmnkod.OptionsColumn.ReadOnly = true;
             this.colnmnh_nmnkod.Visible = true;
             this.colnmnh_nmnkod.VisibleIndex = 0;
             this.colnmnh_nmnkod.Width = 94;
@@ -85,6 +87,8 @@
             this.colnmnh_sonucsirano.FieldName = "nmnh_sonucsirano";
             this.colnmnh_sonucsirano.MinWidth = 25;
             this.colnmnh_sonucsirano.Name = "colnmnh_sonucsirano";
+            this.colnmnh_sonucsirano.OptionsColumn.AllowEdit = false;
+            this.colnmnh_sonucsirano.OptionsColumn.ReadOnly = true;
             this.colnmnh_sonucsirano.Visible = true;
             this.colnmnh_sonucsirano.VisibleIndex = 1;
             this.colnmnh_sonucsirano.Width = 94;
@@ -95,16 +99,20 @@
             this.musteri_fiyatonay.FieldName = "musteri_fiyatonay";
             this.musteri_fiyatonay.MinWidth = 25;
             this.musteri_fiyatonay.Name = "musteri_fiyatonay";
+            this.musteri_fiyatonay.OptionsColumn.AllowEdit = false;
+            this.musteri_fiyatonay.OptionsColumn.ReadOnly = true;
             this.musteri_fiyatonay.Visible = true;
             this.musteri_fiyatonay.VisibleIndex = 2;
             this.musteri_fiyatonay.Width = 94;
             // 
             // colnmn_nmnonay
             // 
-            this.colnmn_nmnonay.Caption = "NUMUNE ONAY";
+            this.colnmn_nmnonay.Caption = "MÜŞTERİ NUMUNE ONAY";
             this.colnmn_nmnonay.FieldName = "nmn_nmnonay";
             this.colnmn_nmnonay.MinWidth = 25;
             this.colnmn_nmnonay.Name = "colnmn_nmnonay";
+            this.colnmn_nmnonay.OptionsColumn.AllowEdit = false;
+            this.colnmn_nmnonay.OptionsColumn.ReadOnly = true;
             this.colnmn_nmnonay.Visible = true;
             this.colnmn_nmnonay.VisibleIndex = 3;
             this.colnmn_nmnonay.Width = 94;
