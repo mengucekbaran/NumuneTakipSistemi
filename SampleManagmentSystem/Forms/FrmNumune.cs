@@ -84,8 +84,20 @@ namespace SampleManagmentSystem.Forms
             //MÜŞTERİ FİYAT ONAY BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
             int selectedRowIndex = gridView1.FocusedRowHandle;
             string nmnKod = gridView1.GetRowCellValue(selectedRowIndex, "nmn_kod").ToString();
-            Forms.FrmMusteriOnay fr = new Forms.FrmMusteriOnay(nmnKod);
-            fr.Show();
+
+            //EĞER NUMUNE SONUCU GİRİLMİŞSE
+            bool isExist = db.NUMUNE_HAREKETLERI.Any(x => x.nmnh_nmnkod == nmnKod);
+            if (isExist)
+            {
+                //MUŞTERİ ONAY
+                Forms.FrmMusteriOnay fr = new Forms.FrmMusteriOnay(nmnKod);
+                fr.Show();
+            }
+            else
+            {
+                XtraMessageBox.Show("Labaratuvar sonuç girmeden müşteri fiyat onay girilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
         //DELETE NUMUNE 
         private void repositoryItemButtonDelete_Click_1(object sender, EventArgs e)
@@ -137,8 +149,18 @@ namespace SampleManagmentSystem.Forms
             //MÜŞTERİ FİYAT ONAY BUTONUNA BASILAN SATIRDAKİ İD BULUNUR
             int selectedRowIndex = gridView1.FocusedRowHandle;
             string nmnKod = gridView1.GetRowCellValue(selectedRowIndex, "nmn_kod").ToString();
-            Forms.FrmNumuneOnay fr = new Forms.FrmNumuneOnay(nmnKod);
-            fr.Show();
+            bool isExist = db.TblNumuneler.Any(x => x.nmn_kod == nmnKod && x.nmn_musonay != null);
+            if (isExist)
+            {
+                Forms.FrmNumuneOnay fr = new Forms.FrmNumuneOnay(nmnKod);
+                fr.Show();
+            }
+            else
+            {
+                XtraMessageBox.Show("Müşteri fiyat onay girilmeden müşteri numune onay girilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
         }
     }
     
